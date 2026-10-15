@@ -1,7 +1,7 @@
-# EFM32XG Peripheral Access Crate (PAC)
+# EFM32 Peripheral Access Crate (PAC)
 
-[![crates.io](https://img.shields.io/crates/v/efm32xg-pac)](https://crates.io/crates/efm32xg-pac)
-[![docs.rs](https://docs.rs/efm32xg-pac/badge.svg)](https://docs.rs/efm32xg-pac)
+[![crates.io](https://img.shields.io/crates/v/efm32-pac)](https://crates.io/crates/efm32-pac)
+[![docs.rs](https://docs.rs/efm32-pac/badge.svg)](https://docs.rs/efm32-pac)
 
 Low-level register mappings for Silicon Labs EFM32 ARM Cortex-M microcontrollers, written in Rust.
 The code is generated automatically from vendor-supplied SVD files using [chiptool](https://github.com/embassy-rs/chiptool).
@@ -18,7 +18,7 @@ Enable exactly one chip feature. The default feature set is `critical-section`, 
 ## Usage
 
 ```toml
-[dependencies.efm32xg-pac]
+[dependencies.efm32-pac]
 version = "0.1"
 features = ["efm32gg11"]   # pick your chip
 ```

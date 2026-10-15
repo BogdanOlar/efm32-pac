@@ -1,5 +1,5 @@
 [package]
-name = "efm32xg-pac"
+name = "efm32-pac"
 version = "0.1.0"
 edition = "2021"
 authors = ["Bogdan Olar <olar.bogdan.dev@gmail.com>"]
@@ -8,7 +8,7 @@ keywords = ["pac", "arm", "cortex-m", "efm32", "chiptool"]
 categories = ["embedded", "hardware-support", "no-std"]
 readme = "README.md"
 license = "MIT/Apache-2.0"
-repository = "https://github.com/BogdanOlar/efm32xg-pac"
+repository = "https://github.com/BogdanOlar/efm32-pac"
 
 [dependencies]
 critical-section = { version = "1.2", optional = true }
