@@ -223,7 +223,23 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ en: {=bool:?}, debugrun: {=bool:?}, em2run: {=bool:?}, em3run: {=bool:?}, lock: {=bool:?}, em4block: {=bool:?}, swoscblock: {=bool:?}, persel: {=u8:?}, clksel: {:?}, warnsel: {=u8:?}, winsel: {=u8:?}, clrsrc: {=bool:?}, wdogrstdis: {=bool:?} }}" , self . en () , self . debugrun () , self . em2run () , self . em3run () , self . lock () , self . em4block () , self . swoscblock () , self . persel () , self . clksel () , self . warnsel () , self . winsel () , self . clrsrc () , self . wdogrstdis ())
+        defmt::write!(
+            f,
+            "Ctrl {{ en: {=bool:?}, debugrun: {=bool:?}, em2run: {=bool:?}, em3run: {=bool:?}, lock: {=bool:?}, em4block: {=bool:?}, swoscblock: {=bool:?}, persel: {=u8:?}, clksel: {:?}, warnsel: {=u8:?}, winsel: {=u8:?}, clrsrc: {=bool:?}, wdogrstdis: {=bool:?} }}",
+            self.en(),
+            self.debugrun(),
+            self.em2run(),
+            self.em3run(),
+            self.lock(),
+            self.em4block(),
+            self.swoscblock(),
+            self.persel(),
+            self.clksel(),
+            self.warnsel(),
+            self.winsel(),
+            self.clrsrc(),
+            self.wdogrstdis()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -312,7 +328,15 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ tout: {=bool:?}, warn: {=bool:?}, win: {=bool:?}, pem0: {=bool:?}, pem1: {=bool:?} }}" , self . tout () , self . warn () , self . win () , self . pem0 () , self . pem1 ())
+        defmt::write!(
+            f,
+            "Ien {{ tout: {=bool:?}, warn: {=bool:?}, win: {=bool:?}, pem0: {=bool:?}, pem1: {=bool:?} }}",
+            self.tout(),
+            self.warn(),
+            self.win(),
+            self.pem0(),
+            self.pem1()
+        )
     }
 }
 #[doc = "Watchdog Interrupt Flags."]
@@ -401,7 +425,15 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ tout: {=bool:?}, warn: {=bool:?}, win: {=bool:?}, pem0: {=bool:?}, pem1: {=bool:?} }}" , self . tout () , self . warn () , self . win () , self . pem0 () , self . pem1 ())
+        defmt::write!(
+            f,
+            "If {{ tout: {=bool:?}, warn: {=bool:?}, win: {=bool:?}, pem0: {=bool:?}, pem1: {=bool:?} }}",
+            self.tout(),
+            self.warn(),
+            self.win(),
+            self.pem0(),
+            self.pem1()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -490,7 +522,15 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ tout: {=bool:?}, warn: {=bool:?}, win: {=bool:?}, pem0: {=bool:?}, pem1: {=bool:?} }}" , self . tout () , self . warn () , self . win () , self . pem0 () , self . pem1 ())
+        defmt::write!(
+            f,
+            "Ifs {{ tout: {=bool:?}, warn: {=bool:?}, win: {=bool:?}, pem0: {=bool:?}, pem1: {=bool:?} }}",
+            self.tout(),
+            self.warn(),
+            self.win(),
+            self.pem0(),
+            self.pem1()
+        )
     }
 }
 #[doc = "PRS Control Register."]
@@ -676,6 +716,13 @@ impl core::fmt::Debug for Syncbusy {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Syncbusy {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Syncbusy {{ ctrl: {=bool:?}, cmd: {=bool:?}, pch0_prsctrl: {=bool:?}, pch1_prsctrl: {=bool:?} }}" , self . ctrl () , self . cmd () , self . pch0_prsctrl () , self . pch1_prsctrl ())
+        defmt::write!(
+            f,
+            "Syncbusy {{ ctrl: {=bool:?}, cmd: {=bool:?}, pch0_prsctrl: {=bool:?}, pch1_prsctrl: {=bool:?} }}",
+            self.ctrl(),
+            self.cmd(),
+            self.pch0_prsctrl(),
+            self.pch1_prsctrl()
+        )
     }
 }

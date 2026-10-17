@@ -167,7 +167,15 @@ impl core::fmt::Debug for Cstatus {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cstatus {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cstatus {{ v0: {:?}, v1: {:?}, seqpart: {=bool:?}, seqskip: {=bool:?}, seqip: {=u8:?} }}" , self . v0 () , self . v1 () , self . seqpart () , self . seqskip () , self . seqip ())
+        defmt::write!(
+            f,
+            "Cstatus {{ v0: {:?}, v1: {:?}, seqpart: {=bool:?}, seqskip: {=bool:?}, seqip: {=u8:?} }}",
+            self.v0(),
+            self.v1(),
+            self.seqpart(),
+            self.seqskip(),
+            self.seqip()
+        )
     }
 }
 #[doc = "Control Register."]
@@ -321,7 +329,20 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ aes: {=bool:?}, keybufdis: {=bool:?}, sha: {=bool:?}, nobusystall: {=bool:?}, incwidth: {:?}, dma0mode: {:?}, dma0rsel: {:?}, dma1mode: {:?}, dma1rsel: {:?}, combdma0wereq: {=bool:?} }}" , self . aes () , self . keybufdis () , self . sha () , self . nobusystall () , self . incwidth () , self . dma0mode () , self . dma0rsel () , self . dma1mode () , self . dma1rsel () , self . combdma0wereq ())
+        defmt::write!(
+            f,
+            "Ctrl {{ aes: {=bool:?}, keybufdis: {=bool:?}, sha: {=bool:?}, nobusystall: {=bool:?}, incwidth: {:?}, dma0mode: {:?}, dma0rsel: {:?}, dma1mode: {:?}, dma1rsel: {:?}, combdma0wereq: {=bool:?} }}",
+            self.aes(),
+            self.keybufdis(),
+            self.sha(),
+            self.nobusystall(),
+            self.incwidth(),
+            self.dma0mode(),
+            self.dma0rsel(),
+            self.dma1mode(),
+            self.dma1rsel(),
+            self.combdma0wereq()
+        )
     }
 }
 #[doc = "DATA0 Register Byte Access."]
@@ -804,7 +825,15 @@ impl core::fmt::Debug for Dstatus {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dstatus {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dstatus {{ data0zero: {:?}, ddata0lsbs: {=u8:?}, ddata0msbs: {=u8:?}, ddata1msb: {=bool:?}, carry: {=bool:?} }}" , self . data0zero () , self . ddata0lsbs () , self . ddata0msbs () , self . ddata1msb () , self . carry ())
+        defmt::write!(
+            f,
+            "Dstatus {{ data0zero: {:?}, ddata0lsbs: {=u8:?}, ddata0msbs: {=u8:?}, ddata1msb: {=bool:?}, carry: {=bool:?} }}",
+            self.data0zero(),
+            self.ddata0lsbs(),
+            self.ddata0msbs(),
+            self.ddata1msb(),
+            self.carry()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -1573,7 +1602,17 @@ impl core::fmt::Debug for Seqctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Seqctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Seqctrl {{ lengtha: {=u16:?}, blocksize: {:?}, dma0skip: {=u8:?}, dma1skip: {=u8:?}, dma0presa: {=bool:?}, dma1presa: {=bool:?}, halt: {=bool:?} }}" , self . lengtha () , self . blocksize () , self . dma0skip () , self . dma1skip () , self . dma0presa () , self . dma1presa () , self . halt ())
+        defmt::write!(
+            f,
+            "Seqctrl {{ lengtha: {=u16:?}, blocksize: {:?}, dma0skip: {=u8:?}, dma1skip: {=u8:?}, dma0presa: {=bool:?}, dma1presa: {=bool:?}, halt: {=bool:?} }}",
+            self.lengtha(),
+            self.blocksize(),
+            self.dma0skip(),
+            self.dma1skip(),
+            self.dma0presa(),
+            self.dma1presa(),
+            self.halt()
+        )
     }
 }
 #[doc = "Sequence Control B."]

@@ -119,7 +119,15 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ wdogrmode: {:?}, lockuprmode: {:?}, sysrmode: {:?}, pinrmode: {:?}, resetstate: {=u8:?} }}" , self . wdogrmode () , self . lockuprmode () , self . sysrmode () , self . pinrmode () , self . resetstate ())
+        defmt::write!(
+            f,
+            "Ctrl {{ wdogrmode: {:?}, lockuprmode: {:?}, sysrmode: {:?}, pinrmode: {:?}, resetstate: {=u8:?} }}",
+            self.wdogrmode(),
+            self.lockuprmode(),
+            self.sysrmode(),
+            self.pinrmode(),
+            self.resetstate()
+        )
     }
 }
 #[doc = "Configuration Lock Register."]
@@ -297,6 +305,18 @@ impl core::fmt::Debug for Rstcause {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Rstcause {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Rstcause {{ porst: {=bool:?}, avddbod: {=bool:?}, dvddbod: {=bool:?}, decbod: {=bool:?}, extrst: {=bool:?}, lockuprst: {=bool:?}, sysreqrst: {=bool:?}, wdogrst: {=bool:?}, em4rst: {=bool:?} }}" , self . porst () , self . avddbod () , self . dvddbod () , self . decbod () , self . extrst () , self . lockuprst () , self . sysreqrst () , self . wdogrst () , self . em4rst ())
+        defmt::write!(
+            f,
+            "Rstcause {{ porst: {=bool:?}, avddbod: {=bool:?}, dvddbod: {=bool:?}, decbod: {=bool:?}, extrst: {=bool:?}, lockuprst: {=bool:?}, sysreqrst: {=bool:?}, wdogrst: {=bool:?}, em4rst: {=bool:?} }}",
+            self.porst(),
+            self.avddbod(),
+            self.dvddbod(),
+            self.decbod(),
+            self.extrst(),
+            self.lockuprst(),
+            self.sysreqrst(),
+            self.wdogrst(),
+            self.em4rst()
+        )
     }
 }

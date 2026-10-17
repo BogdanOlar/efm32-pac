@@ -149,7 +149,20 @@ impl core::fmt::Debug for Aportconflict {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Aportconflict {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Aportconflict {{ aport0xconflict: {=bool:?}, aport0yconflict: {=bool:?}, aport1xconflict: {=bool:?}, aport1yconflict: {=bool:?}, aport2xconflict: {=bool:?}, aport2yconflict: {=bool:?}, aport3xconflict: {=bool:?}, aport3yconflict: {=bool:?}, aport4xconflict: {=bool:?}, aport4yconflict: {=bool:?} }}" , self . aport0xconflict () , self . aport0yconflict () , self . aport1xconflict () , self . aport1yconflict () , self . aport2xconflict () , self . aport2yconflict () , self . aport3xconflict () , self . aport3yconflict () , self . aport4xconflict () , self . aport4yconflict ())
+        defmt::write!(
+            f,
+            "Aportconflict {{ aport0xconflict: {=bool:?}, aport0yconflict: {=bool:?}, aport1xconflict: {=bool:?}, aport1yconflict: {=bool:?}, aport2xconflict: {=bool:?}, aport2yconflict: {=bool:?}, aport3xconflict: {=bool:?}, aport3yconflict: {=bool:?}, aport4xconflict: {=bool:?}, aport4yconflict: {=bool:?} }}",
+            self.aport0xconflict(),
+            self.aport0yconflict(),
+            self.aport1xconflict(),
+            self.aport1yconflict(),
+            self.aport2xconflict(),
+            self.aport2yconflict(),
+            self.aport3xconflict(),
+            self.aport3yconflict(),
+            self.aport4xconflict(),
+            self.aport4yconflict()
+        )
     }
 }
 #[doc = "APORT Request Status Register."]
@@ -303,7 +316,20 @@ impl core::fmt::Debug for Aportreq {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Aportreq {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Aportreq {{ aport0xreq: {=bool:?}, aport0yreq: {=bool:?}, aport1xreq: {=bool:?}, aport1yreq: {=bool:?}, aport2xreq: {=bool:?}, aport2yreq: {=bool:?}, aport3xreq: {=bool:?}, aport3yreq: {=bool:?}, aport4xreq: {=bool:?}, aport4yreq: {=bool:?} }}" , self . aport0xreq () , self . aport0yreq () , self . aport1xreq () , self . aport1yreq () , self . aport2xreq () , self . aport2yreq () , self . aport3xreq () , self . aport3yreq () , self . aport4xreq () , self . aport4yreq ())
+        defmt::write!(
+            f,
+            "Aportreq {{ aport0xreq: {=bool:?}, aport0yreq: {=bool:?}, aport1xreq: {=bool:?}, aport1yreq: {=bool:?}, aport2xreq: {=bool:?}, aport2yreq: {=bool:?}, aport3xreq: {=bool:?}, aport3yreq: {=bool:?}, aport4xreq: {=bool:?}, aport4yreq: {=bool:?} }}",
+            self.aport0xreq(),
+            self.aport0yreq(),
+            self.aport1xreq(),
+            self.aport1yreq(),
+            self.aport2xreq(),
+            self.aport2yreq(),
+            self.aport3xreq(),
+            self.aport3yreq(),
+            self.aport4xreq(),
+            self.aport4yreq()
+        )
     }
 }
 #[doc = "Control Register."]
@@ -496,7 +522,23 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ en: {=bool:?}, inactval: {=bool:?}, gpioinv: {=bool:?}, aportxmasterdis: {=bool:?}, aportymasterdis: {=bool:?}, aportvmasterdis: {=bool:?}, pwrsel: {:?}, accuracy: {=bool:?}, inputrange: {:?}, irise: {=bool:?}, ifall: {=bool:?}, biasprog: {=u8:?}, fullbias: {=bool:?} }}" , self . en () , self . inactval () , self . gpioinv () , self . aportxmasterdis () , self . aportymasterdis () , self . aportvmasterdis () , self . pwrsel () , self . accuracy () , self . inputrange () , self . irise () , self . ifall () , self . biasprog () , self . fullbias ())
+        defmt::write!(
+            f,
+            "Ctrl {{ en: {=bool:?}, inactval: {=bool:?}, gpioinv: {=bool:?}, aportxmasterdis: {=bool:?}, aportymasterdis: {=bool:?}, aportvmasterdis: {=bool:?}, pwrsel: {:?}, accuracy: {=bool:?}, inputrange: {:?}, irise: {=bool:?}, ifall: {=bool:?}, biasprog: {=u8:?}, fullbias: {=bool:?} }}",
+            self.en(),
+            self.inactval(),
+            self.gpioinv(),
+            self.aportxmasterdis(),
+            self.aportymasterdis(),
+            self.aportvmasterdis(),
+            self.pwrsel(),
+            self.accuracy(),
+            self.inputrange(),
+            self.irise(),
+            self.ifall(),
+            self.biasprog(),
+            self.fullbias()
+        )
     }
 }
 #[doc = "External Override Interface Control."]
@@ -1011,7 +1053,17 @@ impl core::fmt::Debug for Inputsel {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Inputsel {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Inputsel {{ possel: {=u8:?}, negsel: {=u8:?}, vasel: {:?}, vbsel: {=bool:?}, vlpsel: {=bool:?}, csresen: {=bool:?}, csressel: {:?} }}" , self . possel () , self . negsel () , self . vasel () , self . vbsel () , self . vlpsel () , self . csresen () , self . csressel ())
+        defmt::write!(
+            f,
+            "Inputsel {{ possel: {=u8:?}, negsel: {=u8:?}, vasel: {:?}, vbsel: {=bool:?}, vlpsel: {=bool:?}, csresen: {=bool:?}, csressel: {:?} }}",
+            self.possel(),
+            self.negsel(),
+            self.vasel(),
+            self.vbsel(),
+            self.vlpsel(),
+            self.csresen(),
+            self.csressel()
+        )
     }
 }
 #[doc = "I/O Routing Location Register."]
@@ -1161,6 +1213,13 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ acmpact: {=bool:?}, acmpout: {=bool:?}, aportconflict: {=bool:?}, extifact: {=bool:?} }}" , self . acmpact () , self . acmpout () , self . aportconflict () , self . extifact ())
+        defmt::write!(
+            f,
+            "Status {{ acmpact: {=bool:?}, acmpout: {=bool:?}, aportconflict: {=bool:?}, extifact: {=bool:?} }}",
+            self.acmpact(),
+            self.acmpout(),
+            self.aportconflict(),
+            self.extifact()
+        )
     }
 }

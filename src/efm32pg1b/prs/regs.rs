@@ -123,7 +123,18 @@ impl core::fmt::Debug for ChCtrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for ChCtrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "ChCtrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "ChCtrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Control Register."]
@@ -267,7 +278,22 @@ impl core::fmt::Debug for Peek {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Peek {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Peek {{ ch_val[0]: {=bool:?}, ch_val[1]: {=bool:?}, ch_val[2]: {=bool:?}, ch_val[3]: {=bool:?}, ch_val[4]: {=bool:?}, ch_val[5]: {=bool:?}, ch_val[6]: {=bool:?}, ch_val[7]: {=bool:?}, ch_val[8]: {=bool:?}, ch_val[9]: {=bool:?}, ch_val[10]: {=bool:?}, ch_val[11]: {=bool:?} }}" , self . ch_val (0usize) , self . ch_val (1usize) , self . ch_val (2usize) , self . ch_val (3usize) , self . ch_val (4usize) , self . ch_val (5usize) , self . ch_val (6usize) , self . ch_val (7usize) , self . ch_val (8usize) , self . ch_val (9usize) , self . ch_val (10usize) , self . ch_val (11usize))
+        defmt::write!(
+            f,
+            "Peek {{ ch_val[0]: {=bool:?}, ch_val[1]: {=bool:?}, ch_val[2]: {=bool:?}, ch_val[3]: {=bool:?}, ch_val[4]: {=bool:?}, ch_val[5]: {=bool:?}, ch_val[6]: {=bool:?}, ch_val[7]: {=bool:?}, ch_val[8]: {=bool:?}, ch_val[9]: {=bool:?}, ch_val[10]: {=bool:?}, ch_val[11]: {=bool:?} }}",
+            self.ch_val(0usize),
+            self.ch_val(1usize),
+            self.ch_val(2usize),
+            self.ch_val(3usize),
+            self.ch_val(4usize),
+            self.ch_val(5usize),
+            self.ch_val(6usize),
+            self.ch_val(7usize),
+            self.ch_val(8usize),
+            self.ch_val(9usize),
+            self.ch_val(10usize),
+            self.ch_val(11usize)
+        )
     }
 }
 #[doc = "I/O Routing Location Register."]
@@ -568,7 +594,22 @@ impl core::fmt::Debug for Routepen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Routepen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Routepen {{ ch_pen[0]: {=bool:?}, ch_pen[1]: {=bool:?}, ch_pen[2]: {=bool:?}, ch_pen[3]: {=bool:?}, ch_pen[4]: {=bool:?}, ch_pen[5]: {=bool:?}, ch_pen[6]: {=bool:?}, ch_pen[7]: {=bool:?}, ch_pen[8]: {=bool:?}, ch_pen[9]: {=bool:?}, ch_pen[10]: {=bool:?}, ch_pen[11]: {=bool:?} }}" , self . ch_pen (0usize) , self . ch_pen (1usize) , self . ch_pen (2usize) , self . ch_pen (3usize) , self . ch_pen (4usize) , self . ch_pen (5usize) , self . ch_pen (6usize) , self . ch_pen (7usize) , self . ch_pen (8usize) , self . ch_pen (9usize) , self . ch_pen (10usize) , self . ch_pen (11usize))
+        defmt::write!(
+            f,
+            "Routepen {{ ch_pen[0]: {=bool:?}, ch_pen[1]: {=bool:?}, ch_pen[2]: {=bool:?}, ch_pen[3]: {=bool:?}, ch_pen[4]: {=bool:?}, ch_pen[5]: {=bool:?}, ch_pen[6]: {=bool:?}, ch_pen[7]: {=bool:?}, ch_pen[8]: {=bool:?}, ch_pen[9]: {=bool:?}, ch_pen[10]: {=bool:?}, ch_pen[11]: {=bool:?} }}",
+            self.ch_pen(0usize),
+            self.ch_pen(1usize),
+            self.ch_pen(2usize),
+            self.ch_pen(3usize),
+            self.ch_pen(4usize),
+            self.ch_pen(5usize),
+            self.ch_pen(6usize),
+            self.ch_pen(7usize),
+            self.ch_pen(8usize),
+            self.ch_pen(9usize),
+            self.ch_pen(10usize),
+            self.ch_pen(11usize)
+        )
     }
 }
 #[doc = "Software Level Register."]
@@ -620,7 +661,22 @@ impl core::fmt::Debug for Swlevel {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Swlevel {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Swlevel {{ ch_level[0]: {=bool:?}, ch_level[1]: {=bool:?}, ch_level[2]: {=bool:?}, ch_level[3]: {=bool:?}, ch_level[4]: {=bool:?}, ch_level[5]: {=bool:?}, ch_level[6]: {=bool:?}, ch_level[7]: {=bool:?}, ch_level[8]: {=bool:?}, ch_level[9]: {=bool:?}, ch_level[10]: {=bool:?}, ch_level[11]: {=bool:?} }}" , self . ch_level (0usize) , self . ch_level (1usize) , self . ch_level (2usize) , self . ch_level (3usize) , self . ch_level (4usize) , self . ch_level (5usize) , self . ch_level (6usize) , self . ch_level (7usize) , self . ch_level (8usize) , self . ch_level (9usize) , self . ch_level (10usize) , self . ch_level (11usize))
+        defmt::write!(
+            f,
+            "Swlevel {{ ch_level[0]: {=bool:?}, ch_level[1]: {=bool:?}, ch_level[2]: {=bool:?}, ch_level[3]: {=bool:?}, ch_level[4]: {=bool:?}, ch_level[5]: {=bool:?}, ch_level[6]: {=bool:?}, ch_level[7]: {=bool:?}, ch_level[8]: {=bool:?}, ch_level[9]: {=bool:?}, ch_level[10]: {=bool:?}, ch_level[11]: {=bool:?} }}",
+            self.ch_level(0usize),
+            self.ch_level(1usize),
+            self.ch_level(2usize),
+            self.ch_level(3usize),
+            self.ch_level(4usize),
+            self.ch_level(5usize),
+            self.ch_level(6usize),
+            self.ch_level(7usize),
+            self.ch_level(8usize),
+            self.ch_level(9usize),
+            self.ch_level(10usize),
+            self.ch_level(11usize)
+        )
     }
 }
 #[doc = "Software Pulse Register."]
@@ -672,6 +728,21 @@ impl core::fmt::Debug for Swpulse {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Swpulse {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Swpulse {{ ch_pulse[0]: {=bool:?}, ch_pulse[1]: {=bool:?}, ch_pulse[2]: {=bool:?}, ch_pulse[3]: {=bool:?}, ch_pulse[4]: {=bool:?}, ch_pulse[5]: {=bool:?}, ch_pulse[6]: {=bool:?}, ch_pulse[7]: {=bool:?}, ch_pulse[8]: {=bool:?}, ch_pulse[9]: {=bool:?}, ch_pulse[10]: {=bool:?}, ch_pulse[11]: {=bool:?} }}" , self . ch_pulse (0usize) , self . ch_pulse (1usize) , self . ch_pulse (2usize) , self . ch_pulse (3usize) , self . ch_pulse (4usize) , self . ch_pulse (5usize) , self . ch_pulse (6usize) , self . ch_pulse (7usize) , self . ch_pulse (8usize) , self . ch_pulse (9usize) , self . ch_pulse (10usize) , self . ch_pulse (11usize))
+        defmt::write!(
+            f,
+            "Swpulse {{ ch_pulse[0]: {=bool:?}, ch_pulse[1]: {=bool:?}, ch_pulse[2]: {=bool:?}, ch_pulse[3]: {=bool:?}, ch_pulse[4]: {=bool:?}, ch_pulse[5]: {=bool:?}, ch_pulse[6]: {=bool:?}, ch_pulse[7]: {=bool:?}, ch_pulse[8]: {=bool:?}, ch_pulse[9]: {=bool:?}, ch_pulse[10]: {=bool:?}, ch_pulse[11]: {=bool:?} }}",
+            self.ch_pulse(0usize),
+            self.ch_pulse(1usize),
+            self.ch_pulse(2usize),
+            self.ch_pulse(3usize),
+            self.ch_pulse(4usize),
+            self.ch_pulse(5usize),
+            self.ch_pulse(6usize),
+            self.ch_pulse(7usize),
+            self.ch_pulse(8usize),
+            self.ch_pulse(9usize),
+            self.ch_pulse(10usize),
+            self.ch_pulse(11usize)
+        )
     }
 }

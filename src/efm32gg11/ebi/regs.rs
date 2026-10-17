@@ -702,7 +702,36 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ mode: {:?}, mode1: {:?}, mode2: {:?}, mode3: {:?}, bank0en: {=bool:?}, bank1en: {=bool:?}, bank2en: {=bool:?}, bank3en: {=bool:?}, noidle: {=bool:?}, noidle1: {=bool:?}, noidle2: {=bool:?}, noidle3: {=bool:?}, ardyen: {=bool:?}, ardytodis: {=bool:?}, ardy1en: {=bool:?}, ardyto1dis: {=bool:?}, ardy2en: {=bool:?}, ardyto2dis: {=bool:?}, ardy3en: {=bool:?}, ardyto3dis: {=bool:?}, bl: {=bool:?}, bl1: {=bool:?}, bl2: {=bool:?}, bl3: {=bool:?}, its: {=bool:?}, altmap: {=bool:?} }}" , self . mode () , self . mode1 () , self . mode2 () , self . mode3 () , self . bank0en () , self . bank1en () , self . bank2en () , self . bank3en () , self . noidle () , self . noidle1 () , self . noidle2 () , self . noidle3 () , self . ardyen () , self . ardytodis () , self . ardy1en () , self . ardyto1dis () , self . ardy2en () , self . ardyto2dis () , self . ardy3en () , self . ardyto3dis () , self . bl () , self . bl1 () , self . bl2 () , self . bl3 () , self . its () , self . altmap ())
+        defmt::write!(
+            f,
+            "Ctrl {{ mode: {:?}, mode1: {:?}, mode2: {:?}, mode3: {:?}, bank0en: {=bool:?}, bank1en: {=bool:?}, bank2en: {=bool:?}, bank3en: {=bool:?}, noidle: {=bool:?}, noidle1: {=bool:?}, noidle2: {=bool:?}, noidle3: {=bool:?}, ardyen: {=bool:?}, ardytodis: {=bool:?}, ardy1en: {=bool:?}, ardyto1dis: {=bool:?}, ardy2en: {=bool:?}, ardyto2dis: {=bool:?}, ardy3en: {=bool:?}, ardyto3dis: {=bool:?}, bl: {=bool:?}, bl1: {=bool:?}, bl2: {=bool:?}, bl3: {=bool:?}, its: {=bool:?}, altmap: {=bool:?} }}",
+            self.mode(),
+            self.mode1(),
+            self.mode2(),
+            self.mode3(),
+            self.bank0en(),
+            self.bank1en(),
+            self.bank2en(),
+            self.bank3en(),
+            self.noidle(),
+            self.noidle1(),
+            self.noidle2(),
+            self.noidle3(),
+            self.ardyen(),
+            self.ardytodis(),
+            self.ardy1en(),
+            self.ardyto1dis(),
+            self.ardy2en(),
+            self.ardyto2dis(),
+            self.ardy3en(),
+            self.ardyto3dis(),
+            self.bl(),
+            self.bl1(),
+            self.bl2(),
+            self.bl3(),
+            self.its(),
+            self.altmap()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -856,7 +885,20 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ vsync: {=bool:?}, hsync: {=bool:?}, vbporch: {=bool:?}, vfporch: {=bool:?}, ddempty: {=bool:?}, ddjit: {=bool:?}, tftpixel0empty: {=bool:?}, tftpixel1empty: {=bool:?}, tftpixelfull: {=bool:?}, tftpixelof: {=bool:?} }}" , self . vsync () , self . hsync () , self . vbporch () , self . vfporch () , self . ddempty () , self . ddjit () , self . tftpixel0empty () , self . tftpixel1empty () , self . tftpixelfull () , self . tftpixelof ())
+        defmt::write!(
+            f,
+            "Ien {{ vsync: {=bool:?}, hsync: {=bool:?}, vbporch: {=bool:?}, vfporch: {=bool:?}, ddempty: {=bool:?}, ddjit: {=bool:?}, tftpixel0empty: {=bool:?}, tftpixel1empty: {=bool:?}, tftpixelfull: {=bool:?}, tftpixelof: {=bool:?} }}",
+            self.vsync(),
+            self.hsync(),
+            self.vbporch(),
+            self.vfporch(),
+            self.ddempty(),
+            self.ddjit(),
+            self.tftpixel0empty(),
+            self.tftpixel1empty(),
+            self.tftpixelfull(),
+            self.tftpixelof()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -1010,7 +1052,20 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ vsync: {=bool:?}, hsync: {=bool:?}, vbporch: {=bool:?}, vfporch: {=bool:?}, ddempty: {=bool:?}, ddjit: {=bool:?}, tftpixel0empty: {=bool:?}, tftpixel1empty: {=bool:?}, tftpixelfull: {=bool:?}, tftpixelof: {=bool:?} }}" , self . vsync () , self . hsync () , self . vbporch () , self . vfporch () , self . ddempty () , self . ddjit () , self . tftpixel0empty () , self . tftpixel1empty () , self . tftpixelfull () , self . tftpixelof ())
+        defmt::write!(
+            f,
+            "If {{ vsync: {=bool:?}, hsync: {=bool:?}, vbporch: {=bool:?}, vfporch: {=bool:?}, ddempty: {=bool:?}, ddjit: {=bool:?}, tftpixel0empty: {=bool:?}, tftpixel1empty: {=bool:?}, tftpixelfull: {=bool:?}, tftpixelof: {=bool:?} }}",
+            self.vsync(),
+            self.hsync(),
+            self.vbporch(),
+            self.vfporch(),
+            self.ddempty(),
+            self.ddjit(),
+            self.tftpixel0empty(),
+            self.tftpixel1empty(),
+            self.tftpixelfull(),
+            self.tftpixelof()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -1164,7 +1219,20 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ vsync: {=bool:?}, hsync: {=bool:?}, vbporch: {=bool:?}, vfporch: {=bool:?}, ddempty: {=bool:?}, ddjit: {=bool:?}, tftpixel0empty: {=bool:?}, tftpixel1empty: {=bool:?}, tftpixelfull: {=bool:?}, tftpixelof: {=bool:?} }}" , self . vsync () , self . hsync () , self . vbporch () , self . vfporch () , self . ddempty () , self . ddjit () , self . tftpixel0empty () , self . tftpixel1empty () , self . tftpixelfull () , self . tftpixelof ())
+        defmt::write!(
+            f,
+            "Ifs {{ vsync: {=bool:?}, hsync: {=bool:?}, vbporch: {=bool:?}, vfporch: {=bool:?}, ddempty: {=bool:?}, ddjit: {=bool:?}, tftpixel0empty: {=bool:?}, tftpixel1empty: {=bool:?}, tftpixelfull: {=bool:?}, tftpixelof: {=bool:?} }}",
+            self.vsync(),
+            self.hsync(),
+            self.vbporch(),
+            self.vfporch(),
+            self.ddempty(),
+            self.ddjit(),
+            self.tftpixel0empty(),
+            self.tftpixel1empty(),
+            self.tftpixelfull(),
+            self.tftpixelof()
+        )
     }
 }
 #[doc = "NAND Control Register."]
@@ -1404,7 +1472,16 @@ impl core::fmt::Debug for Polarity {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Polarity {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Polarity {{ cspol: {=bool:?}, repol: {=bool:?}, wepol: {=bool:?}, alepol: {=bool:?}, ardypol: {=bool:?}, blpol: {=bool:?} }}" , self . cspol () , self . repol () , self . wepol () , self . alepol () , self . ardypol () , self . blpol ())
+        defmt::write!(
+            f,
+            "Polarity {{ cspol: {=bool:?}, repol: {=bool:?}, wepol: {=bool:?}, alepol: {=bool:?}, ardypol: {=bool:?}, blpol: {=bool:?} }}",
+            self.cspol(),
+            self.repol(),
+            self.wepol(),
+            self.alepol(),
+            self.ardypol(),
+            self.blpol()
+        )
     }
 }
 #[doc = "Polarity Register 1."]
@@ -1506,7 +1583,16 @@ impl core::fmt::Debug for Polarity1 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Polarity1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Polarity1 {{ cspol: {=bool:?}, repol: {=bool:?}, wepol: {=bool:?}, alepol: {=bool:?}, ardypol: {=bool:?}, blpol: {=bool:?} }}" , self . cspol () , self . repol () , self . wepol () , self . alepol () , self . ardypol () , self . blpol ())
+        defmt::write!(
+            f,
+            "Polarity1 {{ cspol: {=bool:?}, repol: {=bool:?}, wepol: {=bool:?}, alepol: {=bool:?}, ardypol: {=bool:?}, blpol: {=bool:?} }}",
+            self.cspol(),
+            self.repol(),
+            self.wepol(),
+            self.alepol(),
+            self.ardypol(),
+            self.blpol()
+        )
     }
 }
 #[doc = "Polarity Register 2."]
@@ -1608,7 +1694,16 @@ impl core::fmt::Debug for Polarity2 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Polarity2 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Polarity2 {{ cspol: {=bool:?}, repol: {=bool:?}, wepol: {=bool:?}, alepol: {=bool:?}, ardypol: {=bool:?}, blpol: {=bool:?} }}" , self . cspol () , self . repol () , self . wepol () , self . alepol () , self . ardypol () , self . blpol ())
+        defmt::write!(
+            f,
+            "Polarity2 {{ cspol: {=bool:?}, repol: {=bool:?}, wepol: {=bool:?}, alepol: {=bool:?}, ardypol: {=bool:?}, blpol: {=bool:?} }}",
+            self.cspol(),
+            self.repol(),
+            self.wepol(),
+            self.alepol(),
+            self.ardypol(),
+            self.blpol()
+        )
     }
 }
 #[doc = "Polarity Register 3."]
@@ -1710,7 +1805,16 @@ impl core::fmt::Debug for Polarity3 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Polarity3 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Polarity3 {{ cspol: {=bool:?}, repol: {=bool:?}, wepol: {=bool:?}, alepol: {=bool:?}, ardypol: {=bool:?}, blpol: {=bool:?} }}" , self . cspol () , self . repol () , self . wepol () , self . alepol () , self . ardypol () , self . blpol ())
+        defmt::write!(
+            f,
+            "Polarity3 {{ cspol: {=bool:?}, repol: {=bool:?}, wepol: {=bool:?}, alepol: {=bool:?}, ardypol: {=bool:?}, blpol: {=bool:?} }}",
+            self.cspol(),
+            self.repol(),
+            self.wepol(),
+            self.alepol(),
+            self.ardypol(),
+            self.blpol()
+        )
     }
 }
 #[doc = "Read Timing Register."]
@@ -1812,7 +1916,16 @@ impl core::fmt::Debug for Rdtiming {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Rdtiming {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Rdtiming {{ rdsetup: {=u8:?}, rdstrb: {=u8:?}, rdhold: {=u8:?}, halfre: {=bool:?}, prefetch: {=bool:?}, pagemode: {=bool:?} }}" , self . rdsetup () , self . rdstrb () , self . rdhold () , self . halfre () , self . prefetch () , self . pagemode ())
+        defmt::write!(
+            f,
+            "Rdtiming {{ rdsetup: {=u8:?}, rdstrb: {=u8:?}, rdhold: {=u8:?}, halfre: {=bool:?}, prefetch: {=bool:?}, pagemode: {=bool:?} }}",
+            self.rdsetup(),
+            self.rdstrb(),
+            self.rdhold(),
+            self.halfre(),
+            self.prefetch(),
+            self.pagemode()
+        )
     }
 }
 #[doc = "Read Timing Register 1."]
@@ -1914,7 +2027,16 @@ impl core::fmt::Debug for Rdtiming1 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Rdtiming1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Rdtiming1 {{ rdsetup: {=u8:?}, rdstrb: {=u8:?}, rdhold: {=u8:?}, halfre: {=bool:?}, prefetch: {=bool:?}, pagemode: {=bool:?} }}" , self . rdsetup () , self . rdstrb () , self . rdhold () , self . halfre () , self . prefetch () , self . pagemode ())
+        defmt::write!(
+            f,
+            "Rdtiming1 {{ rdsetup: {=u8:?}, rdstrb: {=u8:?}, rdhold: {=u8:?}, halfre: {=bool:?}, prefetch: {=bool:?}, pagemode: {=bool:?} }}",
+            self.rdsetup(),
+            self.rdstrb(),
+            self.rdhold(),
+            self.halfre(),
+            self.prefetch(),
+            self.pagemode()
+        )
     }
 }
 #[doc = "Read Timing Register 2."]
@@ -2016,7 +2138,16 @@ impl core::fmt::Debug for Rdtiming2 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Rdtiming2 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Rdtiming2 {{ rdsetup: {=u8:?}, rdstrb: {=u8:?}, rdhold: {=u8:?}, halfre: {=bool:?}, prefetch: {=bool:?}, pagemode: {=bool:?} }}" , self . rdsetup () , self . rdstrb () , self . rdhold () , self . halfre () , self . prefetch () , self . pagemode ())
+        defmt::write!(
+            f,
+            "Rdtiming2 {{ rdsetup: {=u8:?}, rdstrb: {=u8:?}, rdhold: {=u8:?}, halfre: {=bool:?}, prefetch: {=bool:?}, pagemode: {=bool:?} }}",
+            self.rdsetup(),
+            self.rdstrb(),
+            self.rdhold(),
+            self.halfre(),
+            self.prefetch(),
+            self.pagemode()
+        )
     }
 }
 #[doc = "Read Timing Register 3."]
@@ -2118,7 +2249,16 @@ impl core::fmt::Debug for Rdtiming3 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Rdtiming3 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Rdtiming3 {{ rdsetup: {=u8:?}, rdstrb: {=u8:?}, rdhold: {=u8:?}, halfre: {=bool:?}, prefetch: {=bool:?}, pagemode: {=bool:?} }}" , self . rdsetup () , self . rdstrb () , self . rdhold () , self . halfre () , self . prefetch () , self . pagemode ())
+        defmt::write!(
+            f,
+            "Rdtiming3 {{ rdsetup: {=u8:?}, rdstrb: {=u8:?}, rdhold: {=u8:?}, halfre: {=bool:?}, prefetch: {=bool:?}, pagemode: {=bool:?} }}",
+            self.rdsetup(),
+            self.rdstrb(),
+            self.rdhold(),
+            self.halfre(),
+            self.prefetch(),
+            self.pagemode()
+        )
     }
 }
 #[doc = "I/O Routing Location Register."]
@@ -2476,7 +2616,24 @@ impl core::fmt::Debug for Routepen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Routepen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Routepen {{ ebipen: {=bool:?}, cs0pen: {=bool:?}, cs1pen: {=bool:?}, cs2pen: {=bool:?}, cs3pen: {=bool:?}, alepen: {=bool:?}, ardypen: {=bool:?}, blpen: {=bool:?}, nandpen: {=bool:?}, alb: {:?}, apen: {:?}, tftpen: {=bool:?}, dataenpen: {=bool:?}, cstftpen: {=bool:?} }}" , self . ebipen () , self . cs0pen () , self . cs1pen () , self . cs2pen () , self . cs3pen () , self . alepen () , self . ardypen () , self . blpen () , self . nandpen () , self . alb () , self . apen () , self . tftpen () , self . dataenpen () , self . cstftpen ())
+        defmt::write!(
+            f,
+            "Routepen {{ ebipen: {=bool:?}, cs0pen: {=bool:?}, cs1pen: {=bool:?}, cs2pen: {=bool:?}, cs3pen: {=bool:?}, alepen: {=bool:?}, ardypen: {=bool:?}, blpen: {=bool:?}, nandpen: {=bool:?}, alb: {:?}, apen: {:?}, tftpen: {=bool:?}, dataenpen: {=bool:?}, cstftpen: {=bool:?} }}",
+            self.ebipen(),
+            self.cs0pen(),
+            self.cs1pen(),
+            self.cs2pen(),
+            self.cs3pen(),
+            self.alepen(),
+            self.ardypen(),
+            self.blpen(),
+            self.nandpen(),
+            self.alb(),
+            self.apen(),
+            self.tftpen(),
+            self.dataenpen(),
+            self.cstftpen()
+        )
     }
 }
 #[doc = "Status Register."]
@@ -2591,7 +2748,17 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ ahbact: {=bool:?}, eccact: {=bool:?}, tftpixel0empty: {=bool:?}, tftpixel1empty: {=bool:?}, tftpixelfull: {=bool:?}, ddact: {=bool:?}, tftddempty: {=bool:?} }}" , self . ahbact () , self . eccact () , self . tftpixel0empty () , self . tftpixel1empty () , self . tftpixelfull () , self . ddact () , self . tftddempty ())
+        defmt::write!(
+            f,
+            "Status {{ ahbact: {=bool:?}, eccact: {=bool:?}, tftpixel0empty: {=bool:?}, tftpixel1empty: {=bool:?}, tftpixelfull: {=bool:?}, ddact: {=bool:?}, tftddempty: {=bool:?} }}",
+            self.ahbact(),
+            self.eccact(),
+            self.tftpixel0empty(),
+            self.tftpixel1empty(),
+            self.tftpixelfull(),
+            self.ddact(),
+            self.tftddempty()
+        )
     }
 }
 #[doc = "TFT Alpha Blending Register."]
@@ -2837,7 +3004,20 @@ impl core::fmt::Debug for Tftctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Tftctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Tftctrl {{ dd: {:?}, maskblend: {:?}, shiftdclken: {=bool:?}, fbctrig: {=bool:?}, interleave: {:?}, color1src: {=bool:?}, width: {:?}, aliasbanken: {=bool:?}, banksel: {:?}, aliasbank: {:?} }}" , self . dd () , self . maskblend () , self . shiftdclken () , self . fbctrig () , self . interleave () , self . color1src () , self . width () , self . aliasbanken () , self . banksel () , self . aliasbank ())
+        defmt::write!(
+            f,
+            "Tftctrl {{ dd: {:?}, maskblend: {:?}, shiftdclken: {=bool:?}, fbctrig: {=bool:?}, interleave: {:?}, color1src: {=bool:?}, width: {:?}, aliasbanken: {=bool:?}, banksel: {:?}, aliasbank: {:?} }}",
+            self.dd(),
+            self.maskblend(),
+            self.shiftdclken(),
+            self.fbctrig(),
+            self.interleave(),
+            self.color1src(),
+            self.width(),
+            self.aliasbanken(),
+            self.banksel(),
+            self.aliasbank()
+        )
     }
 }
 #[doc = "TFT Direct Drive Data Register."]
@@ -2989,7 +3169,14 @@ impl core::fmt::Debug for Tfthporch {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Tfthporch {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Tfthporch {{ hsync: {=u8:?}, hfporch: {=u8:?}, hbporch: {=u8:?}, hsyncstart: {=u8:?} }}" , self . hsync () , self . hfporch () , self . hbporch () , self . hsyncstart ())
+        defmt::write!(
+            f,
+            "Tfthporch {{ hsync: {=u8:?}, hfporch: {=u8:?}, hbporch: {=u8:?}, hsyncstart: {=u8:?} }}",
+            self.hsync(),
+            self.hfporch(),
+            self.hbporch(),
+            self.hsyncstart()
+        )
     }
 }
 #[doc = "TFT Masking Register."]
@@ -3226,7 +3413,15 @@ impl core::fmt::Debug for Tftpolarity {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Tftpolarity {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Tftpolarity {{ cspol: {=bool:?}, dclkpol: {=bool:?}, dataenpol: {=bool:?}, hsyncpol: {=bool:?}, vsyncpol: {=bool:?} }}" , self . cspol () , self . dclkpol () , self . dataenpol () , self . hsyncpol () , self . vsyncpol ())
+        defmt::write!(
+            f,
+            "Tftpolarity {{ cspol: {=bool:?}, dclkpol: {=bool:?}, dataenpol: {=bool:?}, hsyncpol: {=bool:?}, vsyncpol: {=bool:?} }}",
+            self.cspol(),
+            self.dclkpol(),
+            self.dataenpol(),
+            self.hsyncpol(),
+            self.vsyncpol()
+        )
     }
 }
 #[doc = "TFT Size Register."]
@@ -3449,7 +3644,14 @@ impl core::fmt::Debug for Tfttiming {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Tfttiming {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Tfttiming {{ dclkperiod: {=u16:?}, tftstart: {=u16:?}, tftsetup: {=u8:?}, tfthold: {=u8:?} }}" , self . dclkperiod () , self . tftstart () , self . tftsetup () , self . tfthold ())
+        defmt::write!(
+            f,
+            "Tfttiming {{ dclkperiod: {=u16:?}, tftstart: {=u16:?}, tftsetup: {=u8:?}, tfthold: {=u8:?} }}",
+            self.dclkperiod(),
+            self.tftstart(),
+            self.tftsetup(),
+            self.tfthold()
+        )
     }
 }
 #[doc = "TFT Vertical Porch Register."]
@@ -3607,7 +3809,15 @@ impl core::fmt::Debug for Wrtiming {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Wrtiming {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Wrtiming {{ wrsetup: {=u8:?}, wrstrb: {=u8:?}, wrhold: {=u8:?}, halfwe: {=bool:?}, wbufdis: {=bool:?} }}" , self . wrsetup () , self . wrstrb () , self . wrhold () , self . halfwe () , self . wbufdis ())
+        defmt::write!(
+            f,
+            "Wrtiming {{ wrsetup: {=u8:?}, wrstrb: {=u8:?}, wrhold: {=u8:?}, halfwe: {=bool:?}, wbufdis: {=bool:?} }}",
+            self.wrsetup(),
+            self.wrstrb(),
+            self.wrhold(),
+            self.halfwe(),
+            self.wbufdis()
+        )
     }
 }
 #[doc = "Write Timing Register 1."]
@@ -3696,7 +3906,15 @@ impl core::fmt::Debug for Wrtiming1 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Wrtiming1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Wrtiming1 {{ wrsetup: {=u8:?}, wrstrb: {=u8:?}, wrhold: {=u8:?}, halfwe: {=bool:?}, wbufdis: {=bool:?} }}" , self . wrsetup () , self . wrstrb () , self . wrhold () , self . halfwe () , self . wbufdis ())
+        defmt::write!(
+            f,
+            "Wrtiming1 {{ wrsetup: {=u8:?}, wrstrb: {=u8:?}, wrhold: {=u8:?}, halfwe: {=bool:?}, wbufdis: {=bool:?} }}",
+            self.wrsetup(),
+            self.wrstrb(),
+            self.wrhold(),
+            self.halfwe(),
+            self.wbufdis()
+        )
     }
 }
 #[doc = "Write Timing Register 2."]
@@ -3785,7 +4003,15 @@ impl core::fmt::Debug for Wrtiming2 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Wrtiming2 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Wrtiming2 {{ wrsetup: {=u8:?}, wrstrb: {=u8:?}, wrhold: {=u8:?}, halfwe: {=bool:?}, wbufdis: {=bool:?} }}" , self . wrsetup () , self . wrstrb () , self . wrhold () , self . halfwe () , self . wbufdis ())
+        defmt::write!(
+            f,
+            "Wrtiming2 {{ wrsetup: {=u8:?}, wrstrb: {=u8:?}, wrhold: {=u8:?}, halfwe: {=bool:?}, wbufdis: {=bool:?} }}",
+            self.wrsetup(),
+            self.wrstrb(),
+            self.wrhold(),
+            self.halfwe(),
+            self.wbufdis()
+        )
     }
 }
 #[doc = "Write Timing Register 3."]
@@ -3874,6 +4100,14 @@ impl core::fmt::Debug for Wrtiming3 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Wrtiming3 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Wrtiming3 {{ wrsetup: {=u8:?}, wrstrb: {=u8:?}, wrhold: {=u8:?}, halfwe: {=bool:?}, wbufdis: {=bool:?} }}" , self . wrsetup () , self . wrstrb () , self . wrhold () , self . halfwe () , self . wbufdis ())
+        defmt::write!(
+            f,
+            "Wrtiming3 {{ wrsetup: {=u8:?}, wrstrb: {=u8:?}, wrhold: {=u8:?}, halfwe: {=bool:?}, wbufdis: {=bool:?} }}",
+            self.wrsetup(),
+            self.wrstrb(),
+            self.wrhold(),
+            self.halfwe(),
+            self.wbufdis()
+        )
     }
 }

@@ -71,7 +71,14 @@ impl core::fmt::Debug for Etmauthstatus {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Etmauthstatus {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Etmauthstatus {{ nonsecinvdbg: {=u8:?}, nonsecnoninvdbg: {:?}, secinvdbg: {=u8:?}, secnoninvdbg: {=u8:?} }}" , self . nonsecinvdbg () , self . nonsecnoninvdbg () , self . secinvdbg () , self . secnoninvdbg ())
+        defmt::write!(
+            f,
+            "Etmauthstatus {{ nonsecinvdbg: {=u8:?}, nonsecnoninvdbg: {:?}, secinvdbg: {=u8:?}, secnoninvdbg: {=u8:?} }}",
+            self.nonsecinvdbg(),
+            self.nonsecnoninvdbg(),
+            self.secinvdbg(),
+            self.secnoninvdbg()
+        )
     }
 }
 #[doc = "Configuration Code Extension Register."]
@@ -251,7 +258,22 @@ impl core::fmt::Debug for Etmccer {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Etmccer {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Etmccer {{ extinpsel: {=u8:?}, extinpbus: {=u8:?}, readregs: {=bool:?}, daddrcmp: {=bool:?}, instres: {=u8:?}, eicewpnt: {=u8:?}, teicewpnt: {=bool:?}, eiceimp: {=bool:?}, timp: {=bool:?}, rfcnt: {=bool:?}, tenc: {=bool:?}, tsize: {=bool:?} }}" , self . extinpsel () , self . extinpbus () , self . readregs () , self . daddrcmp () , self . instres () , self . eicewpnt () , self . teicewpnt () , self . eiceimp () , self . timp () , self . rfcnt () , self . tenc () , self . tsize ())
+        defmt::write!(
+            f,
+            "Etmccer {{ extinpsel: {=u8:?}, extinpbus: {=u8:?}, readregs: {=bool:?}, daddrcmp: {=bool:?}, instres: {=u8:?}, eicewpnt: {=u8:?}, teicewpnt: {=bool:?}, eiceimp: {=bool:?}, timp: {=bool:?}, rfcnt: {=bool:?}, tenc: {=bool:?}, tsize: {=bool:?} }}",
+            self.extinpsel(),
+            self.extinpbus(),
+            self.readregs(),
+            self.daddrcmp(),
+            self.instres(),
+            self.eicewpnt(),
+            self.teicewpnt(),
+            self.eiceimp(),
+            self.timp(),
+            self.rfcnt(),
+            self.tenc(),
+            self.tsize()
+        )
     }
 }
 #[doc = "Configuration Code Register."]
@@ -431,7 +453,22 @@ impl core::fmt::Debug for Etmccr {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Etmccr {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Etmccr {{ adrcmppair: {=u8:?}, datacmpnum: {=u8:?}, mmdeccnt: {=u8:?}, countnum: {=u8:?}, seqpres: {=bool:?}, extinpnum: {:?}, extoutnum: {=u8:?}, fifofullpres: {=bool:?}, idcompnum: {=u8:?}, tracess: {=bool:?}, mmaccess: {=bool:?}, etmid: {=bool:?} }}" , self . adrcmppair () , self . datacmpnum () , self . mmdeccnt () , self . countnum () , self . seqpres () , self . extinpnum () , self . extoutnum () , self . fifofullpres () , self . idcompnum () , self . tracess () , self . mmaccess () , self . etmid ())
+        defmt::write!(
+            f,
+            "Etmccr {{ adrcmppair: {=u8:?}, datacmpnum: {=u8:?}, mmdeccnt: {=u8:?}, countnum: {=u8:?}, seqpres: {=bool:?}, extinpnum: {:?}, extoutnum: {=u8:?}, fifofullpres: {=bool:?}, idcompnum: {=u8:?}, tracess: {=bool:?}, mmaccess: {=bool:?}, etmid: {=bool:?} }}",
+            self.adrcmppair(),
+            self.datacmpnum(),
+            self.mmdeccnt(),
+            self.countnum(),
+            self.seqpres(),
+            self.extinpnum(),
+            self.extoutnum(),
+            self.fifofullpres(),
+            self.idcompnum(),
+            self.tracess(),
+            self.mmaccess(),
+            self.etmid()
+        )
     }
 }
 #[doc = "Component ID0 Register."]
@@ -857,7 +894,21 @@ impl core::fmt::Debug for Etmcr {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Etmcr {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Etmcr {{ powerdwn: {=bool:?}, portsize: {=u8:?}, stall: {=bool:?}, branchoutput: {=bool:?}, dbgreqctrl: {=bool:?}, etmprog: {=bool:?}, etmportsel: {=bool:?}, portmode2: {=bool:?}, portmode: {=u8:?}, eportsize: {=u8:?}, tstampen: {=bool:?} }}" , self . powerdwn () , self . portsize () , self . stall () , self . branchoutput () , self . dbgreqctrl () , self . etmprog () , self . etmportsel () , self . portmode2 () , self . portmode () , self . eportsize () , self . tstampen ())
+        defmt::write!(
+            f,
+            "Etmcr {{ powerdwn: {=bool:?}, portsize: {=u8:?}, stall: {=bool:?}, branchoutput: {=bool:?}, dbgreqctrl: {=bool:?}, etmprog: {=bool:?}, etmportsel: {=bool:?}, portmode2: {=bool:?}, portmode: {=u8:?}, eportsize: {=u8:?}, tstampen: {=bool:?} }}",
+            self.powerdwn(),
+            self.portsize(),
+            self.stall(),
+            self.branchoutput(),
+            self.dbgreqctrl(),
+            self.etmprog(),
+            self.etmportsel(),
+            self.portmode2(),
+            self.portmode(),
+            self.eportsize(),
+            self.tstampen()
+        )
     }
 }
 #[doc = "CoreSight Device Type Register."]
@@ -1090,7 +1141,19 @@ impl core::fmt::Debug for Etmidr {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Etmidr {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Etmidr {{ impver: {=u8:?}, etmminver: {=u8:?}, etmmajver: {=u8:?}, procfam: {=u8:?}, lpcf: {=bool:?}, thumbt: {=bool:?}, secext: {=bool:?}, bpe: {=bool:?}, impcode: {=u8:?} }}" , self . impver () , self . etmminver () , self . etmmajver () , self . procfam () , self . lpcf () , self . thumbt () , self . secext () , self . bpe () , self . impcode ())
+        defmt::write!(
+            f,
+            "Etmidr {{ impver: {=u8:?}, etmminver: {=u8:?}, etmmajver: {=u8:?}, procfam: {=u8:?}, lpcf: {=bool:?}, thumbt: {=bool:?}, secext: {=bool:?}, bpe: {=bool:?}, impcode: {=u8:?} }}",
+            self.impver(),
+            self.etmminver(),
+            self.etmmajver(),
+            self.procfam(),
+            self.lpcf(),
+            self.thumbt(),
+            self.secext(),
+            self.bpe(),
+            self.impcode()
+        )
     }
 }
 #[doc = "ETM ID Register 2."]
@@ -1824,7 +1887,17 @@ impl core::fmt::Debug for Etmscr {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Etmscr {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Etmscr {{ maxportsize: {=u8:?}, fifofull: {=bool:?}, maxportsize3: {=bool:?}, portsize: {=bool:?}, portmode: {=bool:?}, procnum: {=u8:?}, nofetchcomp: {=bool:?} }}" , self . maxportsize () , self . fifofull () , self . maxportsize3 () , self . portsize () , self . portmode () , self . procnum () , self . nofetchcomp ())
+        defmt::write!(
+            f,
+            "Etmscr {{ maxportsize: {=u8:?}, fifofull: {=bool:?}, maxportsize3: {=bool:?}, portsize: {=bool:?}, portmode: {=bool:?}, procnum: {=u8:?}, nofetchcomp: {=bool:?} }}",
+            self.maxportsize(),
+            self.fifofull(),
+            self.maxportsize3(),
+            self.portsize(),
+            self.portmode(),
+            self.procnum(),
+            self.nofetchcomp()
+        )
     }
 }
 #[doc = "ETM Status Register."]
@@ -1900,7 +1973,14 @@ impl core::fmt::Debug for Etmsr {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Etmsr {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Etmsr {{ ethof: {=bool:?}, etmprogbit: {=bool:?}, tracestat: {=bool:?}, trigbit: {=bool:?} }}" , self . ethof () , self . etmprogbit () , self . tracestat () , self . trigbit ())
+        defmt::write!(
+            f,
+            "Etmsr {{ ethof: {=bool:?}, etmprogbit: {=bool:?}, tracestat: {=bool:?}, trigbit: {=bool:?} }}",
+            self.ethof(),
+            self.etmprogbit(),
+            self.tracestat(),
+            self.trigbit()
+        )
     }
 }
 #[doc = "Synchronisation Frequency Register."]

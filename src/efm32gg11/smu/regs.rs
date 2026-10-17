@@ -616,7 +616,42 @@ impl core::fmt::Debug for Ppupatd0 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ppupatd0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ppupatd0 {{ acmp0: {=bool:?}, acmp1: {=bool:?}, acmp2: {=bool:?}, acmp3: {=bool:?}, adc0: {=bool:?}, adc1: {=bool:?}, can0: {=bool:?}, can1: {=bool:?}, cmu: {=bool:?}, cryotimer: {=bool:?}, crypto0: {=bool:?}, csen: {=bool:?}, vdac0: {=bool:?}, prs: {=bool:?}, ebi: {=bool:?}, emu: {=bool:?}, eth: {=bool:?}, fpueh: {=bool:?}, gpcrc: {=bool:?}, gpio: {=bool:?}, i2c0: {=bool:?}, i2c1: {=bool:?}, i2c2: {=bool:?}, idac0: {=bool:?}, msc: {=bool:?}, lcd: {=bool:?}, ldma: {=bool:?}, lesense: {=bool:?}, letimer0: {=bool:?}, letimer1: {=bool:?}, leuart0: {=bool:?}, leuart1: {=bool:?} }}" , self . acmp0 () , self . acmp1 () , self . acmp2 () , self . acmp3 () , self . adc0 () , self . adc1 () , self . can0 () , self . can1 () , self . cmu () , self . cryotimer () , self . crypto0 () , self . csen () , self . vdac0 () , self . prs () , self . ebi () , self . emu () , self . eth () , self . fpueh () , self . gpcrc () , self . gpio () , self . i2c0 () , self . i2c1 () , self . i2c2 () , self . idac0 () , self . msc () , self . lcd () , self . ldma () , self . lesense () , self . letimer0 () , self . letimer1 () , self . leuart0 () , self . leuart1 ())
+        defmt::write!(
+            f,
+            "Ppupatd0 {{ acmp0: {=bool:?}, acmp1: {=bool:?}, acmp2: {=bool:?}, acmp3: {=bool:?}, adc0: {=bool:?}, adc1: {=bool:?}, can0: {=bool:?}, can1: {=bool:?}, cmu: {=bool:?}, cryotimer: {=bool:?}, crypto0: {=bool:?}, csen: {=bool:?}, vdac0: {=bool:?}, prs: {=bool:?}, ebi: {=bool:?}, emu: {=bool:?}, eth: {=bool:?}, fpueh: {=bool:?}, gpcrc: {=bool:?}, gpio: {=bool:?}, i2c0: {=bool:?}, i2c1: {=bool:?}, i2c2: {=bool:?}, idac0: {=bool:?}, msc: {=bool:?}, lcd: {=bool:?}, ldma: {=bool:?}, lesense: {=bool:?}, letimer0: {=bool:?}, letimer1: {=bool:?}, leuart0: {=bool:?}, leuart1: {=bool:?} }}",
+            self.acmp0(),
+            self.acmp1(),
+            self.acmp2(),
+            self.acmp3(),
+            self.adc0(),
+            self.adc1(),
+            self.can0(),
+            self.can1(),
+            self.cmu(),
+            self.cryotimer(),
+            self.crypto0(),
+            self.csen(),
+            self.vdac0(),
+            self.prs(),
+            self.ebi(),
+            self.emu(),
+            self.eth(),
+            self.fpueh(),
+            self.gpcrc(),
+            self.gpio(),
+            self.i2c0(),
+            self.i2c1(),
+            self.i2c2(),
+            self.idac0(),
+            self.msc(),
+            self.lcd(),
+            self.ldma(),
+            self.lesense(),
+            self.letimer0(),
+            self.letimer1(),
+            self.leuart0(),
+            self.leuart1()
+        )
     }
 }
 #[doc = "PPU Privilege Access Type Descriptor 1."]
@@ -1056,6 +1091,41 @@ impl core::fmt::Debug for Ppupatd1 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ppupatd1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ppupatd1 {{ pcnt0: {=bool:?}, pcnt1: {=bool:?}, pcnt2: {=bool:?}, qspi0: {=bool:?}, rmu: {=bool:?}, rtc: {=bool:?}, rtcc: {=bool:?}, sdio: {=bool:?}, smu: {=bool:?}, timer0: {=bool:?}, timer1: {=bool:?}, timer2: {=bool:?}, timer3: {=bool:?}, timer4: {=bool:?}, timer5: {=bool:?}, timer6: {=bool:?}, trng0: {=bool:?}, uart0: {=bool:?}, uart1: {=bool:?}, usart0: {=bool:?}, usart1: {=bool:?}, usart2: {=bool:?}, usart3: {=bool:?}, usart4: {=bool:?}, usart5: {=bool:?}, usb: {=bool:?}, wdog0: {=bool:?}, wdog1: {=bool:?}, wtimer0: {=bool:?}, wtimer1: {=bool:?}, wtimer2: {=bool:?}, wtimer3: {=bool:?} }}" , self . pcnt0 () , self . pcnt1 () , self . pcnt2 () , self . qspi0 () , self . rmu () , self . rtc () , self . rtcc () , self . sdio () , self . smu () , self . timer0 () , self . timer1 () , self . timer2 () , self . timer3 () , self . timer4 () , self . timer5 () , self . timer6 () , self . trng0 () , self . uart0 () , self . uart1 () , self . usart0 () , self . usart1 () , self . usart2 () , self . usart3 () , self . usart4 () , self . usart5 () , self . usb () , self . wdog0 () , self . wdog1 () , self . wtimer0 () , self . wtimer1 () , self . wtimer2 () , self . wtimer3 ())
+        defmt::write!(
+            f,
+            "Ppupatd1 {{ pcnt0: {=bool:?}, pcnt1: {=bool:?}, pcnt2: {=bool:?}, qspi0: {=bool:?}, rmu: {=bool:?}, rtc: {=bool:?}, rtcc: {=bool:?}, sdio: {=bool:?}, smu: {=bool:?}, timer0: {=bool:?}, timer1: {=bool:?}, timer2: {=bool:?}, timer3: {=bool:?}, timer4: {=bool:?}, timer5: {=bool:?}, timer6: {=bool:?}, trng0: {=bool:?}, uart0: {=bool:?}, uart1: {=bool:?}, usart0: {=bool:?}, usart1: {=bool:?}, usart2: {=bool:?}, usart3: {=bool:?}, usart4: {=bool:?}, usart5: {=bool:?}, usb: {=bool:?}, wdog0: {=bool:?}, wdog1: {=bool:?}, wtimer0: {=bool:?}, wtimer1: {=bool:?}, wtimer2: {=bool:?}, wtimer3: {=bool:?} }}",
+            self.pcnt0(),
+            self.pcnt1(),
+            self.pcnt2(),
+            self.qspi0(),
+            self.rmu(),
+            self.rtc(),
+            self.rtcc(),
+            self.sdio(),
+            self.smu(),
+            self.timer0(),
+            self.timer1(),
+            self.timer2(),
+            self.timer3(),
+            self.timer4(),
+            self.timer5(),
+            self.timer6(),
+            self.trng0(),
+            self.uart0(),
+            self.uart1(),
+            self.usart0(),
+            self.usart1(),
+            self.usart2(),
+            self.usart3(),
+            self.usart4(),
+            self.usart5(),
+            self.usb(),
+            self.wdog0(),
+            self.wdog1(),
+            self.wtimer0(),
+            self.wtimer1(),
+            self.wtimer2(),
+            self.wtimer3()
+        )
     }
 }

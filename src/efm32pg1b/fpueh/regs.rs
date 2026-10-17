@@ -97,7 +97,16 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ fpioc: {=bool:?}, fpdzc: {=bool:?}, fpufc: {=bool:?}, fpofc: {=bool:?}, fpidc: {=bool:?}, fpixc: {=bool:?} }}" , self . fpioc () , self . fpdzc () , self . fpufc () , self . fpofc () , self . fpidc () , self . fpixc ())
+        defmt::write!(
+            f,
+            "Ien {{ fpioc: {=bool:?}, fpdzc: {=bool:?}, fpufc: {=bool:?}, fpofc: {=bool:?}, fpidc: {=bool:?}, fpixc: {=bool:?} }}",
+            self.fpioc(),
+            self.fpdzc(),
+            self.fpufc(),
+            self.fpofc(),
+            self.fpidc(),
+            self.fpixc()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -199,7 +208,16 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ fpioc: {=bool:?}, fpdzc: {=bool:?}, fpufc: {=bool:?}, fpofc: {=bool:?}, fpidc: {=bool:?}, fpixc: {=bool:?} }}" , self . fpioc () , self . fpdzc () , self . fpufc () , self . fpofc () , self . fpidc () , self . fpixc ())
+        defmt::write!(
+            f,
+            "If {{ fpioc: {=bool:?}, fpdzc: {=bool:?}, fpufc: {=bool:?}, fpofc: {=bool:?}, fpidc: {=bool:?}, fpixc: {=bool:?} }}",
+            self.fpioc(),
+            self.fpdzc(),
+            self.fpufc(),
+            self.fpofc(),
+            self.fpidc(),
+            self.fpixc()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -301,6 +319,15 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ fpioc: {=bool:?}, fpdzc: {=bool:?}, fpufc: {=bool:?}, fpofc: {=bool:?}, fpidc: {=bool:?}, fpixc: {=bool:?} }}" , self . fpioc () , self . fpdzc () , self . fpufc () , self . fpofc () , self . fpidc () , self . fpixc ())
+        defmt::write!(
+            f,
+            "Ifs {{ fpioc: {=bool:?}, fpdzc: {=bool:?}, fpufc: {=bool:?}, fpofc: {=bool:?}, fpidc: {=bool:?}, fpixc: {=bool:?} }}",
+            self.fpioc(),
+            self.fpdzc(),
+            self.fpufc(),
+            self.fpofc(),
+            self.fpidc(),
+            self.fpixc()
+        )
     }
 }

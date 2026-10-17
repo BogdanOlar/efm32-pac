@@ -97,7 +97,16 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ drive_strength: {=bool:?}, slew_rate: {=u8:?}, din_dis: {=bool:?}, drive_strength_alt: {=bool:?}, slew_rate_alt: {=u8:?}, din_dis_alt: {=bool:?} }}" , self . drive_strength () , self . slew_rate () , self . din_dis () , self . drive_strength_alt () , self . slew_rate_alt () , self . din_dis_alt ())
+        defmt::write!(
+            f,
+            "Ctrl {{ drive_strength: {=bool:?}, slew_rate: {=u8:?}, din_dis: {=bool:?}, drive_strength_alt: {=bool:?}, slew_rate_alt: {=u8:?}, din_dis_alt: {=bool:?} }}",
+            self.drive_strength(),
+            self.slew_rate(),
+            self.din_dis(),
+            self.drive_strength_alt(),
+            self.slew_rate_alt(),
+            self.din_dis_alt()
+        )
     }
 }
 #[doc = "Port Data in Register."]
@@ -432,7 +441,20 @@ impl core::fmt::Debug for Extilevel {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Extilevel {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Extilevel {{ em4wu0: {=bool:?}, em4wu1: {=bool:?}, em4wu2: {=bool:?}, em4wu3: {=bool:?}, em4wu4: {=bool:?}, em4wu5: {=bool:?}, em4wu6: {=bool:?}, em4wu7: {=bool:?}, em4wu8: {=bool:?}, em4wu9: {=bool:?} }}" , self . em4wu0 () , self . em4wu1 () , self . em4wu2 () , self . em4wu3 () , self . em4wu4 () , self . em4wu5 () , self . em4wu6 () , self . em4wu7 () , self . em4wu8 () , self . em4wu9 ())
+        defmt::write!(
+            f,
+            "Extilevel {{ em4wu0: {=bool:?}, em4wu1: {=bool:?}, em4wu2: {=bool:?}, em4wu3: {=bool:?}, em4wu4: {=bool:?}, em4wu5: {=bool:?}, em4wu6: {=bool:?}, em4wu7: {=bool:?}, em4wu8: {=bool:?}, em4wu9: {=bool:?} }}",
+            self.em4wu0(),
+            self.em4wu1(),
+            self.em4wu2(),
+            self.em4wu3(),
+            self.em4wu4(),
+            self.em4wu5(),
+            self.em4wu6(),
+            self.em4wu7(),
+            self.em4wu8(),
+            self.em4wu9()
+        )
     }
 }
 #[doc = "External Interrupt Pin Select High Register."]
@@ -560,7 +582,18 @@ impl core::fmt::Debug for Extipinselh {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Extipinselh {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Extipinselh {{ extipinsel8: {:?}, extipinsel9: {:?}, extipinsel10: {:?}, extipinsel11: {:?}, extipinsel12: {:?}, extipinsel13: {:?}, extipinsel14: {:?}, extipinsel15: {:?} }}" , self . extipinsel8 () , self . extipinsel9 () , self . extipinsel10 () , self . extipinsel11 () , self . extipinsel12 () , self . extipinsel13 () , self . extipinsel14 () , self . extipinsel15 ())
+        defmt::write!(
+            f,
+            "Extipinselh {{ extipinsel8: {:?}, extipinsel9: {:?}, extipinsel10: {:?}, extipinsel11: {:?}, extipinsel12: {:?}, extipinsel13: {:?}, extipinsel14: {:?}, extipinsel15: {:?} }}",
+            self.extipinsel8(),
+            self.extipinsel9(),
+            self.extipinsel10(),
+            self.extipinsel11(),
+            self.extipinsel12(),
+            self.extipinsel13(),
+            self.extipinsel14(),
+            self.extipinsel15()
+        )
     }
 }
 #[doc = "External Interrupt Pin Select Low Register."]
@@ -688,7 +721,18 @@ impl core::fmt::Debug for Extipinsell {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Extipinsell {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Extipinsell {{ extipinsel0: {:?}, extipinsel1: {:?}, extipinsel2: {:?}, extipinsel3: {:?}, extipinsel4: {:?}, extipinsel5: {:?}, extipinsel6: {:?}, extipinsel7: {:?} }}" , self . extipinsel0 () , self . extipinsel1 () , self . extipinsel2 () , self . extipinsel3 () , self . extipinsel4 () , self . extipinsel5 () , self . extipinsel6 () , self . extipinsel7 ())
+        defmt::write!(
+            f,
+            "Extipinsell {{ extipinsel0: {:?}, extipinsel1: {:?}, extipinsel2: {:?}, extipinsel3: {:?}, extipinsel4: {:?}, extipinsel5: {:?}, extipinsel6: {:?}, extipinsel7: {:?} }}",
+            self.extipinsel0(),
+            self.extipinsel1(),
+            self.extipinsel2(),
+            self.extipinsel3(),
+            self.extipinsel4(),
+            self.extipinsel5(),
+            self.extipinsel6(),
+            self.extipinsel7()
+        )
     }
 }
 #[doc = "External Interrupt Port Select High Register."]
@@ -816,7 +860,18 @@ impl core::fmt::Debug for Extipselh {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Extipselh {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Extipselh {{ extipsel8: {:?}, extipsel9: {:?}, extipsel10: {:?}, extipsel11: {:?}, extipsel12: {:?}, extipsel13: {:?}, extipsel14: {:?}, extipsel15: {:?} }}" , self . extipsel8 () , self . extipsel9 () , self . extipsel10 () , self . extipsel11 () , self . extipsel12 () , self . extipsel13 () , self . extipsel14 () , self . extipsel15 ())
+        defmt::write!(
+            f,
+            "Extipselh {{ extipsel8: {:?}, extipsel9: {:?}, extipsel10: {:?}, extipsel11: {:?}, extipsel12: {:?}, extipsel13: {:?}, extipsel14: {:?}, extipsel15: {:?} }}",
+            self.extipsel8(),
+            self.extipsel9(),
+            self.extipsel10(),
+            self.extipsel11(),
+            self.extipsel12(),
+            self.extipsel13(),
+            self.extipsel14(),
+            self.extipsel15()
+        )
     }
 }
 #[doc = "External Interrupt Port Select Low Register."]
@@ -944,7 +999,18 @@ impl core::fmt::Debug for Extipsell {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Extipsell {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Extipsell {{ extipsel0: {:?}, extipsel1: {:?}, extipsel2: {:?}, extipsel3: {:?}, extipsel4: {:?}, extipsel5: {:?}, extipsel6: {:?}, extipsel7: {:?} }}" , self . extipsel0 () , self . extipsel1 () , self . extipsel2 () , self . extipsel3 () , self . extipsel4 () , self . extipsel5 () , self . extipsel6 () , self . extipsel7 ())
+        defmt::write!(
+            f,
+            "Extipsell {{ extipsel0: {:?}, extipsel1: {:?}, extipsel2: {:?}, extipsel3: {:?}, extipsel4: {:?}, extipsel5: {:?}, extipsel6: {:?}, extipsel7: {:?} }}",
+            self.extipsel0(),
+            self.extipsel1(),
+            self.extipsel2(),
+            self.extipsel3(),
+            self.extipsel4(),
+            self.extipsel5(),
+            self.extipsel6(),
+            self.extipsel7()
+        )
     }
 }
 #[doc = "External Interrupt Rising Edge Trigger Register."]
@@ -1366,7 +1432,18 @@ impl core::fmt::Debug for Modeh {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Modeh {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Modeh {{ mode8: {:?}, mode9: {:?}, mode10: {:?}, mode11: {:?}, mode12: {:?}, mode13: {:?}, mode14: {:?}, mode15: {:?} }}" , self . mode8 () , self . mode9 () , self . mode10 () , self . mode11 () , self . mode12 () , self . mode13 () , self . mode14 () , self . mode15 ())
+        defmt::write!(
+            f,
+            "Modeh {{ mode8: {:?}, mode9: {:?}, mode10: {:?}, mode11: {:?}, mode12: {:?}, mode13: {:?}, mode14: {:?}, mode15: {:?} }}",
+            self.mode8(),
+            self.mode9(),
+            self.mode10(),
+            self.mode11(),
+            self.mode12(),
+            self.mode13(),
+            self.mode14(),
+            self.mode15()
+        )
     }
 }
 #[doc = "Port Pin Mode Low Register."]
@@ -1494,7 +1571,18 @@ impl core::fmt::Debug for Model {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Model {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Model {{ mode0: {:?}, mode1: {:?}, mode2: {:?}, mode3: {:?}, mode4: {:?}, mode5: {:?}, mode6: {:?}, mode7: {:?} }}" , self . mode0 () , self . mode1 () , self . mode2 () , self . mode3 () , self . mode4 () , self . mode5 () , self . mode6 () , self . mode7 ())
+        defmt::write!(
+            f,
+            "Model {{ mode0: {:?}, mode1: {:?}, mode2: {:?}, mode3: {:?}, mode4: {:?}, mode5: {:?}, mode6: {:?}, mode7: {:?} }}",
+            self.mode0(),
+            self.mode1(),
+            self.mode2(),
+            self.mode3(),
+            self.mode4(),
+            self.mode5(),
+            self.mode6(),
+            self.mode7()
+        )
     }
 }
 #[doc = "Over Voltage Disable for All Modes."]
@@ -1777,6 +1865,19 @@ impl core::fmt::Debug for Routepen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Routepen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Routepen {{ swclktckpen: {=bool:?}, swdiotmspen: {=bool:?}, tdopen: {=bool:?}, tdipen: {=bool:?}, swvpen: {=bool:?}, etmtclkpen: {=bool:?}, etmtd0pen: {=bool:?}, etmtd1pen: {=bool:?}, etmtd2pen: {=bool:?}, etmtd3pen: {=bool:?} }}" , self . swclktckpen () , self . swdiotmspen () , self . tdopen () , self . tdipen () , self . swvpen () , self . etmtclkpen () , self . etmtd0pen () , self . etmtd1pen () , self . etmtd2pen () , self . etmtd3pen ())
+        defmt::write!(
+            f,
+            "Routepen {{ swclktckpen: {=bool:?}, swdiotmspen: {=bool:?}, tdopen: {=bool:?}, tdipen: {=bool:?}, swvpen: {=bool:?}, etmtclkpen: {=bool:?}, etmtd0pen: {=bool:?}, etmtd1pen: {=bool:?}, etmtd2pen: {=bool:?}, etmtd3pen: {=bool:?} }}",
+            self.swclktckpen(),
+            self.swdiotmspen(),
+            self.tdopen(),
+            self.tdipen(),
+            self.swvpen(),
+            self.etmtclkpen(),
+            self.etmtd0pen(),
+            self.etmtd1pen(),
+            self.etmtd2pen(),
+            self.etmtd3pen()
+        )
     }
 }

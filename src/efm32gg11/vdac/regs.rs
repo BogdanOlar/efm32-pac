@@ -484,7 +484,22 @@ impl core::fmt::Debug for Cmd {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cmd {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cmd {{ ch0en: {=bool:?}, ch0dis: {=bool:?}, ch1en: {=bool:?}, ch1dis: {=bool:?}, opa0en: {=bool:?}, opa0dis: {=bool:?}, opa1en: {=bool:?}, opa1dis: {=bool:?}, opa2en: {=bool:?}, opa2dis: {=bool:?}, opa3en: {=bool:?}, opa3dis: {=bool:?} }}" , self . ch0en () , self . ch0dis () , self . ch1en () , self . ch1dis () , self . opa0en () , self . opa0dis () , self . opa1en () , self . opa1dis () , self . opa2en () , self . opa2dis () , self . opa3en () , self . opa3dis ())
+        defmt::write!(
+            f,
+            "Cmd {{ ch0en: {=bool:?}, ch0dis: {=bool:?}, ch1en: {=bool:?}, ch1dis: {=bool:?}, opa0en: {=bool:?}, opa0dis: {=bool:?}, opa1en: {=bool:?}, opa1dis: {=bool:?}, opa2en: {=bool:?}, opa2dis: {=bool:?}, opa3en: {=bool:?}, opa3dis: {=bool:?} }}",
+            self.ch0en(),
+            self.ch0dis(),
+            self.ch1en(),
+            self.ch1dis(),
+            self.opa0en(),
+            self.opa0dis(),
+            self.opa1en(),
+            self.opa1dis(),
+            self.opa2en(),
+            self.opa2dis(),
+            self.opa3en(),
+            self.opa3dis()
+        )
     }
 }
 #[doc = "Combined Data Register."]
@@ -680,7 +695,19 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ diff: {=bool:?}, sinemode: {=bool:?}, outenprs: {=bool:?}, ch0prescrst: {=bool:?}, refsel: {:?}, presc: {:?}, refreshperiod: {:?}, warmupmode: {=bool:?}, dacclkmode: {=bool:?} }}" , self . diff () , self . sinemode () , self . outenprs () , self . ch0prescrst () , self . refsel () , self . presc () , self . refreshperiod () , self . warmupmode () , self . dacclkmode ())
+        defmt::write!(
+            f,
+            "Ctrl {{ diff: {=bool:?}, sinemode: {=bool:?}, outenprs: {=bool:?}, ch0prescrst: {=bool:?}, refsel: {:?}, presc: {:?}, refreshperiod: {:?}, warmupmode: {=bool:?}, dacclkmode: {=bool:?} }}",
+            self.diff(),
+            self.sinemode(),
+            self.outenprs(),
+            self.ch0prescrst(),
+            self.refsel(),
+            self.presc(),
+            self.refreshperiod(),
+            self.warmupmode(),
+            self.dacclkmode()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -977,7 +1004,31 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ ch0cd: {=bool:?}, ch1cd: {=bool:?}, ch0of: {=bool:?}, ch1of: {=bool:?}, ch0uf: {=bool:?}, ch1uf: {=bool:?}, ch0bl: {=bool:?}, ch1bl: {=bool:?}, em23err: {=bool:?}, opa0aportconflict: {=bool:?}, opa1aportconflict: {=bool:?}, opa2aportconflict: {=bool:?}, opa3aportconflict: {=bool:?}, opa0prstimederr: {=bool:?}, opa1prstimederr: {=bool:?}, opa2prstimederr: {=bool:?}, opa3prstimederr: {=bool:?}, opa0outvalid: {=bool:?}, opa1outvalid: {=bool:?}, opa2outvalid: {=bool:?}, opa3outvalid: {=bool:?} }}" , self . ch0cd () , self . ch1cd () , self . ch0of () , self . ch1of () , self . ch0uf () , self . ch1uf () , self . ch0bl () , self . ch1bl () , self . em23err () , self . opa0aportconflict () , self . opa1aportconflict () , self . opa2aportconflict () , self . opa3aportconflict () , self . opa0prstimederr () , self . opa1prstimederr () , self . opa2prstimederr () , self . opa3prstimederr () , self . opa0outvalid () , self . opa1outvalid () , self . opa2outvalid () , self . opa3outvalid ())
+        defmt::write!(
+            f,
+            "Ien {{ ch0cd: {=bool:?}, ch1cd: {=bool:?}, ch0of: {=bool:?}, ch1of: {=bool:?}, ch0uf: {=bool:?}, ch1uf: {=bool:?}, ch0bl: {=bool:?}, ch1bl: {=bool:?}, em23err: {=bool:?}, opa0aportconflict: {=bool:?}, opa1aportconflict: {=bool:?}, opa2aportconflict: {=bool:?}, opa3aportconflict: {=bool:?}, opa0prstimederr: {=bool:?}, opa1prstimederr: {=bool:?}, opa2prstimederr: {=bool:?}, opa3prstimederr: {=bool:?}, opa0outvalid: {=bool:?}, opa1outvalid: {=bool:?}, opa2outvalid: {=bool:?}, opa3outvalid: {=bool:?} }}",
+            self.ch0cd(),
+            self.ch1cd(),
+            self.ch0of(),
+            self.ch1of(),
+            self.ch0uf(),
+            self.ch1uf(),
+            self.ch0bl(),
+            self.ch1bl(),
+            self.em23err(),
+            self.opa0aportconflict(),
+            self.opa1aportconflict(),
+            self.opa2aportconflict(),
+            self.opa3aportconflict(),
+            self.opa0prstimederr(),
+            self.opa1prstimederr(),
+            self.opa2prstimederr(),
+            self.opa3prstimederr(),
+            self.opa0outvalid(),
+            self.opa1outvalid(),
+            self.opa2outvalid(),
+            self.opa3outvalid()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -1274,7 +1325,31 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ ch0cd: {=bool:?}, ch1cd: {=bool:?}, ch0of: {=bool:?}, ch1of: {=bool:?}, ch0uf: {=bool:?}, ch1uf: {=bool:?}, ch0bl: {=bool:?}, ch1bl: {=bool:?}, em23err: {=bool:?}, opa0aportconflict: {=bool:?}, opa1aportconflict: {=bool:?}, opa2aportconflict: {=bool:?}, opa3aportconflict: {=bool:?}, opa0prstimederr: {=bool:?}, opa1prstimederr: {=bool:?}, opa2prstimederr: {=bool:?}, opa3prstimederr: {=bool:?}, opa0outvalid: {=bool:?}, opa1outvalid: {=bool:?}, opa2outvalid: {=bool:?}, opa3outvalid: {=bool:?} }}" , self . ch0cd () , self . ch1cd () , self . ch0of () , self . ch1of () , self . ch0uf () , self . ch1uf () , self . ch0bl () , self . ch1bl () , self . em23err () , self . opa0aportconflict () , self . opa1aportconflict () , self . opa2aportconflict () , self . opa3aportconflict () , self . opa0prstimederr () , self . opa1prstimederr () , self . opa2prstimederr () , self . opa3prstimederr () , self . opa0outvalid () , self . opa1outvalid () , self . opa2outvalid () , self . opa3outvalid ())
+        defmt::write!(
+            f,
+            "If {{ ch0cd: {=bool:?}, ch1cd: {=bool:?}, ch0of: {=bool:?}, ch1of: {=bool:?}, ch0uf: {=bool:?}, ch1uf: {=bool:?}, ch0bl: {=bool:?}, ch1bl: {=bool:?}, em23err: {=bool:?}, opa0aportconflict: {=bool:?}, opa1aportconflict: {=bool:?}, opa2aportconflict: {=bool:?}, opa3aportconflict: {=bool:?}, opa0prstimederr: {=bool:?}, opa1prstimederr: {=bool:?}, opa2prstimederr: {=bool:?}, opa3prstimederr: {=bool:?}, opa0outvalid: {=bool:?}, opa1outvalid: {=bool:?}, opa2outvalid: {=bool:?}, opa3outvalid: {=bool:?} }}",
+            self.ch0cd(),
+            self.ch1cd(),
+            self.ch0of(),
+            self.ch1of(),
+            self.ch0uf(),
+            self.ch1uf(),
+            self.ch0bl(),
+            self.ch1bl(),
+            self.em23err(),
+            self.opa0aportconflict(),
+            self.opa1aportconflict(),
+            self.opa2aportconflict(),
+            self.opa3aportconflict(),
+            self.opa0prstimederr(),
+            self.opa1prstimederr(),
+            self.opa2prstimederr(),
+            self.opa3prstimederr(),
+            self.opa0outvalid(),
+            self.opa1outvalid(),
+            self.opa2outvalid(),
+            self.opa3outvalid()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -1545,7 +1620,29 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ ch0cd: {=bool:?}, ch1cd: {=bool:?}, ch0of: {=bool:?}, ch1of: {=bool:?}, ch0uf: {=bool:?}, ch1uf: {=bool:?}, em23err: {=bool:?}, opa0aportconflict: {=bool:?}, opa1aportconflict: {=bool:?}, opa2aportconflict: {=bool:?}, opa3aportconflict: {=bool:?}, opa0prstimederr: {=bool:?}, opa1prstimederr: {=bool:?}, opa2prstimederr: {=bool:?}, opa3prstimederr: {=bool:?}, opa0outvalid: {=bool:?}, opa1outvalid: {=bool:?}, opa2outvalid: {=bool:?}, opa3outvalid: {=bool:?} }}" , self . ch0cd () , self . ch1cd () , self . ch0of () , self . ch1of () , self . ch0uf () , self . ch1uf () , self . em23err () , self . opa0aportconflict () , self . opa1aportconflict () , self . opa2aportconflict () , self . opa3aportconflict () , self . opa0prstimederr () , self . opa1prstimederr () , self . opa2prstimederr () , self . opa3prstimederr () , self . opa0outvalid () , self . opa1outvalid () , self . opa2outvalid () , self . opa3outvalid ())
+        defmt::write!(
+            f,
+            "Ifs {{ ch0cd: {=bool:?}, ch1cd: {=bool:?}, ch0of: {=bool:?}, ch1of: {=bool:?}, ch0uf: {=bool:?}, ch1uf: {=bool:?}, em23err: {=bool:?}, opa0aportconflict: {=bool:?}, opa1aportconflict: {=bool:?}, opa2aportconflict: {=bool:?}, opa3aportconflict: {=bool:?}, opa0prstimederr: {=bool:?}, opa1prstimederr: {=bool:?}, opa2prstimederr: {=bool:?}, opa3prstimederr: {=bool:?}, opa0outvalid: {=bool:?}, opa1outvalid: {=bool:?}, opa2outvalid: {=bool:?}, opa3outvalid: {=bool:?} }}",
+            self.ch0cd(),
+            self.ch1cd(),
+            self.ch0of(),
+            self.ch1of(),
+            self.ch0uf(),
+            self.ch1uf(),
+            self.em23err(),
+            self.opa0aportconflict(),
+            self.opa1aportconflict(),
+            self.opa2aportconflict(),
+            self.opa3aportconflict(),
+            self.opa0prstimederr(),
+            self.opa1prstimederr(),
+            self.opa2prstimederr(),
+            self.opa3prstimederr(),
+            self.opa0outvalid(),
+            self.opa1outvalid(),
+            self.opa2outvalid(),
+            self.opa3outvalid()
+        )
     }
 }
 #[doc = "Operational Amplifier APORT Conflict Status Register."]
@@ -1673,7 +1770,18 @@ impl core::fmt::Debug for Opa0Aportconflict {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Opa0Aportconflict {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Opa0Aportconflict {{ aport1xconflict: {=bool:?}, aport1yconflict: {=bool:?}, aport2xconflict: {=bool:?}, aport2yconflict: {=bool:?}, aport3xconflict: {=bool:?}, aport3yconflict: {=bool:?}, aport4xconflict: {=bool:?}, aport4yconflict: {=bool:?} }}" , self . aport1xconflict () , self . aport1yconflict () , self . aport2xconflict () , self . aport2yconflict () , self . aport3xconflict () , self . aport3yconflict () , self . aport4xconflict () , self . aport4yconflict ())
+        defmt::write!(
+            f,
+            "Opa0Aportconflict {{ aport1xconflict: {=bool:?}, aport1yconflict: {=bool:?}, aport2xconflict: {=bool:?}, aport2yconflict: {=bool:?}, aport3xconflict: {=bool:?}, aport3yconflict: {=bool:?}, aport4xconflict: {=bool:?}, aport4yconflict: {=bool:?} }}",
+            self.aport1xconflict(),
+            self.aport1yconflict(),
+            self.aport2xconflict(),
+            self.aport2yconflict(),
+            self.aport3xconflict(),
+            self.aport3yconflict(),
+            self.aport4xconflict(),
+            self.aport4yconflict()
+        )
     }
 }
 #[doc = "Operational Amplifier APORT Request Status Register."]
@@ -1801,7 +1909,18 @@ impl core::fmt::Debug for Opa0Aportreq {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Opa0Aportreq {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Opa0Aportreq {{ aport1xreq: {=bool:?}, aport1yreq: {=bool:?}, aport2xreq: {=bool:?}, aport2yreq: {=bool:?}, aport3xreq: {=bool:?}, aport3yreq: {=bool:?}, aport4xreq: {=bool:?}, aport4yreq: {=bool:?} }}" , self . aport1xreq () , self . aport1yreq () , self . aport2xreq () , self . aport2yreq () , self . aport3xreq () , self . aport3yreq () , self . aport4xreq () , self . aport4yreq ())
+        defmt::write!(
+            f,
+            "Opa0Aportreq {{ aport1xreq: {=bool:?}, aport1yreq: {=bool:?}, aport2xreq: {=bool:?}, aport2yreq: {=bool:?}, aport3xreq: {=bool:?}, aport3yreq: {=bool:?}, aport4xreq: {=bool:?}, aport4yreq: {=bool:?} }}",
+            self.aport1xreq(),
+            self.aport1yreq(),
+            self.aport2xreq(),
+            self.aport2yreq(),
+            self.aport3xreq(),
+            self.aport3yreq(),
+            self.aport4xreq(),
+            self.aport4yreq()
+        )
     }
 }
 #[doc = "Operational Amplifier Calibration Register."]
@@ -1916,7 +2035,17 @@ impl core::fmt::Debug for Opa0Cal {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Opa0Cal {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Opa0Cal {{ cm1: {=u8:?}, cm2: {=u8:?}, cm3: {=u8:?}, gm: {=u8:?}, gm3: {=u8:?}, offsetp: {=u8:?}, offsetn: {=u8:?} }}" , self . cm1 () , self . cm2 () , self . cm3 () , self . gm () , self . gm3 () , self . offsetp () , self . offsetn ())
+        defmt::write!(
+            f,
+            "Opa0Cal {{ cm1: {=u8:?}, cm2: {=u8:?}, cm3: {=u8:?}, gm: {=u8:?}, gm3: {=u8:?}, offsetp: {=u8:?}, offsetn: {=u8:?} }}",
+            self.cm1(),
+            self.cm2(),
+            self.cm3(),
+            self.gm(),
+            self.gm3(),
+            self.offsetp(),
+            self.offsetn()
+        )
     }
 }
 #[doc = "Operational Amplifier Control Register."]
@@ -2070,7 +2199,20 @@ impl core::fmt::Debug for Opa0Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Opa0Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Opa0Ctrl {{ drivestrength: {:?}, incbw: {=bool:?}, hcmdis: {=bool:?}, outscale: {=bool:?}, prsen: {=bool:?}, prsmode: {=bool:?}, prssel: {:?}, prsoutmode: {=bool:?}, aportxmasterdis: {=bool:?}, aportymasterdis: {=bool:?} }}" , self . drivestrength () , self . incbw () , self . hcmdis () , self . outscale () , self . prsen () , self . prsmode () , self . prssel () , self . prsoutmode () , self . aportxmasterdis () , self . aportymasterdis ())
+        defmt::write!(
+            f,
+            "Opa0Ctrl {{ drivestrength: {:?}, incbw: {=bool:?}, hcmdis: {=bool:?}, outscale: {=bool:?}, prsen: {=bool:?}, prsmode: {=bool:?}, prssel: {:?}, prsoutmode: {=bool:?}, aportxmasterdis: {=bool:?}, aportymasterdis: {=bool:?} }}",
+            self.drivestrength(),
+            self.incbw(),
+            self.hcmdis(),
+            self.outscale(),
+            self.prsen(),
+            self.prsmode(),
+            self.prssel(),
+            self.prsoutmode(),
+            self.aportxmasterdis(),
+            self.aportymasterdis()
+        )
     }
 }
 #[doc = "Operational Amplifier Mux Configuration Register."]
@@ -2159,7 +2301,15 @@ impl core::fmt::Debug for Opa0Mux {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Opa0Mux {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Opa0Mux {{ possel: {=u8:?}, negsel: {=u8:?}, resinmux: {:?}, gain3x: {=bool:?}, ressel: {:?} }}" , self . possel () , self . negsel () , self . resinmux () , self . gain3x () , self . ressel ())
+        defmt::write!(
+            f,
+            "Opa0Mux {{ possel: {=u8:?}, negsel: {=u8:?}, resinmux: {:?}, gain3x: {=bool:?}, ressel: {:?} }}",
+            self.possel(),
+            self.negsel(),
+            self.resinmux(),
+            self.gain3x(),
+            self.ressel()
+        )
     }
 }
 #[doc = "Operational Amplifier Output Configuration Register."]
@@ -2261,7 +2411,16 @@ impl core::fmt::Debug for Opa0Out {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Opa0Out {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Opa0Out {{ mainouten: {=bool:?}, altouten: {=bool:?}, aportouten: {=bool:?}, short: {=bool:?}, altoutpaden: {:?}, aportoutsel: {=u8:?} }}" , self . mainouten () , self . altouten () , self . aportouten () , self . short () , self . altoutpaden () , self . aportoutsel ())
+        defmt::write!(
+            f,
+            "Opa0Out {{ mainouten: {=bool:?}, altouten: {=bool:?}, aportouten: {=bool:?}, short: {=bool:?}, altoutpaden: {:?}, aportoutsel: {=u8:?} }}",
+            self.mainouten(),
+            self.altouten(),
+            self.aportouten(),
+            self.short(),
+            self.altoutpaden(),
+            self.aportoutsel()
+        )
     }
 }
 #[doc = "Operational Amplifier Timer Control Register."]
@@ -2640,6 +2799,31 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ ch0ens: {=bool:?}, ch1ens: {=bool:?}, ch0bl: {=bool:?}, ch1bl: {=bool:?}, ch0warm: {=bool:?}, ch1warm: {=bool:?}, opa0aportconflict: {=bool:?}, opa1aportconflict: {=bool:?}, opa2aportconflict: {=bool:?}, opa3aportconflict: {=bool:?}, opa0ens: {=bool:?}, opa1ens: {=bool:?}, opa2ens: {=bool:?}, opa3ens: {=bool:?}, opa0warm: {=bool:?}, opa1warm: {=bool:?}, opa2warm: {=bool:?}, opa3warm: {=bool:?}, opa0outvalid: {=bool:?}, opa1outvalid: {=bool:?}, opa2outvalid: {=bool:?}, opa3outvalid: {=bool:?} }}" , self . ch0ens () , self . ch1ens () , self . ch0bl () , self . ch1bl () , self . ch0warm () , self . ch1warm () , self . opa0aportconflict () , self . opa1aportconflict () , self . opa2aportconflict () , self . opa3aportconflict () , self . opa0ens () , self . opa1ens () , self . opa2ens () , self . opa3ens () , self . opa0warm () , self . opa1warm () , self . opa2warm () , self . opa3warm () , self . opa0outvalid () , self . opa1outvalid () , self . opa2outvalid () , self . opa3outvalid ())
+        defmt::write!(
+            f,
+            "Status {{ ch0ens: {=bool:?}, ch1ens: {=bool:?}, ch0bl: {=bool:?}, ch1bl: {=bool:?}, ch0warm: {=bool:?}, ch1warm: {=bool:?}, opa0aportconflict: {=bool:?}, opa1aportconflict: {=bool:?}, opa2aportconflict: {=bool:?}, opa3aportconflict: {=bool:?}, opa0ens: {=bool:?}, opa1ens: {=bool:?}, opa2ens: {=bool:?}, opa3ens: {=bool:?}, opa0warm: {=bool:?}, opa1warm: {=bool:?}, opa2warm: {=bool:?}, opa3warm: {=bool:?}, opa0outvalid: {=bool:?}, opa1outvalid: {=bool:?}, opa2outvalid: {=bool:?}, opa3outvalid: {=bool:?} }}",
+            self.ch0ens(),
+            self.ch1ens(),
+            self.ch0bl(),
+            self.ch1bl(),
+            self.ch0warm(),
+            self.ch1warm(),
+            self.opa0aportconflict(),
+            self.opa1aportconflict(),
+            self.opa2aportconflict(),
+            self.opa3aportconflict(),
+            self.opa0ens(),
+            self.opa1ens(),
+            self.opa2ens(),
+            self.opa3ens(),
+            self.opa0warm(),
+            self.opa1warm(),
+            self.opa2warm(),
+            self.opa3warm(),
+            self.opa0outvalid(),
+            self.opa1outvalid(),
+            self.opa2outvalid(),
+            self.opa3outvalid()
+        )
     }
 }

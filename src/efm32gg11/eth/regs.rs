@@ -195,7 +195,15 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ tsuclksel: {:?}, tsupresc: {=u8:?}, miisel: {=bool:?}, gblclken: {=bool:?}, txrefclksel: {=bool:?} }}" , self . tsuclksel () , self . tsupresc () , self . miisel () , self . gblclken () , self . txrefclksel ())
+        defmt::write!(
+            f,
+            "Ctrl {{ tsuclksel: {:?}, tsupresc: {=u8:?}, miisel: {=bool:?}, gblclken: {=bool:?}, txrefclksel: {=bool:?} }}",
+            self.tsuclksel(),
+            self.tsupresc(),
+            self.miisel(),
+            self.gblclken(),
+            self.txrefclksel()
+        )
     }
 }
 #[doc = "Deferred Transmission Frames."]
@@ -412,7 +420,22 @@ impl core::fmt::Debug for Dmacfg {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dmacfg {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dmacfg {{ ambabrstlen: {=u8:?}, hdrdataspliten: {=bool:?}, rxpbufsize: {:?}, txpbufsize: {=bool:?}, txpbuftcpen: {=bool:?}, inflastdbufsizeen: {=bool:?}, rxbufsize: {=u8:?}, frcdiscardonerr: {=bool:?}, frcmaxambabrstrx: {=bool:?}, frcmaxambabrsttx: {=bool:?}, rxbdextndmodeen: {=bool:?}, txbdextendmodeen: {=bool:?} }}" , self . ambabrstlen () , self . hdrdataspliten () , self . rxpbufsize () , self . txpbufsize () , self . txpbuftcpen () , self . inflastdbufsizeen () , self . rxbufsize () , self . frcdiscardonerr () , self . frcmaxambabrstrx () , self . frcmaxambabrsttx () , self . rxbdextndmodeen () , self . txbdextendmodeen ())
+        defmt::write!(
+            f,
+            "Dmacfg {{ ambabrstlen: {=u8:?}, hdrdataspliten: {=bool:?}, rxpbufsize: {:?}, txpbufsize: {=bool:?}, txpbuftcpen: {=bool:?}, inflastdbufsizeen: {=bool:?}, rxbufsize: {=u8:?}, frcdiscardonerr: {=bool:?}, frcmaxambabrstrx: {=bool:?}, frcmaxambabrsttx: {=bool:?}, rxbdextndmodeen: {=bool:?}, txbdextendmodeen: {=bool:?} }}",
+            self.ambabrstlen(),
+            self.hdrdataspliten(),
+            self.rxpbufsize(),
+            self.txpbufsize(),
+            self.txpbuftcpen(),
+            self.inflastdbufsizeen(),
+            self.rxbufsize(),
+            self.frcdiscardonerr(),
+            self.frcmaxambabrstrx(),
+            self.frcmaxambabrsttx(),
+            self.rxbdextndmodeen(),
+            self.txbdextendmodeen()
+        )
     }
 }
 #[doc = "Excessive Collisions."]
@@ -872,7 +895,35 @@ impl core::fmt::Debug for Ienc {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ienc {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ienc {{ mngmntdone: {=bool:?}, rxcmplt: {=bool:?}, rxusedbitread: {=bool:?}, txusedbitread: {=bool:?}, txunderrun: {=bool:?}, rtrylmtorlatecol: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?}, nonzeropfrmquant: {=bool:?}, pausetimezero: {=bool:?}, pfrmtx: {=bool:?}, ptpdlyreqfrmrx: {=bool:?}, ptpsyncfrmrx: {=bool:?}, ptpdlyreqfrmtx: {=bool:?}, ptpsyncfrmtx: {=bool:?}, ptppdlyreqfrmrx: {=bool:?}, ptppdlyrespfrmrx: {=bool:?}, ptppdlyreqfrmtx: {=bool:?}, ptppdlyrespfrmtx: {=bool:?}, tsusecregincr: {=bool:?}, rxlpiindc: {=bool:?}, wolevntrx: {=bool:?}, tsutimercomp: {=bool:?} }}" , self . mngmntdone () , self . rxcmplt () , self . rxusedbitread () , self . txusedbitread () , self . txunderrun () , self . rtrylmtorlatecol () , self . ambaerr () , self . txcmplt () , self . rxoverrun () , self . respnotok () , self . nonzeropfrmquant () , self . pausetimezero () , self . pfrmtx () , self . ptpdlyreqfrmrx () , self . ptpsyncfrmrx () , self . ptpdlyreqfrmtx () , self . ptpsyncfrmtx () , self . ptppdlyreqfrmrx () , self . ptppdlyrespfrmrx () , self . ptppdlyreqfrmtx () , self . ptppdlyrespfrmtx () , self . tsusecregincr () , self . rxlpiindc () , self . wolevntrx () , self . tsutimercomp ())
+        defmt::write!(
+            f,
+            "Ienc {{ mngmntdone: {=bool:?}, rxcmplt: {=bool:?}, rxusedbitread: {=bool:?}, txusedbitread: {=bool:?}, txunderrun: {=bool:?}, rtrylmtorlatecol: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?}, nonzeropfrmquant: {=bool:?}, pausetimezero: {=bool:?}, pfrmtx: {=bool:?}, ptpdlyreqfrmrx: {=bool:?}, ptpsyncfrmrx: {=bool:?}, ptpdlyreqfrmtx: {=bool:?}, ptpsyncfrmtx: {=bool:?}, ptppdlyreqfrmrx: {=bool:?}, ptppdlyrespfrmrx: {=bool:?}, ptppdlyreqfrmtx: {=bool:?}, ptppdlyrespfrmtx: {=bool:?}, tsusecregincr: {=bool:?}, rxlpiindc: {=bool:?}, wolevntrx: {=bool:?}, tsutimercomp: {=bool:?} }}",
+            self.mngmntdone(),
+            self.rxcmplt(),
+            self.rxusedbitread(),
+            self.txusedbitread(),
+            self.txunderrun(),
+            self.rtrylmtorlatecol(),
+            self.ambaerr(),
+            self.txcmplt(),
+            self.rxoverrun(),
+            self.respnotok(),
+            self.nonzeropfrmquant(),
+            self.pausetimezero(),
+            self.pfrmtx(),
+            self.ptpdlyreqfrmrx(),
+            self.ptpsyncfrmrx(),
+            self.ptpdlyreqfrmtx(),
+            self.ptpsyncfrmtx(),
+            self.ptppdlyreqfrmrx(),
+            self.ptppdlyrespfrmrx(),
+            self.ptppdlyreqfrmtx(),
+            self.ptppdlyrespfrmtx(),
+            self.tsusecregincr(),
+            self.rxlpiindc(),
+            self.wolevntrx(),
+            self.tsutimercomp()
+        )
     }
 }
 #[doc = "Interrupt mask register."]
@@ -1234,7 +1285,36 @@ impl core::fmt::Debug for Ienro {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ienro {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ienro {{ mngmntdone: {=bool:?}, rxcmplt: {=bool:?}, rxusedbitread: {=bool:?}, txusedbitread: {=bool:?}, txunderrun: {=bool:?}, rtrylmtorlatecol: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, unused: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?}, nonzeropfrmquant: {=bool:?}, pausetimezero: {=bool:?}, pfrmtx: {=bool:?}, ptpdlyreqfrmrx: {=bool:?}, ptpsyncfrmrx: {=bool:?}, ptpdlyreqfrmtx: {=bool:?}, ptpsyncfrmtx: {=bool:?}, ptppdlyreqfrmrx: {=bool:?}, ptppdlyrespfrmrx: {=bool:?}, ptppdlyreqfrmtx: {=bool:?}, ptppdlyrespfrmtx: {=bool:?}, tsusecregincr: {=bool:?}, rxlpiindc: {=bool:?}, wolevntrx: {=bool:?}, tsutimercomp: {=bool:?} }}" , self . mngmntdone () , self . rxcmplt () , self . rxusedbitread () , self . txusedbitread () , self . txunderrun () , self . rtrylmtorlatecol () , self . ambaerr () , self . txcmplt () , self . unused () , self . rxoverrun () , self . respnotok () , self . nonzeropfrmquant () , self . pausetimezero () , self . pfrmtx () , self . ptpdlyreqfrmrx () , self . ptpsyncfrmrx () , self . ptpdlyreqfrmtx () , self . ptpsyncfrmtx () , self . ptppdlyreqfrmrx () , self . ptppdlyrespfrmrx () , self . ptppdlyreqfrmtx () , self . ptppdlyrespfrmtx () , self . tsusecregincr () , self . rxlpiindc () , self . wolevntrx () , self . tsutimercomp ())
+        defmt::write!(
+            f,
+            "Ienro {{ mngmntdone: {=bool:?}, rxcmplt: {=bool:?}, rxusedbitread: {=bool:?}, txusedbitread: {=bool:?}, txunderrun: {=bool:?}, rtrylmtorlatecol: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, unused: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?}, nonzeropfrmquant: {=bool:?}, pausetimezero: {=bool:?}, pfrmtx: {=bool:?}, ptpdlyreqfrmrx: {=bool:?}, ptpsyncfrmrx: {=bool:?}, ptpdlyreqfrmtx: {=bool:?}, ptpsyncfrmtx: {=bool:?}, ptppdlyreqfrmrx: {=bool:?}, ptppdlyrespfrmrx: {=bool:?}, ptppdlyreqfrmtx: {=bool:?}, ptppdlyrespfrmtx: {=bool:?}, tsusecregincr: {=bool:?}, rxlpiindc: {=bool:?}, wolevntrx: {=bool:?}, tsutimercomp: {=bool:?} }}",
+            self.mngmntdone(),
+            self.rxcmplt(),
+            self.rxusedbitread(),
+            self.txusedbitread(),
+            self.txunderrun(),
+            self.rtrylmtorlatecol(),
+            self.ambaerr(),
+            self.txcmplt(),
+            self.unused(),
+            self.rxoverrun(),
+            self.respnotok(),
+            self.nonzeropfrmquant(),
+            self.pausetimezero(),
+            self.pfrmtx(),
+            self.ptpdlyreqfrmrx(),
+            self.ptpsyncfrmrx(),
+            self.ptpdlyreqfrmtx(),
+            self.ptpsyncfrmtx(),
+            self.ptppdlyreqfrmrx(),
+            self.ptppdlyrespfrmrx(),
+            self.ptppdlyreqfrmtx(),
+            self.ptppdlyrespfrmtx(),
+            self.tsusecregincr(),
+            self.rxlpiindc(),
+            self.wolevntrx(),
+            self.tsutimercomp()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -1583,7 +1663,35 @@ impl core::fmt::Debug for Iens {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Iens {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Iens {{ mngmntdone: {=bool:?}, rxcmplt: {=bool:?}, rxusedbitread: {=bool:?}, txusedbitread: {=bool:?}, txunderrun: {=bool:?}, rtrylmtorlatecol: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?}, nonzeropfrmquant: {=bool:?}, pausetimezero: {=bool:?}, pfrmtx: {=bool:?}, ptpdlyreqfrmrx: {=bool:?}, ptpsyncfrmrx: {=bool:?}, ptpdlyreqfrmtx: {=bool:?}, ptpsyncfrmtx: {=bool:?}, ptppdlyreqfrmrx: {=bool:?}, ptppdlyrespfrmrx: {=bool:?}, ptppdlyreqfrmtx: {=bool:?}, ptppdlyrespfrmtx: {=bool:?}, tsusecregincr: {=bool:?}, rxlpiindc: {=bool:?}, wolevntrx: {=bool:?}, tsutimercomp: {=bool:?} }}" , self . mngmntdone () , self . rxcmplt () , self . rxusedbitread () , self . txusedbitread () , self . txunderrun () , self . rtrylmtorlatecol () , self . ambaerr () , self . txcmplt () , self . rxoverrun () , self . respnotok () , self . nonzeropfrmquant () , self . pausetimezero () , self . pfrmtx () , self . ptpdlyreqfrmrx () , self . ptpsyncfrmrx () , self . ptpdlyreqfrmtx () , self . ptpsyncfrmtx () , self . ptppdlyreqfrmrx () , self . ptppdlyrespfrmrx () , self . ptppdlyreqfrmtx () , self . ptppdlyrespfrmtx () , self . tsusecregincr () , self . rxlpiindc () , self . wolevntrx () , self . tsutimercomp ())
+        defmt::write!(
+            f,
+            "Iens {{ mngmntdone: {=bool:?}, rxcmplt: {=bool:?}, rxusedbitread: {=bool:?}, txusedbitread: {=bool:?}, txunderrun: {=bool:?}, rtrylmtorlatecol: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?}, nonzeropfrmquant: {=bool:?}, pausetimezero: {=bool:?}, pfrmtx: {=bool:?}, ptpdlyreqfrmrx: {=bool:?}, ptpsyncfrmrx: {=bool:?}, ptpdlyreqfrmtx: {=bool:?}, ptpsyncfrmtx: {=bool:?}, ptppdlyreqfrmrx: {=bool:?}, ptppdlyrespfrmrx: {=bool:?}, ptppdlyreqfrmtx: {=bool:?}, ptppdlyrespfrmtx: {=bool:?}, tsusecregincr: {=bool:?}, rxlpiindc: {=bool:?}, wolevntrx: {=bool:?}, tsutimercomp: {=bool:?} }}",
+            self.mngmntdone(),
+            self.rxcmplt(),
+            self.rxusedbitread(),
+            self.txusedbitread(),
+            self.txunderrun(),
+            self.rtrylmtorlatecol(),
+            self.ambaerr(),
+            self.txcmplt(),
+            self.rxoverrun(),
+            self.respnotok(),
+            self.nonzeropfrmquant(),
+            self.pausetimezero(),
+            self.pfrmtx(),
+            self.ptpdlyreqfrmrx(),
+            self.ptpsyncfrmrx(),
+            self.ptpdlyreqfrmtx(),
+            self.ptpsyncfrmtx(),
+            self.ptppdlyreqfrmrx(),
+            self.ptppdlyrespfrmrx(),
+            self.ptppdlyreqfrmtx(),
+            self.ptppdlyrespfrmtx(),
+            self.tsusecregincr(),
+            self.rxlpiindc(),
+            self.wolevntrx(),
+            self.tsutimercomp()
+        )
     }
 }
 #[doc = "Interrupt status register."]
@@ -1932,7 +2040,35 @@ impl core::fmt::Debug for Ifcr {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifcr {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifcr {{ mngmntdone: {=bool:?}, rxcmplt: {=bool:?}, rxusedbitread: {=bool:?}, txusedbitread: {=bool:?}, txunderrun: {=bool:?}, rtrylmtorlatecol: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?}, nonzeropfrmquant: {=bool:?}, pausetimezero: {=bool:?}, pfrmtx: {=bool:?}, ptpdlyreqfrmrx: {=bool:?}, ptpsyncfrmrx: {=bool:?}, ptpdlyreqfrmtx: {=bool:?}, ptpsyncfrmtx: {=bool:?}, ptppdlyreqfrmrx: {=bool:?}, ptppdlyrespfrmrx: {=bool:?}, ptppdlyreqfrmtx: {=bool:?}, ptppdlyrespfrmtx: {=bool:?}, tsusecregincr: {=bool:?}, rxlpiindc: {=bool:?}, wolevntrx: {=bool:?}, tsutimercomp: {=bool:?} }}" , self . mngmntdone () , self . rxcmplt () , self . rxusedbitread () , self . txusedbitread () , self . txunderrun () , self . rtrylmtorlatecol () , self . ambaerr () , self . txcmplt () , self . rxoverrun () , self . respnotok () , self . nonzeropfrmquant () , self . pausetimezero () , self . pfrmtx () , self . ptpdlyreqfrmrx () , self . ptpsyncfrmrx () , self . ptpdlyreqfrmtx () , self . ptpsyncfrmtx () , self . ptppdlyreqfrmrx () , self . ptppdlyrespfrmrx () , self . ptppdlyreqfrmtx () , self . ptppdlyrespfrmtx () , self . tsusecregincr () , self . rxlpiindc () , self . wolevntrx () , self . tsutimercomp ())
+        defmt::write!(
+            f,
+            "Ifcr {{ mngmntdone: {=bool:?}, rxcmplt: {=bool:?}, rxusedbitread: {=bool:?}, txusedbitread: {=bool:?}, txunderrun: {=bool:?}, rtrylmtorlatecol: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?}, nonzeropfrmquant: {=bool:?}, pausetimezero: {=bool:?}, pfrmtx: {=bool:?}, ptpdlyreqfrmrx: {=bool:?}, ptpsyncfrmrx: {=bool:?}, ptpdlyreqfrmtx: {=bool:?}, ptpsyncfrmtx: {=bool:?}, ptppdlyreqfrmrx: {=bool:?}, ptppdlyrespfrmrx: {=bool:?}, ptppdlyreqfrmtx: {=bool:?}, ptppdlyrespfrmtx: {=bool:?}, tsusecregincr: {=bool:?}, rxlpiindc: {=bool:?}, wolevntrx: {=bool:?}, tsutimercomp: {=bool:?} }}",
+            self.mngmntdone(),
+            self.rxcmplt(),
+            self.rxusedbitread(),
+            self.txusedbitread(),
+            self.txunderrun(),
+            self.rtrylmtorlatecol(),
+            self.ambaerr(),
+            self.txcmplt(),
+            self.rxoverrun(),
+            self.respnotok(),
+            self.nonzeropfrmquant(),
+            self.pausetimezero(),
+            self.pfrmtx(),
+            self.ptpdlyreqfrmrx(),
+            self.ptpsyncfrmrx(),
+            self.ptpdlyreqfrmtx(),
+            self.ptpsyncfrmtx(),
+            self.ptppdlyreqfrmrx(),
+            self.ptppdlyrespfrmrx(),
+            self.ptppdlyreqfrmtx(),
+            self.ptppdlyrespfrmtx(),
+            self.tsusecregincr(),
+            self.rxlpiindc(),
+            self.wolevntrx(),
+            self.tsutimercomp()
+        )
     }
 }
 #[doc = "Interrupt moderation register."]
@@ -2449,7 +2585,32 @@ impl core::fmt::Debug for Networkcfg {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Networkcfg {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Networkcfg {{ speed: {=bool:?}, fullduplex: {=bool:?}, discrdnonvlanframes: {=bool:?}, jumboframes: {=bool:?}, copyallframes: {=bool:?}, nobroadcast: {=bool:?}, multicasthashen: {=bool:?}, unicasthashen: {=bool:?}, rx1536byteframes: {=bool:?}, retrytest: {=bool:?}, pauseen: {=bool:?}, rxbuffoffset: {=u8:?}, lenfielderrfrmdiscrd: {=bool:?}, fcsremove: {=bool:?}, mdcclkdiv: {:?}, discopyofpframes: {=bool:?}, rxchksumoffloaden: {=bool:?}, enhalfduplexrx: {=bool:?}, ignorerxfcs: {=bool:?}, ipgstrtchen: {=bool:?}, nspchange: {=bool:?}, ignoreipgrxer: {=bool:?} }}" , self . speed () , self . fullduplex () , self . discrdnonvlanframes () , self . jumboframes () , self . copyallframes () , self . nobroadcast () , self . multicasthashen () , self . unicasthashen () , self . rx1536byteframes () , self . retrytest () , self . pauseen () , self . rxbuffoffset () , self . lenfielderrfrmdiscrd () , self . fcsremove () , self . mdcclkdiv () , self . discopyofpframes () , self . rxchksumoffloaden () , self . enhalfduplexrx () , self . ignorerxfcs () , self . ipgstrtchen () , self . nspchange () , self . ignoreipgrxer ())
+        defmt::write!(
+            f,
+            "Networkcfg {{ speed: {=bool:?}, fullduplex: {=bool:?}, discrdnonvlanframes: {=bool:?}, jumboframes: {=bool:?}, copyallframes: {=bool:?}, nobroadcast: {=bool:?}, multicasthashen: {=bool:?}, unicasthashen: {=bool:?}, rx1536byteframes: {=bool:?}, retrytest: {=bool:?}, pauseen: {=bool:?}, rxbuffoffset: {=u8:?}, lenfielderrfrmdiscrd: {=bool:?}, fcsremove: {=bool:?}, mdcclkdiv: {:?}, discopyofpframes: {=bool:?}, rxchksumoffloaden: {=bool:?}, enhalfduplexrx: {=bool:?}, ignorerxfcs: {=bool:?}, ipgstrtchen: {=bool:?}, nspchange: {=bool:?}, ignoreipgrxer: {=bool:?} }}",
+            self.speed(),
+            self.fullduplex(),
+            self.discrdnonvlanframes(),
+            self.jumboframes(),
+            self.copyallframes(),
+            self.nobroadcast(),
+            self.multicasthashen(),
+            self.unicasthashen(),
+            self.rx1536byteframes(),
+            self.retrytest(),
+            self.pauseen(),
+            self.rxbuffoffset(),
+            self.lenfielderrfrmdiscrd(),
+            self.fcsremove(),
+            self.mdcclkdiv(),
+            self.discopyofpframes(),
+            self.rxchksumoffloaden(),
+            self.enhalfduplexrx(),
+            self.ignorerxfcs(),
+            self.ipgstrtchen(),
+            self.nspchange(),
+            self.ignoreipgrxer()
+        )
     }
 }
 #[doc = "Network control register."]
@@ -2746,7 +2907,31 @@ impl core::fmt::Debug for Networkctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Networkctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Networkctrl {{ loopbacklocal: {=bool:?}, enbrx: {=bool:?}, enbtx: {=bool:?}, manporten: {=bool:?}, clrallstatsregs: {=bool:?}, incallstatsregs: {=bool:?}, statswren: {=bool:?}, backpressure: {=bool:?}, txstrt: {=bool:?}, txhalt: {=bool:?}, txpfrmreq: {=bool:?}, txpfrmzero: {=bool:?}, storerxts: {=bool:?}, pfcenb: {=bool:?}, txpfcpriorpfrm: {=bool:?}, flushrxpkt: {=bool:?}, txlpien: {=bool:?}, ptpunicasten: {=bool:?}, storeudpoffset: {=bool:?}, onestepsyncmode: {=bool:?}, pfcctrl: {=bool:?} }}" , self . loopbacklocal () , self . enbrx () , self . enbtx () , self . manporten () , self . clrallstatsregs () , self . incallstatsregs () , self . statswren () , self . backpressure () , self . txstrt () , self . txhalt () , self . txpfrmreq () , self . txpfrmzero () , self . storerxts () , self . pfcenb () , self . txpfcpriorpfrm () , self . flushrxpkt () , self . txlpien () , self . ptpunicasten () , self . storeudpoffset () , self . onestepsyncmode () , self . pfcctrl ())
+        defmt::write!(
+            f,
+            "Networkctrl {{ loopbacklocal: {=bool:?}, enbrx: {=bool:?}, enbtx: {=bool:?}, manporten: {=bool:?}, clrallstatsregs: {=bool:?}, incallstatsregs: {=bool:?}, statswren: {=bool:?}, backpressure: {=bool:?}, txstrt: {=bool:?}, txhalt: {=bool:?}, txpfrmreq: {=bool:?}, txpfrmzero: {=bool:?}, storerxts: {=bool:?}, pfcenb: {=bool:?}, txpfcpriorpfrm: {=bool:?}, flushrxpkt: {=bool:?}, txlpien: {=bool:?}, ptpunicasten: {=bool:?}, storeudpoffset: {=bool:?}, onestepsyncmode: {=bool:?}, pfcctrl: {=bool:?} }}",
+            self.loopbacklocal(),
+            self.enbrx(),
+            self.enbtx(),
+            self.manporten(),
+            self.clrallstatsregs(),
+            self.incallstatsregs(),
+            self.statswren(),
+            self.backpressure(),
+            self.txstrt(),
+            self.txhalt(),
+            self.txpfrmreq(),
+            self.txpfrmzero(),
+            self.storerxts(),
+            self.pfcenb(),
+            self.txpfcpriorpfrm(),
+            self.flushrxpkt(),
+            self.txlpien(),
+            self.ptpunicasten(),
+            self.storeudpoffset(),
+            self.onestepsyncmode(),
+            self.pfcctrl()
+        )
     }
 }
 #[doc = "Network status register."]
@@ -2822,7 +3007,14 @@ impl core::fmt::Debug for Networkstatus {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Networkstatus {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Networkstatus {{ mdioin: {=bool:?}, mandone: {=bool:?}, pfcnegotiate: {=bool:?}, lpiindicate: {=bool:?} }}" , self . mdioin () , self . mandone () , self . pfcnegotiate () , self . lpiindicate ())
+        defmt::write!(
+            f,
+            "Networkstatus {{ mdioin: {=bool:?}, mandone: {=bool:?}, pfcnegotiate: {=bool:?}, lpiindicate: {=bool:?} }}",
+            self.mdioin(),
+            self.mandone(),
+            self.pfcnegotiate(),
+            self.lpiindicate()
+        )
     }
 }
 #[doc = "Octets Received 47:32."]
@@ -3195,7 +3387,17 @@ impl core::fmt::Debug for Phymngmnt {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Phymngmnt {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Phymngmnt {{ phyrwdata: {=u16:?}, write10: {=u8:?}, regaddr: {=u8:?}, phyaddr: {=u8:?}, operation: {=u8:?}, write1: {=bool:?}, write0: {=bool:?} }}" , self . phyrwdata () , self . write10 () , self . regaddr () , self . phyaddr () , self . operation () , self . write1 () , self . write0 ())
+        defmt::write!(
+            f,
+            "Phymngmnt {{ phyrwdata: {=u16:?}, write10: {=u8:?}, regaddr: {=u8:?}, phyaddr: {=u8:?}, operation: {=u8:?}, write1: {=bool:?}, write0: {=bool:?} }}",
+            self.phyrwdata(),
+            self.write10(),
+            self.regaddr(),
+            self.phyaddr(),
+            self.operation(),
+            self.write1(),
+            self.write0()
+        )
     }
 }
 #[doc = "I/O Route Location Register 0."]
@@ -3463,7 +3665,16 @@ impl core::fmt::Debug for Routepen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Routepen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Routepen {{ mdiopen: {=bool:?}, miitxerpen: {=bool:?}, miirxerpen: {=bool:?}, miipen: {=bool:?}, rmiipen: {=bool:?}, tsutmrtogpen: {=bool:?} }}" , self . mdiopen () , self . miitxerpen () , self . miirxerpen () , self . miipen () , self . rmiipen () , self . tsutmrtogpen ())
+        defmt::write!(
+            f,
+            "Routepen {{ mdiopen: {=bool:?}, miitxerpen: {=bool:?}, miirxerpen: {=bool:?}, miipen: {=bool:?}, rmiipen: {=bool:?}, tsutmrtogpen: {=bool:?} }}",
+            self.mdiopen(),
+            self.miitxerpen(),
+            self.miirxerpen(),
+            self.miipen(),
+            self.rmiipen(),
+            self.tsutmrtogpen()
+        )
     }
 }
 #[doc = "RX BD control register."]
@@ -3909,7 +4120,14 @@ impl core::fmt::Debug for Rxstatus {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Rxstatus {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Rxstatus {{ buffnotavail: {=bool:?}, frmrx: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?} }}" , self . buffnotavail () , self . frmrx () , self . rxoverrun () , self . respnotok ())
+        defmt::write!(
+            f,
+            "Rxstatus {{ buffnotavail: {=bool:?}, frmrx: {=bool:?}, rxoverrun: {=bool:?}, respnotok: {=bool:?} }}",
+            self.buffnotavail(),
+            self.frmrx(),
+            self.rxoverrun(),
+            self.respnotok()
+        )
     }
 }
 #[doc = "Receive Symbol Errors."]
@@ -5879,7 +6097,19 @@ impl core::fmt::Debug for Txstatus {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Txstatus {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Txstatus {{ usedbitread: {=bool:?}, coloccrd: {=bool:?}, retrylmtexcd: {=bool:?}, txgo: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, txunderrun: {=bool:?}, latecoloccrd: {=bool:?}, respnotok: {=bool:?} }}" , self . usedbitread () , self . coloccrd () , self . retrylmtexcd () , self . txgo () , self . ambaerr () , self . txcmplt () , self . txunderrun () , self . latecoloccrd () , self . respnotok ())
+        defmt::write!(
+            f,
+            "Txstatus {{ usedbitread: {=bool:?}, coloccrd: {=bool:?}, retrylmtexcd: {=bool:?}, txgo: {=bool:?}, ambaerr: {=bool:?}, txcmplt: {=bool:?}, txunderrun: {=bool:?}, latecoloccrd: {=bool:?}, respnotok: {=bool:?} }}",
+            self.usedbitread(),
+            self.coloccrd(),
+            self.retrylmtexcd(),
+            self.txgo(),
+            self.ambaerr(),
+            self.txcmplt(),
+            self.txunderrun(),
+            self.latecoloccrd(),
+            self.respnotok()
+        )
     }
 }
 #[doc = "Transmit Under Runs."]
@@ -6042,6 +6272,14 @@ impl core::fmt::Debug for Wolreg {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Wolreg {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Wolreg {{ addr: {=u16:?}, wolmask0: {=bool:?}, wolmask1: {=bool:?}, wolmask2: {=bool:?}, wolmask3: {=bool:?} }}" , self . addr () , self . wolmask0 () , self . wolmask1 () , self . wolmask2 () , self . wolmask3 ())
+        defmt::write!(
+            f,
+            "Wolreg {{ addr: {=u16:?}, wolmask0: {=bool:?}, wolmask1: {=bool:?}, wolmask2: {=bool:?}, wolmask3: {=bool:?} }}",
+            self.addr(),
+            self.wolmask0(),
+            self.wolmask1(),
+            self.wolmask2(),
+            self.wolmask3()
+        )
     }
 }

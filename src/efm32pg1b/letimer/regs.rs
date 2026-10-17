@@ -84,7 +84,15 @@ impl core::fmt::Debug for Cmd {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cmd {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cmd {{ start: {=bool:?}, stop: {=bool:?}, clear: {=bool:?}, cto0: {=bool:?}, cto1: {=bool:?} }}" , self . start () , self . stop () , self . clear () , self . cto0 () , self . cto1 ())
+        defmt::write!(
+            f,
+            "Cmd {{ start: {=bool:?}, stop: {=bool:?}, clear: {=bool:?}, cto0: {=bool:?}, cto1: {=bool:?} }}",
+            self.start(),
+            self.stop(),
+            self.clear(),
+            self.cto0(),
+            self.cto1()
+        )
     }
 }
 #[doc = "Counter Value Register."]
@@ -321,7 +329,18 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ repmode: {:?}, ufoa0: {:?}, ufoa1: {:?}, opol0: {=bool:?}, opol1: {=bool:?}, buftop: {=bool:?}, comp0top: {=bool:?}, debugrun: {=bool:?} }}" , self . repmode () , self . ufoa0 () , self . ufoa1 () , self . opol0 () , self . opol1 () , self . buftop () , self . comp0top () , self . debugrun ())
+        defmt::write!(
+            f,
+            "Ctrl {{ repmode: {:?}, ufoa0: {:?}, ufoa1: {:?}, opol0: {=bool:?}, opol1: {=bool:?}, buftop: {=bool:?}, comp0top: {=bool:?}, debugrun: {=bool:?} }}",
+            self.repmode(),
+            self.ufoa0(),
+            self.ufoa1(),
+            self.opol0(),
+            self.opol1(),
+            self.buftop(),
+            self.comp0top(),
+            self.debugrun()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -410,7 +429,15 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ comp0: {=bool:?}, comp1: {=bool:?}, uf: {=bool:?}, rep0: {=bool:?}, rep1: {=bool:?} }}" , self . comp0 () , self . comp1 () , self . uf () , self . rep0 () , self . rep1 ())
+        defmt::write!(
+            f,
+            "Ien {{ comp0: {=bool:?}, comp1: {=bool:?}, uf: {=bool:?}, rep0: {=bool:?}, rep1: {=bool:?} }}",
+            self.comp0(),
+            self.comp1(),
+            self.uf(),
+            self.rep0(),
+            self.rep1()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -499,7 +526,15 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ comp0: {=bool:?}, comp1: {=bool:?}, uf: {=bool:?}, rep0: {=bool:?}, rep1: {=bool:?} }}" , self . comp0 () , self . comp1 () , self . uf () , self . rep0 () , self . rep1 ())
+        defmt::write!(
+            f,
+            "If {{ comp0: {=bool:?}, comp1: {=bool:?}, uf: {=bool:?}, rep0: {=bool:?}, rep1: {=bool:?} }}",
+            self.comp0(),
+            self.comp1(),
+            self.uf(),
+            self.rep0(),
+            self.rep1()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -588,7 +623,15 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ comp0: {=bool:?}, comp1: {=bool:?}, uf: {=bool:?}, rep0: {=bool:?}, rep1: {=bool:?} }}" , self . comp0 () , self . comp1 () , self . uf () , self . rep0 () , self . rep1 ())
+        defmt::write!(
+            f,
+            "Ifs {{ comp0: {=bool:?}, comp1: {=bool:?}, uf: {=bool:?}, rep0: {=bool:?}, rep1: {=bool:?} }}",
+            self.comp0(),
+            self.comp1(),
+            self.uf(),
+            self.rep0(),
+            self.rep1()
+        )
     }
 }
 #[doc = "PRS Input Select Register."]
@@ -690,7 +733,16 @@ impl core::fmt::Debug for Prssel {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Prssel {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Prssel {{ prsstartsel: {:?}, prsstopsel: {:?}, prsclearsel: {:?}, prsstartmode: {:?}, prsstopmode: {:?}, prsclearmode: {:?} }}" , self . prsstartsel () , self . prsstopsel () , self . prsclearsel () , self . prsstartmode () , self . prsstopmode () , self . prsclearmode ())
+        defmt::write!(
+            f,
+            "Prssel {{ prsstartsel: {:?}, prsstopsel: {:?}, prsclearsel: {:?}, prsstartmode: {:?}, prsstopmode: {:?}, prsclearmode: {:?} }}",
+            self.prsstartsel(),
+            self.prsstopsel(),
+            self.prsclearsel(),
+            self.prsstartmode(),
+            self.prsstopmode(),
+            self.prsclearmode()
+        )
     }
 }
 #[doc = "Repeat Counter Register 0."]

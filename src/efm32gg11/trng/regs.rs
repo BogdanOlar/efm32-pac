@@ -188,7 +188,23 @@ impl core::fmt::Debug for Control {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Control {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Control {{ enable: {=bool:?}, testen: {=bool:?}, condbypass: {=bool:?}, repcountien: {=bool:?}, apt64ien: {=bool:?}, apt4096ien: {=bool:?}, fullien: {=bool:?}, softreset: {=bool:?}, preien: {=bool:?}, almien: {=bool:?}, forcerun: {=bool:?}, bypnist: {=bool:?}, bypais31: {=bool:?} }}" , self . enable () , self . testen () , self . condbypass () , self . repcountien () , self . apt64ien () , self . apt4096ien () , self . fullien () , self . softreset () , self . preien () , self . almien () , self . forcerun () , self . bypnist () , self . bypais31 ())
+        defmt::write!(
+            f,
+            "Control {{ enable: {=bool:?}, testen: {=bool:?}, condbypass: {=bool:?}, repcountien: {=bool:?}, apt64ien: {=bool:?}, apt4096ien: {=bool:?}, fullien: {=bool:?}, softreset: {=bool:?}, preien: {=bool:?}, almien: {=bool:?}, forcerun: {=bool:?}, bypnist: {=bool:?}, bypais31: {=bool:?} }}",
+            self.enable(),
+            self.testen(),
+            self.condbypass(),
+            self.repcountien(),
+            self.apt64ien(),
+            self.apt4096ien(),
+            self.fullien(),
+            self.softreset(),
+            self.preien(),
+            self.almien(),
+            self.forcerun(),
+            self.bypnist(),
+            self.bypais31()
+        )
     }
 }
 #[doc = "Initial Wait Counter."]
@@ -340,6 +356,16 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ testdatabusy: {=bool:?}, repcountif: {=bool:?}, apt64if: {=bool:?}, apt4096if: {=bool:?}, fullif: {=bool:?}, preif: {=bool:?}, almif: {=bool:?} }}" , self . testdatabusy () , self . repcountif () , self . apt64if () , self . apt4096if () , self . fullif () , self . preif () , self . almif ())
+        defmt::write!(
+            f,
+            "Status {{ testdatabusy: {=bool:?}, repcountif: {=bool:?}, apt64if: {=bool:?}, apt4096if: {=bool:?}, fullif: {=bool:?}, preif: {=bool:?}, almif: {=bool:?} }}",
+            self.testdatabusy(),
+            self.repcountif(),
+            self.apt64if(),
+            self.apt4096if(),
+            self.fullif(),
+            self.preif(),
+            self.almif()
+        )
     }
 }

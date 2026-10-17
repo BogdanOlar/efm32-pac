@@ -110,7 +110,17 @@ impl core::fmt::Debug for Cc0Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cc0Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cc0Ctrl {{ mode: {:?}, cmoa: {:?}, icedge: {:?}, prssel: {:?}, compbase: {=bool:?}, compmask: {=u8:?}, daycc: {=bool:?} }}" , self . mode () , self . cmoa () , self . icedge () , self . prssel () , self . compbase () , self . compmask () , self . daycc ())
+        defmt::write!(
+            f,
+            "Cc0Ctrl {{ mode: {:?}, cmoa: {:?}, icedge: {:?}, prssel: {:?}, compbase: {=bool:?}, compmask: {=u8:?}, daycc: {=bool:?} }}",
+            self.mode(),
+            self.cmoa(),
+            self.icedge(),
+            self.prssel(),
+            self.compbase(),
+            self.compmask(),
+            self.daycc()
+        )
     }
 }
 #[doc = "Capture/Compare Date Register."]
@@ -295,7 +305,16 @@ impl core::fmt::Debug for Cc0Time {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cc0Time {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cc0Time {{ secu: {=u8:?}, sect: {=u8:?}, minu: {=u8:?}, mint: {=u8:?}, houru: {=u8:?}, hourt: {=u8:?} }}" , self . secu () , self . sect () , self . minu () , self . mint () , self . houru () , self . hourt ())
+        defmt::write!(
+            f,
+            "Cc0Time {{ secu: {=u8:?}, sect: {=u8:?}, minu: {=u8:?}, mint: {=u8:?}, houru: {=u8:?}, hourt: {=u8:?} }}",
+            self.secu(),
+            self.sect(),
+            self.minu(),
+            self.mint(),
+            self.houru(),
+            self.hourt()
+        )
     }
 }
 #[doc = "Command Register."]
@@ -541,7 +560,20 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ enable: {=bool:?}, debugrun: {=bool:?}, preccv0top: {=bool:?}, ccv1top: {=bool:?}, cntpresc: {:?}, cnttick: {=bool:?}, bumodetsen: {=bool:?}, oscfdeten: {=bool:?}, cntmode: {=bool:?}, lyearcorrdis: {=bool:?} }}" , self . enable () , self . debugrun () , self . preccv0top () , self . ccv1top () , self . cntpresc () , self . cnttick () , self . bumodetsen () , self . oscfdeten () , self . cntmode () , self . lyearcorrdis ())
+        defmt::write!(
+            f,
+            "Ctrl {{ enable: {=bool:?}, debugrun: {=bool:?}, preccv0top: {=bool:?}, ccv1top: {=bool:?}, cntpresc: {:?}, cnttick: {=bool:?}, bumodetsen: {=bool:?}, oscfdeten: {=bool:?}, cntmode: {=bool:?}, lyearcorrdis: {=bool:?} }}",
+            self.enable(),
+            self.debugrun(),
+            self.preccv0top(),
+            self.ccv1top(),
+            self.cntpresc(),
+            self.cnttick(),
+            self.bumodetsen(),
+            self.oscfdeten(),
+            self.cntmode(),
+            self.lyearcorrdis()
+        )
     }
 }
 #[doc = "Date Register."]
@@ -656,7 +688,17 @@ impl core::fmt::Debug for Date {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Date {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Date {{ dayomu: {=u8:?}, dayomt: {=u8:?}, monthu: {=u8:?}, montht: {=bool:?}, yearu: {=u8:?}, yeart: {=u8:?}, dayow: {=u8:?} }}" , self . dayomu () , self . dayomt () , self . monthu () , self . montht () , self . yearu () , self . yeart () , self . dayow ())
+        defmt::write!(
+            f,
+            "Date {{ dayomu: {=u8:?}, dayomt: {=u8:?}, monthu: {=u8:?}, montht: {=bool:?}, yearu: {=u8:?}, yeart: {=u8:?}, dayow: {=u8:?} }}",
+            self.dayomu(),
+            self.dayomt(),
+            self.monthu(),
+            self.montht(),
+            self.yearu(),
+            self.yeart(),
+            self.dayow()
+        )
     }
 }
 #[doc = "Wake Up Enable."]
@@ -860,7 +902,21 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ of: {=bool:?}, cc0: {=bool:?}, cc1: {=bool:?}, cc2: {=bool:?}, oscfail: {=bool:?}, cnttick: {=bool:?}, mintick: {=bool:?}, hourtick: {=bool:?}, daytick: {=bool:?}, dayowof: {=bool:?}, monthtick: {=bool:?} }}" , self . of () , self . cc0 () , self . cc1 () , self . cc2 () , self . oscfail () , self . cnttick () , self . mintick () , self . hourtick () , self . daytick () , self . dayowof () , self . monthtick ())
+        defmt::write!(
+            f,
+            "Ien {{ of: {=bool:?}, cc0: {=bool:?}, cc1: {=bool:?}, cc2: {=bool:?}, oscfail: {=bool:?}, cnttick: {=bool:?}, mintick: {=bool:?}, hourtick: {=bool:?}, daytick: {=bool:?}, dayowof: {=bool:?}, monthtick: {=bool:?} }}",
+            self.of(),
+            self.cc0(),
+            self.cc1(),
+            self.cc2(),
+            self.oscfail(),
+            self.cnttick(),
+            self.mintick(),
+            self.hourtick(),
+            self.daytick(),
+            self.dayowof(),
+            self.monthtick()
+        )
     }
 }
 #[doc = "RTCC Interrupt Flags."]
@@ -1027,7 +1083,21 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ of: {=bool:?}, cc0: {=bool:?}, cc1: {=bool:?}, cc2: {=bool:?}, oscfail: {=bool:?}, cnttick: {=bool:?}, mintick: {=bool:?}, hourtick: {=bool:?}, daytick: {=bool:?}, dayowof: {=bool:?}, monthtick: {=bool:?} }}" , self . of () , self . cc0 () , self . cc1 () , self . cc2 () , self . oscfail () , self . cnttick () , self . mintick () , self . hourtick () , self . daytick () , self . dayowof () , self . monthtick ())
+        defmt::write!(
+            f,
+            "If {{ of: {=bool:?}, cc0: {=bool:?}, cc1: {=bool:?}, cc2: {=bool:?}, oscfail: {=bool:?}, cnttick: {=bool:?}, mintick: {=bool:?}, hourtick: {=bool:?}, daytick: {=bool:?}, dayowof: {=bool:?}, monthtick: {=bool:?} }}",
+            self.of(),
+            self.cc0(),
+            self.cc1(),
+            self.cc2(),
+            self.oscfail(),
+            self.cnttick(),
+            self.mintick(),
+            self.hourtick(),
+            self.daytick(),
+            self.dayowof(),
+            self.monthtick()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -1194,7 +1264,21 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ of: {=bool:?}, cc0: {=bool:?}, cc1: {=bool:?}, cc2: {=bool:?}, oscfail: {=bool:?}, cnttick: {=bool:?}, mintick: {=bool:?}, hourtick: {=bool:?}, daytick: {=bool:?}, dayowof: {=bool:?}, monthtick: {=bool:?} }}" , self . of () , self . cc0 () , self . cc1 () , self . cc2 () , self . oscfail () , self . cnttick () , self . mintick () , self . hourtick () , self . daytick () , self . dayowof () , self . monthtick ())
+        defmt::write!(
+            f,
+            "Ifs {{ of: {=bool:?}, cc0: {=bool:?}, cc1: {=bool:?}, cc2: {=bool:?}, oscfail: {=bool:?}, cnttick: {=bool:?}, mintick: {=bool:?}, hourtick: {=bool:?}, daytick: {=bool:?}, dayowof: {=bool:?}, monthtick: {=bool:?} }}",
+            self.of(),
+            self.cc0(),
+            self.cc1(),
+            self.cc2(),
+            self.oscfail(),
+            self.cnttick(),
+            self.mintick(),
+            self.hourtick(),
+            self.daytick(),
+            self.dayowof(),
+            self.monthtick()
+        )
     }
 }
 #[doc = "Configuration Lock Register."]
@@ -1481,6 +1565,15 @@ impl core::fmt::Debug for Time {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Time {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Time {{ secu: {=u8:?}, sect: {=u8:?}, minu: {=u8:?}, mint: {=u8:?}, houru: {=u8:?}, hourt: {=u8:?} }}" , self . secu () , self . sect () , self . minu () , self . mint () , self . houru () , self . hourt ())
+        defmt::write!(
+            f,
+            "Time {{ secu: {=u8:?}, sect: {=u8:?}, minu: {=u8:?}, mint: {=u8:?}, houru: {=u8:?}, hourt: {=u8:?} }}",
+            self.secu(),
+            self.sect(),
+            self.minu(),
+            self.mint(),
+            self.houru(),
+            self.hourt()
+        )
     }
 }

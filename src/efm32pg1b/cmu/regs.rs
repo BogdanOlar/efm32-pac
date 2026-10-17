@@ -178,7 +178,18 @@ impl core::fmt::Debug for Auxhfrcoctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Auxhfrcoctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Auxhfrcoctrl {{ tuning: {=u8:?}, finetuning: {=u8:?}, freqrange: {=u8:?}, cmpbias: {=u8:?}, ldohp: {=bool:?}, clkdiv: {:?}, finetuningen: {=bool:?}, vreftc: {=u8:?} }}" , self . tuning () , self . finetuning () , self . freqrange () , self . cmpbias () , self . ldohp () , self . clkdiv () , self . finetuningen () , self . vreftc ())
+        defmt::write!(
+            f,
+            "Auxhfrcoctrl {{ tuning: {=u8:?}, finetuning: {=u8:?}, freqrange: {=u8:?}, cmpbias: {=u8:?}, ldohp: {=bool:?}, clkdiv: {:?}, finetuningen: {=bool:?}, vreftc: {=u8:?} }}",
+            self.tuning(),
+            self.finetuning(),
+            self.freqrange(),
+            self.cmpbias(),
+            self.ldohp(),
+            self.clkdiv(),
+            self.finetuningen(),
+            self.vreftc()
+        )
     }
 }
 #[doc = "Calibration Counter Register."]
@@ -304,7 +315,15 @@ impl core::fmt::Debug for Calctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Calctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Calctrl {{ upsel: {:?}, downsel: {:?}, cont: {=bool:?}, prsupsel: {:?}, prsdownsel: {:?} }}" , self . upsel () , self . downsel () , self . cont () , self . prsupsel () , self . prsdownsel ())
+        defmt::write!(
+            f,
+            "Calctrl {{ upsel: {:?}, downsel: {:?}, cont: {=bool:?}, prsupsel: {:?}, prsdownsel: {:?} }}",
+            self.upsel(),
+            self.downsel(),
+            self.cont(),
+            self.prsupsel(),
+            self.prsdownsel()
+        )
     }
 }
 #[doc = "Command Register."]
@@ -380,7 +399,14 @@ impl core::fmt::Debug for Cmd {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cmd {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cmd {{ calstart: {=bool:?}, calstop: {=bool:?}, hfxopeakdetstart: {=bool:?}, hfxoshuntoptstart: {=bool:?} }}" , self . calstart () , self . calstop () , self . hfxopeakdetstart () , self . hfxoshuntoptstart ())
+        defmt::write!(
+            f,
+            "Cmd {{ calstart: {=bool:?}, calstop: {=bool:?}, hfxopeakdetstart: {=bool:?}, hfxoshuntoptstart: {=bool:?} }}",
+            self.calstart(),
+            self.calstop(),
+            self.hfxopeakdetstart(),
+            self.hfxoshuntoptstart()
+        )
     }
 }
 #[doc = "CMU Control Register."]
@@ -456,7 +482,14 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ clkoutsel0: {:?}, clkoutsel1: {:?}, wshfle: {=bool:?}, hfperclken: {=bool:?} }}" , self . clkoutsel0 () , self . clkoutsel1 () , self . wshfle () , self . hfperclken ())
+        defmt::write!(
+            f,
+            "Ctrl {{ clkoutsel0: {:?}, clkoutsel1: {:?}, wshfle: {=bool:?}, hfperclken: {=bool:?} }}",
+            self.clkoutsel0(),
+            self.clkoutsel1(),
+            self.wshfle(),
+            self.hfperclken()
+        )
     }
 }
 #[doc = "Debug Trace Clock Select."]
@@ -632,7 +665,16 @@ impl core::fmt::Debug for Hfbusclken0 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hfbusclken0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hfbusclken0 {{ le: {=bool:?}, crypto: {=bool:?}, gpio: {=bool:?}, prs: {=bool:?}, ldma: {=bool:?}, gpcrc: {=bool:?} }}" , self . le () , self . crypto () , self . gpio () , self . prs () , self . ldma () , self . gpcrc ())
+        defmt::write!(
+            f,
+            "Hfbusclken0 {{ le: {=bool:?}, crypto: {=bool:?}, gpio: {=bool:?}, prs: {=bool:?}, ldma: {=bool:?}, gpcrc: {=bool:?} }}",
+            self.le(),
+            self.crypto(),
+            self.gpio(),
+            self.prs(),
+            self.ldma(),
+            self.gpcrc()
+        )
     }
 }
 #[doc = "High Frequency Clock Select Command Register."]
@@ -920,7 +962,20 @@ impl core::fmt::Debug for Hfperclken0 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hfperclken0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hfperclken0 {{ timer[0]: {=bool:?}, timer[1]: {=bool:?}, usart[0]: {=bool:?}, usart[1]: {=bool:?}, acmp[0]: {=bool:?}, acmp[1]: {=bool:?}, cryotimer: {=bool:?}, i2c[0]: {=bool:?}, adc[0]: {=bool:?}, idac[0]: {=bool:?} }}" , self . timer (0usize) , self . timer (1usize) , self . usart (0usize) , self . usart (1usize) , self . acmp (0usize) , self . acmp (1usize) , self . cryotimer () , self . i2c (0usize) , self . adc (0usize) , self . idac (0usize))
+        defmt::write!(
+            f,
+            "Hfperclken0 {{ timer[0]: {=bool:?}, timer[1]: {=bool:?}, usart[0]: {=bool:?}, usart[1]: {=bool:?}, acmp[0]: {=bool:?}, acmp[1]: {=bool:?}, cryotimer: {=bool:?}, i2c[0]: {=bool:?}, adc[0]: {=bool:?}, idac[0]: {=bool:?} }}",
+            self.timer(0usize),
+            self.timer(1usize),
+            self.usart(0usize),
+            self.usart(1usize),
+            self.acmp(0usize),
+            self.acmp(1usize),
+            self.cryotimer(),
+            self.i2c(0usize),
+            self.adc(0usize),
+            self.idac(0usize)
+        )
     }
 }
 #[doc = "High Frequency Peripheral Clock Prescaler Register."]
@@ -1140,7 +1195,18 @@ impl core::fmt::Debug for Hfrcoctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hfrcoctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hfrcoctrl {{ tuning: {=u8:?}, finetuning: {=u8:?}, freqrange: {=u8:?}, cmpbias: {=u8:?}, ldohp: {=bool:?}, clkdiv: {:?}, finetuningen: {=bool:?}, vreftc: {=u8:?} }}" , self . tuning () , self . finetuning () , self . freqrange () , self . cmpbias () , self . ldohp () , self . clkdiv () , self . finetuningen () , self . vreftc ())
+        defmt::write!(
+            f,
+            "Hfrcoctrl {{ tuning: {=u8:?}, finetuning: {=u8:?}, freqrange: {=u8:?}, cmpbias: {=u8:?}, ldohp: {=bool:?}, clkdiv: {:?}, finetuningen: {=bool:?}, vreftc: {=u8:?} }}",
+            self.tuning(),
+            self.finetuning(),
+            self.freqrange(),
+            self.cmpbias(),
+            self.ldohp(),
+            self.clkdiv(),
+            self.finetuningen(),
+            self.vreftc()
+        )
     }
 }
 #[doc = "HFXO Control Register."]
@@ -1268,7 +1334,18 @@ impl core::fmt::Debug for Hfxoctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hfxoctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hfxoctrl {{ mode: {=bool:?}, peakdetshuntoptmode: {:?}, lowpower: {=bool:?}, xti2gnd: {=bool:?}, xto2gnd: {=bool:?}, lftimeout: {:?}, autostartem0em1: {=bool:?}, autostartselem0em1: {=bool:?} }}" , self . mode () , self . peakdetshuntoptmode () , self . lowpower () , self . xti2gnd () , self . xto2gnd () , self . lftimeout () , self . autostartem0em1 () , self . autostartselem0em1 ())
+        defmt::write!(
+            f,
+            "Hfxoctrl {{ mode: {=bool:?}, peakdetshuntoptmode: {:?}, lowpower: {=bool:?}, xti2gnd: {=bool:?}, xto2gnd: {=bool:?}, lftimeout: {:?}, autostartem0em1: {=bool:?}, autostartselem0em1: {=bool:?} }}",
+            self.mode(),
+            self.peakdetshuntoptmode(),
+            self.lowpower(),
+            self.xti2gnd(),
+            self.xto2gnd(),
+            self.lftimeout(),
+            self.autostartem0em1(),
+            self.autostartselem0em1()
+        )
     }
 }
 #[doc = "HFXO Control 1."]
@@ -1413,7 +1490,14 @@ impl core::fmt::Debug for Hfxostartupctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hfxostartupctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hfxostartupctrl {{ ibtrimxocore: {=u8:?}, ctune: {=u16:?}, reserved0: {=u8:?}, reserved1: {=u8:?} }}" , self . ibtrimxocore () , self . ctune () , self . reserved0 () , self . reserved1 ())
+        defmt::write!(
+            f,
+            "Hfxostartupctrl {{ ibtrimxocore: {=u8:?}, ctune: {=u16:?}, reserved0: {=u8:?}, reserved1: {=u8:?} }}",
+            self.ibtrimxocore(),
+            self.ctune(),
+            self.reserved0(),
+            self.reserved1()
+        )
     }
 }
 #[doc = "HFXO Steady State Control."]
@@ -1515,7 +1599,16 @@ impl core::fmt::Debug for Hfxosteadystatectrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hfxosteadystatectrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hfxosteadystatectrl {{ ibtrimxocore: {=u8:?}, regish: {=u8:?}, ctune: {=u16:?}, regselilow: {=u8:?}, peakdeten: {=bool:?}, regishupper: {=u8:?} }}" , self . ibtrimxocore () , self . regish () , self . ctune () , self . regselilow () , self . peakdeten () , self . regishupper ())
+        defmt::write!(
+            f,
+            "Hfxosteadystatectrl {{ ibtrimxocore: {=u8:?}, regish: {=u8:?}, ctune: {=u16:?}, regselilow: {=u8:?}, peakdeten: {=bool:?}, regishupper: {=u8:?} }}",
+            self.ibtrimxocore(),
+            self.regish(),
+            self.ctune(),
+            self.regselilow(),
+            self.peakdeten(),
+            self.regishupper()
+        )
     }
 }
 #[doc = "HFXO Timeout Control."]
@@ -1604,7 +1697,15 @@ impl core::fmt::Debug for Hfxotimeoutctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hfxotimeoutctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hfxotimeoutctrl {{ startuptimeout: {:?}, steadytimeout: {:?}, reserved2: {=u8:?}, peakdettimeout: {:?}, shuntopttimeout: {:?} }}" , self . startuptimeout () , self . steadytimeout () , self . reserved2 () , self . peakdettimeout () , self . shuntopttimeout ())
+        defmt::write!(
+            f,
+            "Hfxotimeoutctrl {{ startuptimeout: {:?}, steadytimeout: {:?}, reserved2: {=u8:?}, peakdettimeout: {:?}, shuntopttimeout: {:?} }}",
+            self.startuptimeout(),
+            self.steadytimeout(),
+            self.reserved2(),
+            self.peakdettimeout(),
+            self.shuntopttimeout()
+        )
     }
 }
 #[doc = "HFXO Trim Status."]
@@ -1878,7 +1979,25 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ hfrcordy: {=bool:?}, hfxordy: {=bool:?}, lfrcordy: {=bool:?}, lfxordy: {=bool:?}, auxhfrcordy: {=bool:?}, calrdy: {=bool:?}, calof: {=bool:?}, hfxodiserr: {=bool:?}, hfxoautosw: {=bool:?}, hfxopeakdeterr: {=bool:?}, hfxopeakdetrdy: {=bool:?}, hfxoshuntoptrdy: {=bool:?}, hfrcodis: {=bool:?}, lftimeouterr: {=bool:?}, cmuerr: {=bool:?} }}" , self . hfrcordy () , self . hfxordy () , self . lfrcordy () , self . lfxordy () , self . auxhfrcordy () , self . calrdy () , self . calof () , self . hfxodiserr () , self . hfxoautosw () , self . hfxopeakdeterr () , self . hfxopeakdetrdy () , self . hfxoshuntoptrdy () , self . hfrcodis () , self . lftimeouterr () , self . cmuerr ())
+        defmt::write!(
+            f,
+            "Ien {{ hfrcordy: {=bool:?}, hfxordy: {=bool:?}, lfrcordy: {=bool:?}, lfxordy: {=bool:?}, auxhfrcordy: {=bool:?}, calrdy: {=bool:?}, calof: {=bool:?}, hfxodiserr: {=bool:?}, hfxoautosw: {=bool:?}, hfxopeakdeterr: {=bool:?}, hfxopeakdetrdy: {=bool:?}, hfxoshuntoptrdy: {=bool:?}, hfrcodis: {=bool:?}, lftimeouterr: {=bool:?}, cmuerr: {=bool:?} }}",
+            self.hfrcordy(),
+            self.hfxordy(),
+            self.lfrcordy(),
+            self.lfxordy(),
+            self.auxhfrcordy(),
+            self.calrdy(),
+            self.calof(),
+            self.hfxodiserr(),
+            self.hfxoautosw(),
+            self.hfxopeakdeterr(),
+            self.hfxopeakdetrdy(),
+            self.hfxoshuntoptrdy(),
+            self.hfrcodis(),
+            self.lftimeouterr(),
+            self.cmuerr()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -2097,7 +2216,25 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ hfrcordy: {=bool:?}, hfxordy: {=bool:?}, lfrcordy: {=bool:?}, lfxordy: {=bool:?}, auxhfrcordy: {=bool:?}, calrdy: {=bool:?}, calof: {=bool:?}, hfxodiserr: {=bool:?}, hfxoautosw: {=bool:?}, hfxopeakdeterr: {=bool:?}, hfxopeakdetrdy: {=bool:?}, hfxoshuntoptrdy: {=bool:?}, hfrcodis: {=bool:?}, lftimeouterr: {=bool:?}, cmuerr: {=bool:?} }}" , self . hfrcordy () , self . hfxordy () , self . lfrcordy () , self . lfxordy () , self . auxhfrcordy () , self . calrdy () , self . calof () , self . hfxodiserr () , self . hfxoautosw () , self . hfxopeakdeterr () , self . hfxopeakdetrdy () , self . hfxoshuntoptrdy () , self . hfrcodis () , self . lftimeouterr () , self . cmuerr ())
+        defmt::write!(
+            f,
+            "If {{ hfrcordy: {=bool:?}, hfxordy: {=bool:?}, lfrcordy: {=bool:?}, lfxordy: {=bool:?}, auxhfrcordy: {=bool:?}, calrdy: {=bool:?}, calof: {=bool:?}, hfxodiserr: {=bool:?}, hfxoautosw: {=bool:?}, hfxopeakdeterr: {=bool:?}, hfxopeakdetrdy: {=bool:?}, hfxoshuntoptrdy: {=bool:?}, hfrcodis: {=bool:?}, lftimeouterr: {=bool:?}, cmuerr: {=bool:?} }}",
+            self.hfrcordy(),
+            self.hfxordy(),
+            self.lfrcordy(),
+            self.lfxordy(),
+            self.auxhfrcordy(),
+            self.calrdy(),
+            self.calof(),
+            self.hfxodiserr(),
+            self.hfxoautosw(),
+            self.hfxopeakdeterr(),
+            self.hfxopeakdetrdy(),
+            self.hfxoshuntoptrdy(),
+            self.hfrcodis(),
+            self.lftimeouterr(),
+            self.cmuerr()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -2316,7 +2453,25 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ hfrcordy: {=bool:?}, hfxordy: {=bool:?}, lfrcordy: {=bool:?}, lfxordy: {=bool:?}, auxhfrcordy: {=bool:?}, calrdy: {=bool:?}, calof: {=bool:?}, hfxodiserr: {=bool:?}, hfxoautosw: {=bool:?}, hfxopeakdeterr: {=bool:?}, hfxopeakdetrdy: {=bool:?}, hfxoshuntoptrdy: {=bool:?}, hfrcodis: {=bool:?}, lftimeouterr: {=bool:?}, cmuerr: {=bool:?} }}" , self . hfrcordy () , self . hfxordy () , self . lfrcordy () , self . lfxordy () , self . auxhfrcordy () , self . calrdy () , self . calof () , self . hfxodiserr () , self . hfxoautosw () , self . hfxopeakdeterr () , self . hfxopeakdetrdy () , self . hfxoshuntoptrdy () , self . hfrcodis () , self . lftimeouterr () , self . cmuerr ())
+        defmt::write!(
+            f,
+            "Ifs {{ hfrcordy: {=bool:?}, hfxordy: {=bool:?}, lfrcordy: {=bool:?}, lfxordy: {=bool:?}, auxhfrcordy: {=bool:?}, calrdy: {=bool:?}, calof: {=bool:?}, hfxodiserr: {=bool:?}, hfxoautosw: {=bool:?}, hfxopeakdeterr: {=bool:?}, hfxopeakdetrdy: {=bool:?}, hfxoshuntoptrdy: {=bool:?}, hfrcodis: {=bool:?}, lftimeouterr: {=bool:?}, cmuerr: {=bool:?} }}",
+            self.hfrcordy(),
+            self.hfxordy(),
+            self.lfrcordy(),
+            self.lfxordy(),
+            self.auxhfrcordy(),
+            self.calrdy(),
+            self.calof(),
+            self.hfxodiserr(),
+            self.hfxoautosw(),
+            self.hfxopeakdeterr(),
+            self.hfxopeakdetrdy(),
+            self.hfxoshuntoptrdy(),
+            self.hfrcodis(),
+            self.lftimeouterr(),
+            self.cmuerr()
+        )
     }
 }
 #[doc = "Low Frequency a Clock Enable Register 0 (Async Reg)."]
@@ -2767,7 +2922,16 @@ impl core::fmt::Debug for Lfrcoctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Lfrcoctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Lfrcoctrl {{ tuning: {=u16:?}, envref: {=bool:?}, enchop: {=bool:?}, endem: {=bool:?}, timeout: {:?}, gmccurtune: {=u8:?} }}" , self . tuning () , self . envref () , self . enchop () , self . endem () , self . timeout () , self . gmccurtune ())
+        defmt::write!(
+            f,
+            "Lfrcoctrl {{ tuning: {=u16:?}, envref: {=bool:?}, enchop: {=bool:?}, endem: {=bool:?}, timeout: {:?}, gmccurtune: {=u8:?} }}",
+            self.tuning(),
+            self.envref(),
+            self.enchop(),
+            self.endem(),
+            self.timeout(),
+            self.gmccurtune()
+        )
     }
 }
 #[doc = "LFXO Control Register."]
@@ -2895,7 +3059,18 @@ impl core::fmt::Debug for Lfxoctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Lfxoctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Lfxoctrl {{ tuning: {=u8:?}, mode: {:?}, gain: {=u8:?}, highampl: {=bool:?}, agc: {=bool:?}, cur: {=u8:?}, bufcur: {=bool:?}, timeout: {:?} }}" , self . tuning () , self . mode () , self . gain () , self . highampl () , self . agc () , self . cur () , self . bufcur () , self . timeout ())
+        defmt::write!(
+            f,
+            "Lfxoctrl {{ tuning: {=u8:?}, mode: {:?}, gain: {=u8:?}, highampl: {=bool:?}, agc: {=bool:?}, cur: {=u8:?}, bufcur: {=bool:?}, timeout: {:?} }}",
+            self.tuning(),
+            self.mode(),
+            self.gain(),
+            self.highampl(),
+            self.agc(),
+            self.cur(),
+            self.bufcur(),
+            self.timeout()
+        )
     }
 }
 #[doc = "Configuration Lock Register."]
@@ -3086,7 +3261,20 @@ impl core::fmt::Debug for Oscencmd {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Oscencmd {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Oscencmd {{ hfrcoen: {=bool:?}, hfrcodis: {=bool:?}, hfxoen: {=bool:?}, hfxodis: {=bool:?}, auxhfrcoen: {=bool:?}, auxhfrcodis: {=bool:?}, lfrcoen: {=bool:?}, lfrcodis: {=bool:?}, lfxoen: {=bool:?}, lfxodis: {=bool:?} }}" , self . hfrcoen () , self . hfrcodis () , self . hfxoen () , self . hfxodis () , self . auxhfrcoen () , self . auxhfrcodis () , self . lfrcoen () , self . lfrcodis () , self . lfxoen () , self . lfxodis ())
+        defmt::write!(
+            f,
+            "Oscencmd {{ hfrcoen: {=bool:?}, hfrcodis: {=bool:?}, hfxoen: {=bool:?}, hfxodis: {=bool:?}, auxhfrcoen: {=bool:?}, auxhfrcodis: {=bool:?}, lfrcoen: {=bool:?}, lfrcodis: {=bool:?}, lfxoen: {=bool:?}, lfxodis: {=bool:?} }}",
+            self.hfrcoen(),
+            self.hfrcodis(),
+            self.hfxoen(),
+            self.hfxodis(),
+            self.auxhfrcoen(),
+            self.auxhfrcodis(),
+            self.lfrcoen(),
+            self.lfrcodis(),
+            self.lfxoen(),
+            self.lfxodis()
+        )
     }
 }
 #[doc = "PCNT Control Register."]
@@ -3496,7 +3684,27 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ hfrcoens: {=bool:?}, hfrcordy: {=bool:?}, hfxoens: {=bool:?}, hfxordy: {=bool:?}, auxhfrcoens: {=bool:?}, auxhfrcordy: {=bool:?}, lfrcoens: {=bool:?}, lfrcordy: {=bool:?}, lfxoens: {=bool:?}, lfxordy: {=bool:?}, calrdy: {=bool:?}, hfxoreq: {=bool:?}, hfxopeakdetrdy: {=bool:?}, hfxoshuntoptrdy: {=bool:?}, hfxoamphigh: {=bool:?}, hfxoamplow: {=bool:?}, hfxoregilow: {=bool:?} }}" , self . hfrcoens () , self . hfrcordy () , self . hfxoens () , self . hfxordy () , self . auxhfrcoens () , self . auxhfrcordy () , self . lfrcoens () , self . lfrcordy () , self . lfxoens () , self . lfxordy () , self . calrdy () , self . hfxoreq () , self . hfxopeakdetrdy () , self . hfxoshuntoptrdy () , self . hfxoamphigh () , self . hfxoamplow () , self . hfxoregilow ())
+        defmt::write!(
+            f,
+            "Status {{ hfrcoens: {=bool:?}, hfrcordy: {=bool:?}, hfxoens: {=bool:?}, hfxordy: {=bool:?}, auxhfrcoens: {=bool:?}, auxhfrcordy: {=bool:?}, lfrcoens: {=bool:?}, lfrcordy: {=bool:?}, lfxoens: {=bool:?}, lfxordy: {=bool:?}, calrdy: {=bool:?}, hfxoreq: {=bool:?}, hfxopeakdetrdy: {=bool:?}, hfxoshuntoptrdy: {=bool:?}, hfxoamphigh: {=bool:?}, hfxoamplow: {=bool:?}, hfxoregilow: {=bool:?} }}",
+            self.hfrcoens(),
+            self.hfrcordy(),
+            self.hfxoens(),
+            self.hfxordy(),
+            self.auxhfrcoens(),
+            self.auxhfrcordy(),
+            self.lfrcoens(),
+            self.lfrcordy(),
+            self.lfxoens(),
+            self.lfxordy(),
+            self.calrdy(),
+            self.hfxoreq(),
+            self.hfxopeakdetrdy(),
+            self.hfxoshuntoptrdy(),
+            self.hfxoamphigh(),
+            self.hfxoamplow(),
+            self.hfxoregilow()
+        )
     }
 }
 #[doc = "Synchronization Busy Register."]
@@ -3676,7 +3884,22 @@ impl core::fmt::Debug for Syncbusy {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Syncbusy {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Syncbusy {{ lfaclken0: {=bool:?}, lfapresc0: {=bool:?}, lfbclken0: {=bool:?}, lfbpresc0: {=bool:?}, lfeclken0: {=bool:?}, lfepresc0: {=bool:?}, hfrcobsy: {=bool:?}, auxhfrcobsy: {=bool:?}, lfrcobsy: {=bool:?}, lfrcovrefbsy: {=bool:?}, hfxobsy: {=bool:?}, lfxobsy: {=bool:?} }}" , self . lfaclken0 () , self . lfapresc0 () , self . lfbclken0 () , self . lfbpresc0 () , self . lfeclken0 () , self . lfepresc0 () , self . hfrcobsy () , self . auxhfrcobsy () , self . lfrcobsy () , self . lfrcovrefbsy () , self . hfxobsy () , self . lfxobsy ())
+        defmt::write!(
+            f,
+            "Syncbusy {{ lfaclken0: {=bool:?}, lfapresc0: {=bool:?}, lfbclken0: {=bool:?}, lfbpresc0: {=bool:?}, lfeclken0: {=bool:?}, lfepresc0: {=bool:?}, hfrcobsy: {=bool:?}, auxhfrcobsy: {=bool:?}, lfrcobsy: {=bool:?}, lfrcovrefbsy: {=bool:?}, hfxobsy: {=bool:?}, lfxobsy: {=bool:?} }}",
+            self.lfaclken0(),
+            self.lfapresc0(),
+            self.lfbclken0(),
+            self.lfbpresc0(),
+            self.lfeclken0(),
+            self.lfepresc0(),
+            self.hfrcobsy(),
+            self.auxhfrcobsy(),
+            self.lfrcobsy(),
+            self.lfrcovrefbsy(),
+            self.hfxobsy(),
+            self.lfxobsy()
+        )
     }
 }
 #[doc = "ULFRCO Control Register."]

@@ -285,9 +285,9 @@ pub const ETM: etm::Etm = unsafe { etm::Etm::from_ptr(0xe004_1000usize as _) };
 #[cfg(feature = "rt")]
 pub const NVIC_PRIO_BITS: u8 = 3;
 #[cfg(feature = "rt")]
-pub use cortex_m_rt::interrupt;
-#[cfg(feature = "rt")]
 pub use Interrupt as interrupt;
+#[cfg(feature = "rt")]
+pub use cortex_m_rt::interrupt;
 pub mod acmp;
 pub mod adc;
 pub mod can;

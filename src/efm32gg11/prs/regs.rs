@@ -123,7 +123,18 @@ impl core::fmt::Debug for Ch0Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch0Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch0Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch0Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -251,7 +262,18 @@ impl core::fmt::Debug for Ch10Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch10Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch10Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch10Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -379,7 +401,18 @@ impl core::fmt::Debug for Ch11Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch11Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch11Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch11Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -507,7 +540,18 @@ impl core::fmt::Debug for Ch12Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch12Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch12Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch12Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -635,7 +679,18 @@ impl core::fmt::Debug for Ch13Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch13Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch13Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch13Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -763,7 +818,18 @@ impl core::fmt::Debug for Ch14Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch14Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch14Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch14Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -891,7 +957,18 @@ impl core::fmt::Debug for Ch15Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch15Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch15Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch15Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -1019,7 +1096,18 @@ impl core::fmt::Debug for Ch16Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch16Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch16Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch16Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -1147,7 +1235,18 @@ impl core::fmt::Debug for Ch17Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch17Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch17Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch17Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -1275,7 +1374,18 @@ impl core::fmt::Debug for Ch18Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch18Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch18Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch18Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -1403,7 +1513,18 @@ impl core::fmt::Debug for Ch19Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch19Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch19Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch19Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -1531,7 +1652,18 @@ impl core::fmt::Debug for Ch1Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch1Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch1Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch1Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -1659,7 +1791,18 @@ impl core::fmt::Debug for Ch20Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch20Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch20Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch20Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -1787,7 +1930,18 @@ impl core::fmt::Debug for Ch21Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch21Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch21Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch21Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -1915,7 +2069,18 @@ impl core::fmt::Debug for Ch22Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch22Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch22Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch22Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -2043,7 +2208,18 @@ impl core::fmt::Debug for Ch23Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch23Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch23Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch23Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -2171,7 +2347,18 @@ impl core::fmt::Debug for Ch2Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch2Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch2Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch2Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -2299,7 +2486,18 @@ impl core::fmt::Debug for Ch3Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch3Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch3Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch3Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -2427,7 +2625,18 @@ impl core::fmt::Debug for Ch4Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch4Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch4Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch4Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -2555,7 +2764,18 @@ impl core::fmt::Debug for Ch5Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch5Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch5Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch5Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -2683,7 +2903,18 @@ impl core::fmt::Debug for Ch6Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch6Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch6Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch6Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -2811,7 +3042,18 @@ impl core::fmt::Debug for Ch7Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch7Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch7Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch7Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -2939,7 +3181,18 @@ impl core::fmt::Debug for Ch8Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch8Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch8Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch8Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Channel Control Register."]
@@ -3067,7 +3320,18 @@ impl core::fmt::Debug for Ch9Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch9Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch9Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}" , self . sigsel () , self . sourcesel () , self . edsel () , self . stretch () , self . inv () , self . orprev () , self . andnext () , self . async_ ())
+        defmt::write!(
+            f,
+            "Ch9Ctrl {{ sigsel: {=u8:?}, sourcesel: {:?}, edsel: {:?}, stretch: {=bool:?}, inv: {=bool:?}, orprev: {=bool:?}, andnext: {=bool:?}, async_: {=bool:?} }}",
+            self.sigsel(),
+            self.sourcesel(),
+            self.edsel(),
+            self.stretch(),
+            self.inv(),
+            self.orprev(),
+            self.andnext(),
+            self.async_()
+        )
     }
 }
 #[doc = "Control Register."]
@@ -3532,7 +3796,34 @@ impl core::fmt::Debug for Peek {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Peek {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Peek {{ ch0val: {=bool:?}, ch1val: {=bool:?}, ch2val: {=bool:?}, ch3val: {=bool:?}, ch4val: {=bool:?}, ch5val: {=bool:?}, ch6val: {=bool:?}, ch7val: {=bool:?}, ch8val: {=bool:?}, ch9val: {=bool:?}, ch10val: {=bool:?}, ch11val: {=bool:?}, ch12val: {=bool:?}, ch13val: {=bool:?}, ch14val: {=bool:?}, ch15val: {=bool:?}, ch16val: {=bool:?}, ch17val: {=bool:?}, ch18val: {=bool:?}, ch19val: {=bool:?}, ch20val: {=bool:?}, ch21val: {=bool:?}, ch22val: {=bool:?}, ch23val: {=bool:?} }}" , self . ch0val () , self . ch1val () , self . ch2val () , self . ch3val () , self . ch4val () , self . ch5val () , self . ch6val () , self . ch7val () , self . ch8val () , self . ch9val () , self . ch10val () , self . ch11val () , self . ch12val () , self . ch13val () , self . ch14val () , self . ch15val () , self . ch16val () , self . ch17val () , self . ch18val () , self . ch19val () , self . ch20val () , self . ch21val () , self . ch22val () , self . ch23val ())
+        defmt::write!(
+            f,
+            "Peek {{ ch0val: {=bool:?}, ch1val: {=bool:?}, ch2val: {=bool:?}, ch3val: {=bool:?}, ch4val: {=bool:?}, ch5val: {=bool:?}, ch6val: {=bool:?}, ch7val: {=bool:?}, ch8val: {=bool:?}, ch9val: {=bool:?}, ch10val: {=bool:?}, ch11val: {=bool:?}, ch12val: {=bool:?}, ch13val: {=bool:?}, ch14val: {=bool:?}, ch15val: {=bool:?}, ch16val: {=bool:?}, ch17val: {=bool:?}, ch18val: {=bool:?}, ch19val: {=bool:?}, ch20val: {=bool:?}, ch21val: {=bool:?}, ch22val: {=bool:?}, ch23val: {=bool:?} }}",
+            self.ch0val(),
+            self.ch1val(),
+            self.ch2val(),
+            self.ch3val(),
+            self.ch4val(),
+            self.ch5val(),
+            self.ch6val(),
+            self.ch7val(),
+            self.ch8val(),
+            self.ch9val(),
+            self.ch10val(),
+            self.ch11val(),
+            self.ch12val(),
+            self.ch13val(),
+            self.ch14val(),
+            self.ch15val(),
+            self.ch16val(),
+            self.ch17val(),
+            self.ch18val(),
+            self.ch19val(),
+            self.ch20val(),
+            self.ch21val(),
+            self.ch22val(),
+            self.ch23val()
+        )
     }
 }
 #[doc = "I/O Routing Location Register."]
@@ -4366,7 +4657,34 @@ impl core::fmt::Debug for Routepen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Routepen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Routepen {{ ch0pen: {=bool:?}, ch1pen: {=bool:?}, ch2pen: {=bool:?}, ch3pen: {=bool:?}, ch4pen: {=bool:?}, ch5pen: {=bool:?}, ch6pen: {=bool:?}, ch7pen: {=bool:?}, ch8pen: {=bool:?}, ch9pen: {=bool:?}, ch10pen: {=bool:?}, ch11pen: {=bool:?}, ch12pen: {=bool:?}, ch13pen: {=bool:?}, ch14pen: {=bool:?}, ch15pen: {=bool:?}, ch16pen: {=bool:?}, ch17pen: {=bool:?}, ch18pen: {=bool:?}, ch19pen: {=bool:?}, ch20pen: {=bool:?}, ch21pen: {=bool:?}, ch22pen: {=bool:?}, ch23pen: {=bool:?} }}" , self . ch0pen () , self . ch1pen () , self . ch2pen () , self . ch3pen () , self . ch4pen () , self . ch5pen () , self . ch6pen () , self . ch7pen () , self . ch8pen () , self . ch9pen () , self . ch10pen () , self . ch11pen () , self . ch12pen () , self . ch13pen () , self . ch14pen () , self . ch15pen () , self . ch16pen () , self . ch17pen () , self . ch18pen () , self . ch19pen () , self . ch20pen () , self . ch21pen () , self . ch22pen () , self . ch23pen ())
+        defmt::write!(
+            f,
+            "Routepen {{ ch0pen: {=bool:?}, ch1pen: {=bool:?}, ch2pen: {=bool:?}, ch3pen: {=bool:?}, ch4pen: {=bool:?}, ch5pen: {=bool:?}, ch6pen: {=bool:?}, ch7pen: {=bool:?}, ch8pen: {=bool:?}, ch9pen: {=bool:?}, ch10pen: {=bool:?}, ch11pen: {=bool:?}, ch12pen: {=bool:?}, ch13pen: {=bool:?}, ch14pen: {=bool:?}, ch15pen: {=bool:?}, ch16pen: {=bool:?}, ch17pen: {=bool:?}, ch18pen: {=bool:?}, ch19pen: {=bool:?}, ch20pen: {=bool:?}, ch21pen: {=bool:?}, ch22pen: {=bool:?}, ch23pen: {=bool:?} }}",
+            self.ch0pen(),
+            self.ch1pen(),
+            self.ch2pen(),
+            self.ch3pen(),
+            self.ch4pen(),
+            self.ch5pen(),
+            self.ch6pen(),
+            self.ch7pen(),
+            self.ch8pen(),
+            self.ch9pen(),
+            self.ch10pen(),
+            self.ch11pen(),
+            self.ch12pen(),
+            self.ch13pen(),
+            self.ch14pen(),
+            self.ch15pen(),
+            self.ch16pen(),
+            self.ch17pen(),
+            self.ch18pen(),
+            self.ch19pen(),
+            self.ch20pen(),
+            self.ch21pen(),
+            self.ch22pen(),
+            self.ch23pen()
+        )
     }
 }
 #[doc = "Software Level Register."]
@@ -4702,7 +5020,34 @@ impl core::fmt::Debug for Swlevel {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Swlevel {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Swlevel {{ ch0level: {=bool:?}, ch1level: {=bool:?}, ch2level: {=bool:?}, ch3level: {=bool:?}, ch4level: {=bool:?}, ch5level: {=bool:?}, ch6level: {=bool:?}, ch7level: {=bool:?}, ch8level: {=bool:?}, ch9level: {=bool:?}, ch10level: {=bool:?}, ch11level: {=bool:?}, ch12level: {=bool:?}, ch13level: {=bool:?}, ch14level: {=bool:?}, ch15level: {=bool:?}, ch16level: {=bool:?}, ch17level: {=bool:?}, ch18level: {=bool:?}, ch19level: {=bool:?}, ch20level: {=bool:?}, ch21level: {=bool:?}, ch22level: {=bool:?}, ch23level: {=bool:?} }}" , self . ch0level () , self . ch1level () , self . ch2level () , self . ch3level () , self . ch4level () , self . ch5level () , self . ch6level () , self . ch7level () , self . ch8level () , self . ch9level () , self . ch10level () , self . ch11level () , self . ch12level () , self . ch13level () , self . ch14level () , self . ch15level () , self . ch16level () , self . ch17level () , self . ch18level () , self . ch19level () , self . ch20level () , self . ch21level () , self . ch22level () , self . ch23level ())
+        defmt::write!(
+            f,
+            "Swlevel {{ ch0level: {=bool:?}, ch1level: {=bool:?}, ch2level: {=bool:?}, ch3level: {=bool:?}, ch4level: {=bool:?}, ch5level: {=bool:?}, ch6level: {=bool:?}, ch7level: {=bool:?}, ch8level: {=bool:?}, ch9level: {=bool:?}, ch10level: {=bool:?}, ch11level: {=bool:?}, ch12level: {=bool:?}, ch13level: {=bool:?}, ch14level: {=bool:?}, ch15level: {=bool:?}, ch16level: {=bool:?}, ch17level: {=bool:?}, ch18level: {=bool:?}, ch19level: {=bool:?}, ch20level: {=bool:?}, ch21level: {=bool:?}, ch22level: {=bool:?}, ch23level: {=bool:?} }}",
+            self.ch0level(),
+            self.ch1level(),
+            self.ch2level(),
+            self.ch3level(),
+            self.ch4level(),
+            self.ch5level(),
+            self.ch6level(),
+            self.ch7level(),
+            self.ch8level(),
+            self.ch9level(),
+            self.ch10level(),
+            self.ch11level(),
+            self.ch12level(),
+            self.ch13level(),
+            self.ch14level(),
+            self.ch15level(),
+            self.ch16level(),
+            self.ch17level(),
+            self.ch18level(),
+            self.ch19level(),
+            self.ch20level(),
+            self.ch21level(),
+            self.ch22level(),
+            self.ch23level()
+        )
     }
 }
 #[doc = "Software Pulse Register."]
@@ -5038,6 +5383,33 @@ impl core::fmt::Debug for Swpulse {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Swpulse {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Swpulse {{ ch0pulse: {=bool:?}, ch1pulse: {=bool:?}, ch2pulse: {=bool:?}, ch3pulse: {=bool:?}, ch4pulse: {=bool:?}, ch5pulse: {=bool:?}, ch6pulse: {=bool:?}, ch7pulse: {=bool:?}, ch8pulse: {=bool:?}, ch9pulse: {=bool:?}, ch10pulse: {=bool:?}, ch11pulse: {=bool:?}, ch12pulse: {=bool:?}, ch13pulse: {=bool:?}, ch14pulse: {=bool:?}, ch15pulse: {=bool:?}, ch16pulse: {=bool:?}, ch17pulse: {=bool:?}, ch18pulse: {=bool:?}, ch19pulse: {=bool:?}, ch20pulse: {=bool:?}, ch21pulse: {=bool:?}, ch22pulse: {=bool:?}, ch23pulse: {=bool:?} }}" , self . ch0pulse () , self . ch1pulse () , self . ch2pulse () , self . ch3pulse () , self . ch4pulse () , self . ch5pulse () , self . ch6pulse () , self . ch7pulse () , self . ch8pulse () , self . ch9pulse () , self . ch10pulse () , self . ch11pulse () , self . ch12pulse () , self . ch13pulse () , self . ch14pulse () , self . ch15pulse () , self . ch16pulse () , self . ch17pulse () , self . ch18pulse () , self . ch19pulse () , self . ch20pulse () , self . ch21pulse () , self . ch22pulse () , self . ch23pulse ())
+        defmt::write!(
+            f,
+            "Swpulse {{ ch0pulse: {=bool:?}, ch1pulse: {=bool:?}, ch2pulse: {=bool:?}, ch3pulse: {=bool:?}, ch4pulse: {=bool:?}, ch5pulse: {=bool:?}, ch6pulse: {=bool:?}, ch7pulse: {=bool:?}, ch8pulse: {=bool:?}, ch9pulse: {=bool:?}, ch10pulse: {=bool:?}, ch11pulse: {=bool:?}, ch12pulse: {=bool:?}, ch13pulse: {=bool:?}, ch14pulse: {=bool:?}, ch15pulse: {=bool:?}, ch16pulse: {=bool:?}, ch17pulse: {=bool:?}, ch18pulse: {=bool:?}, ch19pulse: {=bool:?}, ch20pulse: {=bool:?}, ch21pulse: {=bool:?}, ch22pulse: {=bool:?}, ch23pulse: {=bool:?} }}",
+            self.ch0pulse(),
+            self.ch1pulse(),
+            self.ch2pulse(),
+            self.ch3pulse(),
+            self.ch4pulse(),
+            self.ch5pulse(),
+            self.ch6pulse(),
+            self.ch7pulse(),
+            self.ch8pulse(),
+            self.ch9pulse(),
+            self.ch10pulse(),
+            self.ch11pulse(),
+            self.ch12pulse(),
+            self.ch13pulse(),
+            self.ch14pulse(),
+            self.ch15pulse(),
+            self.ch16pulse(),
+            self.ch17pulse(),
+            self.ch18pulse(),
+            self.ch19pulse(),
+            self.ch20pulse(),
+            self.ch21pulse(),
+            self.ch22pulse(),
+            self.ch23pulse()
+        )
     }
 }

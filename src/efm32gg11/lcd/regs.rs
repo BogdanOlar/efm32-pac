@@ -223,7 +223,20 @@ impl core::fmt::Debug for Bactrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Bactrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Bactrl {{ blinken: {=bool:?}, blank: {=bool:?}, aen: {=bool:?}, aregasc: {:?}, aregbsc: {:?}, alogsel: {=bool:?}, fcen: {=bool:?}, fcpresc: {:?}, fctop: {=u8:?}, aloc: {=bool:?} }}" , self . blinken () , self . blank () , self . aen () , self . aregasc () , self . aregbsc () , self . alogsel () , self . fcen () , self . fcpresc () , self . fctop () , self . aloc ())
+        defmt::write!(
+            f,
+            "Bactrl {{ blinken: {=bool:?}, blank: {=bool:?}, aen: {=bool:?}, aregasc: {:?}, aregbsc: {:?}, alogsel: {=bool:?}, fcen: {=bool:?}, fcpresc: {:?}, fctop: {=u8:?}, aloc: {=bool:?} }}",
+            self.blinken(),
+            self.blank(),
+            self.aen(),
+            self.aregasc(),
+            self.aregbsc(),
+            self.alogsel(),
+            self.fcen(),
+            self.fcpresc(),
+            self.fctop(),
+            self.aloc()
+        )
     }
 }
 #[doc = "Analog BIAS Control."]
@@ -463,7 +476,16 @@ impl core::fmt::Debug for Dispctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dispctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dispctrl {{ mux: {:?}, wave: {=bool:?}, contrast: {=u8:?}, chgrdst: {:?}, bias: {:?}, mode: {:?} }}" , self . mux () , self . wave () , self . contrast () , self . chgrdst () , self . bias () , self . mode ())
+        defmt::write!(
+            f,
+            "Dispctrl {{ mux: {:?}, wave: {=bool:?}, contrast: {=u8:?}, chgrdst: {:?}, bias: {:?}, mode: {:?} }}",
+            self.mux(),
+            self.wave(),
+            self.contrast(),
+            self.chgrdst(),
+            self.bias(),
+            self.mode()
+        )
     }
 }
 #[doc = "Frame Rate."]
@@ -1332,6 +1354,29 @@ impl core::fmt::Debug for Syncbusy {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Syncbusy {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Syncbusy {{ ctrl: {=bool:?}, bactrl: {=bool:?}, arega: {=bool:?}, aregb: {=bool:?}, segd0l: {=bool:?}, segd1l: {=bool:?}, segd2l: {=bool:?}, segd3l: {=bool:?}, segd0h: {=bool:?}, segd1h: {=bool:?}, segd2h: {=bool:?}, segd3h: {=bool:?}, segd4l: {=bool:?}, segd5l: {=bool:?}, segd6l: {=bool:?}, segd7l: {=bool:?}, segd4h: {=bool:?}, segd5h: {=bool:?}, segd6h: {=bool:?}, segd7h: {=bool:?} }}" , self . ctrl () , self . bactrl () , self . arega () , self . aregb () , self . segd0l () , self . segd1l () , self . segd2l () , self . segd3l () , self . segd0h () , self . segd1h () , self . segd2h () , self . segd3h () , self . segd4l () , self . segd5l () , self . segd6l () , self . segd7l () , self . segd4h () , self . segd5h () , self . segd6h () , self . segd7h ())
+        defmt::write!(
+            f,
+            "Syncbusy {{ ctrl: {=bool:?}, bactrl: {=bool:?}, arega: {=bool:?}, aregb: {=bool:?}, segd0l: {=bool:?}, segd1l: {=bool:?}, segd2l: {=bool:?}, segd3l: {=bool:?}, segd0h: {=bool:?}, segd1h: {=bool:?}, segd2h: {=bool:?}, segd3h: {=bool:?}, segd4l: {=bool:?}, segd5l: {=bool:?}, segd6l: {=bool:?}, segd7l: {=bool:?}, segd4h: {=bool:?}, segd5h: {=bool:?}, segd6h: {=bool:?}, segd7h: {=bool:?} }}",
+            self.ctrl(),
+            self.bactrl(),
+            self.arega(),
+            self.aregb(),
+            self.segd0l(),
+            self.segd1l(),
+            self.segd2l(),
+            self.segd3l(),
+            self.segd0h(),
+            self.segd1h(),
+            self.segd2h(),
+            self.segd3h(),
+            self.segd4l(),
+            self.segd5l(),
+            self.segd6l(),
+            self.segd7l(),
+            self.segd4h(),
+            self.segd5h(),
+            self.segd6h(),
+            self.segd7h()
+        )
     }
 }

@@ -192,7 +192,18 @@ impl core::fmt::Debug for Aportconflict {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Aportconflict {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Aportconflict {{ aport1xconflict: {=bool:?}, aport1yconflict: {=bool:?}, aport2xconflict: {=bool:?}, aport2yconflict: {=bool:?}, aport3xconflict: {=bool:?}, aport3yconflict: {=bool:?}, aport4xconflict: {=bool:?}, aport4yconflict: {=bool:?} }}" , self . aport1xconflict () , self . aport1yconflict () , self . aport2xconflict () , self . aport2yconflict () , self . aport3xconflict () , self . aport3yconflict () , self . aport4xconflict () , self . aport4yconflict ())
+        defmt::write!(
+            f,
+            "Aportconflict {{ aport1xconflict: {=bool:?}, aport1yconflict: {=bool:?}, aport2xconflict: {=bool:?}, aport2yconflict: {=bool:?}, aport3xconflict: {=bool:?}, aport3yconflict: {=bool:?}, aport4xconflict: {=bool:?}, aport4yconflict: {=bool:?} }}",
+            self.aport1xconflict(),
+            self.aport1yconflict(),
+            self.aport2xconflict(),
+            self.aport2yconflict(),
+            self.aport3xconflict(),
+            self.aport3yconflict(),
+            self.aport4xconflict(),
+            self.aport4yconflict()
+        )
     }
 }
 #[doc = "APORT Request Status."]
@@ -320,7 +331,18 @@ impl core::fmt::Debug for Aportreq {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Aportreq {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Aportreq {{ aport1xreq: {=bool:?}, aport1yreq: {=bool:?}, aport2xreq: {=bool:?}, aport2yreq: {=bool:?}, aport3xreq: {=bool:?}, aport3yreq: {=bool:?}, aport4xreq: {=bool:?}, aport4yreq: {=bool:?} }}" , self . aport1xreq () , self . aport1yreq () , self . aport2xreq () , self . aport2yreq () , self . aport3xreq () , self . aport3yreq () , self . aport4xreq () , self . aport4yreq ())
+        defmt::write!(
+            f,
+            "Aportreq {{ aport1xreq: {=bool:?}, aport1yreq: {=bool:?}, aport2xreq: {=bool:?}, aport2yreq: {=bool:?}, aport3xreq: {=bool:?}, aport3yreq: {=bool:?}, aport4xreq: {=bool:?}, aport4yreq: {=bool:?} }}",
+            self.aport1xreq(),
+            self.aport1yreq(),
+            self.aport2xreq(),
+            self.aport2yreq(),
+            self.aport3xreq(),
+            self.aport3yreq(),
+            self.aport4xreq(),
+            self.aport4yreq()
+        )
     }
 }
 #[doc = "Command."]
@@ -650,7 +672,28 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ en: {=bool:?}, cmppol: {=bool:?}, cm: {:?}, sarcr: {:?}, acu: {:?}, mcen: {=bool:?}, stm: {:?}, cmpen: {=bool:?}, drsf: {=bool:?}, dmaen: {=bool:?}, convsel: {=bool:?}, chopen: {=bool:?}, autognd: {=bool:?}, mxuc: {=bool:?}, emacmpen: {=bool:?}, warmupmode: {=bool:?}, localsens: {=bool:?}, cpaccuracy: {=bool:?} }}" , self . en () , self . cmppol () , self . cm () , self . sarcr () , self . acu () , self . mcen () , self . stm () , self . cmpen () , self . drsf () , self . dmaen () , self . convsel () , self . chopen () , self . autognd () , self . mxuc () , self . emacmpen () , self . warmupmode () , self . localsens () , self . cpaccuracy ())
+        defmt::write!(
+            f,
+            "Ctrl {{ en: {=bool:?}, cmppol: {=bool:?}, cm: {:?}, sarcr: {:?}, acu: {:?}, mcen: {=bool:?}, stm: {:?}, cmpen: {=bool:?}, drsf: {=bool:?}, dmaen: {=bool:?}, convsel: {=bool:?}, chopen: {=bool:?}, autognd: {=bool:?}, mxuc: {=bool:?}, emacmpen: {=bool:?}, warmupmode: {=bool:?}, localsens: {=bool:?}, cpaccuracy: {=bool:?} }}",
+            self.en(),
+            self.cmppol(),
+            self.cm(),
+            self.sarcr(),
+            self.acu(),
+            self.mcen(),
+            self.stm(),
+            self.cmpen(),
+            self.drsf(),
+            self.dmaen(),
+            self.convsel(),
+            self.chopen(),
+            self.autognd(),
+            self.mxuc(),
+            self.emacmpen(),
+            self.warmupmode(),
+            self.localsens(),
+            self.cpaccuracy()
+        )
     }
 }
 #[doc = "Delta Modulation Baseline."]
@@ -794,7 +837,15 @@ impl core::fmt::Debug for Dmcfg {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dmcfg {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dmcfg {{ dmg: {=u8:?}, dmr: {=u8:?}, dmcr: {=u8:?}, crmode: {:?}, dmgrdis: {=bool:?} }}" , self . dmg () , self . dmr () , self . dmcr () , self . crmode () , self . dmgrdis ())
+        defmt::write!(
+            f,
+            "Dmcfg {{ dmg: {=u8:?}, dmr: {=u8:?}, dmcr: {=u8:?}, crmode: {:?}, dmgrdis: {=bool:?} }}",
+            self.dmg(),
+            self.dmr(),
+            self.dmcr(),
+            self.crmode(),
+            self.dmgrdis()
+        )
     }
 }
 #[doc = "Exponential Moving Average."]
@@ -955,7 +1006,15 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ cmp: {=bool:?}, conv: {=bool:?}, eos: {=bool:?}, dmaof: {=bool:?}, aportconflict: {=bool:?} }}" , self . cmp () , self . conv () , self . eos () , self . dmaof () , self . aportconflict ())
+        defmt::write!(
+            f,
+            "Ien {{ cmp: {=bool:?}, conv: {=bool:?}, eos: {=bool:?}, dmaof: {=bool:?}, aportconflict: {=bool:?} }}",
+            self.cmp(),
+            self.conv(),
+            self.eos(),
+            self.dmaof(),
+            self.aportconflict()
+        )
     }
 }
 #[doc = "Interrupt Flag."]
@@ -1044,7 +1103,15 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ cmp: {=bool:?}, conv: {=bool:?}, eos: {=bool:?}, dmaof: {=bool:?}, aportconflict: {=bool:?} }}" , self . cmp () , self . conv () , self . eos () , self . dmaof () , self . aportconflict ())
+        defmt::write!(
+            f,
+            "If {{ cmp: {=bool:?}, conv: {=bool:?}, eos: {=bool:?}, dmaof: {=bool:?}, aportconflict: {=bool:?} }}",
+            self.cmp(),
+            self.conv(),
+            self.eos(),
+            self.dmaof(),
+            self.aportconflict()
+        )
     }
 }
 #[doc = "Interrupt Flag Set."]
@@ -1133,7 +1200,15 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ cmp: {=bool:?}, conv: {=bool:?}, eos: {=bool:?}, dmaof: {=bool:?}, aportconflict: {=bool:?} }}" , self . cmp () , self . conv () , self . eos () , self . dmaof () , self . aportconflict ())
+        defmt::write!(
+            f,
+            "Ifs {{ cmp: {=bool:?}, conv: {=bool:?}, eos: {=bool:?}, dmaof: {=bool:?}, aportconflict: {=bool:?} }}",
+            self.cmp(),
+            self.conv(),
+            self.eos(),
+            self.dmaof(),
+            self.aportconflict()
+        )
     }
 }
 #[doc = "PRS Select."]
@@ -1246,7 +1321,14 @@ impl core::fmt::Debug for Scaninputsel0 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Scaninputsel0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Scaninputsel0 {{ input0to7sel: {:?}, input8to15sel: {:?}, input16to23sel: {:?}, input24to31sel: {:?} }}" , self . input0to7sel () , self . input8to15sel () , self . input16to23sel () , self . input24to31sel ())
+        defmt::write!(
+            f,
+            "Scaninputsel0 {{ input0to7sel: {:?}, input8to15sel: {:?}, input16to23sel: {:?}, input24to31sel: {:?} }}",
+            self.input0to7sel(),
+            self.input8to15sel(),
+            self.input16to23sel(),
+            self.input24to31sel()
+        )
     }
 }
 #[doc = "Scan Input Selection 1."]
@@ -1322,7 +1404,14 @@ impl core::fmt::Debug for Scaninputsel1 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Scaninputsel1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Scaninputsel1 {{ input32to39sel: {:?}, input40to47sel: {:?}, input48to55sel: {:?}, input56to63sel: {:?} }}" , self . input32to39sel () , self . input40to47sel () , self . input48to55sel () , self . input56to63sel ())
+        defmt::write!(
+            f,
+            "Scaninputsel1 {{ input32to39sel: {:?}, input40to47sel: {:?}, input48to55sel: {:?}, input56to63sel: {:?} }}",
+            self.input32to39sel(),
+            self.input40to47sel(),
+            self.input48to55sel(),
+            self.input56to63sel()
+        )
     }
 }
 #[doc = "Single Conversion Control."]

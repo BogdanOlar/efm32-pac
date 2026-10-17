@@ -285,7 +285,22 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ en: {=bool:?}, cursink: {=bool:?}, minouttrans: {=bool:?}, aportouten: {=bool:?}, aportoutsel: {:?}, pwrsel: {=bool:?}, em2delay: {=bool:?}, aportmasterdis: {=bool:?}, aportoutenprs: {=bool:?}, mainouten: {=bool:?}, mainoutenprs: {=bool:?}, prssel: {:?} }}" , self . en () , self . cursink () , self . minouttrans () , self . aportouten () , self . aportoutsel () , self . pwrsel () , self . em2delay () , self . aportmasterdis () , self . aportoutenprs () , self . mainouten () , self . mainoutenprs () , self . prssel ())
+        defmt::write!(
+            f,
+            "Ctrl {{ en: {=bool:?}, cursink: {=bool:?}, minouttrans: {=bool:?}, aportouten: {=bool:?}, aportoutsel: {:?}, pwrsel: {=bool:?}, em2delay: {=bool:?}, aportmasterdis: {=bool:?}, aportoutenprs: {=bool:?}, mainouten: {=bool:?}, mainoutenprs: {=bool:?}, prssel: {:?} }}",
+            self.en(),
+            self.cursink(),
+            self.minouttrans(),
+            self.aportouten(),
+            self.aportoutsel(),
+            self.pwrsel(),
+            self.em2delay(),
+            self.aportmasterdis(),
+            self.aportoutenprs(),
+            self.mainouten(),
+            self.mainoutenprs(),
+            self.prssel()
+        )
     }
 }
 #[doc = "Current Programming Register."]

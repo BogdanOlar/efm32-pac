@@ -1,7 +1,7 @@
 [package]
 name = "efm32-pac"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 authors = ["Bogdan Olar <olar.bogdan.dev@gmail.com>"]
 description = "Peripheral access API for Silicon Labs EFM32 microcontrollers (EFM32PG1B, EFM32GG11)"
 keywords = ["pac", "arm", "cortex-m", "efm32", "chiptool"]

@@ -393,7 +393,29 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ mode: {:?}, filt: {=bool:?}, rsten: {=bool:?}, cntrsten: {=bool:?}, auxcntrsten: {=bool:?}, debughalt: {=bool:?}, hyst: {=bool:?}, s1cdir: {=bool:?}, cntev: {:?}, auxcntev: {:?}, cntdir: {=bool:?}, edge: {=bool:?}, tccmode: {:?}, tccpresc: {:?}, tcccomp: {:?}, prsgateen: {=bool:?}, tccprspol: {=bool:?}, tccprssel: {:?}, topbhfsel: {=bool:?} }}" , self . mode () , self . filt () , self . rsten () , self . cntrsten () , self . auxcntrsten () , self . debughalt () , self . hyst () , self . s1cdir () , self . cntev () , self . auxcntev () , self . cntdir () , self . edge () , self . tccmode () , self . tccpresc () , self . tcccomp () , self . prsgateen () , self . tccprspol () , self . tccprssel () , self . topbhfsel ())
+        defmt::write!(
+            f,
+            "Ctrl {{ mode: {:?}, filt: {=bool:?}, rsten: {=bool:?}, cntrsten: {=bool:?}, auxcntrsten: {=bool:?}, debughalt: {=bool:?}, hyst: {=bool:?}, s1cdir: {=bool:?}, cntev: {:?}, auxcntev: {:?}, cntdir: {=bool:?}, edge: {=bool:?}, tccmode: {:?}, tccpresc: {:?}, tcccomp: {:?}, prsgateen: {=bool:?}, tccprspol: {=bool:?}, tccprssel: {:?}, topbhfsel: {=bool:?} }}",
+            self.mode(),
+            self.filt(),
+            self.rsten(),
+            self.cntrsten(),
+            self.auxcntrsten(),
+            self.debughalt(),
+            self.hyst(),
+            self.s1cdir(),
+            self.cntev(),
+            self.auxcntev(),
+            self.cntdir(),
+            self.edge(),
+            self.tccmode(),
+            self.tccpresc(),
+            self.tcccomp(),
+            self.prsgateen(),
+            self.tccprspol(),
+            self.tccprssel(),
+            self.topbhfsel()
+        )
     }
 }
 #[doc = "Freeze Register."]
@@ -532,7 +554,16 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ uf: {=bool:?}, of: {=bool:?}, dircng: {=bool:?}, auxof: {=bool:?}, tcc: {=bool:?}, oqsterr: {=bool:?} }}" , self . uf () , self . of () , self . dircng () , self . auxof () , self . tcc () , self . oqsterr ())
+        defmt::write!(
+            f,
+            "Ien {{ uf: {=bool:?}, of: {=bool:?}, dircng: {=bool:?}, auxof: {=bool:?}, tcc: {=bool:?}, oqsterr: {=bool:?} }}",
+            self.uf(),
+            self.of(),
+            self.dircng(),
+            self.auxof(),
+            self.tcc(),
+            self.oqsterr()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -634,7 +665,16 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ uf: {=bool:?}, of: {=bool:?}, dircng: {=bool:?}, auxof: {=bool:?}, tcc: {=bool:?}, oqsterr: {=bool:?} }}" , self . uf () , self . of () , self . dircng () , self . auxof () , self . tcc () , self . oqsterr ())
+        defmt::write!(
+            f,
+            "If {{ uf: {=bool:?}, of: {=bool:?}, dircng: {=bool:?}, auxof: {=bool:?}, tcc: {=bool:?}, oqsterr: {=bool:?} }}",
+            self.uf(),
+            self.of(),
+            self.dircng(),
+            self.auxof(),
+            self.tcc(),
+            self.oqsterr()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -736,7 +776,16 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ uf: {=bool:?}, of: {=bool:?}, dircng: {=bool:?}, auxof: {=bool:?}, tcc: {=bool:?}, oqsterr: {=bool:?} }}" , self . uf () , self . of () , self . dircng () , self . auxof () , self . tcc () , self . oqsterr ())
+        defmt::write!(
+            f,
+            "Ifs {{ uf: {=bool:?}, of: {=bool:?}, dircng: {=bool:?}, auxof: {=bool:?}, tcc: {=bool:?}, oqsterr: {=bool:?} }}",
+            self.uf(),
+            self.of(),
+            self.dircng(),
+            self.auxof(),
+            self.tcc(),
+            self.oqsterr()
+        )
     }
 }
 #[doc = "PCNT Input Register."]

@@ -284,7 +284,22 @@ impl core::fmt::Debug for CcCtrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for CcCtrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "CcCtrl {{ mode: {:?}, outinv: {=bool:?}, coist: {=bool:?}, cmoa: {:?}, cofoa: {:?}, cufoa: {:?}, prssel: {:?}, icedge: {:?}, icevctrl: {:?}, prsconf: {=bool:?}, insel: {=bool:?}, filt: {=bool:?} }}" , self . mode () , self . outinv () , self . coist () , self . cmoa () , self . cofoa () , self . cufoa () , self . prssel () , self . icedge () , self . icevctrl () , self . prsconf () , self . insel () , self . filt ())
+        defmt::write!(
+            f,
+            "CcCtrl {{ mode: {:?}, outinv: {=bool:?}, coist: {=bool:?}, cmoa: {:?}, cofoa: {:?}, cufoa: {:?}, prssel: {:?}, icedge: {:?}, icevctrl: {:?}, prsconf: {=bool:?}, insel: {=bool:?}, filt: {=bool:?} }}",
+            self.mode(),
+            self.outinv(),
+            self.coist(),
+            self.cmoa(),
+            self.cofoa(),
+            self.cufoa(),
+            self.prssel(),
+            self.icedge(),
+            self.icevctrl(),
+            self.prsconf(),
+            self.insel(),
+            self.filt()
+        )
     }
 }
 #[doc = "Command Register."]
@@ -567,7 +582,23 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ mode: {:?}, sync: {=bool:?}, osmen: {=bool:?}, qdm: {=bool:?}, debugrun: {=bool:?}, dmaclract: {=bool:?}, risea: {:?}, falla: {:?}, x2cnt: {=bool:?}, clksel: {:?}, presc: {:?}, ati: {=bool:?}, rsscoist: {=bool:?} }}" , self . mode () , self . sync () , self . osmen () , self . qdm () , self . debugrun () , self . dmaclract () , self . risea () , self . falla () , self . x2cnt () , self . clksel () , self . presc () , self . ati () , self . rsscoist ())
+        defmt::write!(
+            f,
+            "Ctrl {{ mode: {:?}, sync: {=bool:?}, osmen: {=bool:?}, qdm: {=bool:?}, debugrun: {=bool:?}, dmaclract: {=bool:?}, risea: {:?}, falla: {:?}, x2cnt: {=bool:?}, clksel: {:?}, presc: {:?}, ati: {=bool:?}, rsscoist: {=bool:?} }}",
+            self.mode(),
+            self.sync(),
+            self.osmen(),
+            self.qdm(),
+            self.debugrun(),
+            self.dmaclract(),
+            self.risea(),
+            self.falla(),
+            self.x2cnt(),
+            self.clksel(),
+            self.presc(),
+            self.ati(),
+            self.rsscoist()
+        )
     }
 }
 #[doc = "DTI Control Register."]
@@ -695,7 +726,18 @@ impl core::fmt::Debug for Dtctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dtctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dtctrl {{ dten: {=bool:?}, dtdas: {=bool:?}, dtipol: {=bool:?}, dtcinv: {=bool:?}, dtprssel: {:?}, dtar: {=bool:?}, dtfats: {=bool:?}, dtprsen: {=bool:?} }}" , self . dten () , self . dtdas () , self . dtipol () , self . dtcinv () , self . dtprssel () , self . dtar () , self . dtfats () , self . dtprsen ())
+        defmt::write!(
+            f,
+            "Dtctrl {{ dten: {=bool:?}, dtdas: {=bool:?}, dtipol: {=bool:?}, dtcinv: {=bool:?}, dtprssel: {:?}, dtar: {=bool:?}, dtfats: {=bool:?}, dtprsen: {=bool:?} }}",
+            self.dten(),
+            self.dtdas(),
+            self.dtipol(),
+            self.dtcinv(),
+            self.dtprssel(),
+            self.dtar(),
+            self.dtfats(),
+            self.dtprsen()
+        )
     }
 }
 #[doc = "DTI Fault Register."]
@@ -771,7 +813,14 @@ impl core::fmt::Debug for Dtfault {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dtfault {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dtfault {{ dtprs0f: {=bool:?}, dtprs1f: {=bool:?}, dtdbgf: {=bool:?}, dtlockupf: {=bool:?} }}" , self . dtprs0f () , self . dtprs1f () , self . dtdbgf () , self . dtlockupf ())
+        defmt::write!(
+            f,
+            "Dtfault {{ dtprs0f: {=bool:?}, dtprs1f: {=bool:?}, dtdbgf: {=bool:?}, dtlockupf: {=bool:?} }}",
+            self.dtprs0f(),
+            self.dtprs1f(),
+            self.dtdbgf(),
+            self.dtlockupf()
+        )
     }
 }
 #[doc = "DTI Fault Clear Register."]
@@ -847,7 +896,14 @@ impl core::fmt::Debug for Dtfaultc {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dtfaultc {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dtfaultc {{ dtprs0fc: {=bool:?}, dtprs1fc: {=bool:?}, dtdbgfc: {=bool:?}, tlockupfc: {=bool:?} }}" , self . dtprs0fc () , self . dtprs1fc () , self . dtdbgfc () , self . tlockupfc ())
+        defmt::write!(
+            f,
+            "Dtfaultc {{ dtprs0fc: {=bool:?}, dtprs1fc: {=bool:?}, dtdbgfc: {=bool:?}, tlockupfc: {=bool:?} }}",
+            self.dtprs0fc(),
+            self.dtprs1fc(),
+            self.dtdbgfc(),
+            self.tlockupfc()
+        )
     }
 }
 #[doc = "DTI Fault Configuration Register."]
@@ -962,7 +1018,17 @@ impl core::fmt::Debug for Dtfc {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dtfc {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dtfc {{ dtprs0fsel: {:?}, dtprs1fsel: {:?}, dtfa: {:?}, dtprs0fen: {=bool:?}, dtprs1fen: {=bool:?}, dtdbgfen: {=bool:?}, dtlockupfen: {=bool:?} }}" , self . dtprs0fsel () , self . dtprs1fsel () , self . dtfa () , self . dtprs0fen () , self . dtprs1fen () , self . dtdbgfen () , self . dtlockupfen ())
+        defmt::write!(
+            f,
+            "Dtfc {{ dtprs0fsel: {:?}, dtprs1fsel: {:?}, dtfa: {:?}, dtprs0fen: {=bool:?}, dtprs1fen: {=bool:?}, dtdbgfen: {=bool:?}, dtlockupfen: {=bool:?} }}",
+            self.dtprs0fsel(),
+            self.dtprs1fsel(),
+            self.dtfa(),
+            self.dtprs0fen(),
+            self.dtprs1fen(),
+            self.dtdbgfen(),
+            self.dtlockupfen()
+        )
     }
 }
 #[doc = "DTI Configuration Lock Register."]
@@ -1101,7 +1167,16 @@ impl core::fmt::Debug for Dtogen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dtogen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dtogen {{ dtogcc0en: {=bool:?}, dtogcc1en: {=bool:?}, dtogcc2en: {=bool:?}, dtogcdti0en: {=bool:?}, dtogcdti1en: {=bool:?}, dtogcdti2en: {=bool:?} }}" , self . dtogcc0en () , self . dtogcc1en () , self . dtogcc2en () , self . dtogcdti0en () , self . dtogcdti1en () , self . dtogcdti2en ())
+        defmt::write!(
+            f,
+            "Dtogen {{ dtogcc0en: {=bool:?}, dtogcc1en: {=bool:?}, dtogcc2en: {=bool:?}, dtogcdti0en: {=bool:?}, dtogcdti1en: {=bool:?}, dtogcdti2en: {=bool:?} }}",
+            self.dtogcc0en(),
+            self.dtogcc1en(),
+            self.dtogcc2en(),
+            self.dtogcdti0en(),
+            self.dtogcdti1en(),
+            self.dtogcdti2en()
+        )
     }
 }
 #[doc = "DTI Time Control Register."]
@@ -1273,7 +1348,21 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ of: {=bool:?}, uf: {=bool:?}, dirchg: {=bool:?}, cc[0]: {=bool:?}, cc[1]: {=bool:?}, cc[2]: {=bool:?}, cc[3]: {=bool:?}, icbof[0]: {=bool:?}, icbof[1]: {=bool:?}, icbof[2]: {=bool:?}, icbof[3]: {=bool:?} }}" , self . of () , self . uf () , self . dirchg () , self . cc (0usize) , self . cc (1usize) , self . cc (2usize) , self . cc (3usize) , self . icbof (0usize) , self . icbof (1usize) , self . icbof (2usize) , self . icbof (3usize))
+        defmt::write!(
+            f,
+            "Ien {{ of: {=bool:?}, uf: {=bool:?}, dirchg: {=bool:?}, cc[0]: {=bool:?}, cc[1]: {=bool:?}, cc[2]: {=bool:?}, cc[3]: {=bool:?}, icbof[0]: {=bool:?}, icbof[1]: {=bool:?}, icbof[2]: {=bool:?}, icbof[3]: {=bool:?} }}",
+            self.of(),
+            self.uf(),
+            self.dirchg(),
+            self.cc(0usize),
+            self.cc(1usize),
+            self.cc(2usize),
+            self.cc(3usize),
+            self.icbof(0usize),
+            self.icbof(1usize),
+            self.icbof(2usize),
+            self.icbof(3usize)
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -1376,7 +1465,21 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ of: {=bool:?}, uf: {=bool:?}, dirchg: {=bool:?}, cc[0]: {=bool:?}, cc[1]: {=bool:?}, cc[2]: {=bool:?}, cc[3]: {=bool:?}, icbof[0]: {=bool:?}, icbof[1]: {=bool:?}, icbof[2]: {=bool:?}, icbof[3]: {=bool:?} }}" , self . of () , self . uf () , self . dirchg () , self . cc (0usize) , self . cc (1usize) , self . cc (2usize) , self . cc (3usize) , self . icbof (0usize) , self . icbof (1usize) , self . icbof (2usize) , self . icbof (3usize))
+        defmt::write!(
+            f,
+            "If {{ of: {=bool:?}, uf: {=bool:?}, dirchg: {=bool:?}, cc[0]: {=bool:?}, cc[1]: {=bool:?}, cc[2]: {=bool:?}, cc[3]: {=bool:?}, icbof[0]: {=bool:?}, icbof[1]: {=bool:?}, icbof[2]: {=bool:?}, icbof[3]: {=bool:?} }}",
+            self.of(),
+            self.uf(),
+            self.dirchg(),
+            self.cc(0usize),
+            self.cc(1usize),
+            self.cc(2usize),
+            self.cc(3usize),
+            self.icbof(0usize),
+            self.icbof(1usize),
+            self.icbof(2usize),
+            self.icbof(3usize)
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -1479,7 +1582,21 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ of: {=bool:?}, uf: {=bool:?}, dirchg: {=bool:?}, cc[0]: {=bool:?}, cc[1]: {=bool:?}, cc[2]: {=bool:?}, cc[3]: {=bool:?}, icbof[0]: {=bool:?}, icbof[1]: {=bool:?}, icbof[2]: {=bool:?}, icbof[3]: {=bool:?} }}" , self . of () , self . uf () , self . dirchg () , self . cc (0usize) , self . cc (1usize) , self . cc (2usize) , self . cc (3usize) , self . icbof (0usize) , self . icbof (1usize) , self . icbof (2usize) , self . icbof (3usize))
+        defmt::write!(
+            f,
+            "Ifs {{ of: {=bool:?}, uf: {=bool:?}, dirchg: {=bool:?}, cc[0]: {=bool:?}, cc[1]: {=bool:?}, cc[2]: {=bool:?}, cc[3]: {=bool:?}, icbof[0]: {=bool:?}, icbof[1]: {=bool:?}, icbof[2]: {=bool:?}, icbof[3]: {=bool:?} }}",
+            self.of(),
+            self.uf(),
+            self.dirchg(),
+            self.cc(0usize),
+            self.cc(1usize),
+            self.cc(2usize),
+            self.cc(3usize),
+            self.icbof(0usize),
+            self.icbof(1usize),
+            self.icbof(2usize),
+            self.icbof(3usize)
+        )
     }
 }
 #[doc = "TIMER Configuration Lock Register."]
@@ -1679,7 +1796,17 @@ impl core::fmt::Debug for Routepen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Routepen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Routepen {{ cc_pen[0]: {=bool:?}, cc_pen[1]: {=bool:?}, cc_pen[2]: {=bool:?}, cc_pen[3]: {=bool:?}, cdti_pen[0]: {=bool:?}, cdti_pen[1]: {=bool:?}, cdti_pen[2]: {=bool:?} }}" , self . cc_pen (0usize) , self . cc_pen (1usize) , self . cc_pen (2usize) , self . cc_pen (3usize) , self . cdti_pen (0usize) , self . cdti_pen (1usize) , self . cdti_pen (2usize))
+        defmt::write!(
+            f,
+            "Routepen {{ cc_pen[0]: {=bool:?}, cc_pen[1]: {=bool:?}, cc_pen[2]: {=bool:?}, cc_pen[3]: {=bool:?}, cdti_pen[0]: {=bool:?}, cdti_pen[1]: {=bool:?}, cdti_pen[2]: {=bool:?} }}",
+            self.cc_pen(0usize),
+            self.cc_pen(1usize),
+            self.cc_pen(2usize),
+            self.cc_pen(3usize),
+            self.cdti_pen(0usize),
+            self.cdti_pen(1usize),
+            self.cdti_pen(2usize)
+        )
     }
 }
 #[doc = "Status Register."]
@@ -1898,7 +2025,25 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ running: {=bool:?}, dir: {=bool:?}, topbv: {=bool:?}, ccvbv0: {=bool:?}, ccvbv1: {=bool:?}, ccvbv2: {=bool:?}, ccvbv3: {=bool:?}, icv0: {=bool:?}, icv1: {=bool:?}, icv2: {=bool:?}, icv3: {=bool:?}, ccpol0: {=bool:?}, ccpol1: {=bool:?}, ccpol2: {=bool:?}, ccpol3: {=bool:?} }}" , self . running () , self . dir () , self . topbv () , self . ccvbv0 () , self . ccvbv1 () , self . ccvbv2 () , self . ccvbv3 () , self . icv0 () , self . icv1 () , self . icv2 () , self . icv3 () , self . ccpol0 () , self . ccpol1 () , self . ccpol2 () , self . ccpol3 ())
+        defmt::write!(
+            f,
+            "Status {{ running: {=bool:?}, dir: {=bool:?}, topbv: {=bool:?}, ccvbv0: {=bool:?}, ccvbv1: {=bool:?}, ccvbv2: {=bool:?}, ccvbv3: {=bool:?}, icv0: {=bool:?}, icv1: {=bool:?}, icv2: {=bool:?}, icv3: {=bool:?}, ccpol0: {=bool:?}, ccpol1: {=bool:?}, ccpol2: {=bool:?}, ccpol3: {=bool:?} }}",
+            self.running(),
+            self.dir(),
+            self.topbv(),
+            self.ccvbv0(),
+            self.ccvbv1(),
+            self.ccvbv2(),
+            self.ccvbv3(),
+            self.icv0(),
+            self.icv1(),
+            self.icv2(),
+            self.icv3(),
+            self.ccpol0(),
+            self.ccpol1(),
+            self.ccpol2(),
+            self.ccpol3()
+        )
     }
 }
 #[doc = "Counter Top Value Register."]

@@ -266,7 +266,29 @@ impl core::fmt::Debug for Config {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Config {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Config {{ enbspi: {=bool:?}, selclkpol: {=bool:?}, selclkphase: {=bool:?}, phymodeenable: {=bool:?}, enbdiraccctlr: {=bool:?}, enblegacyipmode: {=bool:?}, periphseldec: {=bool:?}, periphcslines: {=u8:?}, wrprotflash: {=bool:?}, enbahbaddrremap: {=bool:?}, enterxipmode: {=bool:?}, enterxipmodeimm: {=bool:?}, mstrbauddiv: {=u8:?}, enableahbdecoder: {=bool:?}, enabledtrprotocol: {=bool:?}, pipelinephy: {=bool:?}, crcenable: {=bool:?}, dualbyteopcodeen: {=bool:?}, idle: {=bool:?} }}" , self . enbspi () , self . selclkpol () , self . selclkphase () , self . phymodeenable () , self . enbdiraccctlr () , self . enblegacyipmode () , self . periphseldec () , self . periphcslines () , self . wrprotflash () , self . enbahbaddrremap () , self . enterxipmode () , self . enterxipmodeimm () , self . mstrbauddiv () , self . enableahbdecoder () , self . enabledtrprotocol () , self . pipelinephy () , self . crcenable () , self . dualbyteopcodeen () , self . idle ())
+        defmt::write!(
+            f,
+            "Config {{ enbspi: {=bool:?}, selclkpol: {=bool:?}, selclkphase: {=bool:?}, phymodeenable: {=bool:?}, enbdiraccctlr: {=bool:?}, enblegacyipmode: {=bool:?}, periphseldec: {=bool:?}, periphcslines: {=u8:?}, wrprotflash: {=bool:?}, enbahbaddrremap: {=bool:?}, enterxipmode: {=bool:?}, enterxipmodeimm: {=bool:?}, mstrbauddiv: {=u8:?}, enableahbdecoder: {=bool:?}, enabledtrprotocol: {=bool:?}, pipelinephy: {=bool:?}, crcenable: {=bool:?}, dualbyteopcodeen: {=bool:?}, idle: {=bool:?} }}",
+            self.enbspi(),
+            self.selclkpol(),
+            self.selclkphase(),
+            self.phymodeenable(),
+            self.enbdiraccctlr(),
+            self.enblegacyipmode(),
+            self.periphseldec(),
+            self.periphcslines(),
+            self.wrprotflash(),
+            self.enbahbaddrremap(),
+            self.enterxipmode(),
+            self.enterxipmodeimm(),
+            self.mstrbauddiv(),
+            self.enableahbdecoder(),
+            self.enabledtrprotocol(),
+            self.pipelinephy(),
+            self.crcenable(),
+            self.dualbyteopcodeen(),
+            self.idle()
+        )
     }
 }
 #[doc = "Device Delay Register."]
@@ -464,7 +486,17 @@ impl core::fmt::Debug for Devinstrrdconfig {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Devinstrrdconfig {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Devinstrrdconfig {{ rdopcodenonxip: {=u8:?}, instrtype: {=u8:?}, ddren: {=bool:?}, addrxfertypestdmode: {=u8:?}, dataxfertypeextmode: {=u8:?}, modebitenable: {=bool:?}, dummyrdclkcycles: {=u8:?} }}" , self . rdopcodenonxip () , self . instrtype () , self . ddren () , self . addrxfertypestdmode () , self . dataxfertypeextmode () , self . modebitenable () , self . dummyrdclkcycles ())
+        defmt::write!(
+            f,
+            "Devinstrrdconfig {{ rdopcodenonxip: {=u8:?}, instrtype: {=u8:?}, ddren: {=bool:?}, addrxfertypestdmode: {=u8:?}, dataxfertypeextmode: {=u8:?}, modebitenable: {=bool:?}, dummyrdclkcycles: {=u8:?} }}",
+            self.rdopcodenonxip(),
+            self.instrtype(),
+            self.ddren(),
+            self.addrxfertypestdmode(),
+            self.dataxfertypeextmode(),
+            self.modebitenable(),
+            self.dummyrdclkcycles()
+        )
     }
 }
 #[doc = "Device Write Instruction Configuration Register."]
@@ -553,7 +585,15 @@ impl core::fmt::Debug for Devinstrwrconfig {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Devinstrwrconfig {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Devinstrwrconfig {{ wropcode: {=u8:?}, weldis: {=bool:?}, addrxfertypestdmode: {=u8:?}, dataxfertypeextmode: {=u8:?}, dummywrclkcycles: {=u8:?} }}" , self . wropcode () , self . weldis () , self . addrxfertypestdmode () , self . dataxfertypeextmode () , self . dummywrclkcycles ())
+        defmt::write!(
+            f,
+            "Devinstrwrconfig {{ wropcode: {=u8:?}, weldis: {=bool:?}, addrxfertypestdmode: {=u8:?}, dataxfertypeextmode: {=u8:?}, dummywrclkcycles: {=u8:?} }}",
+            self.wropcode(),
+            self.weldis(),
+            self.addrxfertypestdmode(),
+            self.dataxfertypeextmode(),
+            self.dummywrclkcycles()
+        )
     }
 }
 #[doc = "Device Size Configuration Register."]
@@ -642,7 +682,15 @@ impl core::fmt::Debug for Devsizeconfig {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Devsizeconfig {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Devsizeconfig {{ numaddrbytes: {=u8:?}, bytesperdevicepage: {=u16:?}, bytespersubsector: {=u8:?}, memsizeoncs0: {=u8:?}, memsizeoncs1: {=u8:?} }}" , self . numaddrbytes () , self . bytesperdevicepage () , self . bytespersubsector () , self . memsizeoncs0 () , self . memsizeoncs1 ())
+        defmt::write!(
+            f,
+            "Devsizeconfig {{ numaddrbytes: {=u8:?}, bytesperdevicepage: {=u16:?}, bytespersubsector: {=u8:?}, memsizeoncs0: {=u8:?}, memsizeoncs1: {=u8:?} }}",
+            self.numaddrbytes(),
+            self.bytesperdevicepage(),
+            self.bytespersubsector(),
+            self.memsizeoncs0(),
+            self.memsizeoncs1()
+        )
     }
 }
 #[doc = "Flash Command Control Register (STIG)."]
@@ -822,7 +870,22 @@ impl core::fmt::Debug for Flashcmdctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Flashcmdctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Flashcmdctrl {{ cmdexec: {=bool:?}, cmdexecstatus: {=bool:?}, stigmembanken: {=bool:?}, numdummycycles: {=u8:?}, numwrdatabytes: {=u8:?}, enbwritedata: {=bool:?}, numaddrbytes: {=u8:?}, enbmodebit: {=bool:?}, enbcomdaddr: {=bool:?}, numrddatabytes: {=u8:?}, enbreaddata: {=bool:?}, cmdopcode: {=u8:?} }}" , self . cmdexec () , self . cmdexecstatus () , self . stigmembanken () , self . numdummycycles () , self . numwrdatabytes () , self . enbwritedata () , self . numaddrbytes () , self . enbmodebit () , self . enbcomdaddr () , self . numrddatabytes () , self . enbreaddata () , self . cmdopcode ())
+        defmt::write!(
+            f,
+            "Flashcmdctrl {{ cmdexec: {=bool:?}, cmdexecstatus: {=bool:?}, stigmembanken: {=bool:?}, numdummycycles: {=u8:?}, numwrdatabytes: {=u8:?}, enbwritedata: {=bool:?}, numaddrbytes: {=u8:?}, enbmodebit: {=bool:?}, enbcomdaddr: {=bool:?}, numrddatabytes: {=u8:?}, enbreaddata: {=bool:?}, cmdopcode: {=u8:?} }}",
+            self.cmdexec(),
+            self.cmdexecstatus(),
+            self.stigmembanken(),
+            self.numdummycycles(),
+            self.numwrdatabytes(),
+            self.enbwritedata(),
+            self.numaddrbytes(),
+            self.enbmodebit(),
+            self.enbcomdaddr(),
+            self.numrddatabytes(),
+            self.enbreaddata(),
+            self.cmdopcode()
+        )
     }
 }
 #[doc = "Flash Command Control Memory Register (STIG)."]
@@ -911,7 +974,15 @@ impl core::fmt::Debug for Flashcommandctrlmem {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Flashcommandctrlmem {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Flashcommandctrlmem {{ triggermembankreq: {=bool:?}, membankreqinprogress: {=bool:?}, membankreaddata: {=u8:?}, nbofstigreadbytes: {=u8:?}, membankaddr: {=u16:?} }}" , self . triggermembankreq () , self . membankreqinprogress () , self . membankreaddata () , self . nbofstigreadbytes () , self . membankaddr ())
+        defmt::write!(
+            f,
+            "Flashcommandctrlmem {{ triggermembankreq: {=bool:?}, membankreqinprogress: {=bool:?}, membankreaddata: {=u8:?}, nbofstigreadbytes: {=u8:?}, membankaddr: {=u16:?} }}",
+            self.triggermembankreq(),
+            self.membankreqinprogress(),
+            self.membankreaddata(),
+            self.nbofstigreadbytes(),
+            self.membankaddr()
+        )
     }
 }
 #[doc = "Indirect Read Transfer Control Register."]
@@ -1026,7 +1097,17 @@ impl core::fmt::Debug for Indirectreadxferctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Indirectreadxferctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Indirectreadxferctrl {{ start: {=bool:?}, cancel: {=bool:?}, rdstatus: {=bool:?}, sramfull: {=bool:?}, rdqueued: {=bool:?}, indopsdonestatus: {=bool:?}, numindopsdone: {=u8:?} }}" , self . start () , self . cancel () , self . rdstatus () , self . sramfull () , self . rdqueued () , self . indopsdonestatus () , self . numindopsdone ())
+        defmt::write!(
+            f,
+            "Indirectreadxferctrl {{ start: {=bool:?}, cancel: {=bool:?}, rdstatus: {=bool:?}, sramfull: {=bool:?}, rdqueued: {=bool:?}, indopsdonestatus: {=bool:?}, numindopsdone: {=u8:?} }}",
+            self.start(),
+            self.cancel(),
+            self.rdstatus(),
+            self.sramfull(),
+            self.rdqueued(),
+            self.indopsdonestatus(),
+            self.numindopsdone()
+        )
     }
 }
 #[doc = "Indirect Trigger Address Range Register."]
@@ -1169,7 +1250,16 @@ impl core::fmt::Debug for Indirectwritexferctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Indirectwritexferctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Indirectwritexferctrl {{ start: {=bool:?}, cancel: {=bool:?}, wrstatus: {=bool:?}, wrqueued: {=bool:?}, indopsdonestatus: {=bool:?}, numindopsdone: {=u8:?} }}" , self . start () , self . cancel () , self . wrstatus () , self . wrqueued () , self . indopsdonestatus () , self . numindopsdone ())
+        defmt::write!(
+            f,
+            "Indirectwritexferctrl {{ start: {=bool:?}, cancel: {=bool:?}, wrstatus: {=bool:?}, wrqueued: {=bool:?}, indopsdonestatus: {=bool:?}, numindopsdone: {=u8:?} }}",
+            self.start(),
+            self.cancel(),
+            self.wrstatus(),
+            self.wrqueued(),
+            self.indopsdonestatus(),
+            self.numindopsdone()
+        )
     }
 }
 #[doc = "Interrupt Mask."]
@@ -1430,7 +1520,28 @@ impl core::fmt::Debug for Irqmask {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Irqmask {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Irqmask {{ modemfailmask: {=bool:?}, underflowdetmask: {=bool:?}, indirectopdonemask: {=bool:?}, indirectreadrejectmask: {=bool:?}, protwrattemptmask: {=bool:?}, illegalaccessdetmask: {=bool:?}, indirectxferlevelbreachmask: {=bool:?}, recvoverflowmask: {=bool:?}, txfifonotfullmask: {=bool:?}, txfifofullmask: {=bool:?}, rxfifonotemptymask: {=bool:?}, rxfifofullmask: {=bool:?}, indrdsramfullmask: {=bool:?}, pollexpintmask: {=bool:?}, stigreqmask: {=bool:?}, rxcrcdataerrmask: {=bool:?}, rxcrcdatavalmask: {=bool:?}, txcrcchunkbrkmask: {=bool:?} }}" , self . modemfailmask () , self . underflowdetmask () , self . indirectopdonemask () , self . indirectreadrejectmask () , self . protwrattemptmask () , self . illegalaccessdetmask () , self . indirectxferlevelbreachmask () , self . recvoverflowmask () , self . txfifonotfullmask () , self . txfifofullmask () , self . rxfifonotemptymask () , self . rxfifofullmask () , self . indrdsramfullmask () , self . pollexpintmask () , self . stigreqmask () , self . rxcrcdataerrmask () , self . rxcrcdatavalmask () , self . txcrcchunkbrkmask ())
+        defmt::write!(
+            f,
+            "Irqmask {{ modemfailmask: {=bool:?}, underflowdetmask: {=bool:?}, indirectopdonemask: {=bool:?}, indirectreadrejectmask: {=bool:?}, protwrattemptmask: {=bool:?}, illegalaccessdetmask: {=bool:?}, indirectxferlevelbreachmask: {=bool:?}, recvoverflowmask: {=bool:?}, txfifonotfullmask: {=bool:?}, txfifofullmask: {=bool:?}, rxfifonotemptymask: {=bool:?}, rxfifofullmask: {=bool:?}, indrdsramfullmask: {=bool:?}, pollexpintmask: {=bool:?}, stigreqmask: {=bool:?}, rxcrcdataerrmask: {=bool:?}, rxcrcdatavalmask: {=bool:?}, txcrcchunkbrkmask: {=bool:?} }}",
+            self.modemfailmask(),
+            self.underflowdetmask(),
+            self.indirectopdonemask(),
+            self.indirectreadrejectmask(),
+            self.protwrattemptmask(),
+            self.illegalaccessdetmask(),
+            self.indirectxferlevelbreachmask(),
+            self.recvoverflowmask(),
+            self.txfifonotfullmask(),
+            self.txfifofullmask(),
+            self.rxfifonotemptymask(),
+            self.rxfifofullmask(),
+            self.indrdsramfullmask(),
+            self.pollexpintmask(),
+            self.stigreqmask(),
+            self.rxcrcdataerrmask(),
+            self.rxcrcdatavalmask(),
+            self.txcrcchunkbrkmask()
+        )
     }
 }
 #[doc = "Interrupt Status Register."]
@@ -1688,7 +1799,28 @@ impl core::fmt::Debug for Irqstatus {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Irqstatus {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Irqstatus {{ modemfail: {=bool:?}, underflowdet: {=bool:?}, indirectopdone: {=bool:?}, indirectreadreject: {=bool:?}, protwrattempt: {=bool:?}, illegalaccessdet: {=bool:?}, indirectxferlevelbreach: {=bool:?}, recvoverflow: {=bool:?}, txfifonotfull: {=bool:?}, txfifofull: {=bool:?}, rxfifonotempty: {=bool:?}, rxfifofull: {=bool:?}, indrdsramfull: {=bool:?}, pollexpint: {=bool:?}, stigreqint: {=bool:?}, rxcrcdataerr: {=bool:?}, rxcrcdataval: {=bool:?}, txcrcchunkbrk: {=bool:?} }}" , self . modemfail () , self . underflowdet () , self . indirectopdone () , self . indirectreadreject () , self . protwrattempt () , self . illegalaccessdet () , self . indirectxferlevelbreach () , self . recvoverflow () , self . txfifonotfull () , self . txfifofull () , self . rxfifonotempty () , self . rxfifofull () , self . indrdsramfull () , self . pollexpint () , self . stigreqint () , self . rxcrcdataerr () , self . rxcrcdataval () , self . txcrcchunkbrk ())
+        defmt::write!(
+            f,
+            "Irqstatus {{ modemfail: {=bool:?}, underflowdet: {=bool:?}, indirectopdone: {=bool:?}, indirectreadreject: {=bool:?}, protwrattempt: {=bool:?}, illegalaccessdet: {=bool:?}, indirectxferlevelbreach: {=bool:?}, recvoverflow: {=bool:?}, txfifonotfull: {=bool:?}, txfifofull: {=bool:?}, rxfifonotempty: {=bool:?}, rxfifofull: {=bool:?}, indrdsramfull: {=bool:?}, pollexpint: {=bool:?}, stigreqint: {=bool:?}, rxcrcdataerr: {=bool:?}, rxcrcdataval: {=bool:?}, txcrcchunkbrk: {=bool:?} }}",
+            self.modemfail(),
+            self.underflowdet(),
+            self.indirectopdone(),
+            self.indirectreadreject(),
+            self.protwrattempt(),
+            self.illegalaccessdet(),
+            self.indirectxferlevelbreach(),
+            self.recvoverflow(),
+            self.txfifonotfull(),
+            self.txfifofull(),
+            self.rxfifonotempty(),
+            self.rxfifofull(),
+            self.indrdsramfull(),
+            self.pollexpint(),
+            self.stigreqint(),
+            self.rxcrcdataerr(),
+            self.rxcrcdataval(),
+            self.txcrcchunkbrk()
+        )
     }
 }
 #[doc = "Mode Bit Configuration Register."]
@@ -1777,7 +1909,15 @@ impl core::fmt::Debug for Modebitconfig {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Modebitconfig {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Modebitconfig {{ mode: {=u8:?}, chunksize: {=u8:?}, crcoutenable: {=bool:?}, rxcrcdataup: {=u8:?}, rxcrcdatalow: {=u8:?} }}" , self . mode () , self . chunksize () , self . crcoutenable () , self . rxcrcdataup () , self . rxcrcdatalow ())
+        defmt::write!(
+            f,
+            "Modebitconfig {{ mode: {=u8:?}, chunksize: {=u8:?}, crcoutenable: {=bool:?}, rxcrcdataup: {=u8:?}, rxcrcdatalow: {=u8:?} }}",
+            self.mode(),
+            self.chunksize(),
+            self.crcoutenable(),
+            self.rxcrcdataup(),
+            self.rxcrcdatalow()
+        )
     }
 }
 #[doc = "Module ID Register."]
@@ -1922,7 +2062,14 @@ impl core::fmt::Debug for Opcodeextlower {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Opcodeextlower {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Opcodeextlower {{ extstigopcode: {=u8:?}, extpollopcode: {=u8:?}, extwriteopcode: {=u8:?}, extreadopcode: {=u8:?} }}" , self . extstigopcode () , self . extpollopcode () , self . extwriteopcode () , self . extreadopcode ())
+        defmt::write!(
+            f,
+            "Opcodeextlower {{ extstigopcode: {=u8:?}, extpollopcode: {=u8:?}, extwriteopcode: {=u8:?}, extreadopcode: {=u8:?} }}",
+            self.extstigopcode(),
+            self.extpollopcode(),
+            self.extwriteopcode(),
+            self.extreadopcode()
+        )
     }
 }
 #[doc = "Opcode Extension Register (Upper)."]
@@ -2040,7 +2187,13 @@ impl core::fmt::Debug for Phyconfiguration {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Phyconfiguration {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Phyconfiguration {{ phyconfigrxdlldelay: {=u8:?}, phyconfigtxdlldelay: {=u8:?}, phyconfigresync: {=bool:?} }}" , self . phyconfigrxdlldelay () , self . phyconfigtxdlldelay () , self . phyconfigresync ())
+        defmt::write!(
+            f,
+            "Phyconfiguration {{ phyconfigrxdlldelay: {=u8:?}, phyconfigtxdlldelay: {=u8:?}, phyconfigresync: {=bool:?} }}",
+            self.phyconfigrxdlldelay(),
+            self.phyconfigtxdlldelay(),
+            self.phyconfigresync()
+        )
     }
 }
 #[doc = "Polling Flash Status Register."]
@@ -2103,7 +2256,13 @@ impl core::fmt::Debug for Pollingflashstatus {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Pollingflashstatus {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Pollingflashstatus {{ devicestatus: {=u8:?}, devicestatusvalid: {=bool:?}, devicestatusnbdummy: {=u8:?} }}" , self . devicestatus () , self . devicestatusvalid () , self . devicestatusnbdummy ())
+        defmt::write!(
+            f,
+            "Pollingflashstatus {{ devicestatus: {=u8:?}, devicestatusvalid: {=bool:?}, devicestatusnbdummy: {=u8:?} }}",
+            self.devicestatus(),
+            self.devicestatusvalid(),
+            self.devicestatusnbdummy()
+        )
     }
 }
 #[doc = "Read Data Capture Register."]
@@ -2179,7 +2338,14 @@ impl core::fmt::Debug for Rddatacapture {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Rddatacapture {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Rddatacapture {{ bypass: {=bool:?}, delay: {=u8:?}, dqsenable: {=bool:?}, ddrreaddelay: {=u8:?} }}" , self . bypass () , self . delay () , self . dqsenable () , self . ddrreaddelay ())
+        defmt::write!(
+            f,
+            "Rddatacapture {{ bypass: {=bool:?}, delay: {=u8:?}, dqsenable: {=bool:?}, ddrreaddelay: {=u8:?} }}",
+            self.bypass(),
+            self.delay(),
+            self.dqsenable(),
+            self.ddrreaddelay()
+        )
     }
 }
 #[doc = "I/O Route Location Register 0."]
@@ -2409,7 +2575,23 @@ impl core::fmt::Debug for Routepen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Routepen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Routepen {{ sclkpen: {=bool:?}, cs0pen: {=bool:?}, cs1pen: {=bool:?}, dq0pen: {=bool:?}, dq1pen: {=bool:?}, dq2pen: {=bool:?}, dq3pen: {=bool:?}, dq4pen: {=bool:?}, dq5pen: {=bool:?}, dq6pen: {=bool:?}, dq7pen: {=bool:?}, dqspen: {=bool:?}, sclkinpen: {=bool:?} }}" , self . sclkpen () , self . cs0pen () , self . cs1pen () , self . dq0pen () , self . dq1pen () , self . dq2pen () , self . dq3pen () , self . dq4pen () , self . dq5pen () , self . dq6pen () , self . dq7pen () , self . dqspen () , self . sclkinpen ())
+        defmt::write!(
+            f,
+            "Routepen {{ sclkpen: {=bool:?}, cs0pen: {=bool:?}, cs1pen: {=bool:?}, dq0pen: {=bool:?}, dq1pen: {=bool:?}, dq2pen: {=bool:?}, dq3pen: {=bool:?}, dq4pen: {=bool:?}, dq5pen: {=bool:?}, dq6pen: {=bool:?}, dq7pen: {=bool:?}, dqspen: {=bool:?}, sclkinpen: {=bool:?} }}",
+            self.sclkpen(),
+            self.cs0pen(),
+            self.cs1pen(),
+            self.dq0pen(),
+            self.dq1pen(),
+            self.dq2pen(),
+            self.dq3pen(),
+            self.dq4pen(),
+            self.dq5pen(),
+            self.dq6pen(),
+            self.dq7pen(),
+            self.dqspen(),
+            self.sclkinpen()
+        )
     }
 }
 #[doc = "RX Threshold Register."]
@@ -2690,7 +2872,17 @@ impl core::fmt::Debug for Writecompletionctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Writecompletionctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Writecompletionctrl {{ opcode: {=u8:?}, pollingbitindex: {=u8:?}, pollingpolarity: {=bool:?}, disablepolling: {=bool:?}, enablepollingexp: {=bool:?}, pollcount: {=u8:?}, pollrepdelay: {=u8:?} }}" , self . opcode () , self . pollingbitindex () , self . pollingpolarity () , self . disablepolling () , self . enablepollingexp () , self . pollcount () , self . pollrepdelay ())
+        defmt::write!(
+            f,
+            "Writecompletionctrl {{ opcode: {=u8:?}, pollingbitindex: {=u8:?}, pollingpolarity: {=bool:?}, disablepolling: {=bool:?}, enablepollingexp: {=bool:?}, pollcount: {=u8:?}, pollrepdelay: {=u8:?} }}",
+            self.opcode(),
+            self.pollingbitindex(),
+            self.pollingpolarity(),
+            self.disablepolling(),
+            self.enablepollingexp(),
+            self.pollcount(),
+            self.pollrepdelay()
+        )
     }
 }
 #[doc = "Write Protection Control Register."]

@@ -149,7 +149,20 @@ impl core::fmt::Debug for Aportconflict {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Aportconflict {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Aportconflict {{ aport0xconflict: {=bool:?}, aport0yconflict: {=bool:?}, aport1xconflict: {=bool:?}, aport1yconflict: {=bool:?}, aport2xconflict: {=bool:?}, aport2yconflict: {=bool:?}, aport3xconflict: {=bool:?}, aport3yconflict: {=bool:?}, aport4xconflict: {=bool:?}, aport4yconflict: {=bool:?} }}" , self . aport0xconflict () , self . aport0yconflict () , self . aport1xconflict () , self . aport1yconflict () , self . aport2xconflict () , self . aport2yconflict () , self . aport3xconflict () , self . aport3yconflict () , self . aport4xconflict () , self . aport4yconflict ())
+        defmt::write!(
+            f,
+            "Aportconflict {{ aport0xconflict: {=bool:?}, aport0yconflict: {=bool:?}, aport1xconflict: {=bool:?}, aport1yconflict: {=bool:?}, aport2xconflict: {=bool:?}, aport2yconflict: {=bool:?}, aport3xconflict: {=bool:?}, aport3yconflict: {=bool:?}, aport4xconflict: {=bool:?}, aport4yconflict: {=bool:?} }}",
+            self.aport0xconflict(),
+            self.aport0yconflict(),
+            self.aport1xconflict(),
+            self.aport1yconflict(),
+            self.aport2xconflict(),
+            self.aport2yconflict(),
+            self.aport3xconflict(),
+            self.aport3yconflict(),
+            self.aport4xconflict(),
+            self.aport4yconflict()
+        )
     }
 }
 #[doc = "APORT Bus Master Disable Register."]
@@ -277,7 +290,18 @@ impl core::fmt::Debug for Aportmasterdis {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Aportmasterdis {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Aportmasterdis {{ aport1xmasterdis: {=bool:?}, aport1ymasterdis: {=bool:?}, aport2xmasterdis: {=bool:?}, aport2ymasterdis: {=bool:?}, aport3xmasterdis: {=bool:?}, aport3ymasterdis: {=bool:?}, aport4xmasterdis: {=bool:?}, aport4ymasterdis: {=bool:?} }}" , self . aport1xmasterdis () , self . aport1ymasterdis () , self . aport2xmasterdis () , self . aport2ymasterdis () , self . aport3xmasterdis () , self . aport3ymasterdis () , self . aport4xmasterdis () , self . aport4ymasterdis ())
+        defmt::write!(
+            f,
+            "Aportmasterdis {{ aport1xmasterdis: {=bool:?}, aport1ymasterdis: {=bool:?}, aport2xmasterdis: {=bool:?}, aport2ymasterdis: {=bool:?}, aport3xmasterdis: {=bool:?}, aport3ymasterdis: {=bool:?}, aport4xmasterdis: {=bool:?}, aport4ymasterdis: {=bool:?} }}",
+            self.aport1xmasterdis(),
+            self.aport1ymasterdis(),
+            self.aport2xmasterdis(),
+            self.aport2ymasterdis(),
+            self.aport3xmasterdis(),
+            self.aport3ymasterdis(),
+            self.aport4xmasterdis(),
+            self.aport4ymasterdis()
+        )
     }
 }
 #[doc = "APORT Request Status Register."]
@@ -431,7 +455,20 @@ impl core::fmt::Debug for Aportreq {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Aportreq {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Aportreq {{ aport0xreq: {=bool:?}, aport0yreq: {=bool:?}, aport1xreq: {=bool:?}, aport1yreq: {=bool:?}, aport2xreq: {=bool:?}, aport2yreq: {=bool:?}, aport3xreq: {=bool:?}, aport3yreq: {=bool:?}, aport4xreq: {=bool:?}, aport4yreq: {=bool:?} }}" , self . aport0xreq () , self . aport0yreq () , self . aport1xreq () , self . aport1yreq () , self . aport2xreq () , self . aport2yreq () , self . aport3xreq () , self . aport3yreq () , self . aport4xreq () , self . aport4yreq ())
+        defmt::write!(
+            f,
+            "Aportreq {{ aport0xreq: {=bool:?}, aport0yreq: {=bool:?}, aport1xreq: {=bool:?}, aport1yreq: {=bool:?}, aport2xreq: {=bool:?}, aport2yreq: {=bool:?}, aport3xreq: {=bool:?}, aport3yreq: {=bool:?}, aport4xreq: {=bool:?}, aport4yreq: {=bool:?} }}",
+            self.aport0xreq(),
+            self.aport0yreq(),
+            self.aport1xreq(),
+            self.aport1yreq(),
+            self.aport2xreq(),
+            self.aport2yreq(),
+            self.aport3xreq(),
+            self.aport3yreq(),
+            self.aport4xreq(),
+            self.aport4yreq()
+        )
     }
 }
 #[doc = "Bias Programming Register for Various Analog Blocks Used in ADC Operation."]
@@ -628,7 +665,18 @@ impl core::fmt::Debug for Cal {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cal {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cal {{ singleoffset: {=u8:?}, singleoffsetinv: {=u8:?}, singlegain: {=u8:?}, offsetinvmode: {=bool:?}, scanoffset: {=u8:?}, scanoffsetinv: {=u8:?}, scangain: {=u8:?}, calen: {=bool:?} }}" , self . singleoffset () , self . singleoffsetinv () , self . singlegain () , self . offsetinvmode () , self . scanoffset () , self . scanoffsetinv () , self . scangain () , self . calen ())
+        defmt::write!(
+            f,
+            "Cal {{ singleoffset: {=u8:?}, singleoffsetinv: {=u8:?}, singlegain: {=u8:?}, offsetinvmode: {=bool:?}, scanoffset: {=u8:?}, scanoffsetinv: {=u8:?}, scangain: {=u8:?}, calen: {=bool:?} }}",
+            self.singleoffset(),
+            self.singleoffsetinv(),
+            self.singlegain(),
+            self.offsetinvmode(),
+            self.scanoffset(),
+            self.scanoffsetinv(),
+            self.scangain(),
+            self.calen()
+        )
     }
 }
 #[doc = "Command Register."]
@@ -704,7 +752,14 @@ impl core::fmt::Debug for Cmd {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cmd {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cmd {{ singlestart: {=bool:?}, singlestop: {=bool:?}, scanstart: {=bool:?}, scanstop: {=bool:?} }}" , self . singlestart () , self . singlestop () , self . scanstart () , self . scanstop ())
+        defmt::write!(
+            f,
+            "Cmd {{ singlestart: {=bool:?}, singlestop: {=bool:?}, scanstart: {=bool:?}, scanstop: {=bool:?} }}",
+            self.singlestart(),
+            self.singlestop(),
+            self.scanstart(),
+            self.scanstop()
+        )
     }
 }
 #[doc = "Compare Threshold Register."]
@@ -939,7 +994,22 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ warmupmode: {:?}, singledmawu: {=bool:?}, scandmawu: {=bool:?}, tailgate: {=bool:?}, asyncclken: {=bool:?}, adcclkmode: {=bool:?}, presc: {:?}, timebase: {=u8:?}, ovsrsel: {:?}, dbghalt: {=bool:?}, chconmode: {=bool:?}, chconrefwarmidle: {:?} }}" , self . warmupmode () , self . singledmawu () , self . scandmawu () , self . tailgate () , self . asyncclken () , self . adcclkmode () , self . presc () , self . timebase () , self . ovsrsel () , self . dbghalt () , self . chconmode () , self . chconrefwarmidle ())
+        defmt::write!(
+            f,
+            "Ctrl {{ warmupmode: {:?}, singledmawu: {=bool:?}, scandmawu: {=bool:?}, tailgate: {=bool:?}, asyncclken: {=bool:?}, adcclkmode: {=bool:?}, presc: {:?}, timebase: {=u8:?}, ovsrsel: {:?}, dbghalt: {=bool:?}, chconmode: {=bool:?}, chconrefwarmidle: {:?} }}",
+            self.warmupmode(),
+            self.singledmawu(),
+            self.scandmawu(),
+            self.tailgate(),
+            self.asyncclken(),
+            self.adcclkmode(),
+            self.presc(),
+            self.timebase(),
+            self.ovsrsel(),
+            self.dbghalt(),
+            self.chconmode(),
+            self.chconrefwarmidle()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -1145,7 +1215,24 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ single: {=bool:?}, scan: {=bool:?}, singleof: {=bool:?}, scanof: {=bool:?}, singleuf: {=bool:?}, scanuf: {=bool:?}, singlecmp: {=bool:?}, scancmp: {=bool:?}, vrefov: {=bool:?}, progerr: {=bool:?}, scanextpend: {=bool:?}, scanpend: {=bool:?}, prstimederr: {=bool:?}, em23err: {=bool:?} }}" , self . single () , self . scan () , self . singleof () , self . scanof () , self . singleuf () , self . scanuf () , self . singlecmp () , self . scancmp () , self . vrefov () , self . progerr () , self . scanextpend () , self . scanpend () , self . prstimederr () , self . em23err ())
+        defmt::write!(
+            f,
+            "Ien {{ single: {=bool:?}, scan: {=bool:?}, singleof: {=bool:?}, scanof: {=bool:?}, singleuf: {=bool:?}, scanuf: {=bool:?}, singlecmp: {=bool:?}, scancmp: {=bool:?}, vrefov: {=bool:?}, progerr: {=bool:?}, scanextpend: {=bool:?}, scanpend: {=bool:?}, prstimederr: {=bool:?}, em23err: {=bool:?} }}",
+            self.single(),
+            self.scan(),
+            self.singleof(),
+            self.scanof(),
+            self.singleuf(),
+            self.scanuf(),
+            self.singlecmp(),
+            self.scancmp(),
+            self.vrefov(),
+            self.progerr(),
+            self.scanextpend(),
+            self.scanpend(),
+            self.prstimederr(),
+            self.em23err()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -1351,7 +1438,24 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ single: {=bool:?}, scan: {=bool:?}, singleof: {=bool:?}, scanof: {=bool:?}, singleuf: {=bool:?}, scanuf: {=bool:?}, singlecmp: {=bool:?}, scancmp: {=bool:?}, vrefov: {=bool:?}, progerr: {=bool:?}, scanextpend: {=bool:?}, scanpend: {=bool:?}, prstimederr: {=bool:?}, em23err: {=bool:?} }}" , self . single () , self . scan () , self . singleof () , self . scanof () , self . singleuf () , self . scanuf () , self . singlecmp () , self . scancmp () , self . vrefov () , self . progerr () , self . scanextpend () , self . scanpend () , self . prstimederr () , self . em23err ())
+        defmt::write!(
+            f,
+            "If {{ single: {=bool:?}, scan: {=bool:?}, singleof: {=bool:?}, scanof: {=bool:?}, singleuf: {=bool:?}, scanuf: {=bool:?}, singlecmp: {=bool:?}, scancmp: {=bool:?}, vrefov: {=bool:?}, progerr: {=bool:?}, scanextpend: {=bool:?}, scanpend: {=bool:?}, prstimederr: {=bool:?}, em23err: {=bool:?} }}",
+            self.single(),
+            self.scan(),
+            self.singleof(),
+            self.scanof(),
+            self.singleuf(),
+            self.scanuf(),
+            self.singlecmp(),
+            self.scancmp(),
+            self.vrefov(),
+            self.progerr(),
+            self.scanextpend(),
+            self.scanpend(),
+            self.prstimederr(),
+            self.em23err()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -1531,7 +1635,22 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ singleof: {=bool:?}, scanof: {=bool:?}, singleuf: {=bool:?}, scanuf: {=bool:?}, singlecmp: {=bool:?}, scancmp: {=bool:?}, vrefov: {=bool:?}, progerr: {=bool:?}, scanextpend: {=bool:?}, scanpend: {=bool:?}, prstimederr: {=bool:?}, em23err: {=bool:?} }}" , self . singleof () , self . scanof () , self . singleuf () , self . scanuf () , self . singlecmp () , self . scancmp () , self . vrefov () , self . progerr () , self . scanextpend () , self . scanpend () , self . prstimederr () , self . em23err ())
+        defmt::write!(
+            f,
+            "Ifs {{ singleof: {=bool:?}, scanof: {=bool:?}, singleuf: {=bool:?}, scanuf: {=bool:?}, singlecmp: {=bool:?}, scancmp: {=bool:?}, vrefov: {=bool:?}, progerr: {=bool:?}, scanextpend: {=bool:?}, scanpend: {=bool:?}, prstimederr: {=bool:?}, em23err: {=bool:?} }}",
+            self.singleof(),
+            self.scanof(),
+            self.singleuf(),
+            self.scanuf(),
+            self.singlecmp(),
+            self.scancmp(),
+            self.vrefov(),
+            self.progerr(),
+            self.scanextpend(),
+            self.scanpend(),
+            self.prstimederr(),
+            self.em23err()
+        )
     }
 }
 #[doc = "Scan Control Register."]
@@ -1659,7 +1778,18 @@ impl core::fmt::Debug for Scanctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Scanctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Scanctrl {{ rep: {=bool:?}, diff: {=bool:?}, adj: {=bool:?}, res: {:?}, ref_: {:?}, at: {:?}, prsen: {=bool:?}, cmpen: {=bool:?} }}" , self . rep () , self . diff () , self . adj () , self . res () , self . ref_ () , self . at () , self . prsen () , self . cmpen ())
+        defmt::write!(
+            f,
+            "Scanctrl {{ rep: {=bool:?}, diff: {=bool:?}, adj: {=bool:?}, res: {:?}, ref_: {:?}, at: {:?}, prsen: {=bool:?}, cmpen: {=bool:?} }}",
+            self.rep(),
+            self.diff(),
+            self.adj(),
+            self.res(),
+            self.ref_(),
+            self.at(),
+            self.prsen(),
+            self.cmpen()
+        )
     }
 }
 #[doc = "Scan Control Register Continued."]
@@ -1826,7 +1956,21 @@ impl core::fmt::Debug for Scanctrlx {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Scanctrlx {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Scanctrlx {{ vrefsel: {:?}, vrefattfix: {=bool:?}, vrefatt: {=u8:?}, vinatt: {=u8:?}, dvl: {=u8:?}, fifoofact: {=bool:?}, prsmode: {=bool:?}, prssel: {:?}, convstartdelay: {=u8:?}, convstartdelayen: {=bool:?}, repdelay: {:?} }}" , self . vrefsel () , self . vrefattfix () , self . vrefatt () , self . vinatt () , self . dvl () , self . fifoofact () , self . prsmode () , self . prssel () , self . convstartdelay () , self . convstartdelayen () , self . repdelay ())
+        defmt::write!(
+            f,
+            "Scanctrlx {{ vrefsel: {:?}, vrefattfix: {=bool:?}, vrefatt: {=u8:?}, vinatt: {=u8:?}, dvl: {=u8:?}, fifoofact: {=bool:?}, prsmode: {=bool:?}, prssel: {:?}, convstartdelay: {=u8:?}, convstartdelayen: {=bool:?}, repdelay: {:?} }}",
+            self.vrefsel(),
+            self.vrefattfix(),
+            self.vrefatt(),
+            self.vinatt(),
+            self.dvl(),
+            self.fifoofact(),
+            self.prsmode(),
+            self.prssel(),
+            self.convstartdelay(),
+            self.convstartdelayen(),
+            self.repdelay()
+        )
     }
 }
 #[doc = "Scan Sequence Result Data + Data Source Register."]
@@ -2090,7 +2234,14 @@ impl core::fmt::Debug for Scaninputsel {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Scaninputsel {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Scaninputsel {{ input0to7sel: {:?}, input8to15sel: {:?}, input16to23sel: {:?}, input24to31sel: {:?} }}" , self . input0to7sel () , self . input8to15sel () , self . input16to23sel () , self . input24to31sel ())
+        defmt::write!(
+            f,
+            "Scaninputsel {{ input0to7sel: {:?}, input8to15sel: {:?}, input16to23sel: {:?}, input24to31sel: {:?} }}",
+            self.input0to7sel(),
+            self.input8to15sel(),
+            self.input16to23sel(),
+            self.input24to31sel()
+        )
     }
 }
 #[doc = "Negative Input Select Register for Scan."]
@@ -2218,7 +2369,18 @@ impl core::fmt::Debug for Scannegsel {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Scannegsel {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Scannegsel {{ input0negsel: {:?}, input2negsel: {:?}, input4negsel: {:?}, input6negsel: {:?}, input9negsel: {:?}, input11negsel: {:?}, input13negsel: {:?}, input15negsel: {:?} }}" , self . input0negsel () , self . input2negsel () , self . input4negsel () , self . input6negsel () , self . input9negsel () , self . input11negsel () , self . input13negsel () , self . input15negsel ())
+        defmt::write!(
+            f,
+            "Scannegsel {{ input0negsel: {:?}, input2negsel: {:?}, input4negsel: {:?}, input6negsel: {:?}, input9negsel: {:?}, input11negsel: {:?}, input13negsel: {:?}, input15negsel: {:?} }}",
+            self.input0negsel(),
+            self.input2negsel(),
+            self.input4negsel(),
+            self.input6negsel(),
+            self.input9negsel(),
+            self.input11negsel(),
+            self.input13negsel(),
+            self.input15negsel()
+        )
     }
 }
 #[doc = "Single Channel Control Register."]
@@ -2372,7 +2534,20 @@ impl core::fmt::Debug for Singlectrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Singlectrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Singlectrl {{ rep: {=bool:?}, diff: {=bool:?}, adj: {=bool:?}, res: {:?}, ref_: {:?}, possel: {=u8:?}, negsel: {=u8:?}, at: {:?}, prsen: {=bool:?}, cmpen: {=bool:?} }}" , self . rep () , self . diff () , self . adj () , self . res () , self . ref_ () , self . possel () , self . negsel () , self . at () , self . prsen () , self . cmpen ())
+        defmt::write!(
+            f,
+            "Singlectrl {{ rep: {=bool:?}, diff: {=bool:?}, adj: {=bool:?}, res: {:?}, ref_: {:?}, possel: {=u8:?}, negsel: {=u8:?}, at: {:?}, prsen: {=bool:?}, cmpen: {=bool:?} }}",
+            self.rep(),
+            self.diff(),
+            self.adj(),
+            self.res(),
+            self.ref_(),
+            self.possel(),
+            self.negsel(),
+            self.at(),
+            self.prsen(),
+            self.cmpen()
+        )
     }
 }
 #[doc = "Single Channel Control Register Continued."]
@@ -2539,7 +2714,21 @@ impl core::fmt::Debug for Singlectrlx {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Singlectrlx {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Singlectrlx {{ vrefsel: {:?}, vrefattfix: {=bool:?}, vrefatt: {=u8:?}, vinatt: {=u8:?}, dvl: {=u8:?}, fifoofact: {=bool:?}, prsmode: {=bool:?}, prssel: {:?}, convstartdelay: {=u8:?}, convstartdelayen: {=bool:?}, repdelay: {:?} }}" , self . vrefsel () , self . vrefattfix () , self . vrefatt () , self . vinatt () , self . dvl () , self . fifoofact () , self . prsmode () , self . prssel () , self . convstartdelay () , self . convstartdelayen () , self . repdelay ())
+        defmt::write!(
+            f,
+            "Singlectrlx {{ vrefsel: {:?}, vrefattfix: {=bool:?}, vrefatt: {=u8:?}, vinatt: {=u8:?}, dvl: {=u8:?}, fifoofact: {=bool:?}, prsmode: {=bool:?}, prssel: {:?}, convstartdelay: {=u8:?}, convstartdelayen: {=bool:?}, repdelay: {:?} }}",
+            self.vrefsel(),
+            self.vrefattfix(),
+            self.vrefatt(),
+            self.vinatt(),
+            self.dvl(),
+            self.fifoofact(),
+            self.prsmode(),
+            self.prssel(),
+            self.convstartdelay(),
+            self.convstartdelayen(),
+            self.repdelay()
+        )
     }
 }
 #[doc = "Single FIFO Clear Register."]
@@ -2762,6 +2951,18 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ singleact: {=bool:?}, scanact: {=bool:?}, scanpending: {=bool:?}, singlerefwarm: {=bool:?}, scanrefwarm: {=bool:?}, progerr: {:?}, warm: {=bool:?}, singledv: {=bool:?}, scandv: {=bool:?} }}" , self . singleact () , self . scanact () , self . scanpending () , self . singlerefwarm () , self . scanrefwarm () , self . progerr () , self . warm () , self . singledv () , self . scandv ())
+        defmt::write!(
+            f,
+            "Status {{ singleact: {=bool:?}, scanact: {=bool:?}, scanpending: {=bool:?}, singlerefwarm: {=bool:?}, scanrefwarm: {=bool:?}, progerr: {:?}, warm: {=bool:?}, singledv: {=bool:?}, scandv: {=bool:?} }}",
+            self.singleact(),
+            self.scanact(),
+            self.scanpending(),
+            self.singlerefwarm(),
+            self.scanrefwarm(),
+            self.progerr(),
+            self.warm(),
+            self.singledv(),
+            self.scandv()
+        )
     }
 }

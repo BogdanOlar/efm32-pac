@@ -270,7 +270,24 @@ impl core::fmt::Debug for Ch0Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch0Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch0Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch0Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -706,7 +723,24 @@ impl core::fmt::Debug for Ch10Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch10Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch10Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch10Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -1142,7 +1176,24 @@ impl core::fmt::Debug for Ch11Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch11Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch11Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch11Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -1578,7 +1629,24 @@ impl core::fmt::Debug for Ch12Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch12Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch12Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch12Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -2014,7 +2082,24 @@ impl core::fmt::Debug for Ch13Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch13Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch13Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch13Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -2450,7 +2535,24 @@ impl core::fmt::Debug for Ch14Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch14Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch14Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch14Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -2886,7 +2988,24 @@ impl core::fmt::Debug for Ch15Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch15Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch15Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch15Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -3322,7 +3441,24 @@ impl core::fmt::Debug for Ch16Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch16Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch16Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch16Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -3758,7 +3894,24 @@ impl core::fmt::Debug for Ch17Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch17Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch17Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch17Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -4194,7 +4347,24 @@ impl core::fmt::Debug for Ch18Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch18Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch18Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch18Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -4630,7 +4800,24 @@ impl core::fmt::Debug for Ch19Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch19Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch19Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch19Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -5066,7 +5253,24 @@ impl core::fmt::Debug for Ch1Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch1Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch1Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch1Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -5502,7 +5706,24 @@ impl core::fmt::Debug for Ch20Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch20Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch20Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch20Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -5938,7 +6159,24 @@ impl core::fmt::Debug for Ch21Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch21Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch21Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch21Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -6374,7 +6612,24 @@ impl core::fmt::Debug for Ch22Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch22Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch22Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch22Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -6810,7 +7065,24 @@ impl core::fmt::Debug for Ch23Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch23Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch23Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch23Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -7246,7 +7518,24 @@ impl core::fmt::Debug for Ch2Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch2Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch2Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch2Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -7682,7 +7971,24 @@ impl core::fmt::Debug for Ch3Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch3Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch3Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch3Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -8118,7 +8424,24 @@ impl core::fmt::Debug for Ch4Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch4Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch4Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch4Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -8554,7 +8877,24 @@ impl core::fmt::Debug for Ch5Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch5Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch5Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch5Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -8990,7 +9330,24 @@ impl core::fmt::Debug for Ch6Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch6Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch6Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch6Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -9426,7 +9783,24 @@ impl core::fmt::Debug for Ch7Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch7Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch7Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch7Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -9862,7 +10236,24 @@ impl core::fmt::Debug for Ch8Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch8Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch8Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch8Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -10298,7 +10689,24 @@ impl core::fmt::Debug for Ch9Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch9Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch9Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}" , self . structtype () , self . structreq () , self . xfercnt () , self . byteswap () , self . blocksize () , self . doneifsen () , self . reqmode () , self . decloopcnt () , self . ignoresreq () , self . srcinc () , self . size () , self . dstinc () , self . srcmode () , self . dstmode ())
+        defmt::write!(
+            f,
+            "Ch9Ctrl {{ structtype: {:?}, structreq: {=bool:?}, xfercnt: {=u16:?}, byteswap: {=bool:?}, blocksize: {:?}, doneifsen: {=bool:?}, reqmode: {=bool:?}, decloopcnt: {=bool:?}, ignoresreq: {=bool:?}, srcinc: {:?}, size: {:?}, dstinc: {:?}, srcmode: {=bool:?}, dstmode: {=bool:?} }}",
+            self.structtype(),
+            self.structreq(),
+            self.xfercnt(),
+            self.byteswap(),
+            self.blocksize(),
+            self.doneifsen(),
+            self.reqmode(),
+            self.decloopcnt(),
+            self.ignoresreq(),
+            self.srcinc(),
+            self.size(),
+            self.dstinc(),
+            self.srcmode(),
+            self.dstmode()
+        )
     }
 }
 #[doc = "Channel Descriptor Link Structure Address Register."]
@@ -11089,7 +11497,16 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ anybusy: {=bool:?}, anyreq: {=bool:?}, chgrant: {=u8:?}, cherror: {=u8:?}, fifolevel: {=u8:?}, chnum: {=u8:?} }}" , self . anybusy () , self . anyreq () , self . chgrant () , self . cherror () , self . fifolevel () , self . chnum ())
+        defmt::write!(
+            f,
+            "Status {{ anybusy: {=bool:?}, anyreq: {=bool:?}, chgrant: {=u8:?}, cherror: {=u8:?}, fifolevel: {=u8:?}, chnum: {=u8:?} }}",
+            self.anybusy(),
+            self.anyreq(),
+            self.chgrant(),
+            self.cherror(),
+            self.fifolevel(),
+            self.chnum()
+        )
     }
 }
 #[doc = "DMA Channel Software Transfer Request Register."]

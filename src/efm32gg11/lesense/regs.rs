@@ -227,7 +227,26 @@ impl core::fmt::Debug for Altexconf {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Altexconf {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Altexconf {{ idleconf0: {:?}, idleconf1: {:?}, idleconf2: {:?}, idleconf3: {:?}, idleconf4: {:?}, idleconf5: {:?}, idleconf6: {:?}, idleconf7: {:?}, aex0: {=bool:?}, aex1: {=bool:?}, aex2: {=bool:?}, aex3: {=bool:?}, aex4: {=bool:?}, aex5: {=bool:?}, aex6: {=bool:?}, aex7: {=bool:?} }}" , self . idleconf0 () , self . idleconf1 () , self . idleconf2 () , self . idleconf3 () , self . idleconf4 () , self . idleconf5 () , self . idleconf6 () , self . idleconf7 () , self . aex0 () , self . aex1 () , self . aex2 () , self . aex3 () , self . aex4 () , self . aex5 () , self . aex6 () , self . aex7 ())
+        defmt::write!(
+            f,
+            "Altexconf {{ idleconf0: {:?}, idleconf1: {:?}, idleconf2: {:?}, idleconf3: {:?}, idleconf4: {:?}, idleconf5: {:?}, idleconf6: {:?}, idleconf7: {:?}, aex0: {=bool:?}, aex1: {=bool:?}, aex2: {=bool:?}, aex3: {=bool:?}, aex4: {=bool:?}, aex5: {=bool:?}, aex6: {=bool:?}, aex7: {=bool:?} }}",
+            self.idleconf0(),
+            self.idleconf1(),
+            self.idleconf2(),
+            self.idleconf3(),
+            self.idleconf4(),
+            self.idleconf5(),
+            self.idleconf6(),
+            self.idleconf7(),
+            self.aex0(),
+            self.aex1(),
+            self.aex2(),
+            self.aex3(),
+            self.aex4(),
+            self.aex5(),
+            self.aex6(),
+            self.aex7()
+        )
     }
 }
 #[doc = "Bias Control Register."]
@@ -1301,7 +1320,16 @@ impl core::fmt::Debug for Ch0Eval {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch0Eval {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch0Eval {{ compthres: {=u16:?}, comp: {=bool:?}, decode: {=bool:?}, strsample: {:?}, scanresinv: {=bool:?}, mode: {:?} }}" , self . compthres () , self . comp () , self . decode () , self . strsample () , self . scanresinv () , self . mode ())
+        defmt::write!(
+            f,
+            "Ch0Eval {{ compthres: {=u16:?}, comp: {=bool:?}, decode: {=bool:?}, strsample: {:?}, scanresinv: {=bool:?}, mode: {:?} }}",
+            self.compthres(),
+            self.comp(),
+            self.decode(),
+            self.strsample(),
+            self.scanresinv(),
+            self.mode()
+        )
     }
 }
 #[doc = "Scan Configuration."]
@@ -1416,7 +1444,17 @@ impl core::fmt::Debug for Ch0Interact {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ch0Interact {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ch0Interact {{ thres: {=u16:?}, sample: {:?}, setif: {:?}, exmode: {:?}, exclk: {=bool:?}, sampleclk: {=bool:?}, altex: {=bool:?} }}" , self . thres () , self . sample () , self . setif () , self . exmode () , self . exclk () , self . sampleclk () , self . altex ())
+        defmt::write!(
+            f,
+            "Ch0Interact {{ thres: {=u16:?}, sample: {:?}, setif: {:?}, exmode: {:?}, exclk: {=bool:?}, sampleclk: {=bool:?}, altex: {=bool:?} }}",
+            self.thres(),
+            self.sample(),
+            self.setif(),
+            self.exmode(),
+            self.exclk(),
+            self.sampleclk(),
+            self.altex()
+        )
     }
 }
 #[doc = "Scan Configuration."]
@@ -1757,7 +1795,20 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ scanmode: {:?}, prssel: {:?}, scanconf: {:?}, altexmap: {=bool:?}, dualsample: {=bool:?}, bufow: {=bool:?}, strscanres: {=bool:?}, bufidl: {=bool:?}, dmawu: {:?}, debugrun: {=bool:?} }}" , self . scanmode () , self . prssel () , self . scanconf () , self . altexmap () , self . dualsample () , self . bufow () , self . strscanres () , self . bufidl () , self . dmawu () , self . debugrun ())
+        defmt::write!(
+            f,
+            "Ctrl {{ scanmode: {:?}, prssel: {:?}, scanconf: {:?}, altexmap: {=bool:?}, dualsample: {=bool:?}, bufow: {=bool:?}, strscanres: {=bool:?}, bufidl: {=bool:?}, dmawu: {:?}, debugrun: {=bool:?} }}",
+            self.scanmode(),
+            self.prssel(),
+            self.scanconf(),
+            self.altexmap(),
+            self.dualsample(),
+            self.bufow(),
+            self.strscanres(),
+            self.bufidl(),
+            self.dmawu(),
+            self.debugrun()
+        )
     }
 }
 #[doc = "Current Channel Index."]
@@ -1987,7 +2038,23 @@ impl core::fmt::Debug for Decctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Decctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Decctrl {{ disable: {=bool:?}, errchk: {=bool:?}, intmap: {=bool:?}, hystprs0: {=bool:?}, hystprs1: {=bool:?}, hystprs2: {=bool:?}, hystirq: {=bool:?}, prscnt: {=bool:?}, input: {=bool:?}, prssel0: {:?}, prssel1: {:?}, prssel2: {:?}, prssel3: {:?} }}" , self . disable () , self . errchk () , self . intmap () , self . hystprs0 () , self . hystprs1 () , self . hystprs2 () , self . hystirq () , self . prscnt () , self . input () , self . prssel0 () , self . prssel1 () , self . prssel2 () , self . prssel3 ())
+        defmt::write!(
+            f,
+            "Decctrl {{ disable: {=bool:?}, errchk: {=bool:?}, intmap: {=bool:?}, hystprs0: {=bool:?}, hystprs1: {=bool:?}, hystprs2: {=bool:?}, hystirq: {=bool:?}, prscnt: {=bool:?}, input: {=bool:?}, prssel0: {:?}, prssel1: {:?}, prssel2: {:?}, prssel3: {:?} }}",
+            self.disable(),
+            self.errchk(),
+            self.intmap(),
+            self.hystprs0(),
+            self.hystprs1(),
+            self.hystprs2(),
+            self.hystirq(),
+            self.prscnt(),
+            self.input(),
+            self.prssel0(),
+            self.prssel1(),
+            self.prssel2(),
+            self.prssel3()
+        )
     }
 }
 #[doc = "Current Decoder State."]
@@ -2293,7 +2360,26 @@ impl core::fmt::Debug for Idleconf {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Idleconf {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Idleconf {{ ch0: {:?}, ch1: {:?}, ch2: {:?}, ch3: {:?}, ch4: {:?}, ch5: {:?}, ch6: {:?}, ch7: {:?}, ch8: {:?}, ch9: {:?}, ch10: {:?}, ch11: {:?}, ch12: {:?}, ch13: {:?}, ch14: {:?}, ch15: {:?} }}" , self . ch0 () , self . ch1 () , self . ch2 () , self . ch3 () , self . ch4 () , self . ch5 () , self . ch6 () , self . ch7 () , self . ch8 () , self . ch9 () , self . ch10 () , self . ch11 () , self . ch12 () , self . ch13 () , self . ch14 () , self . ch15 ())
+        defmt::write!(
+            f,
+            "Idleconf {{ ch0: {:?}, ch1: {:?}, ch2: {:?}, ch3: {:?}, ch4: {:?}, ch5: {:?}, ch6: {:?}, ch7: {:?}, ch8: {:?}, ch9: {:?}, ch10: {:?}, ch11: {:?}, ch12: {:?}, ch13: {:?}, ch14: {:?}, ch15: {:?} }}",
+            self.ch0(),
+            self.ch1(),
+            self.ch2(),
+            self.ch3(),
+            self.ch4(),
+            self.ch5(),
+            self.ch6(),
+            self.ch7(),
+            self.ch8(),
+            self.ch9(),
+            self.ch10(),
+            self.ch11(),
+            self.ch12(),
+            self.ch13(),
+            self.ch14(),
+            self.ch15()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -2616,7 +2702,33 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ ch0: {=bool:?}, ch1: {=bool:?}, ch2: {=bool:?}, ch3: {=bool:?}, ch4: {=bool:?}, ch5: {=bool:?}, ch6: {=bool:?}, ch7: {=bool:?}, ch8: {=bool:?}, ch9: {=bool:?}, ch10: {=bool:?}, ch11: {=bool:?}, ch12: {=bool:?}, ch13: {=bool:?}, ch14: {=bool:?}, ch15: {=bool:?}, scancomplete: {=bool:?}, dec: {=bool:?}, decerr: {=bool:?}, bufdatav: {=bool:?}, buflevel: {=bool:?}, bufof: {=bool:?}, cntof: {=bool:?} }}" , self . ch0 () , self . ch1 () , self . ch2 () , self . ch3 () , self . ch4 () , self . ch5 () , self . ch6 () , self . ch7 () , self . ch8 () , self . ch9 () , self . ch10 () , self . ch11 () , self . ch12 () , self . ch13 () , self . ch14 () , self . ch15 () , self . scancomplete () , self . dec () , self . decerr () , self . bufdatav () , self . buflevel () , self . bufof () , self . cntof ())
+        defmt::write!(
+            f,
+            "Ien {{ ch0: {=bool:?}, ch1: {=bool:?}, ch2: {=bool:?}, ch3: {=bool:?}, ch4: {=bool:?}, ch5: {=bool:?}, ch6: {=bool:?}, ch7: {=bool:?}, ch8: {=bool:?}, ch9: {=bool:?}, ch10: {=bool:?}, ch11: {=bool:?}, ch12: {=bool:?}, ch13: {=bool:?}, ch14: {=bool:?}, ch15: {=bool:?}, scancomplete: {=bool:?}, dec: {=bool:?}, decerr: {=bool:?}, bufdatav: {=bool:?}, buflevel: {=bool:?}, bufof: {=bool:?}, cntof: {=bool:?} }}",
+            self.ch0(),
+            self.ch1(),
+            self.ch2(),
+            self.ch3(),
+            self.ch4(),
+            self.ch5(),
+            self.ch6(),
+            self.ch7(),
+            self.ch8(),
+            self.ch9(),
+            self.ch10(),
+            self.ch11(),
+            self.ch12(),
+            self.ch13(),
+            self.ch14(),
+            self.ch15(),
+            self.scancomplete(),
+            self.dec(),
+            self.decerr(),
+            self.bufdatav(),
+            self.buflevel(),
+            self.bufof(),
+            self.cntof()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -2939,7 +3051,33 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ ch0: {=bool:?}, ch1: {=bool:?}, ch2: {=bool:?}, ch3: {=bool:?}, ch4: {=bool:?}, ch5: {=bool:?}, ch6: {=bool:?}, ch7: {=bool:?}, ch8: {=bool:?}, ch9: {=bool:?}, ch10: {=bool:?}, ch11: {=bool:?}, ch12: {=bool:?}, ch13: {=bool:?}, ch14: {=bool:?}, ch15: {=bool:?}, scancomplete: {=bool:?}, dec: {=bool:?}, decerr: {=bool:?}, bufdatav: {=bool:?}, buflevel: {=bool:?}, bufof: {=bool:?}, cntof: {=bool:?} }}" , self . ch0 () , self . ch1 () , self . ch2 () , self . ch3 () , self . ch4 () , self . ch5 () , self . ch6 () , self . ch7 () , self . ch8 () , self . ch9 () , self . ch10 () , self . ch11 () , self . ch12 () , self . ch13 () , self . ch14 () , self . ch15 () , self . scancomplete () , self . dec () , self . decerr () , self . bufdatav () , self . buflevel () , self . bufof () , self . cntof ())
+        defmt::write!(
+            f,
+            "If {{ ch0: {=bool:?}, ch1: {=bool:?}, ch2: {=bool:?}, ch3: {=bool:?}, ch4: {=bool:?}, ch5: {=bool:?}, ch6: {=bool:?}, ch7: {=bool:?}, ch8: {=bool:?}, ch9: {=bool:?}, ch10: {=bool:?}, ch11: {=bool:?}, ch12: {=bool:?}, ch13: {=bool:?}, ch14: {=bool:?}, ch15: {=bool:?}, scancomplete: {=bool:?}, dec: {=bool:?}, decerr: {=bool:?}, bufdatav: {=bool:?}, buflevel: {=bool:?}, bufof: {=bool:?}, cntof: {=bool:?} }}",
+            self.ch0(),
+            self.ch1(),
+            self.ch2(),
+            self.ch3(),
+            self.ch4(),
+            self.ch5(),
+            self.ch6(),
+            self.ch7(),
+            self.ch8(),
+            self.ch9(),
+            self.ch10(),
+            self.ch11(),
+            self.ch12(),
+            self.ch13(),
+            self.ch14(),
+            self.ch15(),
+            self.scancomplete(),
+            self.dec(),
+            self.decerr(),
+            self.bufdatav(),
+            self.buflevel(),
+            self.bufof(),
+            self.cntof()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -3262,7 +3400,33 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ ch0: {=bool:?}, ch1: {=bool:?}, ch2: {=bool:?}, ch3: {=bool:?}, ch4: {=bool:?}, ch5: {=bool:?}, ch6: {=bool:?}, ch7: {=bool:?}, ch8: {=bool:?}, ch9: {=bool:?}, ch10: {=bool:?}, ch11: {=bool:?}, ch12: {=bool:?}, ch13: {=bool:?}, ch14: {=bool:?}, ch15: {=bool:?}, scancomplete: {=bool:?}, dec: {=bool:?}, decerr: {=bool:?}, bufdatav: {=bool:?}, buflevel: {=bool:?}, bufof: {=bool:?}, cntof: {=bool:?} }}" , self . ch0 () , self . ch1 () , self . ch2 () , self . ch3 () , self . ch4 () , self . ch5 () , self . ch6 () , self . ch7 () , self . ch8 () , self . ch9 () , self . ch10 () , self . ch11 () , self . ch12 () , self . ch13 () , self . ch14 () , self . ch15 () , self . scancomplete () , self . dec () , self . decerr () , self . bufdatav () , self . buflevel () , self . bufof () , self . cntof ())
+        defmt::write!(
+            f,
+            "Ifs {{ ch0: {=bool:?}, ch1: {=bool:?}, ch2: {=bool:?}, ch3: {=bool:?}, ch4: {=bool:?}, ch5: {=bool:?}, ch6: {=bool:?}, ch7: {=bool:?}, ch8: {=bool:?}, ch9: {=bool:?}, ch10: {=bool:?}, ch11: {=bool:?}, ch12: {=bool:?}, ch13: {=bool:?}, ch14: {=bool:?}, ch15: {=bool:?}, scancomplete: {=bool:?}, dec: {=bool:?}, decerr: {=bool:?}, bufdatav: {=bool:?}, buflevel: {=bool:?}, bufof: {=bool:?}, cntof: {=bool:?} }}",
+            self.ch0(),
+            self.ch1(),
+            self.ch2(),
+            self.ch3(),
+            self.ch4(),
+            self.ch5(),
+            self.ch6(),
+            self.ch7(),
+            self.ch8(),
+            self.ch9(),
+            self.ch10(),
+            self.ch11(),
+            self.ch12(),
+            self.ch13(),
+            self.ch14(),
+            self.ch15(),
+            self.scancomplete(),
+            self.dec(),
+            self.decerr(),
+            self.bufdatav(),
+            self.buflevel(),
+            self.bufof(),
+            self.cntof()
+        )
     }
 }
 #[doc = "Peripheral Control Register."]
@@ -3455,7 +3619,23 @@ impl core::fmt::Debug for Perctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Perctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Perctrl {{ dacch0en: {=bool:?}, dacch1en: {=bool:?}, dacch0data: {=bool:?}, dacch1data: {=bool:?}, dacstartup: {=bool:?}, dacconvtrig: {=bool:?}, acmp0mode: {:?}, acmp1mode: {:?}, acmp0inv: {=bool:?}, acmp1inv: {=bool:?}, acmp0hysten: {=bool:?}, acmp1hysten: {=bool:?}, warmupmode: {:?} }}" , self . dacch0en () , self . dacch1en () , self . dacch0data () , self . dacch1data () , self . dacstartup () , self . dacconvtrig () , self . acmp0mode () , self . acmp1mode () , self . acmp0inv () , self . acmp1inv () , self . acmp0hysten () , self . acmp1hysten () , self . warmupmode ())
+        defmt::write!(
+            f,
+            "Perctrl {{ dacch0en: {=bool:?}, dacch1en: {=bool:?}, dacch0data: {=bool:?}, dacch1data: {=bool:?}, dacstartup: {=bool:?}, dacconvtrig: {=bool:?}, acmp0mode: {:?}, acmp1mode: {:?}, acmp0inv: {=bool:?}, acmp1inv: {=bool:?}, acmp0hysten: {=bool:?}, acmp1hysten: {=bool:?}, warmupmode: {:?} }}",
+            self.dacch0en(),
+            self.dacch1en(),
+            self.dacch0data(),
+            self.dacch1data(),
+            self.dacstartup(),
+            self.dacconvtrig(),
+            self.acmp0mode(),
+            self.acmp1mode(),
+            self.acmp0inv(),
+            self.acmp1inv(),
+            self.acmp0hysten(),
+            self.acmp1hysten(),
+            self.warmupmode()
+        )
     }
 }
 #[doc = "PRS Control Register."]
@@ -3915,7 +4095,34 @@ impl core::fmt::Debug for Routepen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Routepen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Routepen {{ ch0pen: {=bool:?}, ch1pen: {=bool:?}, ch2pen: {=bool:?}, ch3pen: {=bool:?}, ch4pen: {=bool:?}, ch5pen: {=bool:?}, ch6pen: {=bool:?}, ch7pen: {=bool:?}, ch8pen: {=bool:?}, ch9pen: {=bool:?}, ch10pen: {=bool:?}, ch11pen: {=bool:?}, ch12pen: {=bool:?}, ch13pen: {=bool:?}, ch14pen: {=bool:?}, ch15pen: {=bool:?}, altex0pen: {=bool:?}, altex1pen: {=bool:?}, altex2pen: {=bool:?}, altex3pen: {=bool:?}, altex4pen: {=bool:?}, altex5pen: {=bool:?}, altex6pen: {=bool:?}, altex7pen: {=bool:?} }}" , self . ch0pen () , self . ch1pen () , self . ch2pen () , self . ch3pen () , self . ch4pen () , self . ch5pen () , self . ch6pen () , self . ch7pen () , self . ch8pen () , self . ch9pen () , self . ch10pen () , self . ch11pen () , self . ch12pen () , self . ch13pen () , self . ch14pen () , self . ch15pen () , self . altex0pen () , self . altex1pen () , self . altex2pen () , self . altex3pen () , self . altex4pen () , self . altex5pen () , self . altex6pen () , self . altex7pen ())
+        defmt::write!(
+            f,
+            "Routepen {{ ch0pen: {=bool:?}, ch1pen: {=bool:?}, ch2pen: {=bool:?}, ch3pen: {=bool:?}, ch4pen: {=bool:?}, ch5pen: {=bool:?}, ch6pen: {=bool:?}, ch7pen: {=bool:?}, ch8pen: {=bool:?}, ch9pen: {=bool:?}, ch10pen: {=bool:?}, ch11pen: {=bool:?}, ch12pen: {=bool:?}, ch13pen: {=bool:?}, ch14pen: {=bool:?}, ch15pen: {=bool:?}, altex0pen: {=bool:?}, altex1pen: {=bool:?}, altex2pen: {=bool:?}, altex3pen: {=bool:?}, altex4pen: {=bool:?}, altex5pen: {=bool:?}, altex6pen: {=bool:?}, altex7pen: {=bool:?} }}",
+            self.ch0pen(),
+            self.ch1pen(),
+            self.ch2pen(),
+            self.ch3pen(),
+            self.ch4pen(),
+            self.ch5pen(),
+            self.ch6pen(),
+            self.ch7pen(),
+            self.ch8pen(),
+            self.ch9pen(),
+            self.ch10pen(),
+            self.ch11pen(),
+            self.ch12pen(),
+            self.ch13pen(),
+            self.ch14pen(),
+            self.ch15pen(),
+            self.altex0pen(),
+            self.altex1pen(),
+            self.altex2pen(),
+            self.altex3pen(),
+            self.altex4pen(),
+            self.altex5pen(),
+            self.altex6pen(),
+            self.altex7pen()
+        )
     }
 }
 #[doc = "Scan Result Register."]
@@ -4113,7 +4320,16 @@ impl core::fmt::Debug for St0Tconfa {
 #[cfg(feature = "defmt")]
 impl defmt::Format for St0Tconfa {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "St0Tconfa {{ comp: {=u8:?}, mask: {=u8:?}, nextstate: {=u8:?}, chain: {=bool:?}, setif: {=bool:?}, prsact: {=u8:?} }}" , self . comp () , self . mask () , self . nextstate () , self . chain () , self . setif () , self . prsact ())
+        defmt::write!(
+            f,
+            "St0Tconfa {{ comp: {=u8:?}, mask: {=u8:?}, nextstate: {=u8:?}, chain: {=bool:?}, setif: {=bool:?}, prsact: {=u8:?} }}",
+            self.comp(),
+            self.mask(),
+            self.nextstate(),
+            self.chain(),
+            self.setif(),
+            self.prsact()
+        )
     }
 }
 #[doc = "State Transition Configuration B."]
@@ -4202,7 +4418,15 @@ impl core::fmt::Debug for St0Tconfb {
 #[cfg(feature = "defmt")]
 impl defmt::Format for St0Tconfb {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "St0Tconfb {{ comp: {=u8:?}, mask: {=u8:?}, nextstate: {=u8:?}, setif: {=bool:?}, prsact: {=u8:?} }}" , self . comp () , self . mask () , self . nextstate () , self . setif () , self . prsact ())
+        defmt::write!(
+            f,
+            "St0Tconfb {{ comp: {=u8:?}, mask: {=u8:?}, nextstate: {=u8:?}, setif: {=bool:?}, prsact: {=u8:?} }}",
+            self.comp(),
+            self.mask(),
+            self.nextstate(),
+            self.setif(),
+            self.prsact()
+        )
     }
 }
 #[doc = "Status Register."]
@@ -4304,7 +4528,16 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ bufdatav: {=bool:?}, bufhalffull: {=bool:?}, buffull: {=bool:?}, running: {=bool:?}, scanactive: {=bool:?}, dacactive: {=bool:?} }}" , self . bufdatav () , self . bufhalffull () , self . buffull () , self . running () , self . scanactive () , self . dacactive ())
+        defmt::write!(
+            f,
+            "Status {{ bufdatav: {=bool:?}, bufhalffull: {=bool:?}, buffull: {=bool:?}, running: {=bool:?}, scanactive: {=bool:?}, dacactive: {=bool:?} }}",
+            self.bufdatav(),
+            self.bufhalffull(),
+            self.buffull(),
+            self.running(),
+            self.scanactive(),
+            self.dacactive()
+        )
     }
 }
 #[doc = "Synchronization Busy Register."]
@@ -4443,6 +4676,15 @@ impl core::fmt::Debug for Timctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Timctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Timctrl {{ auxpresc: {:?}, lfpresc: {:?}, pcpresc: {:?}, pctop: {=u8:?}, startdly: {=u8:?}, auxstartup: {=bool:?} }}" , self . auxpresc () , self . lfpresc () , self . pcpresc () , self . pctop () , self . startdly () , self . auxstartup ())
+        defmt::write!(
+            f,
+            "Timctrl {{ auxpresc: {:?}, lfpresc: {:?}, pcpresc: {:?}, pctop: {=u8:?}, startdly: {=u8:?}, auxstartup: {=bool:?} }}",
+            self.auxpresc(),
+            self.lfpresc(),
+            self.pcpresc(),
+            self.pctop(),
+            self.startdly(),
+            self.auxstartup()
+        )
     }
 }

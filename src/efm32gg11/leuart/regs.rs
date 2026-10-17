@@ -158,7 +158,18 @@ impl core::fmt::Debug for Cmd {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cmd {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cmd {{ rxen: {=bool:?}, rxdis: {=bool:?}, txen: {=bool:?}, txdis: {=bool:?}, rxblocken: {=bool:?}, rxblockdis: {=bool:?}, cleartx: {=bool:?}, clearrx: {=bool:?} }}" , self . rxen () , self . rxdis () , self . txen () , self . txdis () , self . rxblocken () , self . rxblockdis () , self . cleartx () , self . clearrx ())
+        defmt::write!(
+            f,
+            "Cmd {{ rxen: {=bool:?}, rxdis: {=bool:?}, txen: {=bool:?}, txdis: {=bool:?}, rxblocken: {=bool:?}, rxblockdis: {=bool:?}, cleartx: {=bool:?}, clearrx: {=bool:?} }}",
+            self.rxen(),
+            self.rxdis(),
+            self.txen(),
+            self.txdis(),
+            self.rxblocken(),
+            self.rxblockdis(),
+            self.cleartx(),
+            self.clearrx()
+        )
     }
 }
 #[doc = "Control Register."]
@@ -364,7 +375,24 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ autotri: {=bool:?}, databits: {=bool:?}, parity: {:?}, stopbits: {=bool:?}, inv: {=bool:?}, errsdma: {=bool:?}, loopbk: {=bool:?}, sfubrx: {=bool:?}, mpm: {=bool:?}, mpab: {=bool:?}, bit8dv: {=bool:?}, rxdmawu: {=bool:?}, txdmawu: {=bool:?}, txdelay: {:?} }}" , self . autotri () , self . databits () , self . parity () , self . stopbits () , self . inv () , self . errsdma () , self . loopbk () , self . sfubrx () , self . mpm () , self . mpab () , self . bit8dv () , self . rxdmawu () , self . txdmawu () , self . txdelay ())
+        defmt::write!(
+            f,
+            "Ctrl {{ autotri: {=bool:?}, databits: {=bool:?}, parity: {:?}, stopbits: {=bool:?}, inv: {=bool:?}, errsdma: {=bool:?}, loopbk: {=bool:?}, sfubrx: {=bool:?}, mpm: {=bool:?}, mpab: {=bool:?}, bit8dv: {=bool:?}, rxdmawu: {=bool:?}, txdmawu: {=bool:?}, txdelay: {:?} }}",
+            self.autotri(),
+            self.databits(),
+            self.parity(),
+            self.stopbits(),
+            self.inv(),
+            self.errsdma(),
+            self.loopbk(),
+            self.sfubrx(),
+            self.mpm(),
+            self.mpab(),
+            self.bit8dv(),
+            self.rxdmawu(),
+            self.txdmawu(),
+            self.txdelay()
+        )
     }
 }
 #[doc = "Freeze Register."]
@@ -568,7 +596,21 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, rxof: {=bool:?}, rxuf: {=bool:?}, txof: {=bool:?}, perr: {=bool:?}, ferr: {=bool:?}, mpaf: {=bool:?}, startf: {=bool:?}, sigf: {=bool:?} }}" , self . txc () , self . txbl () , self . rxdatav () , self . rxof () , self . rxuf () , self . txof () , self . perr () , self . ferr () , self . mpaf () , self . startf () , self . sigf ())
+        defmt::write!(
+            f,
+            "Ien {{ txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, rxof: {=bool:?}, rxuf: {=bool:?}, txof: {=bool:?}, perr: {=bool:?}, ferr: {=bool:?}, mpaf: {=bool:?}, startf: {=bool:?}, sigf: {=bool:?} }}",
+            self.txc(),
+            self.txbl(),
+            self.rxdatav(),
+            self.rxof(),
+            self.rxuf(),
+            self.txof(),
+            self.perr(),
+            self.ferr(),
+            self.mpaf(),
+            self.startf(),
+            self.sigf()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -735,7 +777,21 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, rxof: {=bool:?}, rxuf: {=bool:?}, txof: {=bool:?}, perr: {=bool:?}, ferr: {=bool:?}, mpaf: {=bool:?}, startf: {=bool:?}, sigf: {=bool:?} }}" , self . txc () , self . txbl () , self . rxdatav () , self . rxof () , self . rxuf () , self . txof () , self . perr () , self . ferr () , self . mpaf () , self . startf () , self . sigf ())
+        defmt::write!(
+            f,
+            "If {{ txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, rxof: {=bool:?}, rxuf: {=bool:?}, txof: {=bool:?}, perr: {=bool:?}, ferr: {=bool:?}, mpaf: {=bool:?}, startf: {=bool:?}, sigf: {=bool:?} }}",
+            self.txc(),
+            self.txbl(),
+            self.rxdatav(),
+            self.rxof(),
+            self.rxuf(),
+            self.txof(),
+            self.perr(),
+            self.ferr(),
+            self.mpaf(),
+            self.startf(),
+            self.sigf()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -876,7 +932,19 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ txc: {=bool:?}, rxof: {=bool:?}, rxuf: {=bool:?}, txof: {=bool:?}, perr: {=bool:?}, ferr: {=bool:?}, mpaf: {=bool:?}, startf: {=bool:?}, sigf: {=bool:?} }}" , self . txc () , self . rxof () , self . rxuf () , self . txof () , self . perr () , self . ferr () , self . mpaf () , self . startf () , self . sigf ())
+        defmt::write!(
+            f,
+            "Ifs {{ txc: {=bool:?}, rxof: {=bool:?}, rxuf: {=bool:?}, txof: {=bool:?}, perr: {=bool:?}, ferr: {=bool:?}, mpaf: {=bool:?}, startf: {=bool:?}, sigf: {=bool:?} }}",
+            self.txc(),
+            self.rxof(),
+            self.rxuf(),
+            self.txof(),
+            self.perr(),
+            self.ferr(),
+            self.mpaf(),
+            self.startf(),
+            self.sigf()
+        )
     }
 }
 #[doc = "LEUART Input Register."]
@@ -1478,7 +1546,17 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ rxens: {=bool:?}, txens: {=bool:?}, rxblock: {=bool:?}, txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, txidle: {=bool:?} }}" , self . rxens () , self . txens () , self . rxblock () , self . txc () , self . txbl () , self . rxdatav () , self . txidle ())
+        defmt::write!(
+            f,
+            "Status {{ rxens: {=bool:?}, txens: {=bool:?}, rxblock: {=bool:?}, txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, txidle: {=bool:?} }}",
+            self.rxens(),
+            self.txens(),
+            self.rxblock(),
+            self.txc(),
+            self.txbl(),
+            self.rxdatav(),
+            self.txidle()
+        )
     }
 }
 #[doc = "Synchronization Busy Register."]
@@ -1606,7 +1684,18 @@ impl core::fmt::Debug for Syncbusy {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Syncbusy {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Syncbusy {{ ctrl: {=bool:?}, cmd: {=bool:?}, clkdiv: {=bool:?}, startframe: {=bool:?}, sigframe: {=bool:?}, txdatax: {=bool:?}, txdata: {=bool:?}, pulsectrl: {=bool:?} }}" , self . ctrl () , self . cmd () , self . clkdiv () , self . startframe () , self . sigframe () , self . txdatax () , self . txdata () , self . pulsectrl ())
+        defmt::write!(
+            f,
+            "Syncbusy {{ ctrl: {=bool:?}, cmd: {=bool:?}, clkdiv: {=bool:?}, startframe: {=bool:?}, sigframe: {=bool:?}, txdatax: {=bool:?}, txdata: {=bool:?}, pulsectrl: {=bool:?} }}",
+            self.ctrl(),
+            self.cmd(),
+            self.clkdiv(),
+            self.startframe(),
+            self.sigframe(),
+            self.txdatax(),
+            self.txdata(),
+            self.pulsectrl()
+        )
     }
 }
 #[doc = "Transmit Buffer Data Register."]
@@ -1719,6 +1808,13 @@ impl core::fmt::Debug for Txdatax {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Txdatax {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Txdatax {{ txdata: {=u16:?}, txbreak: {=bool:?}, txdisat: {=bool:?}, rxenat: {=bool:?} }}" , self . txdata () , self . txbreak () , self . txdisat () , self . rxenat ())
+        defmt::write!(
+            f,
+            "Txdatax {{ txdata: {=u16:?}, txbreak: {=bool:?}, txdisat: {=bool:?}, rxenat: {=bool:?} }}",
+            self.txdata(),
+            self.txbreak(),
+            self.txdisat(),
+            self.rxenat()
+        )
     }
 }

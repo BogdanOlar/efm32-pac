@@ -503,7 +503,18 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ addrfaulten: {=bool:?}, clkdisfaulten: {=bool:?}, pwrupondemand: {=bool:?}, ifcreadclear: {=bool:?}, timeoutfaulten: {=bool:?}, rameccerrfaulten: {=bool:?}, ebifaulten: {=bool:?}, waitmode: {=bool:?} }}" , self . addrfaulten () , self . clkdisfaulten () , self . pwrupondemand () , self . ifcreadclear () , self . timeoutfaulten () , self . rameccerrfaulten () , self . ebifaulten () , self . waitmode ())
+        defmt::write!(
+            f,
+            "Ctrl {{ addrfaulten: {=bool:?}, clkdisfaulten: {=bool:?}, pwrupondemand: {=bool:?}, ifcreadclear: {=bool:?}, timeoutfaulten: {=bool:?}, rameccerrfaulten: {=bool:?}, ebifaulten: {=bool:?}, waitmode: {=bool:?} }}",
+            self.addrfaulten(),
+            self.clkdisfaulten(),
+            self.pwrupondemand(),
+            self.ifcreadclear(),
+            self.timeoutfaulten(),
+            self.rameccerrfaulten(),
+            self.ebifaulten(),
+            self.waitmode()
+        )
     }
 }
 #[doc = "RAM ECC Control Register."]
@@ -579,7 +590,14 @@ impl core::fmt::Debug for Eccctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Eccctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Eccctrl {{ rameccewen: {=bool:?}, rameccchken: {=bool:?}, ram1eccewen: {=bool:?}, ram1eccchken: {=bool:?} }}" , self . rameccewen () , self . rameccchken () , self . ram1eccewen () , self . ram1eccchken ())
+        defmt::write!(
+            f,
+            "Eccctrl {{ rameccewen: {=bool:?}, rameccchken: {=bool:?}, ram1eccewen: {=bool:?}, ram1eccchken: {=bool:?} }}",
+            self.rameccewen(),
+            self.rameccchken(),
+            self.ram1eccewen(),
+            self.ram1eccchken()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -759,7 +777,22 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ erase: {=bool:?}, write: {=bool:?}, chof: {=bool:?}, cmof: {=bool:?}, pwrupf: {=bool:?}, icacherr: {=bool:?}, wdataov: {=bool:?}, lvewrite: {=bool:?}, ramerr1b: {=bool:?}, ramerr2b: {=bool:?}, ram1err1b: {=bool:?}, ram1err2b: {=bool:?} }}" , self . erase () , self . write () , self . chof () , self . cmof () , self . pwrupf () , self . icacherr () , self . wdataov () , self . lvewrite () , self . ramerr1b () , self . ramerr2b () , self . ram1err1b () , self . ram1err2b ())
+        defmt::write!(
+            f,
+            "Ien {{ erase: {=bool:?}, write: {=bool:?}, chof: {=bool:?}, cmof: {=bool:?}, pwrupf: {=bool:?}, icacherr: {=bool:?}, wdataov: {=bool:?}, lvewrite: {=bool:?}, ramerr1b: {=bool:?}, ramerr2b: {=bool:?}, ram1err1b: {=bool:?}, ram1err2b: {=bool:?} }}",
+            self.erase(),
+            self.write(),
+            self.chof(),
+            self.cmof(),
+            self.pwrupf(),
+            self.icacherr(),
+            self.wdataov(),
+            self.lvewrite(),
+            self.ramerr1b(),
+            self.ramerr2b(),
+            self.ram1err1b(),
+            self.ram1err2b()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -939,7 +972,22 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ erase: {=bool:?}, write: {=bool:?}, chof: {=bool:?}, cmof: {=bool:?}, pwrupf: {=bool:?}, icacherr: {=bool:?}, wdataov: {=bool:?}, lvewrite: {=bool:?}, ramerr1b: {=bool:?}, ramerr2b: {=bool:?}, ram1err1b: {=bool:?}, ram1err2b: {=bool:?} }}" , self . erase () , self . write () , self . chof () , self . cmof () , self . pwrupf () , self . icacherr () , self . wdataov () , self . lvewrite () , self . ramerr1b () , self . ramerr2b () , self . ram1err1b () , self . ram1err2b ())
+        defmt::write!(
+            f,
+            "If {{ erase: {=bool:?}, write: {=bool:?}, chof: {=bool:?}, cmof: {=bool:?}, pwrupf: {=bool:?}, icacherr: {=bool:?}, wdataov: {=bool:?}, lvewrite: {=bool:?}, ramerr1b: {=bool:?}, ramerr2b: {=bool:?}, ram1err1b: {=bool:?}, ram1err2b: {=bool:?} }}",
+            self.erase(),
+            self.write(),
+            self.chof(),
+            self.cmof(),
+            self.pwrupf(),
+            self.icacherr(),
+            self.wdataov(),
+            self.lvewrite(),
+            self.ramerr1b(),
+            self.ramerr2b(),
+            self.ram1err1b(),
+            self.ram1err2b()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -1119,7 +1167,22 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ erase: {=bool:?}, write: {=bool:?}, chof: {=bool:?}, cmof: {=bool:?}, pwrupf: {=bool:?}, icacherr: {=bool:?}, wdataov: {=bool:?}, lvewrite: {=bool:?}, ramerr1b: {=bool:?}, ramerr2b: {=bool:?}, ram1err1b: {=bool:?}, ram1err2b: {=bool:?} }}" , self . erase () , self . write () , self . chof () , self . cmof () , self . pwrupf () , self . icacherr () , self . wdataov () , self . lvewrite () , self . ramerr1b () , self . ramerr2b () , self . ram1err1b () , self . ram1err2b ())
+        defmt::write!(
+            f,
+            "Ifs {{ erase: {=bool:?}, write: {=bool:?}, chof: {=bool:?}, cmof: {=bool:?}, pwrupf: {=bool:?}, icacherr: {=bool:?}, wdataov: {=bool:?}, lvewrite: {=bool:?}, ramerr1b: {=bool:?}, ramerr2b: {=bool:?}, ram1err1b: {=bool:?}, ram1err2b: {=bool:?} }}",
+            self.erase(),
+            self.write(),
+            self.chof(),
+            self.cmof(),
+            self.pwrupf(),
+            self.icacherr(),
+            self.wdataov(),
+            self.lvewrite(),
+            self.ramerr1b(),
+            self.ramerr2b(),
+            self.ram1err1b(),
+            self.ram1err2b()
+        )
     }
 }
 #[doc = "Configuration Lock Register."]
@@ -1308,7 +1371,17 @@ impl core::fmt::Debug for Ramctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ramctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ramctrl {{ ramwsen: {=bool:?}, ramprefetchen: {=bool:?}, ram1wsen: {=bool:?}, ram1prefetchen: {=bool:?}, ram2cacheen: {=bool:?}, ram2wsen: {=bool:?}, ram2prefetchen: {=bool:?} }}" , self . ramwsen () , self . ramprefetchen () , self . ram1wsen () , self . ram1prefetchen () , self . ram2cacheen () , self . ram2wsen () , self . ram2prefetchen ())
+        defmt::write!(
+            f,
+            "Ramctrl {{ ramwsen: {=bool:?}, ramprefetchen: {=bool:?}, ram1wsen: {=bool:?}, ram1prefetchen: {=bool:?}, ram2cacheen: {=bool:?}, ram2wsen: {=bool:?}, ram2prefetchen: {=bool:?} }}",
+            self.ramwsen(),
+            self.ramprefetchen(),
+            self.ram1wsen(),
+            self.ram1prefetchen(),
+            self.ram2cacheen(),
+            self.ram2wsen(),
+            self.ram2prefetchen()
+        )
     }
 }
 #[doc = "Read Control Register."]
@@ -1449,7 +1522,19 @@ impl core::fmt::Debug for Readctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Readctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Readctrl {{ ifcdis: {=bool:?}, aidis: {=bool:?}, iccdis: {=bool:?}, ebicdis: {=bool:?}, prefetch: {=bool:?}, usehprot: {=bool:?}, qspicdis: {=bool:?}, mode: {:?}, scbtp: {=bool:?} }}" , self . ifcdis () , self . aidis () , self . iccdis () , self . ebicdis () , self . prefetch () , self . usehprot () , self . qspicdis () , self . mode () , self . scbtp ())
+        defmt::write!(
+            f,
+            "Readctrl {{ ifcdis: {=bool:?}, aidis: {=bool:?}, iccdis: {=bool:?}, ebicdis: {=bool:?}, prefetch: {=bool:?}, usehprot: {=bool:?}, qspicdis: {=bool:?}, mode: {:?}, scbtp: {=bool:?} }}",
+            self.ifcdis(),
+            self.aidis(),
+            self.iccdis(),
+            self.ebicdis(),
+            self.prefetch(),
+            self.usehprot(),
+            self.qspicdis(),
+            self.mode(),
+            self.scbtp()
+        )
     }
 }
 #[doc = "Startup Control."]
@@ -1551,7 +1636,16 @@ impl core::fmt::Debug for Startup {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Startup {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Startup {{ stdly0: {=u16:?}, stdly1: {=u16:?}, astwait: {=bool:?}, stwsen: {=bool:?}, stwsaen: {=bool:?}, stws: {=u8:?} }}" , self . stdly0 () , self . stdly1 () , self . astwait () , self . stwsen () , self . stwsaen () , self . stws ())
+        defmt::write!(
+            f,
+            "Startup {{ stdly0: {=u16:?}, stdly1: {=u16:?}, astwait: {=bool:?}, stwsen: {=bool:?}, stwsaen: {=bool:?}, stws: {=u8:?} }}",
+            self.stdly0(),
+            self.stdly1(),
+            self.astwait(),
+            self.stwsen(),
+            self.stwsaen(),
+            self.stws()
+        )
     }
 }
 #[doc = "Status Register."]
@@ -1705,7 +1799,20 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ busy: {=bool:?}, locked: {=bool:?}, invaddr: {=bool:?}, wdataready: {=bool:?}, wordtimeout: {=bool:?}, eraseaborted: {=bool:?}, pcrunning: {=bool:?}, bankswitched: {=bool:?}, wdatavalid: {=u8:?}, pwrupckbdfailcount: {=u8:?} }}" , self . busy () , self . locked () , self . invaddr () , self . wdataready () , self . wordtimeout () , self . eraseaborted () , self . pcrunning () , self . bankswitched () , self . wdatavalid () , self . pwrupckbdfailcount ())
+        defmt::write!(
+            f,
+            "Status {{ busy: {=bool:?}, locked: {=bool:?}, invaddr: {=bool:?}, wdataready: {=bool:?}, wordtimeout: {=bool:?}, eraseaborted: {=bool:?}, pcrunning: {=bool:?}, bankswitched: {=bool:?}, wdatavalid: {=u8:?}, pwrupckbdfailcount: {=u8:?} }}",
+            self.busy(),
+            self.locked(),
+            self.invaddr(),
+            self.wdataready(),
+            self.wordtimeout(),
+            self.eraseaborted(),
+            self.pcrunning(),
+            self.bankswitched(),
+            self.wdatavalid(),
+            self.pwrupckbdfailcount()
+        )
     }
 }
 #[doc = "Write Command Register."]
@@ -1846,7 +1953,19 @@ impl core::fmt::Debug for Writecmd {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Writecmd {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Writecmd {{ laddrim: {=bool:?}, erasepage: {=bool:?}, writeend: {=bool:?}, writeonce: {=bool:?}, writetrig: {=bool:?}, eraseabort: {=bool:?}, erasemain0: {=bool:?}, erasemain1: {=bool:?}, clearwdata: {=bool:?} }}" , self . laddrim () , self . erasepage () , self . writeend () , self . writeonce () , self . writetrig () , self . eraseabort () , self . erasemain0 () , self . erasemain1 () , self . clearwdata ())
+        defmt::write!(
+            f,
+            "Writecmd {{ laddrim: {=bool:?}, erasepage: {=bool:?}, writeend: {=bool:?}, writeonce: {=bool:?}, writetrig: {=bool:?}, eraseabort: {=bool:?}, erasemain0: {=bool:?}, erasemain1: {=bool:?}, clearwdata: {=bool:?} }}",
+            self.laddrim(),
+            self.erasepage(),
+            self.writeend(),
+            self.writeonce(),
+            self.writetrig(),
+            self.eraseabort(),
+            self.erasemain0(),
+            self.erasemain1(),
+            self.clearwdata()
+        )
     }
 }
 #[doc = "Write Control Register."]

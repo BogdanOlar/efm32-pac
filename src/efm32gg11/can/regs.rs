@@ -265,7 +265,17 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ init: {=bool:?}, ie: {=bool:?}, sie: {=bool:?}, eie: {=bool:?}, dar: {=bool:?}, cce: {=bool:?}, test: {=bool:?} }}" , self . init () , self . ie () , self . sie () , self . eie () , self . dar () , self . cce () , self . test ())
+        defmt::write!(
+            f,
+            "Ctrl {{ init: {=bool:?}, ie: {=bool:?}, sie: {=bool:?}, eie: {=bool:?}, dar: {=bool:?}, cce: {=bool:?}, test: {=bool:?} }}",
+            self.init(),
+            self.ie(),
+            self.sie(),
+            self.eie(),
+            self.dar(),
+            self.cce(),
+            self.test()
+        )
     }
 }
 #[doc = "Error Count Register."]
@@ -748,7 +758,18 @@ impl core::fmt::Debug for Mir0Cmdmask {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Mir0Cmdmask {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Mir0Cmdmask {{ datab: {=bool:?}, dataa: {=bool:?}, txrqstnewdat: {=bool:?}, clrintpnd: {=bool:?}, control: {=bool:?}, arbacc: {=bool:?}, maskacc: {=bool:?}, wrrd: {=bool:?} }}" , self . datab () , self . dataa () , self . txrqstnewdat () , self . clrintpnd () , self . control () , self . arbacc () , self . maskacc () , self . wrrd ())
+        defmt::write!(
+            f,
+            "Mir0Cmdmask {{ datab: {=bool:?}, dataa: {=bool:?}, txrqstnewdat: {=bool:?}, clrintpnd: {=bool:?}, control: {=bool:?}, arbacc: {=bool:?}, maskacc: {=bool:?}, wrrd: {=bool:?} }}",
+            self.datab(),
+            self.dataa(),
+            self.txrqstnewdat(),
+            self.clrintpnd(),
+            self.control(),
+            self.arbacc(),
+            self.maskacc(),
+            self.wrrd()
+        )
     }
 }
 #[doc = "Interface Command Request Register."]
@@ -957,7 +978,20 @@ impl core::fmt::Debug for Mir0Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Mir0Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Mir0Ctrl {{ dlc: {=u8:?}, eob: {=bool:?}, txrqst: {=bool:?}, rmten: {=bool:?}, rxie: {=bool:?}, txie: {=bool:?}, umask: {=bool:?}, intpnd: {=bool:?}, messageof: {=bool:?}, datavalid: {=bool:?} }}" , self . dlc () , self . eob () , self . txrqst () , self . rmten () , self . rxie () , self . txie () , self . umask () , self . intpnd () , self . messageof () , self . datavalid ())
+        defmt::write!(
+            f,
+            "Mir0Ctrl {{ dlc: {=u8:?}, eob: {=bool:?}, txrqst: {=bool:?}, rmten: {=bool:?}, rxie: {=bool:?}, txie: {=bool:?}, umask: {=bool:?}, intpnd: {=bool:?}, messageof: {=bool:?}, datavalid: {=bool:?} }}",
+            self.dlc(),
+            self.eob(),
+            self.txrqst(),
+            self.rmten(),
+            self.rxie(),
+            self.txie(),
+            self.umask(),
+            self.intpnd(),
+            self.messageof(),
+            self.datavalid()
+        )
     }
 }
 #[doc = "Interface Data B Register."]
@@ -1363,7 +1397,16 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ lec: {:?}, txok: {=bool:?}, rxok: {=bool:?}, epass: {=bool:?}, ewarn: {=bool:?}, boff: {=bool:?} }}" , self . lec () , self . txok () , self . rxok () , self . epass () , self . ewarn () , self . boff ())
+        defmt::write!(
+            f,
+            "Status {{ lec: {:?}, txok: {=bool:?}, rxok: {=bool:?}, epass: {=bool:?}, ewarn: {=bool:?}, boff: {=bool:?} }}",
+            self.lec(),
+            self.txok(),
+            self.rxok(),
+            self.epass(),
+            self.ewarn(),
+            self.boff()
+        )
     }
 }
 #[doc = "Test Register."]
@@ -1452,7 +1495,15 @@ impl core::fmt::Debug for Test {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Test {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Test {{ basic: {=bool:?}, silent: {=bool:?}, lback: {=bool:?}, tx: {:?}, rx: {=bool:?} }}" , self . basic () , self . silent () , self . lback () , self . tx () , self . rx ())
+        defmt::write!(
+            f,
+            "Test {{ basic: {=bool:?}, silent: {=bool:?}, lback: {=bool:?}, tx: {:?}, rx: {=bool:?} }}",
+            self.basic(),
+            self.silent(),
+            self.lback(),
+            self.tx(),
+            self.rx()
+        )
     }
 }
 #[doc = "Transmission Request Register."]

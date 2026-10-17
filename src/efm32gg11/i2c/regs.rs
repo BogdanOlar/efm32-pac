@@ -158,7 +158,18 @@ impl core::fmt::Debug for Cmd {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cmd {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cmd {{ start: {=bool:?}, stop: {=bool:?}, ack: {=bool:?}, nack: {=bool:?}, cont: {=bool:?}, abort: {=bool:?}, cleartx: {=bool:?}, clearpc: {=bool:?} }}" , self . start () , self . stop () , self . ack () , self . nack () , self . cont () , self . abort () , self . cleartx () , self . clearpc ())
+        defmt::write!(
+            f,
+            "Cmd {{ start: {=bool:?}, stop: {=bool:?}, ack: {=bool:?}, nack: {=bool:?}, cont: {=bool:?}, abort: {=bool:?}, cleartx: {=bool:?}, clearpc: {=bool:?} }}",
+            self.start(),
+            self.stop(),
+            self.ack(),
+            self.nack(),
+            self.cont(),
+            self.abort(),
+            self.cleartx(),
+            self.clearpc()
+        )
     }
 }
 #[doc = "Control Register."]
@@ -338,7 +349,22 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ en: {=bool:?}, slave: {=bool:?}, autoack: {=bool:?}, autose: {=bool:?}, autosn: {=bool:?}, arbdis: {=bool:?}, gcamen: {=bool:?}, txbil: {=bool:?}, clhr: {:?}, bito: {:?}, gibito: {=bool:?}, clto: {:?} }}" , self . en () , self . slave () , self . autoack () , self . autose () , self . autosn () , self . arbdis () , self . gcamen () , self . txbil () , self . clhr () , self . bito () , self . gibito () , self . clto ())
+        defmt::write!(
+            f,
+            "Ctrl {{ en: {=bool:?}, slave: {=bool:?}, autoack: {=bool:?}, autose: {=bool:?}, autosn: {=bool:?}, arbdis: {=bool:?}, gcamen: {=bool:?}, txbil: {=bool:?}, clhr: {:?}, bito: {:?}, gibito: {=bool:?}, clto: {:?} }}",
+            self.en(),
+            self.slave(),
+            self.autoack(),
+            self.autose(),
+            self.autosn(),
+            self.arbdis(),
+            self.gcamen(),
+            self.txbil(),
+            self.clhr(),
+            self.bito(),
+            self.gibito(),
+            self.clto()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -609,7 +635,29 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ start: {=bool:?}, rstart: {=bool:?}, addr: {=bool:?}, txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, ack: {=bool:?}, nack: {=bool:?}, mstop: {=bool:?}, arblost: {=bool:?}, buserr: {=bool:?}, bushold: {=bool:?}, txof: {=bool:?}, rxuf: {=bool:?}, bito: {=bool:?}, clto: {=bool:?}, sstop: {=bool:?}, rxfull: {=bool:?}, clerr: {=bool:?} }}" , self . start () , self . rstart () , self . addr () , self . txc () , self . txbl () , self . rxdatav () , self . ack () , self . nack () , self . mstop () , self . arblost () , self . buserr () , self . bushold () , self . txof () , self . rxuf () , self . bito () , self . clto () , self . sstop () , self . rxfull () , self . clerr ())
+        defmt::write!(
+            f,
+            "Ien {{ start: {=bool:?}, rstart: {=bool:?}, addr: {=bool:?}, txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, ack: {=bool:?}, nack: {=bool:?}, mstop: {=bool:?}, arblost: {=bool:?}, buserr: {=bool:?}, bushold: {=bool:?}, txof: {=bool:?}, rxuf: {=bool:?}, bito: {=bool:?}, clto: {=bool:?}, sstop: {=bool:?}, rxfull: {=bool:?}, clerr: {=bool:?} }}",
+            self.start(),
+            self.rstart(),
+            self.addr(),
+            self.txc(),
+            self.txbl(),
+            self.rxdatav(),
+            self.ack(),
+            self.nack(),
+            self.mstop(),
+            self.arblost(),
+            self.buserr(),
+            self.bushold(),
+            self.txof(),
+            self.rxuf(),
+            self.bito(),
+            self.clto(),
+            self.sstop(),
+            self.rxfull(),
+            self.clerr()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -880,7 +928,29 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ start: {=bool:?}, rstart: {=bool:?}, addr: {=bool:?}, txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, ack: {=bool:?}, nack: {=bool:?}, mstop: {=bool:?}, arblost: {=bool:?}, buserr: {=bool:?}, bushold: {=bool:?}, txof: {=bool:?}, rxuf: {=bool:?}, bito: {=bool:?}, clto: {=bool:?}, sstop: {=bool:?}, rxfull: {=bool:?}, clerr: {=bool:?} }}" , self . start () , self . rstart () , self . addr () , self . txc () , self . txbl () , self . rxdatav () , self . ack () , self . nack () , self . mstop () , self . arblost () , self . buserr () , self . bushold () , self . txof () , self . rxuf () , self . bito () , self . clto () , self . sstop () , self . rxfull () , self . clerr ())
+        defmt::write!(
+            f,
+            "If {{ start: {=bool:?}, rstart: {=bool:?}, addr: {=bool:?}, txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, ack: {=bool:?}, nack: {=bool:?}, mstop: {=bool:?}, arblost: {=bool:?}, buserr: {=bool:?}, bushold: {=bool:?}, txof: {=bool:?}, rxuf: {=bool:?}, bito: {=bool:?}, clto: {=bool:?}, sstop: {=bool:?}, rxfull: {=bool:?}, clerr: {=bool:?} }}",
+            self.start(),
+            self.rstart(),
+            self.addr(),
+            self.txc(),
+            self.txbl(),
+            self.rxdatav(),
+            self.ack(),
+            self.nack(),
+            self.mstop(),
+            self.arblost(),
+            self.buserr(),
+            self.bushold(),
+            self.txof(),
+            self.rxuf(),
+            self.bito(),
+            self.clto(),
+            self.sstop(),
+            self.rxfull(),
+            self.clerr()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -1125,7 +1195,27 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ start: {=bool:?}, rstart: {=bool:?}, addr: {=bool:?}, txc: {=bool:?}, ack: {=bool:?}, nack: {=bool:?}, mstop: {=bool:?}, arblost: {=bool:?}, buserr: {=bool:?}, bushold: {=bool:?}, txof: {=bool:?}, rxuf: {=bool:?}, bito: {=bool:?}, clto: {=bool:?}, sstop: {=bool:?}, rxfull: {=bool:?}, clerr: {=bool:?} }}" , self . start () , self . rstart () , self . addr () , self . txc () , self . ack () , self . nack () , self . mstop () , self . arblost () , self . buserr () , self . bushold () , self . txof () , self . rxuf () , self . bito () , self . clto () , self . sstop () , self . rxfull () , self . clerr ())
+        defmt::write!(
+            f,
+            "Ifs {{ start: {=bool:?}, rstart: {=bool:?}, addr: {=bool:?}, txc: {=bool:?}, ack: {=bool:?}, nack: {=bool:?}, mstop: {=bool:?}, arblost: {=bool:?}, buserr: {=bool:?}, bushold: {=bool:?}, txof: {=bool:?}, rxuf: {=bool:?}, bito: {=bool:?}, clto: {=bool:?}, sstop: {=bool:?}, rxfull: {=bool:?}, clerr: {=bool:?} }}",
+            self.start(),
+            self.rstart(),
+            self.addr(),
+            self.txc(),
+            self.ack(),
+            self.nack(),
+            self.mstop(),
+            self.arblost(),
+            self.buserr(),
+            self.bushold(),
+            self.txof(),
+            self.rxuf(),
+            self.bito(),
+            self.clto(),
+            self.sstop(),
+            self.rxfull(),
+            self.clerr()
+        )
     }
 }
 #[doc = "I/O Routing Location Register."]
@@ -1593,7 +1683,16 @@ impl core::fmt::Debug for State {
 #[cfg(feature = "defmt")]
 impl defmt::Format for State {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "State {{ busy: {=bool:?}, master: {=bool:?}, transmitter: {=bool:?}, nacked: {=bool:?}, bushold: {=bool:?}, state: {:?} }}" , self . busy () , self . master () , self . transmitter () , self . nacked () , self . bushold () , self . state ())
+        defmt::write!(
+            f,
+            "State {{ busy: {=bool:?}, master: {=bool:?}, transmitter: {=bool:?}, nacked: {=bool:?}, bushold: {=bool:?}, state: {:?} }}",
+            self.busy(),
+            self.master(),
+            self.transmitter(),
+            self.nacked(),
+            self.bushold(),
+            self.state()
+        )
     }
 }
 #[doc = "Status Register."]
@@ -1747,7 +1846,20 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ pstart: {=bool:?}, pstop: {=bool:?}, pack: {=bool:?}, pnack: {=bool:?}, pcont: {=bool:?}, pabort: {=bool:?}, txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, rxfull: {=bool:?} }}" , self . pstart () , self . pstop () , self . pack () , self . pnack () , self . pcont () , self . pabort () , self . txc () , self . txbl () , self . rxdatav () , self . rxfull ())
+        defmt::write!(
+            f,
+            "Status {{ pstart: {=bool:?}, pstop: {=bool:?}, pack: {=bool:?}, pnack: {=bool:?}, pcont: {=bool:?}, pabort: {=bool:?}, txc: {=bool:?}, txbl: {=bool:?}, rxdatav: {=bool:?}, rxfull: {=bool:?} }}",
+            self.pstart(),
+            self.pstop(),
+            self.pack(),
+            self.pnack(),
+            self.pcont(),
+            self.pabort(),
+            self.txc(),
+            self.txbl(),
+            self.rxdatav(),
+            self.rxfull()
+        )
     }
 }
 #[doc = "Transmit Buffer Data Register."]

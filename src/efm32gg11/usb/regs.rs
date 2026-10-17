@@ -267,7 +267,22 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ vbusenap: {=bool:?}, selfpowered: {=bool:?}, lemoscctrl: {:?}, lemphyctrl: {=bool:?}, lemidleen: {=bool:?}, idcden: {=bool:?}, otgclkcdis: {=bool:?}, otgidindis: {=bool:?}, otgphyctrldis: {=bool:?}, dcden: {:?}, pden: {=bool:?}, sden: {=bool:?} }}" , self . vbusenap () , self . selfpowered () , self . lemoscctrl () , self . lemphyctrl () , self . lemidleen () , self . idcden () , self . otgclkcdis () , self . otgidindis () , self . otgphyctrldis () , self . dcden () , self . pden () , self . sden ())
+        defmt::write!(
+            f,
+            "Ctrl {{ vbusenap: {=bool:?}, selfpowered: {=bool:?}, lemoscctrl: {:?}, lemphyctrl: {=bool:?}, lemidleen: {=bool:?}, idcden: {=bool:?}, otgclkcdis: {=bool:?}, otgidindis: {=bool:?}, otgphyctrldis: {=bool:?}, dcden: {:?}, pden: {=bool:?}, sden: {=bool:?} }}",
+            self.vbusenap(),
+            self.selfpowered(),
+            self.lemoscctrl(),
+            self.lemphyctrl(),
+            self.lemidleen(),
+            self.idcden(),
+            self.otgclkcdis(),
+            self.otgidindis(),
+            self.otgphyctrldis(),
+            self.dcden(),
+            self.pden(),
+            self.sden()
+        )
     }
 }
 #[doc = "Device All Endpoints Interrupt Register."]
@@ -473,7 +488,24 @@ impl core::fmt::Debug for Daint {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Daint {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Daint {{ inepint0: {=bool:?}, inepint1: {=bool:?}, inepint2: {=bool:?}, inepint3: {=bool:?}, inepint4: {=bool:?}, inepint5: {=bool:?}, inepint6: {=bool:?}, outepint0: {=bool:?}, outepint1: {=bool:?}, outepint2: {=bool:?}, outepint3: {=bool:?}, outepint4: {=bool:?}, outepint5: {=bool:?}, outepint6: {=bool:?} }}" , self . inepint0 () , self . inepint1 () , self . inepint2 () , self . inepint3 () , self . inepint4 () , self . inepint5 () , self . inepint6 () , self . outepint0 () , self . outepint1 () , self . outepint2 () , self . outepint3 () , self . outepint4 () , self . outepint5 () , self . outepint6 ())
+        defmt::write!(
+            f,
+            "Daint {{ inepint0: {=bool:?}, inepint1: {=bool:?}, inepint2: {=bool:?}, inepint3: {=bool:?}, inepint4: {=bool:?}, inepint5: {=bool:?}, inepint6: {=bool:?}, outepint0: {=bool:?}, outepint1: {=bool:?}, outepint2: {=bool:?}, outepint3: {=bool:?}, outepint4: {=bool:?}, outepint5: {=bool:?}, outepint6: {=bool:?} }}",
+            self.inepint0(),
+            self.inepint1(),
+            self.inepint2(),
+            self.inepint3(),
+            self.inepint4(),
+            self.inepint5(),
+            self.inepint6(),
+            self.outepint0(),
+            self.outepint1(),
+            self.outepint2(),
+            self.outepint3(),
+            self.outepint4(),
+            self.outepint5(),
+            self.outepint6()
+        )
     }
 }
 #[doc = "Device All Endpoints Interrupt Mask Register."]
@@ -679,7 +711,24 @@ impl core::fmt::Debug for Daintmsk {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Daintmsk {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Daintmsk {{ inepmsk0: {=bool:?}, inepmsk1: {=bool:?}, inepmsk2: {=bool:?}, inepmsk3: {=bool:?}, inepmsk4: {=bool:?}, inepmsk5: {=bool:?}, inepmsk6: {=bool:?}, outepmsk0: {=bool:?}, outepmsk1: {=bool:?}, outepmsk2: {=bool:?}, outepmsk3: {=bool:?}, outepmsk4: {=bool:?}, outepmsk5: {=bool:?}, outepmsk6: {=bool:?} }}" , self . inepmsk0 () , self . inepmsk1 () , self . inepmsk2 () , self . inepmsk3 () , self . inepmsk4 () , self . inepmsk5 () , self . inepmsk6 () , self . outepmsk0 () , self . outepmsk1 () , self . outepmsk2 () , self . outepmsk3 () , self . outepmsk4 () , self . outepmsk5 () , self . outepmsk6 ())
+        defmt::write!(
+            f,
+            "Daintmsk {{ inepmsk0: {=bool:?}, inepmsk1: {=bool:?}, inepmsk2: {=bool:?}, inepmsk3: {=bool:?}, inepmsk4: {=bool:?}, inepmsk5: {=bool:?}, inepmsk6: {=bool:?}, outepmsk0: {=bool:?}, outepmsk1: {=bool:?}, outepmsk2: {=bool:?}, outepmsk3: {=bool:?}, outepmsk4: {=bool:?}, outepmsk5: {=bool:?}, outepmsk6: {=bool:?} }}",
+            self.inepmsk0(),
+            self.inepmsk1(),
+            self.inepmsk2(),
+            self.inepmsk3(),
+            self.inepmsk4(),
+            self.inepmsk5(),
+            self.inepmsk6(),
+            self.outepmsk0(),
+            self.outepmsk1(),
+            self.outepmsk2(),
+            self.outepmsk3(),
+            self.outepmsk4(),
+            self.outepmsk5(),
+            self.outepmsk6()
+        )
     }
 }
 #[doc = "Data TRIM 1 Values for USB DP and DM."]
@@ -807,7 +856,18 @@ impl core::fmt::Debug for Dattrim1 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dattrim1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dattrim1 {{ rout: {=u8:?}, endlypullup: {=bool:?}, dlypullupfs: {=u8:?}, vcrsfs: {=u8:?}, tfdmfs: {=u8:?}, trdmfs: {=u8:?}, tfdpfs: {=u8:?}, trdpfs: {=u8:?} }}" , self . rout () , self . endlypullup () , self . dlypullupfs () , self . vcrsfs () , self . tfdmfs () , self . trdmfs () , self . tfdpfs () , self . trdpfs ())
+        defmt::write!(
+            f,
+            "Dattrim1 {{ rout: {=u8:?}, endlypullup: {=bool:?}, dlypullupfs: {=u8:?}, vcrsfs: {=u8:?}, tfdmfs: {=u8:?}, trdmfs: {=u8:?}, tfdpfs: {=u8:?}, trdpfs: {=u8:?} }}",
+            self.rout(),
+            self.endlypullup(),
+            self.dlypullupfs(),
+            self.vcrsfs(),
+            self.tfdmfs(),
+            self.trdmfs(),
+            self.tfdpfs(),
+            self.trdpfs()
+        )
     }
 }
 #[doc = "Device Configuration Register."]
@@ -944,7 +1004,19 @@ impl core::fmt::Debug for Dcfg {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dcfg {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dcfg {{ devspd: {:?}, nzstsouthshk: {=bool:?}, ena32khzsusp: {=bool:?}, devaddr: {=u8:?}, perfrint: {:?}, endevoutnak: {=bool:?}, xcvrdly: {=bool:?}, erraticintmsk: {=bool:?}, resvalid: {=u8:?} }}" , self . devspd () , self . nzstsouthshk () , self . ena32khzsusp () , self . devaddr () , self . perfrint () , self . endevoutnak () , self . xcvrdly () , self . erraticintmsk () , self . resvalid ())
+        defmt::write!(
+            f,
+            "Dcfg {{ devspd: {:?}, nzstsouthshk: {=bool:?}, ena32khzsusp: {=bool:?}, devaddr: {=u8:?}, perfrint: {:?}, endevoutnak: {=bool:?}, xcvrdly: {=bool:?}, erraticintmsk: {=bool:?}, resvalid: {=u8:?} }}",
+            self.devspd(),
+            self.nzstsouthshk(),
+            self.ena32khzsusp(),
+            self.devaddr(),
+            self.perfrint(),
+            self.endevoutnak(),
+            self.xcvrdly(),
+            self.erraticintmsk(),
+            self.resvalid()
+        )
     }
 }
 #[doc = "Device Control Register."]
@@ -1124,7 +1196,22 @@ impl core::fmt::Debug for Dctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dctl {{ rmtwkupsig: {=bool:?}, sftdiscon: {=bool:?}, gnpinnaksts: {=bool:?}, goutnaksts: {=bool:?}, tstctl: {:?}, sgnpinnak: {=bool:?}, cgnpinnak: {=bool:?}, sgoutnak: {=bool:?}, cgoutnak: {=bool:?}, pwronprgdone: {=bool:?}, ignrfrmnum: {=bool:?}, nakonbble: {=bool:?} }}" , self . rmtwkupsig () , self . sftdiscon () , self . gnpinnaksts () , self . goutnaksts () , self . tstctl () , self . sgnpinnak () , self . cgnpinnak () , self . sgoutnak () , self . cgoutnak () , self . pwronprgdone () , self . ignrfrmnum () , self . nakonbble ())
+        defmt::write!(
+            f,
+            "Dctl {{ rmtwkupsig: {=bool:?}, sftdiscon: {=bool:?}, gnpinnaksts: {=bool:?}, goutnaksts: {=bool:?}, tstctl: {:?}, sgnpinnak: {=bool:?}, cgnpinnak: {=bool:?}, sgoutnak: {=bool:?}, cgoutnak: {=bool:?}, pwronprgdone: {=bool:?}, ignrfrmnum: {=bool:?}, nakonbble: {=bool:?} }}",
+            self.rmtwkupsig(),
+            self.sftdiscon(),
+            self.gnpinnaksts(),
+            self.goutnaksts(),
+            self.tstctl(),
+            self.sgnpinnak(),
+            self.cgnpinnak(),
+            self.sgoutnak(),
+            self.cgoutnak(),
+            self.pwronprgdone(),
+            self.ignrfrmnum(),
+            self.nakonbble()
+        )
     }
 }
 #[doc = "Device Control IN Endpoint x+1 Control Register."]
@@ -1317,7 +1404,23 @@ impl core::fmt::Debug for Diep0Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep0Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep0Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . stall () , self . txfnum () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Diep0Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.stall(),
+            self.txfnum(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device IN Endpoint Transmit FIFO Status Register 1."]
@@ -1534,7 +1637,22 @@ impl core::fmt::Debug for Diep0Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep0Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep0Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . timeout () , self . intkntxfemp () , self . intknepmis () , self . inepnakeff () , self . txfemp () , self . txfifoundrn () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt ())
+        defmt::write!(
+            f,
+            "Diep0Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.timeout(),
+            self.intkntxfemp(),
+            self.intknepmis(),
+            self.inepnakeff(),
+            self.txfemp(),
+            self.txfifoundrn(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt()
+        )
     }
 }
 #[doc = "Device IN Endpoint x+1 Transfer Size Register."]
@@ -1757,7 +1875,20 @@ impl core::fmt::Debug for Diep0ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep0ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep0ctl {{ mps: {:?}, usbactep: {=bool:?}, naksts: {=bool:?}, eptype: {=u8:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . naksts () , self . eptype () , self . stall () , self . txfnum () , self . cnak () , self . snak () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Diep0ctl {{ mps: {:?}, usbactep: {=bool:?}, naksts: {=bool:?}, eptype: {=u8:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.naksts(),
+            self.eptype(),
+            self.stall(),
+            self.txfnum(),
+            self.cnak(),
+            self.snak(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device IN Endpoint 0 Interrupt Register."]
@@ -1937,7 +2068,22 @@ impl core::fmt::Debug for Diep0int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep0int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep0int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . timeout () , self . intkntxfemp () , self . intknepmis () , self . inepnakeff () , self . txfemp () , self . txfifoundrn () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt ())
+        defmt::write!(
+            f,
+            "Diep0int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.timeout(),
+            self.intkntxfemp(),
+            self.intknepmis(),
+            self.inepnakeff(),
+            self.txfemp(),
+            self.txfifoundrn(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt()
+        )
     }
 }
 #[doc = "Device IN Endpoint 0 Transfer Size Register."]
@@ -2222,7 +2368,23 @@ impl core::fmt::Debug for Diep1Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep1Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep1Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . stall () , self . txfnum () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Diep1Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.stall(),
+            self.txfnum(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device IN Endpoint Transmit FIFO Status Register 1."]
@@ -2439,7 +2601,22 @@ impl core::fmt::Debug for Diep1Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep1Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep1Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . timeout () , self . intkntxfemp () , self . intknepmis () , self . inepnakeff () , self . txfemp () , self . txfifoundrn () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt ())
+        defmt::write!(
+            f,
+            "Diep1Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.timeout(),
+            self.intkntxfemp(),
+            self.intknepmis(),
+            self.inepnakeff(),
+            self.txfemp(),
+            self.txfifoundrn(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt()
+        )
     }
 }
 #[doc = "Device IN Endpoint x+1 Transfer Size Register."]
@@ -2701,7 +2878,23 @@ impl core::fmt::Debug for Diep2Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep2Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep2Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . stall () , self . txfnum () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Diep2Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.stall(),
+            self.txfnum(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device IN Endpoint Transmit FIFO Status Register 1."]
@@ -2918,7 +3111,22 @@ impl core::fmt::Debug for Diep2Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep2Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep2Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . timeout () , self . intkntxfemp () , self . intknepmis () , self . inepnakeff () , self . txfemp () , self . txfifoundrn () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt ())
+        defmt::write!(
+            f,
+            "Diep2Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.timeout(),
+            self.intkntxfemp(),
+            self.intknepmis(),
+            self.inepnakeff(),
+            self.txfemp(),
+            self.txfifoundrn(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt()
+        )
     }
 }
 #[doc = "Device IN Endpoint x+1 Transfer Size Register."]
@@ -3180,7 +3388,23 @@ impl core::fmt::Debug for Diep3Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep3Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep3Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . stall () , self . txfnum () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Diep3Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.stall(),
+            self.txfnum(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device IN Endpoint Transmit FIFO Status Register 1."]
@@ -3397,7 +3621,22 @@ impl core::fmt::Debug for Diep3Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep3Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep3Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . timeout () , self . intkntxfemp () , self . intknepmis () , self . inepnakeff () , self . txfemp () , self . txfifoundrn () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt ())
+        defmt::write!(
+            f,
+            "Diep3Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.timeout(),
+            self.intkntxfemp(),
+            self.intknepmis(),
+            self.inepnakeff(),
+            self.txfemp(),
+            self.txfifoundrn(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt()
+        )
     }
 }
 #[doc = "Device IN Endpoint x+1 Transfer Size Register."]
@@ -3659,7 +3898,23 @@ impl core::fmt::Debug for Diep4Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep4Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep4Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . stall () , self . txfnum () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Diep4Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.stall(),
+            self.txfnum(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device IN Endpoint Transmit FIFO Status Register 1."]
@@ -3876,7 +4131,22 @@ impl core::fmt::Debug for Diep4Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep4Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep4Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . timeout () , self . intkntxfemp () , self . intknepmis () , self . inepnakeff () , self . txfemp () , self . txfifoundrn () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt ())
+        defmt::write!(
+            f,
+            "Diep4Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.timeout(),
+            self.intkntxfemp(),
+            self.intknepmis(),
+            self.inepnakeff(),
+            self.txfemp(),
+            self.txfifoundrn(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt()
+        )
     }
 }
 #[doc = "Device IN Endpoint x+1 Transfer Size Register."]
@@ -4138,7 +4408,23 @@ impl core::fmt::Debug for Diep5Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep5Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep5Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . stall () , self . txfnum () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Diep5Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, stall: {=bool:?}, txfnum: {=u8:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.stall(),
+            self.txfnum(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device IN Endpoint Transmit FIFO Status Register 1."]
@@ -4355,7 +4641,22 @@ impl core::fmt::Debug for Diep5Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diep5Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diep5Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . timeout () , self . intkntxfemp () , self . intknepmis () , self . inepnakeff () , self . txfemp () , self . txfifoundrn () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt ())
+        defmt::write!(
+            f,
+            "Diep5Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, timeout: {=bool:?}, intkntxfemp: {=bool:?}, intknepmis: {=bool:?}, inepnakeff: {=bool:?}, txfemp: {=bool:?}, txfifoundrn: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.timeout(),
+            self.intkntxfemp(),
+            self.intknepmis(),
+            self.inepnakeff(),
+            self.txfemp(),
+            self.txfifoundrn(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt()
+        )
     }
 }
 #[doc = "Device IN Endpoint x+1 Transfer Size Register."]
@@ -4606,7 +4907,19 @@ impl core::fmt::Debug for Diepmsk {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Diepmsk {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Diepmsk {{ xfercomplmsk: {=bool:?}, epdisbldmsk: {=bool:?}, ahberrmsk: {=bool:?}, timeoutmsk: {=bool:?}, intkntxfempmsk: {=bool:?}, intknepmismsk: {=bool:?}, inepnakeffmsk: {=bool:?}, txfifoundrnmsk: {=bool:?}, nakmsk: {=bool:?} }}" , self . xfercomplmsk () , self . epdisbldmsk () , self . ahberrmsk () , self . timeoutmsk () , self . intkntxfempmsk () , self . intknepmismsk () , self . inepnakeffmsk () , self . txfifoundrnmsk () , self . nakmsk ())
+        defmt::write!(
+            f,
+            "Diepmsk {{ xfercomplmsk: {=bool:?}, epdisbldmsk: {=bool:?}, ahberrmsk: {=bool:?}, timeoutmsk: {=bool:?}, intkntxfempmsk: {=bool:?}, intknepmismsk: {=bool:?}, inepnakeffmsk: {=bool:?}, txfifoundrnmsk: {=bool:?}, nakmsk: {=bool:?} }}",
+            self.xfercomplmsk(),
+            self.epdisbldmsk(),
+            self.ahberrmsk(),
+            self.timeoutmsk(),
+            self.intkntxfempmsk(),
+            self.intknepmismsk(),
+            self.inepnakeffmsk(),
+            self.txfifoundrnmsk(),
+            self.nakmsk()
+        )
     }
 }
 #[doc = "Device IN Endpoint Transmit FIFO Size Register 1."]
@@ -5129,7 +5442,23 @@ impl core::fmt::Debug for Doep0Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep0Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep0Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . snp () , self . stall () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Doep0Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.snp(),
+            self.stall(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Interrupt Register."]
@@ -5307,7 +5636,22 @@ impl core::fmt::Debug for Doep0Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep0Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep0Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . setup () , self . outtknepdis () , self . stsphsercvd () , self . back2backsetup () , self . outpkterr () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt () , self . stuppktrcvd ())
+        defmt::write!(
+            f,
+            "Doep0Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.setup(),
+            self.outtknepdis(),
+            self.stsphsercvd(),
+            self.back2backsetup(),
+            self.outpkterr(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt(),
+            self.stuppktrcvd()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Transfer Size Register."]
@@ -5530,7 +5874,20 @@ impl core::fmt::Debug for Doep0ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep0ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep0ctl {{ mps: {:?}, usbactep: {=bool:?}, naksts: {=bool:?}, eptype: {=u8:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . naksts () , self . eptype () , self . snp () , self . stall () , self . cnak () , self . snak () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Doep0ctl {{ mps: {:?}, usbactep: {=bool:?}, naksts: {=bool:?}, eptype: {=u8:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.naksts(),
+            self.eptype(),
+            self.snp(),
+            self.stall(),
+            self.cnak(),
+            self.snak(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device OUT Endpoint 0 Interrupt Register."]
@@ -5708,7 +6065,22 @@ impl core::fmt::Debug for Doep0int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep0int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep0int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . setup () , self . outtknepdis () , self . stsphsercvd () , self . back2backsetup () , self . outpkterr () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt () , self . stuppktrcvd ())
+        defmt::write!(
+            f,
+            "Doep0int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.setup(),
+            self.outtknepdis(),
+            self.stsphsercvd(),
+            self.back2backsetup(),
+            self.outpkterr(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt(),
+            self.stuppktrcvd()
+        )
     }
 }
 #[doc = "Device OUT Endpoint 0 Transfer Size Register."]
@@ -5970,7 +6342,23 @@ impl core::fmt::Debug for Doep1Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep1Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep1Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . snp () , self . stall () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Doep1Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.snp(),
+            self.stall(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Interrupt Register."]
@@ -6148,7 +6536,22 @@ impl core::fmt::Debug for Doep1Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep1Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep1Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . setup () , self . outtknepdis () , self . stsphsercvd () , self . back2backsetup () , self . outpkterr () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt () , self . stuppktrcvd ())
+        defmt::write!(
+            f,
+            "Doep1Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.setup(),
+            self.outtknepdis(),
+            self.stsphsercvd(),
+            self.back2backsetup(),
+            self.outpkterr(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt(),
+            self.stuppktrcvd()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Transfer Size Register."]
@@ -6410,7 +6813,23 @@ impl core::fmt::Debug for Doep2Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep2Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep2Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . snp () , self . stall () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Doep2Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.snp(),
+            self.stall(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Interrupt Register."]
@@ -6588,7 +7007,22 @@ impl core::fmt::Debug for Doep2Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep2Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep2Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . setup () , self . outtknepdis () , self . stsphsercvd () , self . back2backsetup () , self . outpkterr () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt () , self . stuppktrcvd ())
+        defmt::write!(
+            f,
+            "Doep2Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.setup(),
+            self.outtknepdis(),
+            self.stsphsercvd(),
+            self.back2backsetup(),
+            self.outpkterr(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt(),
+            self.stuppktrcvd()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Transfer Size Register."]
@@ -6850,7 +7284,23 @@ impl core::fmt::Debug for Doep3Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep3Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep3Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . snp () , self . stall () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Doep3Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.snp(),
+            self.stall(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Interrupt Register."]
@@ -7028,7 +7478,22 @@ impl core::fmt::Debug for Doep3Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep3Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep3Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . setup () , self . outtknepdis () , self . stsphsercvd () , self . back2backsetup () , self . outpkterr () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt () , self . stuppktrcvd ())
+        defmt::write!(
+            f,
+            "Doep3Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.setup(),
+            self.outtknepdis(),
+            self.stsphsercvd(),
+            self.back2backsetup(),
+            self.outpkterr(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt(),
+            self.stuppktrcvd()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Transfer Size Register."]
@@ -7290,7 +7755,23 @@ impl core::fmt::Debug for Doep4Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep4Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep4Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . snp () , self . stall () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Doep4Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.snp(),
+            self.stall(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Interrupt Register."]
@@ -7468,7 +7949,22 @@ impl core::fmt::Debug for Doep4Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep4Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep4Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . setup () , self . outtknepdis () , self . stsphsercvd () , self . back2backsetup () , self . outpkterr () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt () , self . stuppktrcvd ())
+        defmt::write!(
+            f,
+            "Doep4Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.setup(),
+            self.outtknepdis(),
+            self.stsphsercvd(),
+            self.back2backsetup(),
+            self.outpkterr(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt(),
+            self.stuppktrcvd()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Transfer Size Register."]
@@ -7730,7 +8226,23 @@ impl core::fmt::Debug for Doep5Ctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep5Ctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep5Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}" , self . mps () , self . usbactep () , self . dpideof () , self . naksts () , self . eptype () , self . snp () , self . stall () , self . cnak () , self . snak () , self . setd0pidef () , self . setd1pidof () , self . epdis () , self . epena ())
+        defmt::write!(
+            f,
+            "Doep5Ctl {{ mps: {=u16:?}, usbactep: {=bool:?}, dpideof: {=bool:?}, naksts: {=bool:?}, eptype: {:?}, snp: {=bool:?}, stall: {=bool:?}, cnak: {=bool:?}, snak: {=bool:?}, setd0pidef: {=bool:?}, setd1pidof: {=bool:?}, epdis: {=bool:?}, epena: {=bool:?} }}",
+            self.mps(),
+            self.usbactep(),
+            self.dpideof(),
+            self.naksts(),
+            self.eptype(),
+            self.snp(),
+            self.stall(),
+            self.cnak(),
+            self.snak(),
+            self.setd0pidef(),
+            self.setd1pidof(),
+            self.epdis(),
+            self.epena()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Interrupt Register."]
@@ -7908,7 +8420,22 @@ impl core::fmt::Debug for Doep5Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doep5Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doep5Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}" , self . xfercompl () , self . epdisbld () , self . ahberr () , self . setup () , self . outtknepdis () , self . stsphsercvd () , self . back2backsetup () , self . outpkterr () , self . pktdrpsts () , self . bbleerr () , self . nakintrpt () , self . stuppktrcvd ())
+        defmt::write!(
+            f,
+            "Doep5Int {{ xfercompl: {=bool:?}, epdisbld: {=bool:?}, ahberr: {=bool:?}, setup: {=bool:?}, outtknepdis: {=bool:?}, stsphsercvd: {=bool:?}, back2backsetup: {=bool:?}, outpkterr: {=bool:?}, pktdrpsts: {=bool:?}, bbleerr: {=bool:?}, nakintrpt: {=bool:?}, stuppktrcvd: {=bool:?} }}",
+            self.xfercompl(),
+            self.epdisbld(),
+            self.ahberr(),
+            self.setup(),
+            self.outtknepdis(),
+            self.stsphsercvd(),
+            self.back2backsetup(),
+            self.outpkterr(),
+            self.pktdrpsts(),
+            self.bbleerr(),
+            self.nakintrpt(),
+            self.stuppktrcvd()
+        )
     }
 }
 #[doc = "Device OUT Endpoint x+1 Transfer Size Register."]
@@ -8131,7 +8658,20 @@ impl core::fmt::Debug for Doepmsk {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Doepmsk {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Doepmsk {{ xfercomplmsk: {=bool:?}, epdisbldmsk: {=bool:?}, ahberrmsk: {=bool:?}, setupmsk: {=bool:?}, outtknepdismsk: {=bool:?}, stsphsercvdmsk: {=bool:?}, back2backsetup: {=bool:?}, outpkterrmsk: {=bool:?}, bbleerrmsk: {=bool:?}, nakmsk: {=bool:?} }}" , self . xfercomplmsk () , self . epdisbldmsk () , self . ahberrmsk () , self . setupmsk () , self . outtknepdismsk () , self . stsphsercvdmsk () , self . back2backsetup () , self . outpkterrmsk () , self . bbleerrmsk () , self . nakmsk ())
+        defmt::write!(
+            f,
+            "Doepmsk {{ xfercomplmsk: {=bool:?}, epdisbldmsk: {=bool:?}, ahberrmsk: {=bool:?}, setupmsk: {=bool:?}, outtknepdismsk: {=bool:?}, stsphsercvdmsk: {=bool:?}, back2backsetup: {=bool:?}, outpkterrmsk: {=bool:?}, bbleerrmsk: {=bool:?}, nakmsk: {=bool:?} }}",
+            self.xfercomplmsk(),
+            self.epdisbldmsk(),
+            self.ahberrmsk(),
+            self.setupmsk(),
+            self.outtknepdismsk(),
+            self.stsphsercvdmsk(),
+            self.back2backsetup(),
+            self.outpkterrmsk(),
+            self.bbleerrmsk(),
+            self.nakmsk()
+        )
     }
 }
 #[doc = "Device Status Register."]
@@ -8220,7 +8760,15 @@ impl core::fmt::Debug for Dsts {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dsts {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dsts {{ suspsts: {=bool:?}, enumspd: {:?}, errticerr: {=bool:?}, soffn: {=u16:?}, devlnsts: {=u8:?} }}" , self . suspsts () , self . enumspd () , self . errticerr () , self . soffn () , self . devlnsts ())
+        defmt::write!(
+            f,
+            "Dsts {{ suspsts: {=bool:?}, enumspd: {:?}, errticerr: {=bool:?}, soffn: {=u16:?}, devlnsts: {=u8:?} }}",
+            self.suspsts(),
+            self.enumspd(),
+            self.errticerr(),
+            self.soffn(),
+            self.devlnsts()
+        )
     }
 }
 #[doc = "Device Threshold Control Register."]
@@ -8335,7 +8883,17 @@ impl core::fmt::Debug for Dthrctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dthrctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dthrctl {{ nonisothren: {=bool:?}, isothren: {=bool:?}, txthrlen: {=u16:?}, ahbthrratio: {:?}, rxthren: {=bool:?}, rxthrlen: {=u16:?}, arbprken: {=bool:?} }}" , self . nonisothren () , self . isothren () , self . txthrlen () , self . ahbthrratio () , self . rxthren () , self . rxthrlen () , self . arbprken ())
+        defmt::write!(
+            f,
+            "Dthrctl {{ nonisothren: {=bool:?}, isothren: {=bool:?}, txthrlen: {=u16:?}, ahbthrratio: {:?}, rxthren: {=bool:?}, rxthrlen: {=u16:?}, arbprken: {=bool:?} }}",
+            self.nonisothren(),
+            self.isothren(),
+            self.txthrlen(),
+            self.ahbthrratio(),
+            self.rxthren(),
+            self.rxthrlen(),
+            self.arbprken()
+        )
     }
 }
 #[doc = "Device VBUS Discharge Time Register."]
@@ -8541,7 +9099,18 @@ impl core::fmt::Debug for Gahbcfg {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Gahbcfg {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Gahbcfg {{ glblintrmsk: {=bool:?}, hbstlen: {:?}, dmaen: {=bool:?}, nptxfemplvl: {=bool:?}, ptxfemplvl: {=bool:?}, remmemsupp: {=bool:?}, notialldmawrit: {=bool:?}, ahbsingle: {=bool:?} }}" , self . glblintrmsk () , self . hbstlen () , self . dmaen () , self . nptxfemplvl () , self . ptxfemplvl () , self . remmemsupp () , self . notialldmawrit () , self . ahbsingle ())
+        defmt::write!(
+            f,
+            "Gahbcfg {{ glblintrmsk: {=bool:?}, hbstlen: {:?}, dmaen: {=bool:?}, nptxfemplvl: {=bool:?}, ptxfemplvl: {=bool:?}, remmemsupp: {=bool:?}, notialldmawrit: {=bool:?}, ahbsingle: {=bool:?} }}",
+            self.glblintrmsk(),
+            self.hbstlen(),
+            self.dmaen(),
+            self.nptxfemplvl(),
+            self.ptxfemplvl(),
+            self.remmemsupp(),
+            self.notialldmawrit(),
+            self.ahbsingle()
+        )
     }
 }
 #[doc = "Global DFIFO Configuration Register."]
@@ -8967,7 +9536,37 @@ impl core::fmt::Debug for Gintmsk {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Gintmsk {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Gintmsk {{ modemismsk: {=bool:?}, otgintmsk: {=bool:?}, sofmsk: {=bool:?}, rxflvlmsk: {=bool:?}, nptxfempmsk: {=bool:?}, ginnakeffmsk: {=bool:?}, goutnakeffmsk: {=bool:?}, erlysuspmsk: {=bool:?}, usbsuspmsk: {=bool:?}, usbrstmsk: {=bool:?}, enumdonemsk: {=bool:?}, isooutdropmsk: {=bool:?}, eopfmsk: {=bool:?}, epmismsk: {=bool:?}, iepintmsk: {=bool:?}, oepintmsk: {=bool:?}, incompisoinmsk: {=bool:?}, incomplpmsk: {=bool:?}, fetsuspmsk: {=bool:?}, resetdetmsk: {=bool:?}, prtintmsk: {=bool:?}, hchintmsk: {=bool:?}, ptxfempmsk: {=bool:?}, conidstschngmsk: {=bool:?}, disconnintmsk: {=bool:?}, sessreqintmsk: {=bool:?}, wkupintmsk: {=bool:?} }}" , self . modemismsk () , self . otgintmsk () , self . sofmsk () , self . rxflvlmsk () , self . nptxfempmsk () , self . ginnakeffmsk () , self . goutnakeffmsk () , self . erlysuspmsk () , self . usbsuspmsk () , self . usbrstmsk () , self . enumdonemsk () , self . isooutdropmsk () , self . eopfmsk () , self . epmismsk () , self . iepintmsk () , self . oepintmsk () , self . incompisoinmsk () , self . incomplpmsk () , self . fetsuspmsk () , self . resetdetmsk () , self . prtintmsk () , self . hchintmsk () , self . ptxfempmsk () , self . conidstschngmsk () , self . disconnintmsk () , self . sessreqintmsk () , self . wkupintmsk ())
+        defmt::write!(
+            f,
+            "Gintmsk {{ modemismsk: {=bool:?}, otgintmsk: {=bool:?}, sofmsk: {=bool:?}, rxflvlmsk: {=bool:?}, nptxfempmsk: {=bool:?}, ginnakeffmsk: {=bool:?}, goutnakeffmsk: {=bool:?}, erlysuspmsk: {=bool:?}, usbsuspmsk: {=bool:?}, usbrstmsk: {=bool:?}, enumdonemsk: {=bool:?}, isooutdropmsk: {=bool:?}, eopfmsk: {=bool:?}, epmismsk: {=bool:?}, iepintmsk: {=bool:?}, oepintmsk: {=bool:?}, incompisoinmsk: {=bool:?}, incomplpmsk: {=bool:?}, fetsuspmsk: {=bool:?}, resetdetmsk: {=bool:?}, prtintmsk: {=bool:?}, hchintmsk: {=bool:?}, ptxfempmsk: {=bool:?}, conidstschngmsk: {=bool:?}, disconnintmsk: {=bool:?}, sessreqintmsk: {=bool:?}, wkupintmsk: {=bool:?} }}",
+            self.modemismsk(),
+            self.otgintmsk(),
+            self.sofmsk(),
+            self.rxflvlmsk(),
+            self.nptxfempmsk(),
+            self.ginnakeffmsk(),
+            self.goutnakeffmsk(),
+            self.erlysuspmsk(),
+            self.usbsuspmsk(),
+            self.usbrstmsk(),
+            self.enumdonemsk(),
+            self.isooutdropmsk(),
+            self.eopfmsk(),
+            self.epmismsk(),
+            self.iepintmsk(),
+            self.oepintmsk(),
+            self.incompisoinmsk(),
+            self.incomplpmsk(),
+            self.fetsuspmsk(),
+            self.resetdetmsk(),
+            self.prtintmsk(),
+            self.hchintmsk(),
+            self.ptxfempmsk(),
+            self.conidstschngmsk(),
+            self.disconnintmsk(),
+            self.sessreqintmsk(),
+            self.wkupintmsk()
+        )
     }
 }
 #[doc = "Interrupt Register."]
@@ -9355,7 +9954,38 @@ impl core::fmt::Debug for Gintsts {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Gintsts {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Gintsts {{ curmod: {=bool:?}, modemis: {=bool:?}, otgint: {=bool:?}, sof: {=bool:?}, rxflvl: {=bool:?}, nptxfemp: {=bool:?}, ginnakeff: {=bool:?}, goutnakeff: {=bool:?}, erlysusp: {=bool:?}, usbsusp: {=bool:?}, usbrst: {=bool:?}, enumdone: {=bool:?}, isooutdrop: {=bool:?}, eopf: {=bool:?}, epmis: {=bool:?}, iepint: {=bool:?}, oepint: {=bool:?}, incompisoin: {=bool:?}, incomplp: {=bool:?}, fetsusp: {=bool:?}, resetdet: {=bool:?}, prtint: {=bool:?}, hchint: {=bool:?}, ptxfemp: {=bool:?}, conidstschng: {=bool:?}, disconnint: {=bool:?}, sessreqint: {=bool:?}, wkupint: {=bool:?} }}" , self . curmod () , self . modemis () , self . otgint () , self . sof () , self . rxflvl () , self . nptxfemp () , self . ginnakeff () , self . goutnakeff () , self . erlysusp () , self . usbsusp () , self . usbrst () , self . enumdone () , self . isooutdrop () , self . eopf () , self . epmis () , self . iepint () , self . oepint () , self . incompisoin () , self . incomplp () , self . fetsusp () , self . resetdet () , self . prtint () , self . hchint () , self . ptxfemp () , self . conidstschng () , self . disconnint () , self . sessreqint () , self . wkupint ())
+        defmt::write!(
+            f,
+            "Gintsts {{ curmod: {=bool:?}, modemis: {=bool:?}, otgint: {=bool:?}, sof: {=bool:?}, rxflvl: {=bool:?}, nptxfemp: {=bool:?}, ginnakeff: {=bool:?}, goutnakeff: {=bool:?}, erlysusp: {=bool:?}, usbsusp: {=bool:?}, usbrst: {=bool:?}, enumdone: {=bool:?}, isooutdrop: {=bool:?}, eopf: {=bool:?}, epmis: {=bool:?}, iepint: {=bool:?}, oepint: {=bool:?}, incompisoin: {=bool:?}, incomplp: {=bool:?}, fetsusp: {=bool:?}, resetdet: {=bool:?}, prtint: {=bool:?}, hchint: {=bool:?}, ptxfemp: {=bool:?}, conidstschng: {=bool:?}, disconnint: {=bool:?}, sessreqint: {=bool:?}, wkupint: {=bool:?} }}",
+            self.curmod(),
+            self.modemis(),
+            self.otgint(),
+            self.sof(),
+            self.rxflvl(),
+            self.nptxfemp(),
+            self.ginnakeff(),
+            self.goutnakeff(),
+            self.erlysusp(),
+            self.usbsusp(),
+            self.usbrst(),
+            self.enumdone(),
+            self.isooutdrop(),
+            self.eopf(),
+            self.epmis(),
+            self.iepint(),
+            self.oepint(),
+            self.incompisoin(),
+            self.incomplp(),
+            self.fetsusp(),
+            self.resetdet(),
+            self.prtint(),
+            self.hchint(),
+            self.ptxfemp(),
+            self.conidstschng(),
+            self.disconnint(),
+            self.sessreqint(),
+            self.wkupint()
+        )
     }
 }
 #[doc = "Non-periodic Transmit FIFO Size Register."]
@@ -9763,7 +10393,30 @@ impl core::fmt::Debug for Gotgctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Gotgctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Gotgctl {{ sesreqscs: {=bool:?}, sesreq: {=bool:?}, vbvalidoven: {=bool:?}, vbvalidovval: {=bool:?}, avalidoven: {=bool:?}, avalidovval: {=bool:?}, bvalidoven: {=bool:?}, bvalidovval: {=bool:?}, hstnegscs: {=bool:?}, hnpreq: {=bool:?}, hstsethnpen: {=bool:?}, devhnpen: {=bool:?}, ehen: {=bool:?}, dbncefltrbypass: {=bool:?}, conidsts: {=bool:?}, dbnctime: {=bool:?}, asesvld: {=bool:?}, bsesvld: {=bool:?}, otgver: {=bool:?}, curmod: {=bool:?} }}" , self . sesreqscs () , self . sesreq () , self . vbvalidoven () , self . vbvalidovval () , self . avalidoven () , self . avalidovval () , self . bvalidoven () , self . bvalidovval () , self . hstnegscs () , self . hnpreq () , self . hstsethnpen () , self . devhnpen () , self . ehen () , self . dbncefltrbypass () , self . conidsts () , self . dbnctime () , self . asesvld () , self . bsesvld () , self . otgver () , self . curmod ())
+        defmt::write!(
+            f,
+            "Gotgctl {{ sesreqscs: {=bool:?}, sesreq: {=bool:?}, vbvalidoven: {=bool:?}, vbvalidovval: {=bool:?}, avalidoven: {=bool:?}, avalidovval: {=bool:?}, bvalidoven: {=bool:?}, bvalidovval: {=bool:?}, hstnegscs: {=bool:?}, hnpreq: {=bool:?}, hstsethnpen: {=bool:?}, devhnpen: {=bool:?}, ehen: {=bool:?}, dbncefltrbypass: {=bool:?}, conidsts: {=bool:?}, dbnctime: {=bool:?}, asesvld: {=bool:?}, bsesvld: {=bool:?}, otgver: {=bool:?}, curmod: {=bool:?} }}",
+            self.sesreqscs(),
+            self.sesreq(),
+            self.vbvalidoven(),
+            self.vbvalidovval(),
+            self.avalidoven(),
+            self.avalidovval(),
+            self.bvalidoven(),
+            self.bvalidovval(),
+            self.hstnegscs(),
+            self.hnpreq(),
+            self.hstsethnpen(),
+            self.devhnpen(),
+            self.ehen(),
+            self.dbncefltrbypass(),
+            self.conidsts(),
+            self.dbnctime(),
+            self.asesvld(),
+            self.bsesvld(),
+            self.otgver(),
+            self.curmod()
+        )
     }
 }
 #[doc = "OTG Interrupt Register."]
@@ -9865,7 +10518,16 @@ impl core::fmt::Debug for Gotgint {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Gotgint {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Gotgint {{ sesenddet: {=bool:?}, sesreqsucstschng: {=bool:?}, hstnegsucstschng: {=bool:?}, hstnegdet: {=bool:?}, adevtoutchg: {=bool:?}, dbncedone: {=bool:?} }}" , self . sesenddet () , self . sesreqsucstschng () , self . hstnegsucstschng () , self . hstnegdet () , self . adevtoutchg () , self . dbncedone ())
+        defmt::write!(
+            f,
+            "Gotgint {{ sesenddet: {=bool:?}, sesreqsucstschng: {=bool:?}, hstnegsucstschng: {=bool:?}, hstnegdet: {=bool:?}, adevtoutchg: {=bool:?}, dbncedone: {=bool:?} }}",
+            self.sesenddet(),
+            self.sesreqsucstschng(),
+            self.hstnegsucstschng(),
+            self.hstnegdet(),
+            self.adevtoutchg(),
+            self.dbncedone()
+        )
     }
 }
 #[doc = "Reset Register."]
@@ -9993,7 +10655,18 @@ impl core::fmt::Debug for Grstctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Grstctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Grstctl {{ csftrst: {=bool:?}, piufssftrst: {=bool:?}, frmcntrrst: {=bool:?}, rxfflsh: {=bool:?}, txfflsh: {=bool:?}, txfnum: {:?}, dmareq: {=bool:?}, ahbidle: {=bool:?} }}" , self . csftrst () , self . piufssftrst () , self . frmcntrrst () , self . rxfflsh () , self . txfflsh () , self . txfnum () , self . dmareq () , self . ahbidle ())
+        defmt::write!(
+            f,
+            "Grstctl {{ csftrst: {=bool:?}, piufssftrst: {=bool:?}, frmcntrrst: {=bool:?}, rxfflsh: {=bool:?}, txfflsh: {=bool:?}, txfnum: {:?}, dmareq: {=bool:?}, ahbidle: {=bool:?} }}",
+            self.csftrst(),
+            self.piufssftrst(),
+            self.frmcntrrst(),
+            self.rxfflsh(),
+            self.txfflsh(),
+            self.txfnum(),
+            self.dmareq(),
+            self.ahbidle()
+        )
     }
 }
 #[doc = "Receive FIFO Size Register."]
@@ -10378,7 +11051,20 @@ impl core::fmt::Debug for Gusbcfg {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Gusbcfg {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Gusbcfg {{ toutcal: {=u8:?}, fsintf: {=bool:?}, srpcap: {=bool:?}, hnpcap: {=bool:?}, usbtrdtim: {=u8:?}, termseldlpulse: {=bool:?}, txenddelay: {=bool:?}, forcehstmode: {=bool:?}, forcedevmode: {=bool:?}, corrupttxpkt: {=bool:?} }}" , self . toutcal () , self . fsintf () , self . srpcap () , self . hnpcap () , self . usbtrdtim () , self . termseldlpulse () , self . txenddelay () , self . forcehstmode () , self . forcedevmode () , self . corrupttxpkt ())
+        defmt::write!(
+            f,
+            "Gusbcfg {{ toutcal: {=u8:?}, fsintf: {=bool:?}, srpcap: {=bool:?}, hnpcap: {=bool:?}, usbtrdtim: {=u8:?}, termseldlpulse: {=bool:?}, txenddelay: {=bool:?}, forcehstmode: {=bool:?}, forcedevmode: {=bool:?}, corrupttxpkt: {=bool:?} }}",
+            self.toutcal(),
+            self.fsintf(),
+            self.srpcap(),
+            self.hnpcap(),
+            self.usbtrdtim(),
+            self.termseldlpulse(),
+            self.txenddelay(),
+            self.forcehstmode(),
+            self.forcedevmode(),
+            self.corrupttxpkt()
+        )
     }
 }
 #[doc = "Host All Channels Interrupt Register."]
@@ -10606,7 +11292,20 @@ impl core::fmt::Debug for Hc0Char {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hc0Char {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hc0Char {{ mps: {=u16:?}, epnum: {=u8:?}, epdir: {=bool:?}, lspddev: {=bool:?}, eptype: {:?}, mc: {=u8:?}, devaddr: {=u8:?}, oddfrm: {=bool:?}, chdis: {=bool:?}, chena: {=bool:?} }}" , self . mps () , self . epnum () , self . epdir () , self . lspddev () , self . eptype () , self . mc () , self . devaddr () , self . oddfrm () , self . chdis () , self . chena ())
+        defmt::write!(
+            f,
+            "Hc0Char {{ mps: {=u16:?}, epnum: {=u8:?}, epdir: {=bool:?}, lspddev: {=bool:?}, eptype: {:?}, mc: {=u8:?}, devaddr: {=u8:?}, oddfrm: {=bool:?}, chdis: {=bool:?}, chena: {=bool:?} }}",
+            self.mps(),
+            self.epnum(),
+            self.epdir(),
+            self.lspddev(),
+            self.eptype(),
+            self.mc(),
+            self.devaddr(),
+            self.oddfrm(),
+            self.chdis(),
+            self.chena()
+        )
     }
 }
 #[doc = "Host Channel x Interrupt Register."]
@@ -10760,7 +11459,20 @@ impl core::fmt::Debug for Hc0Int {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hc0Int {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hc0Int {{ xfercompl: {=bool:?}, chhltd: {=bool:?}, ahberr: {=bool:?}, stall: {=bool:?}, nak: {=bool:?}, ack: {=bool:?}, xacterr: {=bool:?}, bblerr: {=bool:?}, frmovrun: {=bool:?}, datatglerr: {=bool:?} }}" , self . xfercompl () , self . chhltd () , self . ahberr () , self . stall () , self . nak () , self . ack () , self . xacterr () , self . bblerr () , self . frmovrun () , self . datatglerr ())
+        defmt::write!(
+            f,
+            "Hc0Int {{ xfercompl: {=bool:?}, chhltd: {=bool:?}, ahberr: {=bool:?}, stall: {=bool:?}, nak: {=bool:?}, ack: {=bool:?}, xacterr: {=bool:?}, bblerr: {=bool:?}, frmovrun: {=bool:?}, datatglerr: {=bool:?} }}",
+            self.xfercompl(),
+            self.chhltd(),
+            self.ahberr(),
+            self.stall(),
+            self.nak(),
+            self.ack(),
+            self.xacterr(),
+            self.bblerr(),
+            self.frmovrun(),
+            self.datatglerr()
+        )
     }
 }
 #[doc = "Host Channel x Interrupt Mask Register."]
@@ -10914,7 +11626,20 @@ impl core::fmt::Debug for Hc0Intmsk {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hc0Intmsk {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hc0Intmsk {{ xfercomplmsk: {=bool:?}, chhltdmsk: {=bool:?}, ahberrmsk: {=bool:?}, stallmsk: {=bool:?}, nakmsk: {=bool:?}, ackmsk: {=bool:?}, xacterrmsk: {=bool:?}, bblerrmsk: {=bool:?}, frmovrunmsk: {=bool:?}, datatglerrmsk: {=bool:?} }}" , self . xfercomplmsk () , self . chhltdmsk () , self . ahberrmsk () , self . stallmsk () , self . nakmsk () , self . ackmsk () , self . xacterrmsk () , self . bblerrmsk () , self . frmovrunmsk () , self . datatglerrmsk ())
+        defmt::write!(
+            f,
+            "Hc0Intmsk {{ xfercomplmsk: {=bool:?}, chhltdmsk: {=bool:?}, ahberrmsk: {=bool:?}, stallmsk: {=bool:?}, nakmsk: {=bool:?}, ackmsk: {=bool:?}, xacterrmsk: {=bool:?}, bblerrmsk: {=bool:?}, frmovrunmsk: {=bool:?}, datatglerrmsk: {=bool:?} }}",
+            self.xfercomplmsk(),
+            self.chhltdmsk(),
+            self.ahberrmsk(),
+            self.stallmsk(),
+            self.nakmsk(),
+            self.ackmsk(),
+            self.xacterrmsk(),
+            self.bblerrmsk(),
+            self.frmovrunmsk(),
+            self.datatglerrmsk()
+        )
     }
 }
 #[doc = "Host Channel x Split Control Register."]
@@ -11003,7 +11728,15 @@ impl core::fmt::Debug for Hc0Splt {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hc0Splt {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hc0Splt {{ prtaddr: {=u8:?}, hubaddr: {=u8:?}, xactpos: {=u8:?}, compsplt: {=bool:?}, spltena: {=bool:?} }}" , self . prtaddr () , self . hubaddr () , self . xactpos () , self . compsplt () , self . spltena ())
+        defmt::write!(
+            f,
+            "Hc0Splt {{ prtaddr: {=u8:?}, hubaddr: {=u8:?}, xactpos: {=u8:?}, compsplt: {=bool:?}, spltena: {=bool:?} }}",
+            self.prtaddr(),
+            self.hubaddr(),
+            self.xactpos(),
+            self.compsplt(),
+            self.spltena()
+        )
     }
 }
 #[doc = "Host Channel x Transfer Size Register."]
@@ -11161,7 +11894,15 @@ impl core::fmt::Debug for Hcfg {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hcfg {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hcfg {{ fslspclksel: {:?}, fslssupp: {=bool:?}, ena32khzs: {=bool:?}, resvalid: {=u8:?}, modechtimen: {=bool:?} }}" , self . fslspclksel () , self . fslssupp () , self . ena32khzs () , self . resvalid () , self . modechtimen ())
+        defmt::write!(
+            f,
+            "Hcfg {{ fslspclksel: {:?}, fslssupp: {=bool:?}, ena32khzs: {=bool:?}, resvalid: {=u8:?}, modechtimen: {=bool:?} }}",
+            self.fslspclksel(),
+            self.fslssupp(),
+            self.ena32khzs(),
+            self.resvalid(),
+            self.modechtimen()
+        )
     }
 }
 #[doc = "Host Frame Interval Register."]
@@ -11464,7 +12205,23 @@ impl core::fmt::Debug for Hprt {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hprt {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hprt {{ prtconnsts: {=bool:?}, prtconndet: {=bool:?}, prtena: {=bool:?}, prtenchng: {=bool:?}, prtovrcurract: {=bool:?}, prtovrcurrchng: {=bool:?}, prtres: {=bool:?}, prtsusp: {=bool:?}, prtrst: {=bool:?}, prtlnsts: {=u8:?}, prtpwr: {=bool:?}, prttstctl: {:?}, prtspd: {:?} }}" , self . prtconnsts () , self . prtconndet () , self . prtena () , self . prtenchng () , self . prtovrcurract () , self . prtovrcurrchng () , self . prtres () , self . prtsusp () , self . prtrst () , self . prtlnsts () , self . prtpwr () , self . prttstctl () , self . prtspd ())
+        defmt::write!(
+            f,
+            "Hprt {{ prtconnsts: {=bool:?}, prtconndet: {=bool:?}, prtena: {=bool:?}, prtenchng: {=bool:?}, prtovrcurract: {=bool:?}, prtovrcurrchng: {=bool:?}, prtres: {=bool:?}, prtsusp: {=bool:?}, prtrst: {=bool:?}, prtlnsts: {=u8:?}, prtpwr: {=bool:?}, prttstctl: {:?}, prtspd: {:?} }}",
+            self.prtconnsts(),
+            self.prtconndet(),
+            self.prtena(),
+            self.prtenchng(),
+            self.prtovrcurract(),
+            self.prtovrcurrchng(),
+            self.prtres(),
+            self.prtsusp(),
+            self.prtrst(),
+            self.prtlnsts(),
+            self.prtpwr(),
+            self.prttstctl(),
+            self.prtspd()
+        )
     }
 }
 #[doc = "Host Periodic Transmit FIFO Size Register."]
@@ -11690,7 +12447,16 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ vbusdeth: {=bool:?}, vbusdetl: {=bool:?}, err: {=bool:?}, dcd: {=bool:?}, pd: {=bool:?}, sd: {=bool:?} }}" , self . vbusdeth () , self . vbusdetl () , self . err () , self . dcd () , self . pd () , self . sd ())
+        defmt::write!(
+            f,
+            "Ien {{ vbusdeth: {=bool:?}, vbusdetl: {=bool:?}, err: {=bool:?}, dcd: {=bool:?}, pd: {=bool:?}, sd: {=bool:?} }}",
+            self.vbusdeth(),
+            self.vbusdetl(),
+            self.err(),
+            self.dcd(),
+            self.pd(),
+            self.sd()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -11792,7 +12558,16 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ vbusdeth: {=bool:?}, vbusdetl: {=bool:?}, err: {=bool:?}, dcd: {=bool:?}, pd: {=bool:?}, sd: {=bool:?} }}" , self . vbusdeth () , self . vbusdetl () , self . err () , self . dcd () , self . pd () , self . sd ())
+        defmt::write!(
+            f,
+            "If {{ vbusdeth: {=bool:?}, vbusdetl: {=bool:?}, err: {=bool:?}, dcd: {=bool:?}, pd: {=bool:?}, sd: {=bool:?} }}",
+            self.vbusdeth(),
+            self.vbusdetl(),
+            self.err(),
+            self.dcd(),
+            self.pd(),
+            self.sd()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -11894,7 +12669,16 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ vbusdeth: {=bool:?}, vbusdetl: {=bool:?}, err: {=bool:?}, dcd: {=bool:?}, pd: {=bool:?}, sd: {=bool:?} }}" , self . vbusdeth () , self . vbusdetl () , self . err () , self . dcd () , self . pd () , self . sd ())
+        defmt::write!(
+            f,
+            "Ifs {{ vbusdeth: {=bool:?}, vbusdetl: {=bool:?}, err: {=bool:?}, dcd: {=bool:?}, pd: {=bool:?}, sd: {=bool:?} }}",
+            self.vbusdeth(),
+            self.vbusdetl(),
+            self.err(),
+            self.dcd(),
+            self.pd(),
+            self.sd()
+        )
     }
 }
 #[doc = "USB LEM Control Register."]
@@ -12033,7 +12817,16 @@ impl core::fmt::Debug for Pcgcctl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Pcgcctl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Pcgcctl {{ stoppclk: {=bool:?}, gatehclk: {=bool:?}, pwrclmp: {=bool:?}, rstpdwnmodule: {=bool:?}, physleep: {=bool:?}, resetaftersusp: {=bool:?} }}" , self . stoppclk () , self . gatehclk () , self . pwrclmp () , self . rstpdwnmodule () , self . physleep () , self . resetaftersusp ())
+        defmt::write!(
+            f,
+            "Pcgcctl {{ stoppclk: {=bool:?}, gatehclk: {=bool:?}, pwrclmp: {=bool:?}, rstpdwnmodule: {=bool:?}, physleep: {=bool:?}, resetaftersusp: {=bool:?} }}",
+            self.stoppclk(),
+            self.gatehclk(),
+            self.pwrclmp(),
+            self.rstpdwnmodule(),
+            self.physleep(),
+            self.resetaftersusp()
+        )
     }
 }
 #[doc = "I/O Routing Register."]
@@ -12229,6 +13022,18 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ vbusdeth: {=bool:?}, lemactive: {=bool:?}, dcdto: {=bool:?}, sdp: {=bool:?}, cdp: {=bool:?}, dcp: {=bool:?}, acafs: {=bool:?}, acals: {=bool:?}, usbcdbusy: {=bool:?} }}" , self . vbusdeth () , self . lemactive () , self . dcdto () , self . sdp () , self . cdp () , self . dcp () , self . acafs () , self . acals () , self . usbcdbusy ())
+        defmt::write!(
+            f,
+            "Status {{ vbusdeth: {=bool:?}, lemactive: {=bool:?}, dcdto: {=bool:?}, sdp: {=bool:?}, cdp: {=bool:?}, dcp: {=bool:?}, acafs: {=bool:?}, acals: {=bool:?}, usbcdbusy: {=bool:?} }}",
+            self.vbusdeth(),
+            self.lemactive(),
+            self.dcdto(),
+            self.sdp(),
+            self.cdp(),
+            self.dcp(),
+            self.acafs(),
+            self.acals(),
+            self.usbcdbusy()
+        )
     }
 }

@@ -188,7 +188,23 @@ impl core::fmt::Debug for Ac12errstat {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ac12errstat {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ac12errstat {{ ac12notexe: {=bool:?}, ac12toe: {=bool:?}, ac12crcerr: {=bool:?}, ac12endbiterr: {=bool:?}, ac12indexerr: {=bool:?}, cnibac12err: {=bool:?}, uhsmodesel: {:?}, sigen1p8v: {=bool:?}, drvstnsel: {:?}, exetuning: {=bool:?}, sampclksel: {=bool:?}, asyncinten: {=bool:?}, prstvalen: {=bool:?} }}" , self . ac12notexe () , self . ac12toe () , self . ac12crcerr () , self . ac12endbiterr () , self . ac12indexerr () , self . cnibac12err () , self . uhsmodesel () , self . sigen1p8v () , self . drvstnsel () , self . exetuning () , self . sampclksel () , self . asyncinten () , self . prstvalen ())
+        defmt::write!(
+            f,
+            "Ac12errstat {{ ac12notexe: {=bool:?}, ac12toe: {=bool:?}, ac12crcerr: {=bool:?}, ac12endbiterr: {=bool:?}, ac12indexerr: {=bool:?}, cnibac12err: {=bool:?}, uhsmodesel: {:?}, sigen1p8v: {=bool:?}, drvstnsel: {:?}, exetuning: {=bool:?}, sampclksel: {=bool:?}, asyncinten: {=bool:?}, prstvalen: {=bool:?} }}",
+            self.ac12notexe(),
+            self.ac12toe(),
+            self.ac12crcerr(),
+            self.ac12endbiterr(),
+            self.ac12indexerr(),
+            self.cnibac12err(),
+            self.uhsmodesel(),
+            self.sigen1p8v(),
+            self.drvstnsel(),
+            self.exetuning(),
+            self.sampclksel(),
+            self.asyncinten(),
+            self.prstvalen()
+        )
     }
 }
 #[doc = "ADMA Error Status Register."]
@@ -531,7 +547,25 @@ impl core::fmt::Debug for Capab0 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Capab0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Capab0 {{ tmoutclkfreq: {=u8:?}, tmoutclkunit: {=bool:?}, baseclkfreqsd: {=u8:?}, maxblocklen: {=u8:?}, extmediabussup: {=bool:?}, adma2sup: {=bool:?}, hssup: {=bool:?}, sdmasup: {=bool:?}, susressup: {=bool:?}, voltsup3p3v: {=bool:?}, voltsup3p0v: {=bool:?}, voltsup1p8v: {=bool:?}, sysbus64bsup: {=bool:?}, asyncintsup: {=bool:?}, ifslottype: {:?} }}" , self . tmoutclkfreq () , self . tmoutclkunit () , self . baseclkfreqsd () , self . maxblocklen () , self . extmediabussup () , self . adma2sup () , self . hssup () , self . sdmasup () , self . susressup () , self . voltsup3p3v () , self . voltsup3p0v () , self . voltsup1p8v () , self . sysbus64bsup () , self . asyncintsup () , self . ifslottype ())
+        defmt::write!(
+            f,
+            "Capab0 {{ tmoutclkfreq: {=u8:?}, tmoutclkunit: {=bool:?}, baseclkfreqsd: {=u8:?}, maxblocklen: {=u8:?}, extmediabussup: {=bool:?}, adma2sup: {=bool:?}, hssup: {=bool:?}, sdmasup: {=bool:?}, susressup: {=bool:?}, voltsup3p3v: {=bool:?}, voltsup3p0v: {=bool:?}, voltsup1p8v: {=bool:?}, sysbus64bsup: {=bool:?}, asyncintsup: {=bool:?}, ifslottype: {:?} }}",
+            self.tmoutclkfreq(),
+            self.tmoutclkunit(),
+            self.baseclkfreqsd(),
+            self.maxblocklen(),
+            self.extmediabussup(),
+            self.adma2sup(),
+            self.hssup(),
+            self.sdmasup(),
+            self.susressup(),
+            self.voltsup3p3v(),
+            self.voltsup3p0v(),
+            self.voltsup1p8v(),
+            self.sysbus64bsup(),
+            self.asyncintsup(),
+            self.ifslottype()
+        )
     }
 }
 #[doc = "Capabilities Register to Hold Bits 63~32."]
@@ -711,7 +745,22 @@ impl core::fmt::Debug for Capab2 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Capab2 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Capab2 {{ sdr50sup: {=bool:?}, sdr104sup: {=bool:?}, ddr50sup: {=bool:?}, drvtypasup: {=bool:?}, drvtypcsup: {=bool:?}, drvtypdsup: {=bool:?}, timcntretun: {=u8:?}, usetunsdr50: {=bool:?}, retunemodes: {=u8:?}, clockkmul: {=u8:?}, spimode: {=bool:?}, spiblockmode: {=bool:?} }}" , self . sdr50sup () , self . sdr104sup () , self . ddr50sup () , self . drvtypasup () , self . drvtypcsup () , self . drvtypdsup () , self . timcntretun () , self . usetunsdr50 () , self . retunemodes () , self . clockkmul () , self . spimode () , self . spiblockmode ())
+        defmt::write!(
+            f,
+            "Capab2 {{ sdr50sup: {=bool:?}, sdr104sup: {=bool:?}, ddr50sup: {=bool:?}, drvtypasup: {=bool:?}, drvtypcsup: {=bool:?}, drvtypdsup: {=bool:?}, timcntretun: {=u8:?}, usetunsdr50: {=bool:?}, retunemodes: {=u8:?}, clockkmul: {=u8:?}, spimode: {=bool:?}, spiblockmode: {=bool:?} }}",
+            self.sdr50sup(),
+            self.sdr104sup(),
+            self.ddr50sup(),
+            self.drvtypasup(),
+            self.drvtypcsup(),
+            self.drvtypdsup(),
+            self.timcntretun(),
+            self.usetunsdr50(),
+            self.retunemodes(),
+            self.clockkmul(),
+            self.spimode(),
+            self.spiblockmode()
+        )
     }
 }
 #[doc = "Core Configuration 0."]
@@ -904,7 +953,23 @@ impl core::fmt::Debug for Cfg0 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cfg0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cfg0 {{ tuningcnt: {=u8:?}, toutclkfreq: {=u8:?}, toutclkunit: {=bool:?}, baseclkfreq: {=u8:?}, maxblklen: {:?}, c8bitsup: {=bool:?}, cadma2sup: {=bool:?}, chssup: {=bool:?}, csdmasup: {=bool:?}, csuspressup: {=bool:?}, c3p3vsup: {=bool:?}, c3p0vsup: {=bool:?}, c1p8vsup: {=bool:?} }}" , self . tuningcnt () , self . toutclkfreq () , self . toutclkunit () , self . baseclkfreq () , self . maxblklen () , self . c8bitsup () , self . cadma2sup () , self . chssup () , self . csdmasup () , self . csuspressup () , self . c3p3vsup () , self . c3p0vsup () , self . c1p8vsup ())
+        defmt::write!(
+            f,
+            "Cfg0 {{ tuningcnt: {=u8:?}, toutclkfreq: {=u8:?}, toutclkunit: {=bool:?}, baseclkfreq: {=u8:?}, maxblklen: {:?}, c8bitsup: {=bool:?}, cadma2sup: {=bool:?}, chssup: {=bool:?}, csdmasup: {=bool:?}, csuspressup: {=bool:?}, c3p3vsup: {=bool:?}, c3p0vsup: {=bool:?}, c1p8vsup: {=bool:?} }}",
+            self.tuningcnt(),
+            self.toutclkfreq(),
+            self.toutclkunit(),
+            self.baseclkfreq(),
+            self.maxblklen(),
+            self.c8bitsup(),
+            self.cadma2sup(),
+            self.chssup(),
+            self.csdmasup(),
+            self.csuspressup(),
+            self.c3p3vsup(),
+            self.c3p0vsup(),
+            self.c1p8vsup()
+        )
     }
 }
 #[doc = "Core Configuration 1."]
@@ -1097,7 +1162,23 @@ impl core::fmt::Debug for Cfg1 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cfg1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cfg1 {{ asyncintrsup: {=bool:?}, slottype: {:?}, csdr50sup: {=bool:?}, csdr104sup: {=bool:?}, cddr50sup: {=bool:?}, cdrvasup: {=bool:?}, cdrvcsup: {=bool:?}, cdrvdsup: {=bool:?}, retuntmrctl: {=u8:?}, tunsdr50: {=bool:?}, retunmodes: {=u8:?}, spisup: {=bool:?}, asyncwkupen: {=bool:?} }}" , self . asyncintrsup () , self . slottype () , self . csdr50sup () , self . csdr104sup () , self . cddr50sup () , self . cdrvasup () , self . cdrvcsup () , self . cdrvdsup () , self . retuntmrctl () , self . tunsdr50 () , self . retunmodes () , self . spisup () , self . asyncwkupen ())
+        defmt::write!(
+            f,
+            "Cfg1 {{ asyncintrsup: {=bool:?}, slottype: {:?}, csdr50sup: {=bool:?}, csdr104sup: {=bool:?}, cddr50sup: {=bool:?}, cdrvasup: {=bool:?}, cdrvcsup: {=bool:?}, cdrvdsup: {=bool:?}, retuntmrctl: {=u8:?}, tunsdr50: {=bool:?}, retunmodes: {=u8:?}, spisup: {=bool:?}, asyncwkupen: {=bool:?} }}",
+            self.asyncintrsup(),
+            self.slottype(),
+            self.csdr50sup(),
+            self.csdr104sup(),
+            self.cddr50sup(),
+            self.cdrvasup(),
+            self.cdrvcsup(),
+            self.cdrvdsup(),
+            self.retuntmrctl(),
+            self.tunsdr50(),
+            self.retunmodes(),
+            self.spisup(),
+            self.asyncwkupen()
+        )
     }
 }
 #[doc = "Core Configuration Preset Value 0."]
@@ -1199,7 +1280,16 @@ impl core::fmt::Debug for Cfgpresetval0 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cfgpresetval0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cfgpresetval0 {{ initsdclkfreq: {=u16:?}, initclkgenen: {=bool:?}, initdrvst: {=u8:?}, dspsdclkfreq: {=u16:?}, dspclkgenen: {=bool:?}, dspdrvst: {=u8:?} }}" , self . initsdclkfreq () , self . initclkgenen () , self . initdrvst () , self . dspsdclkfreq () , self . dspclkgenen () , self . dspdrvst ())
+        defmt::write!(
+            f,
+            "Cfgpresetval0 {{ initsdclkfreq: {=u16:?}, initclkgenen: {=bool:?}, initdrvst: {=u8:?}, dspsdclkfreq: {=u16:?}, dspclkgenen: {=bool:?}, dspdrvst: {=u8:?} }}",
+            self.initsdclkfreq(),
+            self.initclkgenen(),
+            self.initdrvst(),
+            self.dspsdclkfreq(),
+            self.dspclkgenen(),
+            self.dspdrvst()
+        )
     }
 }
 #[doc = "Core Configuration Preset Value 1."]
@@ -1301,7 +1391,16 @@ impl core::fmt::Debug for Cfgpresetval1 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cfgpresetval1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cfgpresetval1 {{ hspsdclkfreq: {=u16:?}, hspclkgenen: {=bool:?}, hspdrvst: {=u8:?}, sdr12sdclkfreq: {=u16:?}, sdr12clkgenen: {=bool:?}, sdr12drvst: {=u8:?} }}" , self . hspsdclkfreq () , self . hspclkgenen () , self . hspdrvst () , self . sdr12sdclkfreq () , self . sdr12clkgenen () , self . sdr12drvst ())
+        defmt::write!(
+            f,
+            "Cfgpresetval1 {{ hspsdclkfreq: {=u16:?}, hspclkgenen: {=bool:?}, hspdrvst: {=u8:?}, sdr12sdclkfreq: {=u16:?}, sdr12clkgenen: {=bool:?}, sdr12drvst: {=u8:?} }}",
+            self.hspsdclkfreq(),
+            self.hspclkgenen(),
+            self.hspdrvst(),
+            self.sdr12sdclkfreq(),
+            self.sdr12clkgenen(),
+            self.sdr12drvst()
+        )
     }
 }
 #[doc = "Core Configuration Preset Value 2."]
@@ -1403,7 +1502,16 @@ impl core::fmt::Debug for Cfgpresetval2 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cfgpresetval2 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cfgpresetval2 {{ sdr25sdclkfreq: {=u16:?}, sdr25clkgenen: {=bool:?}, sdr25drvst: {=u8:?}, sdr50sdclkfreq: {=u16:?}, sdr50clkgenen: {=bool:?}, sdr50drvst: {=u8:?} }}" , self . sdr25sdclkfreq () , self . sdr25clkgenen () , self . sdr25drvst () , self . sdr50sdclkfreq () , self . sdr50clkgenen () , self . sdr50drvst ())
+        defmt::write!(
+            f,
+            "Cfgpresetval2 {{ sdr25sdclkfreq: {=u16:?}, sdr25clkgenen: {=bool:?}, sdr25drvst: {=u8:?}, sdr50sdclkfreq: {=u16:?}, sdr50clkgenen: {=bool:?}, sdr50drvst: {=u8:?} }}",
+            self.sdr25sdclkfreq(),
+            self.sdr25clkgenen(),
+            self.sdr25drvst(),
+            self.sdr50sdclkfreq(),
+            self.sdr50clkgenen(),
+            self.sdr50drvst()
+        )
     }
 }
 #[doc = "Core Configuration Preset Value 3."]
@@ -1505,7 +1613,16 @@ impl core::fmt::Debug for Cfgpresetval3 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Cfgpresetval3 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Cfgpresetval3 {{ sdr104sdclkfreq: {=u16:?}, sdr104clkgenen: {=bool:?}, sdr104drvst: {=u8:?}, ddr50sdclkfreq: {=u16:?}, ddr50clkgenen: {=bool:?}, ddr50drvst: {=u8:?} }}" , self . sdr104sdclkfreq () , self . sdr104clkgenen () , self . sdr104drvst () , self . ddr50sdclkfreq () , self . ddr50clkgenen () , self . ddr50drvst ())
+        defmt::write!(
+            f,
+            "Cfgpresetval3 {{ sdr104sdclkfreq: {=u16:?}, sdr104clkgenen: {=bool:?}, sdr104drvst: {=u8:?}, ddr50sdclkfreq: {=u16:?}, ddr50clkgenen: {=bool:?}, ddr50drvst: {=u8:?} }}",
+            self.sdr104sdclkfreq(),
+            self.sdr104clkgenen(),
+            self.sdr104drvst(),
+            self.ddr50sdclkfreq(),
+            self.ddr50clkgenen(),
+            self.ddr50drvst()
+        )
     }
 }
 #[doc = "Clock Control, Timeout Control and Software Register."]
@@ -1659,7 +1776,20 @@ impl core::fmt::Debug for Clockctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Clockctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Clockctrl {{ intclken: {=bool:?}, intclkstable: {=bool:?}, sdclken: {=bool:?}, clkgensel: {=bool:?}, uppsdclkfre: {=u8:?}, sdclkfreqsel: {:?}, dattoutcntval: {=u8:?}, sftrsta: {=bool:?}, sftrstcmd: {=bool:?}, sftrstdat: {=bool:?} }}" , self . intclken () , self . intclkstable () , self . sdclken () , self . clkgensel () , self . uppsdclkfre () , self . sdclkfreqsel () , self . dattoutcntval () , self . sftrsta () , self . sftrstcmd () , self . sftrstdat ())
+        defmt::write!(
+            f,
+            "Clockctrl {{ intclken: {=bool:?}, intclkstable: {=bool:?}, sdclken: {=bool:?}, clkgensel: {=bool:?}, uppsdclkfre: {=u8:?}, sdclkfreqsel: {:?}, dattoutcntval: {=u8:?}, sftrsta: {=bool:?}, sftrstcmd: {=bool:?}, sftrstdat: {=bool:?} }}",
+            self.intclken(),
+            self.intclkstable(),
+            self.sdclken(),
+            self.clkgensel(),
+            self.uppsdclkfre(),
+            self.sdclkfreqsel(),
+            self.dattoutcntval(),
+            self.sftrsta(),
+            self.sftrstcmd(),
+            self.sftrstdat()
+        )
     }
 }
 #[doc = "Core Control Signals."]
@@ -1761,7 +1891,16 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ itapdlyen: {=bool:?}, itapdlysel: {=u8:?}, itapchgwin: {=bool:?}, otapdlyen: {=bool:?}, otapdlysel: {=u8:?}, txdlymuxsel: {=u8:?} }}" , self . itapdlyen () , self . itapdlysel () , self . itapchgwin () , self . otapdlyen () , self . otapdlysel () , self . txdlymuxsel ())
+        defmt::write!(
+            f,
+            "Ctrl {{ itapdlyen: {=bool:?}, itapdlysel: {=u8:?}, itapchgwin: {=bool:?}, otapdlyen: {=bool:?}, otapdlysel: {=u8:?}, txdlymuxsel: {=u8:?} }}",
+            self.itapdlyen(),
+            self.itapdlysel(),
+            self.itapchgwin(),
+            self.otapdlyen(),
+            self.otapdlysel(),
+            self.txdlymuxsel()
+        )
     }
 }
 #[doc = "Force Event Register for Auto CMD Error Status."]
@@ -2019,7 +2158,28 @@ impl core::fmt::Debug for Fevterrstat {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Fevterrstat {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Fevterrstat {{ ac12nex: {=bool:?}, ac12toe: {=bool:?}, ac12crce: {=bool:?}, ac12ebe: {=bool:?}, ac12indxe: {=bool:?}, cnibac12e: {=bool:?}, cmdtoe: {=bool:?}, cmdcrce: {=bool:?}, cmdebe: {=bool:?}, cmdindxe: {=bool:?}, dattoe: {=bool:?}, datcrce: {=bool:?}, datebe: {=bool:?}, curlimite: {=bool:?}, ac12e: {=bool:?}, admae: {=bool:?}, tuninge: {=bool:?}, venspece: {=u8:?} }}" , self . ac12nex () , self . ac12toe () , self . ac12crce () , self . ac12ebe () , self . ac12indxe () , self . cnibac12e () , self . cmdtoe () , self . cmdcrce () , self . cmdebe () , self . cmdindxe () , self . dattoe () , self . datcrce () , self . datebe () , self . curlimite () , self . ac12e () , self . admae () , self . tuninge () , self . venspece ())
+        defmt::write!(
+            f,
+            "Fevterrstat {{ ac12nex: {=bool:?}, ac12toe: {=bool:?}, ac12crce: {=bool:?}, ac12ebe: {=bool:?}, ac12indxe: {=bool:?}, cnibac12e: {=bool:?}, cmdtoe: {=bool:?}, cmdcrce: {=bool:?}, cmdebe: {=bool:?}, cmdindxe: {=bool:?}, dattoe: {=bool:?}, datcrce: {=bool:?}, datebe: {=bool:?}, curlimite: {=bool:?}, ac12e: {=bool:?}, admae: {=bool:?}, tuninge: {=bool:?}, venspece: {=u8:?} }}",
+            self.ac12nex(),
+            self.ac12toe(),
+            self.ac12crce(),
+            self.ac12ebe(),
+            self.ac12indxe(),
+            self.cnibac12e(),
+            self.cmdtoe(),
+            self.cmdcrce(),
+            self.cmdebe(),
+            self.cmdindxe(),
+            self.dattoe(),
+            self.datcrce(),
+            self.datebe(),
+            self.curlimite(),
+            self.ac12e(),
+            self.admae(),
+            self.tuninge(),
+            self.venspece()
+        )
     }
 }
 #[doc = "Host Control1, Power, Block Gap and Wakeup-up Control Register."]
@@ -2316,7 +2476,31 @@ impl core::fmt::Debug for Hostctrl1 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Hostctrl1 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Hostctrl1 {{ ledctrl: {=bool:?}, dattranwd: {=bool:?}, hsen: {=bool:?}, dmasel: {:?}, extdattranwd: {=bool:?}, cdtstlvl: {=bool:?}, cdsigdet: {=bool:?}, sdbuspower: {=bool:?}, sdbusvoltsel: {:?}, hrdrst: {=bool:?}, stopatblkgapreq: {=bool:?}, continuereq: {=bool:?}, rdwaitctrl: {=bool:?}, intatblkgap: {=bool:?}, spimode: {=bool:?}, booten: {=bool:?}, altbooten: {=bool:?}, bootackchk: {=bool:?}, wkupevntenoncardint: {=bool:?}, wkupevntenoncins: {=bool:?}, wkupevntenoncrm: {=bool:?} }}" , self . ledctrl () , self . dattranwd () , self . hsen () , self . dmasel () , self . extdattranwd () , self . cdtstlvl () , self . cdsigdet () , self . sdbuspower () , self . sdbusvoltsel () , self . hrdrst () , self . stopatblkgapreq () , self . continuereq () , self . rdwaitctrl () , self . intatblkgap () , self . spimode () , self . booten () , self . altbooten () , self . bootackchk () , self . wkupevntenoncardint () , self . wkupevntenoncins () , self . wkupevntenoncrm ())
+        defmt::write!(
+            f,
+            "Hostctrl1 {{ ledctrl: {=bool:?}, dattranwd: {=bool:?}, hsen: {=bool:?}, dmasel: {:?}, extdattranwd: {=bool:?}, cdtstlvl: {=bool:?}, cdsigdet: {=bool:?}, sdbuspower: {=bool:?}, sdbusvoltsel: {:?}, hrdrst: {=bool:?}, stopatblkgapreq: {=bool:?}, continuereq: {=bool:?}, rdwaitctrl: {=bool:?}, intatblkgap: {=bool:?}, spimode: {=bool:?}, booten: {=bool:?}, altbooten: {=bool:?}, bootackchk: {=bool:?}, wkupevntenoncardint: {=bool:?}, wkupevntenoncins: {=bool:?}, wkupevntenoncrm: {=bool:?} }}",
+            self.ledctrl(),
+            self.dattranwd(),
+            self.hsen(),
+            self.dmasel(),
+            self.extdattranwd(),
+            self.cdtstlvl(),
+            self.cdsigdet(),
+            self.sdbuspower(),
+            self.sdbusvoltsel(),
+            self.hrdrst(),
+            self.stopatblkgapreq(),
+            self.continuereq(),
+            self.rdwaitctrl(),
+            self.intatblkgap(),
+            self.spimode(),
+            self.booten(),
+            self.altbooten(),
+            self.bootackchk(),
+            self.wkupevntenoncardint(),
+            self.wkupevntenoncins(),
+            self.wkupevntenoncrm()
+        )
     }
 }
 #[doc = "Normal and Error Interrupt Signal Enable Register."]
@@ -2652,7 +2836,34 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ cmdcomsen: {=bool:?}, trancomsen: {=bool:?}, blkgapevtsen: {=bool:?}, dmaintsen: {=bool:?}, bufwrrdysen: {=bool:?}, bufrdrdysen: {=bool:?}, cardinssen: {=bool:?}, cardremsen: {=bool:?}, cardintsen: {=bool:?}, retuningevtsen: {=bool:?}, bootackrcvsen: {=bool:?}, bootterminatesen: {=bool:?}, cmdtouterrsen: {=bool:?}, cmdcrcerrsen: {=bool:?}, cmdendbiterrsen: {=bool:?}, cmdindexerrsen: {=bool:?}, dattouterrsen: {=bool:?}, datcrcerrsen: {=bool:?}, datendbiterrsen: {=bool:?}, currentlimiterrsen: {=bool:?}, autocmderrsen: {=bool:?}, admaerrsen: {=bool:?}, tuningerrsignalenable: {=bool:?}, targetresperrsen: {=bool:?} }}" , self . cmdcomsen () , self . trancomsen () , self . blkgapevtsen () , self . dmaintsen () , self . bufwrrdysen () , self . bufrdrdysen () , self . cardinssen () , self . cardremsen () , self . cardintsen () , self . retuningevtsen () , self . bootackrcvsen () , self . bootterminatesen () , self . cmdtouterrsen () , self . cmdcrcerrsen () , self . cmdendbiterrsen () , self . cmdindexerrsen () , self . dattouterrsen () , self . datcrcerrsen () , self . datendbiterrsen () , self . currentlimiterrsen () , self . autocmderrsen () , self . admaerrsen () , self . tuningerrsignalenable () , self . targetresperrsen ())
+        defmt::write!(
+            f,
+            "Ien {{ cmdcomsen: {=bool:?}, trancomsen: {=bool:?}, blkgapevtsen: {=bool:?}, dmaintsen: {=bool:?}, bufwrrdysen: {=bool:?}, bufrdrdysen: {=bool:?}, cardinssen: {=bool:?}, cardremsen: {=bool:?}, cardintsen: {=bool:?}, retuningevtsen: {=bool:?}, bootackrcvsen: {=bool:?}, bootterminatesen: {=bool:?}, cmdtouterrsen: {=bool:?}, cmdcrcerrsen: {=bool:?}, cmdendbiterrsen: {=bool:?}, cmdindexerrsen: {=bool:?}, dattouterrsen: {=bool:?}, datcrcerrsen: {=bool:?}, datendbiterrsen: {=bool:?}, currentlimiterrsen: {=bool:?}, autocmderrsen: {=bool:?}, admaerrsen: {=bool:?}, tuningerrsignalenable: {=bool:?}, targetresperrsen: {=bool:?} }}",
+            self.cmdcomsen(),
+            self.trancomsen(),
+            self.blkgapevtsen(),
+            self.dmaintsen(),
+            self.bufwrrdysen(),
+            self.bufrdrdysen(),
+            self.cardinssen(),
+            self.cardremsen(),
+            self.cardintsen(),
+            self.retuningevtsen(),
+            self.bootackrcvsen(),
+            self.bootterminatesen(),
+            self.cmdtouterrsen(),
+            self.cmdcrcerrsen(),
+            self.cmdendbiterrsen(),
+            self.cmdindexerrsen(),
+            self.dattouterrsen(),
+            self.datcrcerrsen(),
+            self.datendbiterrsen(),
+            self.currentlimiterrsen(),
+            self.autocmderrsen(),
+            self.admaerrsen(),
+            self.tuningerrsignalenable(),
+            self.targetresperrsen()
+        )
     }
 }
 #[doc = "Normal and Error Interrupt Status Register."]
@@ -2988,7 +3199,34 @@ impl core::fmt::Debug for Ifcr {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifcr {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifcr {{ cmdcom: {=bool:?}, trancom: {=bool:?}, blkgapevt: {=bool:?}, dmaint: {=bool:?}, bfrwrrdy: {=bool:?}, bfrrdrdy: {=bool:?}, cardins: {=bool:?}, cardrm: {=bool:?}, cardint: {=bool:?}, retuningevt: {=bool:?}, bootackrcv: {=bool:?}, bootterminate: {=bool:?}, errint: {=bool:?}, cmdtouterr: {=bool:?}, cmdcrcerr: {=bool:?}, cmdendbiterr: {=bool:?}, cmdindexerr: {=bool:?}, dattouterr: {=bool:?}, datcrcerr: {=bool:?}, datendbiterr: {=bool:?}, currentlimiterr: {=bool:?}, autocmderr: {=bool:?}, admaerr: {=bool:?}, targetresp: {=bool:?} }}" , self . cmdcom () , self . trancom () , self . blkgapevt () , self . dmaint () , self . bfrwrrdy () , self . bfrrdrdy () , self . cardins () , self . cardrm () , self . cardint () , self . retuningevt () , self . bootackrcv () , self . bootterminate () , self . errint () , self . cmdtouterr () , self . cmdcrcerr () , self . cmdendbiterr () , self . cmdindexerr () , self . dattouterr () , self . datcrcerr () , self . datendbiterr () , self . currentlimiterr () , self . autocmderr () , self . admaerr () , self . targetresp ())
+        defmt::write!(
+            f,
+            "Ifcr {{ cmdcom: {=bool:?}, trancom: {=bool:?}, blkgapevt: {=bool:?}, dmaint: {=bool:?}, bfrwrrdy: {=bool:?}, bfrrdrdy: {=bool:?}, cardins: {=bool:?}, cardrm: {=bool:?}, cardint: {=bool:?}, retuningevt: {=bool:?}, bootackrcv: {=bool:?}, bootterminate: {=bool:?}, errint: {=bool:?}, cmdtouterr: {=bool:?}, cmdcrcerr: {=bool:?}, cmdendbiterr: {=bool:?}, cmdindexerr: {=bool:?}, dattouterr: {=bool:?}, datcrcerr: {=bool:?}, datendbiterr: {=bool:?}, currentlimiterr: {=bool:?}, autocmderr: {=bool:?}, admaerr: {=bool:?}, targetresp: {=bool:?} }}",
+            self.cmdcom(),
+            self.trancom(),
+            self.blkgapevt(),
+            self.dmaint(),
+            self.bfrwrrdy(),
+            self.bfrrdrdy(),
+            self.cardins(),
+            self.cardrm(),
+            self.cardint(),
+            self.retuningevt(),
+            self.bootackrcv(),
+            self.bootterminate(),
+            self.errint(),
+            self.cmdtouterr(),
+            self.cmdcrcerr(),
+            self.cmdendbiterr(),
+            self.cmdindexerr(),
+            self.dattouterr(),
+            self.datcrcerr(),
+            self.datendbiterr(),
+            self.currentlimiterr(),
+            self.autocmderr(),
+            self.admaerr(),
+            self.targetresp()
+        )
     }
 }
 #[doc = "Normal and Error Interrupt Status Enable Register."]
@@ -3324,7 +3562,34 @@ impl core::fmt::Debug for Ifenc {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifenc {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifenc {{ cmdcomen: {=bool:?}, trancomen: {=bool:?}, blkgapevten: {=bool:?}, dmainten: {=bool:?}, bufwrrdyen: {=bool:?}, bufrdrdyen: {=bool:?}, cardinsen: {=bool:?}, cardrmen: {=bool:?}, cardinten: {=bool:?}, retuningevten: {=bool:?}, bootackrcven: {=bool:?}, bootterminateen: {=bool:?}, cmdtouterren: {=bool:?}, cmdcrcerren: {=bool:?}, cmdendbiterren: {=bool:?}, cmdindexerren: {=bool:?}, dattouterren: {=bool:?}, datcrcerren: {=bool:?}, datendbiterren: {=bool:?}, currentlimiterren: {=bool:?}, autocmderren: {=bool:?}, admaerren: {=bool:?}, tuningerren: {=bool:?}, targetrespen: {=bool:?} }}" , self . cmdcomen () , self . trancomen () , self . blkgapevten () , self . dmainten () , self . bufwrrdyen () , self . bufrdrdyen () , self . cardinsen () , self . cardrmen () , self . cardinten () , self . retuningevten () , self . bootackrcven () , self . bootterminateen () , self . cmdtouterren () , self . cmdcrcerren () , self . cmdendbiterren () , self . cmdindexerren () , self . dattouterren () , self . datcrcerren () , self . datendbiterren () , self . currentlimiterren () , self . autocmderren () , self . admaerren () , self . tuningerren () , self . targetrespen ())
+        defmt::write!(
+            f,
+            "Ifenc {{ cmdcomen: {=bool:?}, trancomen: {=bool:?}, blkgapevten: {=bool:?}, dmainten: {=bool:?}, bufwrrdyen: {=bool:?}, bufrdrdyen: {=bool:?}, cardinsen: {=bool:?}, cardrmen: {=bool:?}, cardinten: {=bool:?}, retuningevten: {=bool:?}, bootackrcven: {=bool:?}, bootterminateen: {=bool:?}, cmdtouterren: {=bool:?}, cmdcrcerren: {=bool:?}, cmdendbiterren: {=bool:?}, cmdindexerren: {=bool:?}, dattouterren: {=bool:?}, datcrcerren: {=bool:?}, datendbiterren: {=bool:?}, currentlimiterren: {=bool:?}, autocmderren: {=bool:?}, admaerren: {=bool:?}, tuningerren: {=bool:?}, targetrespen: {=bool:?} }}",
+            self.cmdcomen(),
+            self.trancomen(),
+            self.blkgapevten(),
+            self.dmainten(),
+            self.bufwrrdyen(),
+            self.bufrdrdyen(),
+            self.cardinsen(),
+            self.cardrmen(),
+            self.cardinten(),
+            self.retuningevten(),
+            self.bootackrcven(),
+            self.bootterminateen(),
+            self.cmdtouterren(),
+            self.cmdcrcerren(),
+            self.cmdendbiterren(),
+            self.cmdindexerren(),
+            self.dattouterren(),
+            self.datcrcerren(),
+            self.datendbiterren(),
+            self.currentlimiterren(),
+            self.autocmderren(),
+            self.admaerren(),
+            self.tuningerren(),
+            self.targetrespen()
+        )
     }
 }
 #[doc = "Maximum Current Capabilities Register."]
@@ -3612,7 +3877,25 @@ impl core::fmt::Debug for Prsstat {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Prsstat {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Prsstat {{ cmdinhibitcmd: {=bool:?}, cmdinhibitdat: {=bool:?}, datlineactive: {=bool:?}, retuningreq: {=bool:?}, wrtranact: {=bool:?}, rdtranact: {=bool:?}, bufferwriteenable: {=bool:?}, bufrden: {=bool:?}, cardins: {=bool:?}, cardstatestable: {=bool:?}, carddetpinlvl: {=bool:?}, wrprotswpinlvl: {=bool:?}, dat3to0siglvl: {=u8:?}, cmdsiglvl: {=bool:?}, dat7to4siglvl: {=u8:?} }}" , self . cmdinhibitcmd () , self . cmdinhibitdat () , self . datlineactive () , self . retuningreq () , self . wrtranact () , self . rdtranact () , self . bufferwriteenable () , self . bufrden () , self . cardins () , self . cardstatestable () , self . carddetpinlvl () , self . wrprotswpinlvl () , self . dat3to0siglvl () , self . cmdsiglvl () , self . dat7to4siglvl ())
+        defmt::write!(
+            f,
+            "Prsstat {{ cmdinhibitcmd: {=bool:?}, cmdinhibitdat: {=bool:?}, datlineactive: {=bool:?}, retuningreq: {=bool:?}, wrtranact: {=bool:?}, rdtranact: {=bool:?}, bufferwriteenable: {=bool:?}, bufrden: {=bool:?}, cardins: {=bool:?}, cardstatestable: {=bool:?}, carddetpinlvl: {=bool:?}, wrprotswpinlvl: {=bool:?}, dat3to0siglvl: {=u8:?}, cmdsiglvl: {=bool:?}, dat7to4siglvl: {=u8:?} }}",
+            self.cmdinhibitcmd(),
+            self.cmdinhibitdat(),
+            self.datlineactive(),
+            self.retuningreq(),
+            self.wrtranact(),
+            self.rdtranact(),
+            self.bufferwriteenable(),
+            self.bufrden(),
+            self.cardins(),
+            self.cardstatestable(),
+            self.carddetpinlvl(),
+            self.wrprotswpinlvl(),
+            self.dat3to0siglvl(),
+            self.cmdsiglvl(),
+            self.dat7to4siglvl()
+        )
     }
 }
 #[doc = "Preset Value for Initialization and Default Speed Mode."]
@@ -3714,7 +3997,16 @@ impl core::fmt::Debug for Prstval0 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Prstval0 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Prstval0 {{ initsdclkfreqval: {=u16:?}, initclckgenval: {=bool:?}, initdrvstval: {:?}, dspsdclkfreqval: {=u16:?}, dspclkgenval: {=bool:?}, dspdrvstval: {:?} }}" , self . initsdclkfreqval () , self . initclckgenval () , self . initdrvstval () , self . dspsdclkfreqval () , self . dspclkgenval () , self . dspdrvstval ())
+        defmt::write!(
+            f,
+            "Prstval0 {{ initsdclkfreqval: {=u16:?}, initclckgenval: {=bool:?}, initdrvstval: {:?}, dspsdclkfreqval: {=u16:?}, dspclkgenval: {=bool:?}, dspdrvstval: {:?} }}",
+            self.initsdclkfreqval(),
+            self.initclckgenval(),
+            self.initdrvstval(),
+            self.dspsdclkfreqval(),
+            self.dspclkgenval(),
+            self.dspdrvstval()
+        )
     }
 }
 #[doc = "Preset Value for High Speed and SDR12 Modes."]
@@ -3816,7 +4108,16 @@ impl core::fmt::Debug for Prstval2 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Prstval2 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Prstval2 {{ hspsdclkfreqval: {=u16:?}, hspclkgenval: {=bool:?}, hspdrvstval: {:?}, sdr12sdclkfreqval: {=u16:?}, sdr12clkgenval: {=bool:?}, sdr12drvstval: {:?} }}" , self . hspsdclkfreqval () , self . hspclkgenval () , self . hspdrvstval () , self . sdr12sdclkfreqval () , self . sdr12clkgenval () , self . sdr12drvstval ())
+        defmt::write!(
+            f,
+            "Prstval2 {{ hspsdclkfreqval: {=u16:?}, hspclkgenval: {=bool:?}, hspdrvstval: {:?}, sdr12sdclkfreqval: {=u16:?}, sdr12clkgenval: {=bool:?}, sdr12drvstval: {:?} }}",
+            self.hspsdclkfreqval(),
+            self.hspclkgenval(),
+            self.hspdrvstval(),
+            self.sdr12sdclkfreqval(),
+            self.sdr12clkgenval(),
+            self.sdr12drvstval()
+        )
     }
 }
 #[doc = "Preset Value for SDR25 and SDR50 Modes."]
@@ -3918,7 +4219,16 @@ impl core::fmt::Debug for Prstval4 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Prstval4 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Prstval4 {{ sdr25sdclkfreqval: {=u16:?}, sdr25clkgenval: {=bool:?}, sdr25drvstval: {:?}, sdr50sdclkfreqval: {=u16:?}, sdr50clckgenval: {=bool:?}, sdr50drvstval: {:?} }}" , self . sdr25sdclkfreqval () , self . sdr25clkgenval () , self . sdr25drvstval () , self . sdr50sdclkfreqval () , self . sdr50clckgenval () , self . sdr50drvstval ())
+        defmt::write!(
+            f,
+            "Prstval4 {{ sdr25sdclkfreqval: {=u16:?}, sdr25clkgenval: {=bool:?}, sdr25drvstval: {:?}, sdr50sdclkfreqval: {=u16:?}, sdr50clckgenval: {=bool:?}, sdr50drvstval: {:?} }}",
+            self.sdr25sdclkfreqval(),
+            self.sdr25clkgenval(),
+            self.sdr25drvstval(),
+            self.sdr50sdclkfreqval(),
+            self.sdr50clckgenval(),
+            self.sdr50drvstval()
+        )
     }
 }
 #[doc = "Preset Value for SDR104 and DDR50 Modes."]
@@ -4020,7 +4330,16 @@ impl core::fmt::Debug for Prstval6 {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Prstval6 {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Prstval6 {{ sdr104sdclkfreqval: {=u16:?}, sdr104clkgenval: {=bool:?}, sdr104drvstval: {:?}, ddr50sdclkfreqval: {=u16:?}, ddr50clkgenval: {=bool:?}, ddr50drvstval: {:?} }}" , self . sdr104sdclkfreqval () , self . sdr104clkgenval () , self . sdr104drvstval () , self . ddr50sdclkfreqval () , self . ddr50clkgenval () , self . ddr50drvstval ())
+        defmt::write!(
+            f,
+            "Prstval6 {{ sdr104sdclkfreqval: {=u16:?}, sdr104clkgenval: {=bool:?}, sdr104drvstval: {:?}, ddr50sdclkfreqval: {=u16:?}, ddr50clkgenval: {=bool:?}, ddr50drvstval: {:?} }}",
+            self.sdr104sdclkfreqval(),
+            self.sdr104clkgenval(),
+            self.sdr104drvstval(),
+            self.ddr50sdclkfreqval(),
+            self.ddr50clkgenval(),
+            self.ddr50drvstval()
+        )
     }
 }
 #[doc = "I/O LOCATION Register."]
@@ -4294,7 +4613,20 @@ impl core::fmt::Debug for Routepen {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Routepen {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Routepen {{ clkpen: {=bool:?}, cmdpen: {=bool:?}, d0pen: {=bool:?}, d1pen: {=bool:?}, d2pen: {=bool:?}, d3pen: {=bool:?}, d4pen: {=bool:?}, d5pen: {=bool:?}, d6pen: {=bool:?}, d7pen: {=bool:?} }}" , self . clkpen () , self . cmdpen () , self . d0pen () , self . d1pen () , self . d2pen () , self . d3pen () , self . d4pen () , self . d5pen () , self . d6pen () , self . d7pen ())
+        defmt::write!(
+            f,
+            "Routepen {{ clkpen: {=bool:?}, cmdpen: {=bool:?}, d0pen: {=bool:?}, d1pen: {=bool:?}, d2pen: {=bool:?}, d3pen: {=bool:?}, d4pen: {=bool:?}, d5pen: {=bool:?}, d6pen: {=bool:?}, d7pen: {=bool:?} }}",
+            self.clkpen(),
+            self.cmdpen(),
+            self.d0pen(),
+            self.d1pen(),
+            self.d2pen(),
+            self.d3pen(),
+            self.d4pen(),
+            self.d5pen(),
+            self.d6pen(),
+            self.d7pen()
+        )
     }
 }
 #[doc = "Slot Interrupt Status Register."]
@@ -4530,6 +4862,20 @@ impl core::fmt::Debug for Tfrmode {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Tfrmode {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Tfrmode {{ dmaen: {=bool:?}, blkcnten: {=bool:?}, autocmden: {:?}, datdirsel: {=bool:?}, multsingblksel: {=bool:?}, resptypesel: {:?}, cmdcrcchken: {=bool:?}, cmdindxchken: {=bool:?}, datpressel: {=bool:?}, cmdtype: {:?}, cmdindex: {=u8:?} }}" , self . dmaen () , self . blkcnten () , self . autocmden () , self . datdirsel () , self . multsingblksel () , self . resptypesel () , self . cmdcrcchken () , self . cmdindxchken () , self . datpressel () , self . cmdtype () , self . cmdindex ())
+        defmt::write!(
+            f,
+            "Tfrmode {{ dmaen: {=bool:?}, blkcnten: {=bool:?}, autocmden: {:?}, datdirsel: {=bool:?}, multsingblksel: {=bool:?}, resptypesel: {:?}, cmdcrcchken: {=bool:?}, cmdindxchken: {=bool:?}, datpressel: {=bool:?}, cmdtype: {:?}, cmdindex: {=u8:?} }}",
+            self.dmaen(),
+            self.blkcnten(),
+            self.autocmden(),
+            self.datdirsel(),
+            self.multsingblksel(),
+            self.resptypesel(),
+            self.cmdcrcchken(),
+            self.cmdindxchken(),
+            self.datpressel(),
+            self.cmdtype(),
+            self.cmdindex()
+        )
     }
 }

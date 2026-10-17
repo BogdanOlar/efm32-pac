@@ -132,7 +132,16 @@ impl core::fmt::Debug for Ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ctrl {{ en: {=bool:?}, polysel: {=bool:?}, bytemode: {=bool:?}, bitreverse: {=bool:?}, bytereverse: {=bool:?}, autoinit: {=bool:?} }}" , self . en () , self . polysel () , self . bytemode () , self . bitreverse () , self . bytereverse () , self . autoinit ())
+        defmt::write!(
+            f,
+            "Ctrl {{ en: {=bool:?}, polysel: {=bool:?}, bytemode: {=bool:?}, bitreverse: {=bool:?}, bytereverse: {=bool:?}, autoinit: {=bool:?} }}",
+            self.en(),
+            self.polysel(),
+            self.bytemode(),
+            self.bitreverse(),
+            self.bytereverse(),
+            self.autoinit()
+        )
     }
 }
 #[doc = "Input 8-bit Data Register."]

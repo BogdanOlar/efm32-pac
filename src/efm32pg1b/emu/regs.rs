@@ -97,7 +97,16 @@ impl core::fmt::Debug for Biasconf {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Biasconf {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Biasconf {{ nadutyem01: {=bool:?}, lpem01: {=bool:?}, gmcem23: {=bool:?}, uadutyem23: {=bool:?}, nadutyem23: {=bool:?}, lpem23: {=bool:?} }}" , self . nadutyem01 () , self . lpem01 () , self . gmcem23 () , self . uadutyem23 () , self . nadutyem23 () , self . lpem23 ())
+        defmt::write!(
+            f,
+            "Biasconf {{ nadutyem01: {=bool:?}, lpem01: {=bool:?}, gmcem23: {=bool:?}, uadutyem23: {=bool:?}, nadutyem23: {=bool:?}, lpem23: {=bool:?} }}",
+            self.nadutyem01(),
+            self.lpem01(),
+            self.gmcem23(),
+            self.uadutyem23(),
+            self.nadutyem23(),
+            self.lpem23()
+        )
     }
 }
 #[doc = "Test Control Register for Regulator and BIAS."]
@@ -438,7 +447,16 @@ impl core::fmt::Debug for Dcdclncompctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dcdclncompctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dcdclncompctrl {{ compenr1: {=u8:?}, compenr2: {=u8:?}, compenr3: {=u8:?}, compenc1: {=u8:?}, compenc2: {=u8:?}, compenc3: {=u8:?} }}" , self . compenr1 () , self . compenr2 () , self . compenr3 () , self . compenc1 () , self . compenc2 () , self . compenc3 ())
+        defmt::write!(
+            f,
+            "Dcdclncompctrl {{ compenr1: {=u8:?}, compenr2: {=u8:?}, compenr3: {=u8:?}, compenc1: {=u8:?}, compenc2: {=u8:?}, compenc3: {=u8:?} }}",
+            self.compenr1(),
+            self.compenr2(),
+            self.compenr3(),
+            self.compenc1(),
+            self.compenc2(),
+            self.compenc3()
+        )
     }
 }
 #[doc = "DCDC Low Noise Controller Frequency Control."]
@@ -787,7 +805,17 @@ impl core::fmt::Debug for Dcdcmiscctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dcdcmiscctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dcdcmiscctrl {{ lnforceccm: {=bool:?}, pfetcnt: {=u8:?}, nfetcnt: {=u8:?}, byplimsel: {=u8:?}, lpclimilimsel: {=u8:?}, lnclimilimsel: {=u8:?}, lpcmpbias: {:?} }}" , self . lnforceccm () , self . pfetcnt () , self . nfetcnt () , self . byplimsel () , self . lpclimilimsel () , self . lnclimilimsel () , self . lpcmpbias ())
+        defmt::write!(
+            f,
+            "Dcdcmiscctrl {{ lnforceccm: {=bool:?}, pfetcnt: {=u8:?}, nfetcnt: {=u8:?}, byplimsel: {=u8:?}, lpclimilimsel: {=u8:?}, lnclimilimsel: {=u8:?}, lpcmpbias: {:?} }}",
+            self.lnforceccm(),
+            self.pfetcnt(),
+            self.nfetcnt(),
+            self.byplimsel(),
+            self.lpclimilimsel(),
+            self.lnclimilimsel(),
+            self.lpcmpbias()
+        )
     }
 }
 #[doc = "DCDC Read Status Register."]
@@ -917,7 +945,15 @@ impl core::fmt::Debug for Dcdctiming {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Dcdctiming {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Dcdctiming {{ lpinitwait: {=u8:?}, compenprchgen: {=bool:?}, lnwait: {=u8:?}, bypwait: {=u8:?}, dutyscale: {=u8:?} }}" , self . lpinitwait () , self . compenprchgen () , self . lnwait () , self . bypwait () , self . dutyscale ())
+        defmt::write!(
+            f,
+            "Dcdctiming {{ lpinitwait: {=u8:?}, compenprchgen: {=bool:?}, lnwait: {=u8:?}, bypwait: {=u8:?}, dutyscale: {=u8:?} }}",
+            self.lpinitwait(),
+            self.compenprchgen(),
+            self.lnwait(),
+            self.bypwait(),
+            self.dutyscale()
+        )
     }
 }
 #[doc = "DCDC Power Train NFET Zero Current Detector Control Register."]
@@ -1074,7 +1110,16 @@ impl core::fmt::Debug for Em4ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Em4ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Em4ctrl {{ em4state: {=bool:?}, retainlfrco: {=bool:?}, retainlfxo: {=bool:?}, retainulfrco: {=bool:?}, em4ioretmode: {:?}, em4entry: {=u8:?} }}" , self . em4state () , self . retainlfrco () , self . retainlfxo () , self . retainulfrco () , self . em4ioretmode () , self . em4entry ())
+        defmt::write!(
+            f,
+            "Em4ctrl {{ em4state: {=bool:?}, retainlfrco: {=bool:?}, retainlfxo: {=bool:?}, retainulfrco: {=bool:?}, em4ioretmode: {:?}, em4entry: {=u8:?} }}",
+            self.em4state(),
+            self.retainlfrco(),
+            self.retainlfxo(),
+            self.retainulfrco(),
+            self.em4ioretmode(),
+            self.em4entry()
+        )
     }
 }
 #[doc = "Interrupt Enable Register."]
@@ -1345,7 +1390,29 @@ impl core::fmt::Debug for Ien {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ien {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ien {{ vmonavddfall: {=bool:?}, vmonavddrise: {=bool:?}, vmonaltavddfall: {=bool:?}, vmonaltavddrise: {=bool:?}, vmondvddfall: {=bool:?}, vmondvddrise: {=bool:?}, vmonio0fall: {=bool:?}, vmonio0rise: {=bool:?}, vmonfvddfall: {=bool:?}, vmonfvddrise: {=bool:?}, pfetovercurrentlimit: {=bool:?}, nfetovercurrentlimit: {=bool:?}, dcdclprunning: {=bool:?}, dcdclnrunning: {=bool:?}, dcdcinbypass: {=bool:?}, em23wakeup: {=bool:?}, temp: {=bool:?}, templow: {=bool:?}, temphigh: {=bool:?} }}" , self . vmonavddfall () , self . vmonavddrise () , self . vmonaltavddfall () , self . vmonaltavddrise () , self . vmondvddfall () , self . vmondvddrise () , self . vmonio0fall () , self . vmonio0rise () , self . vmonfvddfall () , self . vmonfvddrise () , self . pfetovercurrentlimit () , self . nfetovercurrentlimit () , self . dcdclprunning () , self . dcdclnrunning () , self . dcdcinbypass () , self . em23wakeup () , self . temp () , self . templow () , self . temphigh ())
+        defmt::write!(
+            f,
+            "Ien {{ vmonavddfall: {=bool:?}, vmonavddrise: {=bool:?}, vmonaltavddfall: {=bool:?}, vmonaltavddrise: {=bool:?}, vmondvddfall: {=bool:?}, vmondvddrise: {=bool:?}, vmonio0fall: {=bool:?}, vmonio0rise: {=bool:?}, vmonfvddfall: {=bool:?}, vmonfvddrise: {=bool:?}, pfetovercurrentlimit: {=bool:?}, nfetovercurrentlimit: {=bool:?}, dcdclprunning: {=bool:?}, dcdclnrunning: {=bool:?}, dcdcinbypass: {=bool:?}, em23wakeup: {=bool:?}, temp: {=bool:?}, templow: {=bool:?}, temphigh: {=bool:?} }}",
+            self.vmonavddfall(),
+            self.vmonavddrise(),
+            self.vmonaltavddfall(),
+            self.vmonaltavddrise(),
+            self.vmondvddfall(),
+            self.vmondvddrise(),
+            self.vmonio0fall(),
+            self.vmonio0rise(),
+            self.vmonfvddfall(),
+            self.vmonfvddrise(),
+            self.pfetovercurrentlimit(),
+            self.nfetovercurrentlimit(),
+            self.dcdclprunning(),
+            self.dcdclnrunning(),
+            self.dcdcinbypass(),
+            self.em23wakeup(),
+            self.temp(),
+            self.templow(),
+            self.temphigh()
+        )
     }
 }
 #[doc = "Interrupt Flag Register."]
@@ -1616,7 +1683,29 @@ impl core::fmt::Debug for If {
 #[cfg(feature = "defmt")]
 impl defmt::Format for If {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "If {{ vmonavddfall: {=bool:?}, vmonavddrise: {=bool:?}, vmonaltavddfall: {=bool:?}, vmonaltavddrise: {=bool:?}, vmondvddfall: {=bool:?}, vmondvddrise: {=bool:?}, vmonio0fall: {=bool:?}, vmonio0rise: {=bool:?}, vmonfvddfall: {=bool:?}, vmonfvddrise: {=bool:?}, pfetovercurrentlimit: {=bool:?}, nfetovercurrentlimit: {=bool:?}, dcdclprunning: {=bool:?}, dcdclnrunning: {=bool:?}, dcdcinbypass: {=bool:?}, em23wakeup: {=bool:?}, temp: {=bool:?}, templow: {=bool:?}, temphigh: {=bool:?} }}" , self . vmonavddfall () , self . vmonavddrise () , self . vmonaltavddfall () , self . vmonaltavddrise () , self . vmondvddfall () , self . vmondvddrise () , self . vmonio0fall () , self . vmonio0rise () , self . vmonfvddfall () , self . vmonfvddrise () , self . pfetovercurrentlimit () , self . nfetovercurrentlimit () , self . dcdclprunning () , self . dcdclnrunning () , self . dcdcinbypass () , self . em23wakeup () , self . temp () , self . templow () , self . temphigh ())
+        defmt::write!(
+            f,
+            "If {{ vmonavddfall: {=bool:?}, vmonavddrise: {=bool:?}, vmonaltavddfall: {=bool:?}, vmonaltavddrise: {=bool:?}, vmondvddfall: {=bool:?}, vmondvddrise: {=bool:?}, vmonio0fall: {=bool:?}, vmonio0rise: {=bool:?}, vmonfvddfall: {=bool:?}, vmonfvddrise: {=bool:?}, pfetovercurrentlimit: {=bool:?}, nfetovercurrentlimit: {=bool:?}, dcdclprunning: {=bool:?}, dcdclnrunning: {=bool:?}, dcdcinbypass: {=bool:?}, em23wakeup: {=bool:?}, temp: {=bool:?}, templow: {=bool:?}, temphigh: {=bool:?} }}",
+            self.vmonavddfall(),
+            self.vmonavddrise(),
+            self.vmonaltavddfall(),
+            self.vmonaltavddrise(),
+            self.vmondvddfall(),
+            self.vmondvddrise(),
+            self.vmonio0fall(),
+            self.vmonio0rise(),
+            self.vmonfvddfall(),
+            self.vmonfvddrise(),
+            self.pfetovercurrentlimit(),
+            self.nfetovercurrentlimit(),
+            self.dcdclprunning(),
+            self.dcdclnrunning(),
+            self.dcdcinbypass(),
+            self.em23wakeup(),
+            self.temp(),
+            self.templow(),
+            self.temphigh()
+        )
     }
 }
 #[doc = "Interrupt Flag Set Register."]
@@ -1887,7 +1976,29 @@ impl core::fmt::Debug for Ifs {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Ifs {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Ifs {{ vmonavddfall: {=bool:?}, vmonavddrise: {=bool:?}, vmonaltavddfall: {=bool:?}, vmonaltavddrise: {=bool:?}, vmondvddfall: {=bool:?}, vmondvddrise: {=bool:?}, vmonio0fall: {=bool:?}, vmonio0rise: {=bool:?}, vmonfvddfall: {=bool:?}, vmonfvddrise: {=bool:?}, pfetovercurrentlimit: {=bool:?}, nfetovercurrentlimit: {=bool:?}, dcdclprunning: {=bool:?}, dcdclnrunning: {=bool:?}, dcdcinbypass: {=bool:?}, em23wakeup: {=bool:?}, temp: {=bool:?}, templow: {=bool:?}, temphigh: {=bool:?} }}" , self . vmonavddfall () , self . vmonavddrise () , self . vmonaltavddfall () , self . vmonaltavddrise () , self . vmondvddfall () , self . vmondvddrise () , self . vmonio0fall () , self . vmonio0rise () , self . vmonfvddfall () , self . vmonfvddrise () , self . pfetovercurrentlimit () , self . nfetovercurrentlimit () , self . dcdclprunning () , self . dcdclnrunning () , self . dcdcinbypass () , self . em23wakeup () , self . temp () , self . templow () , self . temphigh ())
+        defmt::write!(
+            f,
+            "Ifs {{ vmonavddfall: {=bool:?}, vmonavddrise: {=bool:?}, vmonaltavddfall: {=bool:?}, vmonaltavddrise: {=bool:?}, vmondvddfall: {=bool:?}, vmondvddrise: {=bool:?}, vmonio0fall: {=bool:?}, vmonio0rise: {=bool:?}, vmonfvddfall: {=bool:?}, vmonfvddrise: {=bool:?}, pfetovercurrentlimit: {=bool:?}, nfetovercurrentlimit: {=bool:?}, dcdclprunning: {=bool:?}, dcdclnrunning: {=bool:?}, dcdcinbypass: {=bool:?}, em23wakeup: {=bool:?}, temp: {=bool:?}, templow: {=bool:?}, temphigh: {=bool:?} }}",
+            self.vmonavddfall(),
+            self.vmonavddrise(),
+            self.vmonaltavddfall(),
+            self.vmonaltavddrise(),
+            self.vmondvddfall(),
+            self.vmondvddrise(),
+            self.vmonio0fall(),
+            self.vmonio0rise(),
+            self.vmonfvddfall(),
+            self.vmonfvddrise(),
+            self.pfetovercurrentlimit(),
+            self.nfetovercurrentlimit(),
+            self.dcdclprunning(),
+            self.dcdclnrunning(),
+            self.dcdcinbypass(),
+            self.em23wakeup(),
+            self.temp(),
+            self.templow(),
+            self.temphigh()
+        )
     }
 }
 #[doc = "Configuration Lock Register."]
@@ -2187,7 +2298,17 @@ impl core::fmt::Debug for Status {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Status {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Status {{ vmonrdy: {=bool:?}, vmonavdd: {=bool:?}, vmonaltavdd: {=bool:?}, vmondvdd: {=bool:?}, vmonio0: {=bool:?}, vmonfvdd: {=bool:?}, em4ioret: {=bool:?} }}" , self . vmonrdy () , self . vmonavdd () , self . vmonaltavdd () , self . vmondvdd () , self . vmonio0 () , self . vmonfvdd () , self . em4ioret ())
+        defmt::write!(
+            f,
+            "Status {{ vmonrdy: {=bool:?}, vmonavdd: {=bool:?}, vmonaltavdd: {=bool:?}, vmondvdd: {=bool:?}, vmonio0: {=bool:?}, vmonfvdd: {=bool:?}, em4ioret: {=bool:?} }}",
+            self.vmonrdy(),
+            self.vmonavdd(),
+            self.vmonaltavdd(),
+            self.vmondvdd(),
+            self.vmonio0(),
+            self.vmonfvdd(),
+            self.em4ioret()
+        )
     }
 }
 #[doc = "Value of Last Temperature Measurement."]
@@ -2417,7 +2538,15 @@ impl core::fmt::Debug for Vmonaltavddctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Vmonaltavddctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Vmonaltavddctrl {{ en: {=bool:?}, risewu: {=bool:?}, fallwu: {=bool:?}, thresfine: {=u8:?}, threscoarse: {=u8:?} }}" , self . en () , self . risewu () , self . fallwu () , self . thresfine () , self . threscoarse ())
+        defmt::write!(
+            f,
+            "Vmonaltavddctrl {{ en: {=bool:?}, risewu: {=bool:?}, fallwu: {=bool:?}, thresfine: {=u8:?}, threscoarse: {=u8:?} }}",
+            self.en(),
+            self.risewu(),
+            self.fallwu(),
+            self.thresfine(),
+            self.threscoarse()
+        )
     }
 }
 #[doc = "VMON AVDD Channel Control."]
@@ -2532,7 +2661,17 @@ impl core::fmt::Debug for Vmonavddctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Vmonavddctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Vmonavddctrl {{ en: {=bool:?}, risewu: {=bool:?}, fallwu: {=bool:?}, fallthresfine: {=u8:?}, fallthrescoarse: {=u8:?}, risethresfine: {=u8:?}, risethrescoarse: {=u8:?} }}" , self . en () , self . risewu () , self . fallwu () , self . fallthresfine () , self . fallthrescoarse () , self . risethresfine () , self . risethrescoarse ())
+        defmt::write!(
+            f,
+            "Vmonavddctrl {{ en: {=bool:?}, risewu: {=bool:?}, fallwu: {=bool:?}, fallthresfine: {=u8:?}, fallthrescoarse: {=u8:?}, risethresfine: {=u8:?}, risethrescoarse: {=u8:?} }}",
+            self.en(),
+            self.risewu(),
+            self.fallwu(),
+            self.fallthresfine(),
+            self.fallthrescoarse(),
+            self.risethresfine(),
+            self.risethrescoarse()
+        )
     }
 }
 #[doc = "VMON DVDD Channel Control."]
@@ -2621,7 +2760,15 @@ impl core::fmt::Debug for Vmondvddctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Vmondvddctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Vmondvddctrl {{ en: {=bool:?}, risewu: {=bool:?}, fallwu: {=bool:?}, thresfine: {=u8:?}, threscoarse: {=u8:?} }}" , self . en () , self . risewu () , self . fallwu () , self . thresfine () , self . threscoarse ())
+        defmt::write!(
+            f,
+            "Vmondvddctrl {{ en: {=bool:?}, risewu: {=bool:?}, fallwu: {=bool:?}, thresfine: {=u8:?}, threscoarse: {=u8:?} }}",
+            self.en(),
+            self.risewu(),
+            self.fallwu(),
+            self.thresfine(),
+            self.threscoarse()
+        )
     }
 }
 #[doc = "VMON IOVDD0 Channel Control."]
@@ -2723,6 +2870,15 @@ impl core::fmt::Debug for Vmonio0ctrl {
 #[cfg(feature = "defmt")]
 impl defmt::Format for Vmonio0ctrl {
     fn format(&self, f: defmt::Formatter) {
-        defmt :: write ! (f , "Vmonio0ctrl {{ en: {=bool:?}, risewu: {=bool:?}, fallwu: {=bool:?}, retdis: {=bool:?}, thresfine: {=u8:?}, threscoarse: {=u8:?} }}" , self . en () , self . risewu () , self . fallwu () , self . retdis () , self . thresfine () , self . threscoarse ())
+        defmt::write!(
+            f,
+            "Vmonio0ctrl {{ en: {=bool:?}, risewu: {=bool:?}, fallwu: {=bool:?}, retdis: {=bool:?}, thresfine: {=u8:?}, threscoarse: {=u8:?} }}",
+            self.en(),
+            self.risewu(),
+            self.fallwu(),
+            self.retdis(),
+            self.thresfine(),
+            self.threscoarse()
+        )
     }
 }
