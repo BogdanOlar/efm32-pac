@@ -303,6 +303,10 @@ transforms:
   - !Rename
       from: "rtcc::regs::Combcnt"
       to: "rtcc::regs::CombCnt"
+  # Fix `CntPresc` name
+  - !Rename
+      from: "rtcc::vals::Cntpresc"
+      to: "rtcc::vals::CntPresc"
   # collapse the 3 flat CC0_*..CC2_* channel registers into a cluster.
   - !MakeBlock
       blocks: "rtcc::Rtcc"
@@ -321,6 +325,13 @@ transforms:
       to: "rtcc::vals::Cc$2"
       check: NoCheck
       skip_unmergeable: true
+  # Fix names
+  - !Rename
+      from: "rtcc::vals::CcCtrlIcedge"
+      to: "rtcc::vals::CcCtrlIcEdge"
+  - !Rename
+      from: "rtcc::vals::CcCtrlPrssel"
+      to: "rtcc::vals::CcCtrlPrsSel"
   # RET0_REG..RET31_REG (plain u32, contiguous) -> ret register array
   - !MakeRegisterArray
       blocks: rtcc::Rtcc
@@ -398,10 +409,19 @@ transforms:
       to: "timer::vals::Cc$2"
       check: NoCheck
       skip_unmergeable: true
-  # Fix `CcLoc` name
+  # Fix names
   - !Rename
       from: "timer::vals::Ccloc"
       to: "timer::vals::CcLoc"
+  - !Rename
+      from: "timer::vals::CcCtrlIcedge"
+      to: "timer::vals::CcCtrlIcEdge"
+  - !Rename
+      from: "timer::vals::CcCtrlIcevctrl"
+      to: "timer::vals::CcCtrlIcEvCtrl"
+  - !Rename
+      from: "timer::vals::CcCtrlPrssel"
+      to: "timer::vals::CcCtrlPrsSel"
 
   # ===========================================================================
   # USART0 + USART1 -> usart::Usart

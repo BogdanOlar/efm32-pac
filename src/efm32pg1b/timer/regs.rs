@@ -187,37 +187,37 @@ impl CcCtrl {
     #[doc = "Compare/Capture Channel PRS Input Channel Selection."]
     #[must_use]
     #[inline(always)]
-    pub const fn prssel(&self) -> super::vals::CcCtrlPrssel {
+    pub const fn prssel(&self) -> super::vals::CcCtrlPrsSel {
         let val = (self.0 >> 16usize) & 0x0f;
-        super::vals::CcCtrlPrssel::from_bits(val as u8)
+        super::vals::CcCtrlPrsSel::from_bits(val as u8)
     }
     #[doc = "Compare/Capture Channel PRS Input Channel Selection."]
     #[inline(always)]
-    pub const fn set_prssel(&mut self, val: super::vals::CcCtrlPrssel) {
+    pub const fn set_prssel(&mut self, val: super::vals::CcCtrlPrsSel) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
     #[doc = "Input Capture Edge Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn icedge(&self) -> super::vals::CcCtrlIcedge {
+    pub const fn icedge(&self) -> super::vals::CcCtrlIcEdge {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::CcCtrlIcedge::from_bits(val as u8)
+        super::vals::CcCtrlIcEdge::from_bits(val as u8)
     }
     #[doc = "Input Capture Edge Select."]
     #[inline(always)]
-    pub const fn set_icedge(&mut self, val: super::vals::CcCtrlIcedge) {
+    pub const fn set_icedge(&mut self, val: super::vals::CcCtrlIcEdge) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "Input Capture Event Control."]
     #[must_use]
     #[inline(always)]
-    pub const fn icevctrl(&self) -> super::vals::CcCtrlIcevctrl {
+    pub const fn icevctrl(&self) -> super::vals::CcCtrlIcEvCtrl {
         let val = (self.0 >> 26usize) & 0x03;
-        super::vals::CcCtrlIcevctrl::from_bits(val as u8)
+        super::vals::CcCtrlIcEvCtrl::from_bits(val as u8)
     }
     #[doc = "Input Capture Event Control."]
     #[inline(always)]
-    pub const fn set_icevctrl(&mut self, val: super::vals::CcCtrlIcevctrl) {
+    pub const fn set_icevctrl(&mut self, val: super::vals::CcCtrlIcEvCtrl) {
         self.0 = (self.0 & !(0x03 << 26usize)) | (((val.to_bits() as u32) & 0x03) << 26usize);
     }
     #[doc = "PRS Configuration."]

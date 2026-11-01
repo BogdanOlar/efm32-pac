@@ -30,25 +30,25 @@ impl CcCtrl {
     #[doc = "Input Capture Edge Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn icedge(&self) -> super::vals::CcCtrlIcedge {
+    pub const fn icedge(&self) -> super::vals::CcCtrlIcEdge {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::CcCtrlIcedge::from_bits(val as u8)
+        super::vals::CcCtrlIcEdge::from_bits(val as u8)
     }
     #[doc = "Input Capture Edge Select."]
     #[inline(always)]
-    pub const fn set_icedge(&mut self, val: super::vals::CcCtrlIcedge) {
+    pub const fn set_icedge(&mut self, val: super::vals::CcCtrlIcEdge) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "Compare/Capture Channel PRS Input Channel Selection."]
     #[must_use]
     #[inline(always)]
-    pub const fn prssel(&self) -> super::vals::CcCtrlPrssel {
+    pub const fn prssel(&self) -> super::vals::CcCtrlPrsSel {
         let val = (self.0 >> 6usize) & 0x0f;
-        super::vals::CcCtrlPrssel::from_bits(val as u8)
+        super::vals::CcCtrlPrsSel::from_bits(val as u8)
     }
     #[doc = "Compare/Capture Channel PRS Input Channel Selection."]
     #[inline(always)]
-    pub const fn set_prssel(&mut self, val: super::vals::CcCtrlPrssel) {
+    pub const fn set_prssel(&mut self, val: super::vals::CcCtrlPrsSel) {
         self.0 = (self.0 & !(0x0f << 6usize)) | (((val.to_bits() as u32) & 0x0f) << 6usize);
     }
     #[doc = "Capture Compare Channel Comparison Base."]
@@ -465,13 +465,13 @@ impl Ctrl {
     #[doc = "Counter Prescaler Value."]
     #[must_use]
     #[inline(always)]
-    pub const fn cntpresc(&self) -> super::vals::Cntpresc {
+    pub const fn cntpresc(&self) -> super::vals::CntPresc {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::Cntpresc::from_bits(val as u8)
+        super::vals::CntPresc::from_bits(val as u8)
     }
     #[doc = "Counter Prescaler Value."]
     #[inline(always)]
-    pub const fn set_cntpresc(&mut self, val: super::vals::Cntpresc) {
+    pub const fn set_cntpresc(&mut self, val: super::vals::CntPresc) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "Counter Prescaler Mode."]

@@ -36,7 +36,7 @@ impl From<CcCtrlCmoa> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum CcCtrlIcedge {
+pub enum CcCtrlIcEdge {
     #[doc = "Rising edges detected."]
     Rising = 0x0,
     #[doc = "Falling edges detected."]
@@ -46,9 +46,9 @@ pub enum CcCtrlIcedge {
     #[doc = "No edge detection, signal is left as it is."]
     None = 0x03,
 }
-impl CcCtrlIcedge {
+impl CcCtrlIcEdge {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> CcCtrlIcedge {
+    pub const fn from_bits(val: u8) -> CcCtrlIcEdge {
         unsafe { core::mem::transmute(val & 0x03) }
     }
     #[inline(always)]
@@ -56,16 +56,16 @@ impl CcCtrlIcedge {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for CcCtrlIcedge {
+impl From<u8> for CcCtrlIcEdge {
     #[inline(always)]
-    fn from(val: u8) -> CcCtrlIcedge {
-        CcCtrlIcedge::from_bits(val)
+    fn from(val: u8) -> CcCtrlIcEdge {
+        CcCtrlIcEdge::from_bits(val)
     }
 }
-impl From<CcCtrlIcedge> for u8 {
+impl From<CcCtrlIcEdge> for u8 {
     #[inline(always)]
-    fn from(val: CcCtrlIcedge) -> u8 {
-        CcCtrlIcedge::to_bits(val)
+    fn from(val: CcCtrlIcEdge) -> u8 {
+        CcCtrlIcEdge::to_bits(val)
     }
 }
 #[repr(u8)]
@@ -105,7 +105,7 @@ impl From<CcCtrlMode> for u8 {
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum CcCtrlPrssel {
+pub enum CcCtrlPrsSel {
     #[doc = "PRS Channel 0 selected as input."]
     Prsch0 = 0x0,
     #[doc = "PRS Channel 1 selected as input."]
@@ -135,9 +135,9 @@ pub enum CcCtrlPrssel {
     _RESERVED_e = 0x0e,
     _RESERVED_f = 0x0f,
 }
-impl CcCtrlPrssel {
+impl CcCtrlPrsSel {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> CcCtrlPrssel {
+    pub const fn from_bits(val: u8) -> CcCtrlPrsSel {
         unsafe { core::mem::transmute(val & 0x0f) }
     }
     #[inline(always)]
@@ -145,22 +145,22 @@ impl CcCtrlPrssel {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for CcCtrlPrssel {
+impl From<u8> for CcCtrlPrsSel {
     #[inline(always)]
-    fn from(val: u8) -> CcCtrlPrssel {
-        CcCtrlPrssel::from_bits(val)
+    fn from(val: u8) -> CcCtrlPrsSel {
+        CcCtrlPrsSel::from_bits(val)
     }
 }
-impl From<CcCtrlPrssel> for u8 {
+impl From<CcCtrlPrsSel> for u8 {
     #[inline(always)]
-    fn from(val: CcCtrlPrssel) -> u8 {
-        CcCtrlPrssel::to_bits(val)
+    fn from(val: CcCtrlPrsSel) -> u8 {
+        CcCtrlPrsSel::to_bits(val)
     }
 }
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-pub enum Cntpresc {
+pub enum CntPresc {
     #[doc = "CLKCNT = LFECLKRTCC/1."]
     Div1 = 0x0,
     #[doc = "CLKCNT = LFECLKRTCC/2."]
@@ -194,9 +194,9 @@ pub enum Cntpresc {
     #[doc = "CLKCNT = LFECLKRTCC/32768."]
     Div32768 = 0x0f,
 }
-impl Cntpresc {
+impl CntPresc {
     #[inline(always)]
-    pub const fn from_bits(val: u8) -> Cntpresc {
+    pub const fn from_bits(val: u8) -> CntPresc {
         unsafe { core::mem::transmute(val & 0x0f) }
     }
     #[inline(always)]
@@ -204,15 +204,15 @@ impl Cntpresc {
         unsafe { core::mem::transmute(self) }
     }
 }
-impl From<u8> for Cntpresc {
+impl From<u8> for CntPresc {
     #[inline(always)]
-    fn from(val: u8) -> Cntpresc {
-        Cntpresc::from_bits(val)
+    fn from(val: u8) -> CntPresc {
+        CntPresc::from_bits(val)
     }
 }
-impl From<Cntpresc> for u8 {
+impl From<CntPresc> for u8 {
     #[inline(always)]
-    fn from(val: Cntpresc) -> u8 {
-        Cntpresc::to_bits(val)
+    fn from(val: CntPresc) -> u8 {
+        CntPresc::to_bits(val)
     }
 }
