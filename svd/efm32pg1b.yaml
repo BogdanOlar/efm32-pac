@@ -293,15 +293,39 @@ transforms:
   # RTCC
   # ===========================================================================
 
-  # merge CC1/CC2 fieldsets into CC0 (identical layout).  RET0_REG..
-  # RET31_REG are plain u32 registers (no fieldset) at distinct offsets, so
-  # they cannot be merged into one fieldset and are left as separate
-  # registers.
+  # merge CC0/CC1/CC2 fieldsets into CC (identical layout).
   - !MergeFieldsets
       from: "rtcc::regs::Cc(\\d+)(.+)"
-      to: "rtcc::regs::Cc0$2"
-      main: "rtcc::regs::Cc0.*"
+      to: "rtcc::regs::Cc$2"
+      main: "rtcc::regs::Cc.*"
       check: NoCheck
+  # Fix `CombCnt` name
+  - !Rename
+      from: "rtcc::regs::Combcnt"
+      to: "rtcc::regs::CombCnt"
+  # collapse the 3 flat CC0_*..CC2_* channel registers into a cluster.
+  - !MakeBlock
+      blocks: "rtcc::Rtcc"
+      from: "cc(\\d+)_(.+)"
+      to_outer: "cc$1"
+      to_inner: "$2"
+      to_block: "rtcc::Channel"
+  # Create a single cc register array with 3 elements
+  - !MakeRegisterArray
+      blocks: rtcc::Rtcc
+      from: cc\d+
+      to: cc
+  # merge rtcc channel enums
+  - !MergeEnums
+      from: "rtcc::vals::Cc(\\d+)(.+)"
+      to: "rtcc::vals::Cc$2"
+      check: NoCheck
+      skip_unmergeable: true
+  # RET0_REG..RET31_REG (plain u32, contiguous) -> ret register array
+  - !MakeRegisterArray
+      blocks: rtcc::Rtcc
+      from: ret\d+_reg
+      to: ret
 
   # ===========================================================================
   # TIMER

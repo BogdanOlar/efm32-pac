@@ -1,54 +1,54 @@
 #[doc = "CC Channel Control Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Cc0Ctrl(pub u32);
-impl Cc0Ctrl {
+pub struct CcCtrl(pub u32);
+impl CcCtrl {
     #[doc = "CC Channel Mode."]
     #[must_use]
     #[inline(always)]
-    pub const fn mode(&self) -> super::vals::Cc0CtrlMode {
+    pub const fn mode(&self) -> super::vals::CcCtrlMode {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Cc0CtrlMode::from_bits(val as u8)
+        super::vals::CcCtrlMode::from_bits(val as u8)
     }
     #[doc = "CC Channel Mode."]
     #[inline(always)]
-    pub const fn set_mode(&mut self, val: super::vals::Cc0CtrlMode) {
+    pub const fn set_mode(&mut self, val: super::vals::CcCtrlMode) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "Compare Match Output Action."]
     #[must_use]
     #[inline(always)]
-    pub const fn cmoa(&self) -> super::vals::Cc0CtrlCmoa {
+    pub const fn cmoa(&self) -> super::vals::CcCtrlCmoa {
         let val = (self.0 >> 2usize) & 0x03;
-        super::vals::Cc0CtrlCmoa::from_bits(val as u8)
+        super::vals::CcCtrlCmoa::from_bits(val as u8)
     }
     #[doc = "Compare Match Output Action."]
     #[inline(always)]
-    pub const fn set_cmoa(&mut self, val: super::vals::Cc0CtrlCmoa) {
+    pub const fn set_cmoa(&mut self, val: super::vals::CcCtrlCmoa) {
         self.0 = (self.0 & !(0x03 << 2usize)) | (((val.to_bits() as u32) & 0x03) << 2usize);
     }
     #[doc = "Input Capture Edge Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn icedge(&self) -> super::vals::Cc0CtrlIcedge {
+    pub const fn icedge(&self) -> super::vals::CcCtrlIcedge {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Cc0CtrlIcedge::from_bits(val as u8)
+        super::vals::CcCtrlIcedge::from_bits(val as u8)
     }
     #[doc = "Input Capture Edge Select."]
     #[inline(always)]
-    pub const fn set_icedge(&mut self, val: super::vals::Cc0CtrlIcedge) {
+    pub const fn set_icedge(&mut self, val: super::vals::CcCtrlIcedge) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "Compare/Capture Channel PRS Input Channel Selection."]
     #[must_use]
     #[inline(always)]
-    pub const fn prssel(&self) -> super::vals::Cc0CtrlPrssel {
+    pub const fn prssel(&self) -> super::vals::CcCtrlPrssel {
         let val = (self.0 >> 6usize) & 0x0f;
-        super::vals::Cc0CtrlPrssel::from_bits(val as u8)
+        super::vals::CcCtrlPrssel::from_bits(val as u8)
     }
     #[doc = "Compare/Capture Channel PRS Input Channel Selection."]
     #[inline(always)]
-    pub const fn set_prssel(&mut self, val: super::vals::Cc0CtrlPrssel) {
+    pub const fn set_prssel(&mut self, val: super::vals::CcCtrlPrssel) {
         self.0 = (self.0 & !(0x0f << 6usize)) | (((val.to_bits() as u32) & 0x0f) << 6usize);
     }
     #[doc = "Capture Compare Channel Comparison Base."]
@@ -88,15 +88,15 @@ impl Cc0Ctrl {
         self.0 = (self.0 & !(0x01 << 17usize)) | (((val as u32) & 0x01) << 17usize);
     }
 }
-impl Default for Cc0Ctrl {
+impl Default for CcCtrl {
     #[inline(always)]
-    fn default() -> Cc0Ctrl {
-        Cc0Ctrl(0)
+    fn default() -> CcCtrl {
+        CcCtrl(0)
     }
 }
-impl core::fmt::Debug for Cc0Ctrl {
+impl core::fmt::Debug for CcCtrl {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Cc0Ctrl")
+        f.debug_struct("CcCtrl")
             .field("mode", &self.mode())
             .field("cmoa", &self.cmoa())
             .field("icedge", &self.icedge())
@@ -108,11 +108,11 @@ impl core::fmt::Debug for Cc0Ctrl {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Cc0Ctrl {
+impl defmt::Format for CcCtrl {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Cc0Ctrl {{ mode: {:?}, cmoa: {:?}, icedge: {:?}, prssel: {:?}, compbase: {=bool:?}, compmask: {=u8:?}, daycc: {=bool:?} }}",
+            "CcCtrl {{ mode: {:?}, cmoa: {:?}, icedge: {:?}, prssel: {:?}, compbase: {=bool:?}, compmask: {=u8:?}, daycc: {=bool:?} }}",
             self.mode(),
             self.cmoa(),
             self.icedge(),
@@ -126,8 +126,8 @@ impl defmt::Format for Cc0Ctrl {
 #[doc = "Capture/Compare Date Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Cc0Date(pub u32);
-impl Cc0Date {
+pub struct CcDate(pub u32);
+impl CcDate {
     #[doc = "Day of Month/week, Units."]
     #[must_use]
     #[inline(always)]
@@ -177,15 +177,15 @@ impl Cc0Date {
         self.0 = (self.0 & !(0x01 << 12usize)) | (((val as u32) & 0x01) << 12usize);
     }
 }
-impl Default for Cc0Date {
+impl Default for CcDate {
     #[inline(always)]
-    fn default() -> Cc0Date {
-        Cc0Date(0)
+    fn default() -> CcDate {
+        CcDate(0)
     }
 }
-impl core::fmt::Debug for Cc0Date {
+impl core::fmt::Debug for CcDate {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Cc0Date")
+        f.debug_struct("CcDate")
             .field("dayu", &self.dayu())
             .field("dayt", &self.dayt())
             .field("monthu", &self.monthu())
@@ -194,11 +194,11 @@ impl core::fmt::Debug for Cc0Date {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Cc0Date {
+impl defmt::Format for CcDate {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Cc0Date {{ dayu: {=u8:?}, dayt: {=u8:?}, monthu: {=u8:?}, montht: {=bool:?} }}",
+            "CcDate {{ dayu: {=u8:?}, dayt: {=u8:?}, monthu: {=u8:?}, montht: {=bool:?} }}",
             self.dayu(),
             self.dayt(),
             self.monthu(),
@@ -209,8 +209,8 @@ impl defmt::Format for Cc0Date {
 #[doc = "Capture/Compare Time Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Cc0Time(pub u32);
-impl Cc0Time {
+pub struct CcTime(pub u32);
+impl CcTime {
     #[doc = "Seconds, Units."]
     #[must_use]
     #[inline(always)]
@@ -284,15 +284,15 @@ impl Cc0Time {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val as u32) & 0x03) << 20usize);
     }
 }
-impl Default for Cc0Time {
+impl Default for CcTime {
     #[inline(always)]
-    fn default() -> Cc0Time {
-        Cc0Time(0)
+    fn default() -> CcTime {
+        CcTime(0)
     }
 }
-impl core::fmt::Debug for Cc0Time {
+impl core::fmt::Debug for CcTime {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Cc0Time")
+        f.debug_struct("CcTime")
             .field("secu", &self.secu())
             .field("sect", &self.sect())
             .field("minu", &self.minu())
@@ -303,11 +303,11 @@ impl core::fmt::Debug for Cc0Time {
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Cc0Time {
+impl defmt::Format for CcTime {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Cc0Time {{ secu: {=u8:?}, sect: {=u8:?}, minu: {=u8:?}, mint: {=u8:?}, houru: {=u8:?}, hourt: {=u8:?} }}",
+            "CcTime {{ secu: {=u8:?}, sect: {=u8:?}, minu: {=u8:?}, mint: {=u8:?}, houru: {=u8:?}, hourt: {=u8:?} }}",
             self.secu(),
             self.sect(),
             self.minu(),
@@ -357,8 +357,8 @@ impl defmt::Format for Cmd {
 #[doc = "Combined Pre-Counter and Counter Value Register."]
 #[repr(transparent)]
 #[derive(Copy, Clone, Eq, PartialEq)]
-pub struct Combcnt(pub u32);
-impl Combcnt {
+pub struct CombCnt(pub u32);
+impl CombCnt {
     #[doc = "Pre-Counter Value."]
     #[must_use]
     #[inline(always)]
@@ -384,26 +384,26 @@ impl Combcnt {
         self.0 = (self.0 & !(0x0001_ffff << 15usize)) | (((val as u32) & 0x0001_ffff) << 15usize);
     }
 }
-impl Default for Combcnt {
+impl Default for CombCnt {
     #[inline(always)]
-    fn default() -> Combcnt {
-        Combcnt(0)
+    fn default() -> CombCnt {
+        CombCnt(0)
     }
 }
-impl core::fmt::Debug for Combcnt {
+impl core::fmt::Debug for CombCnt {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Combcnt")
+        f.debug_struct("CombCnt")
             .field("precnt", &self.precnt())
             .field("cntlsb", &self.cntlsb())
             .finish()
     }
 }
 #[cfg(feature = "defmt")]
-impl defmt::Format for Combcnt {
+impl defmt::Format for CombCnt {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Combcnt {{ precnt: {=u16:?}, cntlsb: {=u32:?} }}",
+            "CombCnt {{ precnt: {=u16:?}, cntlsb: {=u32:?} }}",
             self.precnt(),
             self.cntlsb()
         )

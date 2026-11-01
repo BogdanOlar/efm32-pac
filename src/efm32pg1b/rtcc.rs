@@ -1,3 +1,39 @@
+#[derive(Copy, Clone, Eq, PartialEq)]
+pub struct Channel {
+    ptr: *mut u8,
+}
+unsafe impl Send for Channel {}
+unsafe impl Sync for Channel {}
+impl Channel {
+    #[inline(always)]
+    pub const unsafe fn from_ptr(ptr: *mut ()) -> Self {
+        Self { ptr: ptr as _ }
+    }
+    #[inline(always)]
+    pub const fn as_ptr(&self) -> *mut () {
+        self.ptr as _
+    }
+    #[doc = "CC Channel Control Register."]
+    #[inline(always)]
+    pub const fn ctrl(self) -> crate::common::Reg<regs::CcCtrl, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
+    }
+    #[doc = "Capture/Compare Value Register."]
+    #[inline(always)]
+    pub const fn ccv(self) -> crate::common::Reg<u32, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x04usize) as _) }
+    }
+    #[doc = "Capture/Compare Time Register."]
+    #[inline(always)]
+    pub const fn time(self) -> crate::common::Reg<regs::CcTime, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x08usize) as _) }
+    }
+    #[doc = "Capture/Compare Date Register."]
+    #[inline(always)]
+    pub const fn date(self) -> crate::common::Reg<regs::CcDate, crate::common::RW> {
+        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
+    }
+}
 #[doc = "RTCC."]
 #[derive(Copy, Clone, Eq, PartialEq)]
 pub struct Rtcc {
@@ -31,7 +67,7 @@ impl Rtcc {
     }
     #[doc = "Combined Pre-Counter and Counter Value Register."]
     #[inline(always)]
-    pub const fn combcnt(self) -> crate::common::Reg<regs::Combcnt, crate::common::R> {
+    pub const fn combcnt(self) -> crate::common::Reg<regs::CombCnt, crate::common::R> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0cusize) as _) }
     }
     #[doc = "Time of Day Register."]
@@ -94,225 +130,18 @@ impl Rtcc {
     pub const fn em4wuen(self) -> crate::common::Reg<regs::Em4wuen, crate::common::RW> {
         unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x3cusize) as _) }
     }
-    #[doc = "CC Channel Control Register."]
     #[inline(always)]
-    pub const fn cc0_ctrl(self) -> crate::common::Reg<regs::Cc0Ctrl, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x40usize) as _) }
-    }
-    #[doc = "Capture/Compare Value Register."]
-    #[inline(always)]
-    pub const fn cc0_ccv(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x44usize) as _) }
-    }
-    #[doc = "Capture/Compare Time Register."]
-    #[inline(always)]
-    pub const fn cc0_time(self) -> crate::common::Reg<regs::Cc0Time, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x48usize) as _) }
-    }
-    #[doc = "Capture/Compare Date Register."]
-    #[inline(always)]
-    pub const fn cc0_date(self) -> crate::common::Reg<regs::Cc0Date, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x4cusize) as _) }
-    }
-    #[doc = "CC Channel Control Register."]
-    #[inline(always)]
-    pub const fn cc1_ctrl(self) -> crate::common::Reg<regs::Cc0Ctrl, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x50usize) as _) }
-    }
-    #[doc = "Capture/Compare Value Register."]
-    #[inline(always)]
-    pub const fn cc1_ccv(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x54usize) as _) }
-    }
-    #[doc = "Capture/Compare Time Register."]
-    #[inline(always)]
-    pub const fn cc1_time(self) -> crate::common::Reg<regs::Cc0Time, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x58usize) as _) }
-    }
-    #[doc = "Capture/Compare Date Register."]
-    #[inline(always)]
-    pub const fn cc1_date(self) -> crate::common::Reg<regs::Cc0Date, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x5cusize) as _) }
-    }
-    #[doc = "CC Channel Control Register."]
-    #[inline(always)]
-    pub const fn cc2_ctrl(self) -> crate::common::Reg<regs::Cc0Ctrl, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
-    }
-    #[doc = "Capture/Compare Value Register."]
-    #[inline(always)]
-    pub const fn cc2_ccv(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x64usize) as _) }
-    }
-    #[doc = "Capture/Compare Time Register."]
-    #[inline(always)]
-    pub const fn cc2_time(self) -> crate::common::Reg<regs::Cc0Time, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x68usize) as _) }
-    }
-    #[doc = "Capture/Compare Date Register."]
-    #[inline(always)]
-    pub const fn cc2_date(self) -> crate::common::Reg<regs::Cc0Date, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x6cusize) as _) }
+    pub const fn cc(self, n: usize) -> Channel {
+        assert!(n < 3usize);
+        unsafe { Channel::from_ptr(self.ptr.wrapping_add(0x40usize + n * 16usize) as _) }
     }
     #[doc = "Retention Register."]
     #[inline(always)]
-    pub const fn ret0_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret1_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0108usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret2_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x010cusize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret3_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0110usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret4_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0114usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret5_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0118usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret6_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x011cusize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret7_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0120usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret8_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0124usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret9_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0128usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret10_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x012cusize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret11_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0130usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret12_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0134usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret13_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0138usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret14_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x013cusize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret15_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0140usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret16_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0144usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret17_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0148usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret18_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x014cusize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret19_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0150usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret20_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0154usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret21_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0158usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret22_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x015cusize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret23_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0160usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret24_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0164usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret25_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0168usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret26_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x016cusize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret27_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0170usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret28_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0174usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret29_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0178usize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret30_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x017cusize) as _) }
-    }
-    #[doc = "Retention Register."]
-    #[inline(always)]
-    pub const fn ret31_reg(self) -> crate::common::Reg<u32, crate::common::RW> {
-        unsafe { crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0180usize) as _) }
+    pub const fn ret(self, n: usize) -> crate::common::Reg<u32, crate::common::RW> {
+        assert!(n < 32usize);
+        unsafe {
+            crate::common::Reg::from_ptr(self.ptr.wrapping_add(0x0104usize + n * 4usize) as _)
+        }
     }
 }
 pub mod regs;
