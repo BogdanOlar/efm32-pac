@@ -151,6 +151,30 @@ transforms:
       fieldset: "gpio::regs::Ctrl"
       from: "dindisalt"
       to: "din_dis_alt"
+  # port_a..port_f (0x30 stride) -> port array
+  - !MakeRegisterArray
+      blocks: gpio::Gpio
+      from: port_[a-f]
+      to: port
+  # merge the per-port, per-pin mode enums (PaModelMode0, ..., PfModehMode15)
+  - !MergeEnums
+      from: "gpio::vals::P[a-z]Mode[lh]Mode\\d+"
+      to: "gpio::vals::Mode"
+      check: NoCheck
+  # merge the per-pin external interrupt select enums
+  - !MergeEnums
+      from: "gpio::vals::Extipsel\\d+"
+      to: "gpio::vals::Extipsel"
+      check: NoCheck
+  - !MergeEnums
+      from: "gpio::vals::Extipinsel\\d+"
+      to: "gpio::vals::Extipinsel"
+      check: NoCheck
+  # mode0..mode7 -> mode array (MODEL), mode8..mode15 -> mode array (MODEH)
+  - !MakeFieldArray
+    fieldsets: gpio::regs::Mode[lh]
+    from: mode\d+
+    to: mode
 
   # ===========================================================================
   # I2C

@@ -409,97 +409,97 @@ impl Extipinselh {
     #[doc = "External Interrupt 8 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel8(&self) -> super::vals::Extipinsel8 {
+    pub const fn extipinsel8(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Extipinsel8::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 8 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel8(&mut self, val: super::vals::Extipinsel8) {
+    pub const fn set_extipinsel8(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "External Interrupt 9 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel9(&self) -> super::vals::Extipinsel9 {
+    pub const fn extipinsel9(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Extipinsel9::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 9 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel9(&mut self, val: super::vals::Extipinsel9) {
+    pub const fn set_extipinsel9(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "External Interrupt 10 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel10(&self) -> super::vals::Extipinsel10 {
+    pub const fn extipinsel10(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Extipinsel10::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 10 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel10(&mut self, val: super::vals::Extipinsel10) {
+    pub const fn set_extipinsel10(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "External Interrupt 11 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel11(&self) -> super::vals::Extipinsel11 {
+    pub const fn extipinsel11(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Extipinsel11::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 11 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel11(&mut self, val: super::vals::Extipinsel11) {
+    pub const fn set_extipinsel11(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "External Interrupt 12 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel12(&self) -> super::vals::Extipinsel12 {
+    pub const fn extipinsel12(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Extipinsel12::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 12 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel12(&mut self, val: super::vals::Extipinsel12) {
+    pub const fn set_extipinsel12(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "External Interrupt 13 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel13(&self) -> super::vals::Extipinsel13 {
+    pub const fn extipinsel13(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Extipinsel13::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 13 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel13(&mut self, val: super::vals::Extipinsel13) {
+    pub const fn set_extipinsel13(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "External Interrupt 14 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel14(&self) -> super::vals::Extipinsel14 {
+    pub const fn extipinsel14(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Extipinsel14::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 14 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel14(&mut self, val: super::vals::Extipinsel14) {
+    pub const fn set_extipinsel14(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "External Interrupt 15 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel15(&self) -> super::vals::Extipinsel15 {
+    pub const fn extipinsel15(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Extipinsel15::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 15 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel15(&mut self, val: super::vals::Extipinsel15) {
+    pub const fn set_extipinsel15(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -548,97 +548,97 @@ impl Extipinsell {
     #[doc = "External Interrupt 0 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel0(&self) -> super::vals::Extipinsel0 {
+    pub const fn extipinsel0(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 0usize) & 0x03;
-        super::vals::Extipinsel0::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 0 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel0(&mut self, val: super::vals::Extipinsel0) {
+    pub const fn set_extipinsel0(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 0usize)) | (((val.to_bits() as u32) & 0x03) << 0usize);
     }
     #[doc = "External Interrupt 1 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel1(&self) -> super::vals::Extipinsel1 {
+    pub const fn extipinsel1(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 4usize) & 0x03;
-        super::vals::Extipinsel1::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 1 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel1(&mut self, val: super::vals::Extipinsel1) {
+    pub const fn set_extipinsel1(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 4usize)) | (((val.to_bits() as u32) & 0x03) << 4usize);
     }
     #[doc = "External Interrupt 2 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel2(&self) -> super::vals::Extipinsel2 {
+    pub const fn extipinsel2(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 8usize) & 0x03;
-        super::vals::Extipinsel2::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 2 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel2(&mut self, val: super::vals::Extipinsel2) {
+    pub const fn set_extipinsel2(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 8usize)) | (((val.to_bits() as u32) & 0x03) << 8usize);
     }
     #[doc = "External Interrupt 3 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel3(&self) -> super::vals::Extipinsel3 {
+    pub const fn extipinsel3(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 12usize) & 0x03;
-        super::vals::Extipinsel3::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 3 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel3(&mut self, val: super::vals::Extipinsel3) {
+    pub const fn set_extipinsel3(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 12usize)) | (((val.to_bits() as u32) & 0x03) << 12usize);
     }
     #[doc = "External Interrupt 4 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel4(&self) -> super::vals::Extipinsel4 {
+    pub const fn extipinsel4(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 16usize) & 0x03;
-        super::vals::Extipinsel4::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 4 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel4(&mut self, val: super::vals::Extipinsel4) {
+    pub const fn set_extipinsel4(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 16usize)) | (((val.to_bits() as u32) & 0x03) << 16usize);
     }
     #[doc = "External Interrupt 5 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel5(&self) -> super::vals::Extipinsel5 {
+    pub const fn extipinsel5(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 20usize) & 0x03;
-        super::vals::Extipinsel5::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 5 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel5(&mut self, val: super::vals::Extipinsel5) {
+    pub const fn set_extipinsel5(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 20usize)) | (((val.to_bits() as u32) & 0x03) << 20usize);
     }
     #[doc = "External Interrupt 6 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel6(&self) -> super::vals::Extipinsel6 {
+    pub const fn extipinsel6(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 24usize) & 0x03;
-        super::vals::Extipinsel6::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 6 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel6(&mut self, val: super::vals::Extipinsel6) {
+    pub const fn set_extipinsel6(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 24usize)) | (((val.to_bits() as u32) & 0x03) << 24usize);
     }
     #[doc = "External Interrupt 7 Pin Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipinsel7(&self) -> super::vals::Extipinsel7 {
+    pub const fn extipinsel7(&self) -> super::vals::Extipinsel {
         let val = (self.0 >> 28usize) & 0x03;
-        super::vals::Extipinsel7::from_bits(val as u8)
+        super::vals::Extipinsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 7 Pin Select."]
     #[inline(always)]
-    pub const fn set_extipinsel7(&mut self, val: super::vals::Extipinsel7) {
+    pub const fn set_extipinsel7(&mut self, val: super::vals::Extipinsel) {
         self.0 = (self.0 & !(0x03 << 28usize)) | (((val.to_bits() as u32) & 0x03) << 28usize);
     }
 }
@@ -687,97 +687,97 @@ impl Extipselh {
     #[doc = "External Interrupt 8 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel8(&self) -> super::vals::Extipsel8 {
+    pub const fn extipsel8(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 0usize) & 0x0f;
-        super::vals::Extipsel8::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 8 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel8(&mut self, val: super::vals::Extipsel8) {
+    pub const fn set_extipsel8(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
     #[doc = "External Interrupt 9 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel9(&self) -> super::vals::Extipsel9 {
+    pub const fn extipsel9(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 4usize) & 0x0f;
-        super::vals::Extipsel9::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 9 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel9(&mut self, val: super::vals::Extipsel9) {
+    pub const fn set_extipsel9(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
     }
     #[doc = "External Interrupt 10 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel10(&self) -> super::vals::Extipsel10 {
+    pub const fn extipsel10(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::Extipsel10::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 10 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel10(&mut self, val: super::vals::Extipsel10) {
+    pub const fn set_extipsel10(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "External Interrupt 11 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel11(&self) -> super::vals::Extipsel11 {
+    pub const fn extipsel11(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 12usize) & 0x0f;
-        super::vals::Extipsel11::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 11 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel11(&mut self, val: super::vals::Extipsel11) {
+    pub const fn set_extipsel11(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val.to_bits() as u32) & 0x0f) << 12usize);
     }
     #[doc = "External Interrupt 12 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel12(&self) -> super::vals::Extipsel12 {
+    pub const fn extipsel12(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 16usize) & 0x0f;
-        super::vals::Extipsel12::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 12 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel12(&mut self, val: super::vals::Extipsel12) {
+    pub const fn set_extipsel12(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
     #[doc = "External Interrupt 13 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel13(&self) -> super::vals::Extipsel13 {
+    pub const fn extipsel13(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 20usize) & 0x0f;
-        super::vals::Extipsel13::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 13 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel13(&mut self, val: super::vals::Extipsel13) {
+    pub const fn set_extipsel13(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 20usize)) | (((val.to_bits() as u32) & 0x0f) << 20usize);
     }
     #[doc = "External Interrupt 14 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel14(&self) -> super::vals::Extipsel14 {
+    pub const fn extipsel14(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 24usize) & 0x0f;
-        super::vals::Extipsel14::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 14 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel14(&mut self, val: super::vals::Extipsel14) {
+    pub const fn set_extipsel14(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
     }
     #[doc = "External Interrupt 15 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel15(&self) -> super::vals::Extipsel15 {
+    pub const fn extipsel15(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 28usize) & 0x0f;
-        super::vals::Extipsel15::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 15 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel15(&mut self, val: super::vals::Extipsel15) {
+    pub const fn set_extipsel15(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 28usize)) | (((val.to_bits() as u32) & 0x0f) << 28usize);
     }
 }
@@ -826,97 +826,97 @@ impl Extipsell {
     #[doc = "External Interrupt 0 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel0(&self) -> super::vals::Extipsel0 {
+    pub const fn extipsel0(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 0usize) & 0x0f;
-        super::vals::Extipsel0::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 0 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel0(&mut self, val: super::vals::Extipsel0) {
+    pub const fn set_extipsel0(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
     }
     #[doc = "External Interrupt 1 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel1(&self) -> super::vals::Extipsel1 {
+    pub const fn extipsel1(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 4usize) & 0x0f;
-        super::vals::Extipsel1::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 1 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel1(&mut self, val: super::vals::Extipsel1) {
+    pub const fn set_extipsel1(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
     }
     #[doc = "External Interrupt 2 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel2(&self) -> super::vals::Extipsel2 {
+    pub const fn extipsel2(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::Extipsel2::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 2 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel2(&mut self, val: super::vals::Extipsel2) {
+    pub const fn set_extipsel2(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
     }
     #[doc = "External Interrupt 3 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel3(&self) -> super::vals::Extipsel3 {
+    pub const fn extipsel3(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 12usize) & 0x0f;
-        super::vals::Extipsel3::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 3 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel3(&mut self, val: super::vals::Extipsel3) {
+    pub const fn set_extipsel3(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 12usize)) | (((val.to_bits() as u32) & 0x0f) << 12usize);
     }
     #[doc = "External Interrupt 4 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel4(&self) -> super::vals::Extipsel4 {
+    pub const fn extipsel4(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 16usize) & 0x0f;
-        super::vals::Extipsel4::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 4 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel4(&mut self, val: super::vals::Extipsel4) {
+    pub const fn set_extipsel4(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
     }
     #[doc = "External Interrupt 5 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel5(&self) -> super::vals::Extipsel5 {
+    pub const fn extipsel5(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 20usize) & 0x0f;
-        super::vals::Extipsel5::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 5 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel5(&mut self, val: super::vals::Extipsel5) {
+    pub const fn set_extipsel5(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 20usize)) | (((val.to_bits() as u32) & 0x0f) << 20usize);
     }
     #[doc = "External Interrupt 6 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel6(&self) -> super::vals::Extipsel6 {
+    pub const fn extipsel6(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 24usize) & 0x0f;
-        super::vals::Extipsel6::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 6 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel6(&mut self, val: super::vals::Extipsel6) {
+    pub const fn set_extipsel6(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
     }
     #[doc = "External Interrupt 7 Port Select."]
     #[must_use]
     #[inline(always)]
-    pub const fn extipsel7(&self) -> super::vals::Extipsel7 {
+    pub const fn extipsel7(&self) -> super::vals::Extipsel {
         let val = (self.0 >> 28usize) & 0x0f;
-        super::vals::Extipsel7::from_bits(val as u8)
+        super::vals::Extipsel::from_bits(val as u8)
     }
     #[doc = "External Interrupt 7 Port Select."]
     #[inline(always)]
-    pub const fn set_extipsel7(&mut self, val: super::vals::Extipsel7) {
+    pub const fn set_extipsel7(&mut self, val: super::vals::Extipsel) {
         self.0 = (self.0 & !(0x0f << 28usize)) | (((val.to_bits() as u32) & 0x0f) << 28usize);
     }
 }
@@ -1259,98 +1259,18 @@ impl Modeh {
     #[doc = "Pin 8 Mode."]
     #[must_use]
     #[inline(always)]
-    pub const fn mode8(&self) -> super::vals::PaModehMode8 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        super::vals::PaModehMode8::from_bits(val as u8)
+    pub const fn mode(&self, n: usize) -> super::vals::Mode {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x0f;
+        super::vals::Mode::from_bits(val as u8)
     }
     #[doc = "Pin 8 Mode."]
     #[inline(always)]
-    pub const fn set_mode8(&mut self, val: super::vals::PaModehMode8) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Pin 9 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode9(&self) -> super::vals::PaModehMode9 {
-        let val = (self.0 >> 4usize) & 0x0f;
-        super::vals::PaModehMode9::from_bits(val as u8)
-    }
-    #[doc = "Pin 9 Mode."]
-    #[inline(always)]
-    pub const fn set_mode9(&mut self, val: super::vals::PaModehMode9) {
-        self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
-    }
-    #[doc = "Pin 10 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode10(&self) -> super::vals::PaModehMode10 {
-        let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PaModehMode10::from_bits(val as u8)
-    }
-    #[doc = "Pin 10 Mode."]
-    #[inline(always)]
-    pub const fn set_mode10(&mut self, val: super::vals::PaModehMode10) {
-        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
-    }
-    #[doc = "Pin 11 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode11(&self) -> super::vals::PaModehMode11 {
-        let val = (self.0 >> 12usize) & 0x0f;
-        super::vals::PaModehMode11::from_bits(val as u8)
-    }
-    #[doc = "Pin 11 Mode."]
-    #[inline(always)]
-    pub const fn set_mode11(&mut self, val: super::vals::PaModehMode11) {
-        self.0 = (self.0 & !(0x0f << 12usize)) | (((val.to_bits() as u32) & 0x0f) << 12usize);
-    }
-    #[doc = "Pin 12 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode12(&self) -> super::vals::PaModehMode12 {
-        let val = (self.0 >> 16usize) & 0x0f;
-        super::vals::PaModehMode12::from_bits(val as u8)
-    }
-    #[doc = "Pin 12 Mode."]
-    #[inline(always)]
-    pub const fn set_mode12(&mut self, val: super::vals::PaModehMode12) {
-        self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
-    }
-    #[doc = "Pin 13 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode13(&self) -> super::vals::PaModehMode13 {
-        let val = (self.0 >> 20usize) & 0x0f;
-        super::vals::PaModehMode13::from_bits(val as u8)
-    }
-    #[doc = "Pin 13 Mode."]
-    #[inline(always)]
-    pub const fn set_mode13(&mut self, val: super::vals::PaModehMode13) {
-        self.0 = (self.0 & !(0x0f << 20usize)) | (((val.to_bits() as u32) & 0x0f) << 20usize);
-    }
-    #[doc = "Pin 14 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode14(&self) -> super::vals::PaModehMode14 {
-        let val = (self.0 >> 24usize) & 0x0f;
-        super::vals::PaModehMode14::from_bits(val as u8)
-    }
-    #[doc = "Pin 14 Mode."]
-    #[inline(always)]
-    pub const fn set_mode14(&mut self, val: super::vals::PaModehMode14) {
-        self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
-    }
-    #[doc = "Pin 15 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode15(&self) -> super::vals::PaModehMode15 {
-        let val = (self.0 >> 28usize) & 0x0f;
-        super::vals::PaModehMode15::from_bits(val as u8)
-    }
-    #[doc = "Pin 15 Mode."]
-    #[inline(always)]
-    pub const fn set_mode15(&mut self, val: super::vals::PaModehMode15) {
-        self.0 = (self.0 & !(0x0f << 28usize)) | (((val.to_bits() as u32) & 0x0f) << 28usize);
+    pub const fn set_mode(&mut self, n: usize, val: super::vals::Mode) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x0f << offs)) | (((val.to_bits() as u32) & 0x0f) << offs);
     }
 }
 impl Default for Modeh {
@@ -1362,14 +1282,14 @@ impl Default for Modeh {
 impl core::fmt::Debug for Modeh {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Modeh")
-            .field("mode8", &self.mode8())
-            .field("mode9", &self.mode9())
-            .field("mode10", &self.mode10())
-            .field("mode11", &self.mode11())
-            .field("mode12", &self.mode12())
-            .field("mode13", &self.mode13())
-            .field("mode14", &self.mode14())
-            .field("mode15", &self.mode15())
+            .field("mode[0]", &self.mode(0usize))
+            .field("mode[1]", &self.mode(1usize))
+            .field("mode[2]", &self.mode(2usize))
+            .field("mode[3]", &self.mode(3usize))
+            .field("mode[4]", &self.mode(4usize))
+            .field("mode[5]", &self.mode(5usize))
+            .field("mode[6]", &self.mode(6usize))
+            .field("mode[7]", &self.mode(7usize))
             .finish()
     }
 }
@@ -1378,15 +1298,15 @@ impl defmt::Format for Modeh {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Modeh {{ mode8: {:?}, mode9: {:?}, mode10: {:?}, mode11: {:?}, mode12: {:?}, mode13: {:?}, mode14: {:?}, mode15: {:?} }}",
-            self.mode8(),
-            self.mode9(),
-            self.mode10(),
-            self.mode11(),
-            self.mode12(),
-            self.mode13(),
-            self.mode14(),
-            self.mode15()
+            "Modeh {{ mode[0]: {:?}, mode[1]: {:?}, mode[2]: {:?}, mode[3]: {:?}, mode[4]: {:?}, mode[5]: {:?}, mode[6]: {:?}, mode[7]: {:?} }}",
+            self.mode(0usize),
+            self.mode(1usize),
+            self.mode(2usize),
+            self.mode(3usize),
+            self.mode(4usize),
+            self.mode(5usize),
+            self.mode(6usize),
+            self.mode(7usize)
         )
     }
 }
@@ -1398,98 +1318,18 @@ impl Model {
     #[doc = "Pin 0 Mode."]
     #[must_use]
     #[inline(always)]
-    pub const fn mode0(&self) -> super::vals::PaModelMode0 {
-        let val = (self.0 >> 0usize) & 0x0f;
-        super::vals::PaModelMode0::from_bits(val as u8)
+    pub const fn mode(&self, n: usize) -> super::vals::Mode {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        let val = (self.0 >> offs) & 0x0f;
+        super::vals::Mode::from_bits(val as u8)
     }
     #[doc = "Pin 0 Mode."]
     #[inline(always)]
-    pub const fn set_mode0(&mut self, val: super::vals::PaModelMode0) {
-        self.0 = (self.0 & !(0x0f << 0usize)) | (((val.to_bits() as u32) & 0x0f) << 0usize);
-    }
-    #[doc = "Pin 1 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode1(&self) -> super::vals::PaModelMode1 {
-        let val = (self.0 >> 4usize) & 0x0f;
-        super::vals::PaModelMode1::from_bits(val as u8)
-    }
-    #[doc = "Pin 1 Mode."]
-    #[inline(always)]
-    pub const fn set_mode1(&mut self, val: super::vals::PaModelMode1) {
-        self.0 = (self.0 & !(0x0f << 4usize)) | (((val.to_bits() as u32) & 0x0f) << 4usize);
-    }
-    #[doc = "Pin 2 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode2(&self) -> super::vals::PaModelMode2 {
-        let val = (self.0 >> 8usize) & 0x0f;
-        super::vals::PaModelMode2::from_bits(val as u8)
-    }
-    #[doc = "Pin 2 Mode."]
-    #[inline(always)]
-    pub const fn set_mode2(&mut self, val: super::vals::PaModelMode2) {
-        self.0 = (self.0 & !(0x0f << 8usize)) | (((val.to_bits() as u32) & 0x0f) << 8usize);
-    }
-    #[doc = "Pin 3 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode3(&self) -> super::vals::PaModelMode3 {
-        let val = (self.0 >> 12usize) & 0x0f;
-        super::vals::PaModelMode3::from_bits(val as u8)
-    }
-    #[doc = "Pin 3 Mode."]
-    #[inline(always)]
-    pub const fn set_mode3(&mut self, val: super::vals::PaModelMode3) {
-        self.0 = (self.0 & !(0x0f << 12usize)) | (((val.to_bits() as u32) & 0x0f) << 12usize);
-    }
-    #[doc = "Pin 4 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode4(&self) -> super::vals::PaModelMode4 {
-        let val = (self.0 >> 16usize) & 0x0f;
-        super::vals::PaModelMode4::from_bits(val as u8)
-    }
-    #[doc = "Pin 4 Mode."]
-    #[inline(always)]
-    pub const fn set_mode4(&mut self, val: super::vals::PaModelMode4) {
-        self.0 = (self.0 & !(0x0f << 16usize)) | (((val.to_bits() as u32) & 0x0f) << 16usize);
-    }
-    #[doc = "Pin 5 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode5(&self) -> super::vals::PaModelMode5 {
-        let val = (self.0 >> 20usize) & 0x0f;
-        super::vals::PaModelMode5::from_bits(val as u8)
-    }
-    #[doc = "Pin 5 Mode."]
-    #[inline(always)]
-    pub const fn set_mode5(&mut self, val: super::vals::PaModelMode5) {
-        self.0 = (self.0 & !(0x0f << 20usize)) | (((val.to_bits() as u32) & 0x0f) << 20usize);
-    }
-    #[doc = "Pin 6 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode6(&self) -> super::vals::PaModelMode6 {
-        let val = (self.0 >> 24usize) & 0x0f;
-        super::vals::PaModelMode6::from_bits(val as u8)
-    }
-    #[doc = "Pin 6 Mode."]
-    #[inline(always)]
-    pub const fn set_mode6(&mut self, val: super::vals::PaModelMode6) {
-        self.0 = (self.0 & !(0x0f << 24usize)) | (((val.to_bits() as u32) & 0x0f) << 24usize);
-    }
-    #[doc = "Pin 7 Mode."]
-    #[must_use]
-    #[inline(always)]
-    pub const fn mode7(&self) -> super::vals::PaModelMode7 {
-        let val = (self.0 >> 28usize) & 0x0f;
-        super::vals::PaModelMode7::from_bits(val as u8)
-    }
-    #[doc = "Pin 7 Mode."]
-    #[inline(always)]
-    pub const fn set_mode7(&mut self, val: super::vals::PaModelMode7) {
-        self.0 = (self.0 & !(0x0f << 28usize)) | (((val.to_bits() as u32) & 0x0f) << 28usize);
+    pub const fn set_mode(&mut self, n: usize, val: super::vals::Mode) {
+        assert!(n < 8usize);
+        let offs = 0usize + n * 4usize;
+        self.0 = (self.0 & !(0x0f << offs)) | (((val.to_bits() as u32) & 0x0f) << offs);
     }
 }
 impl Default for Model {
@@ -1501,14 +1341,14 @@ impl Default for Model {
 impl core::fmt::Debug for Model {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Model")
-            .field("mode0", &self.mode0())
-            .field("mode1", &self.mode1())
-            .field("mode2", &self.mode2())
-            .field("mode3", &self.mode3())
-            .field("mode4", &self.mode4())
-            .field("mode5", &self.mode5())
-            .field("mode6", &self.mode6())
-            .field("mode7", &self.mode7())
+            .field("mode[0]", &self.mode(0usize))
+            .field("mode[1]", &self.mode(1usize))
+            .field("mode[2]", &self.mode(2usize))
+            .field("mode[3]", &self.mode(3usize))
+            .field("mode[4]", &self.mode(4usize))
+            .field("mode[5]", &self.mode(5usize))
+            .field("mode[6]", &self.mode(6usize))
+            .field("mode[7]", &self.mode(7usize))
             .finish()
     }
 }
@@ -1517,15 +1357,15 @@ impl defmt::Format for Model {
     fn format(&self, f: defmt::Formatter) {
         defmt::write!(
             f,
-            "Model {{ mode0: {:?}, mode1: {:?}, mode2: {:?}, mode3: {:?}, mode4: {:?}, mode5: {:?}, mode6: {:?}, mode7: {:?} }}",
-            self.mode0(),
-            self.mode1(),
-            self.mode2(),
-            self.mode3(),
-            self.mode4(),
-            self.mode5(),
-            self.mode6(),
-            self.mode7()
+            "Model {{ mode[0]: {:?}, mode[1]: {:?}, mode[2]: {:?}, mode[3]: {:?}, mode[4]: {:?}, mode[5]: {:?}, mode[6]: {:?}, mode[7]: {:?} }}",
+            self.mode(0usize),
+            self.mode(1usize),
+            self.mode(2usize),
+            self.mode(3usize),
+            self.mode(4usize),
+            self.mode(5usize),
+            self.mode(6usize),
+            self.mode(7usize)
         )
     }
 }

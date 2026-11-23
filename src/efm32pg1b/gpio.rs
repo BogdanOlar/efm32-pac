@@ -15,28 +15,9 @@ impl Gpio {
         self.ptr as _
     }
     #[inline(always)]
-    pub const fn port_a(self) -> Port {
-        unsafe { Port::from_ptr(self.ptr.wrapping_add(0x0usize) as _) }
-    }
-    #[inline(always)]
-    pub const fn port_b(self) -> Port {
-        unsafe { Port::from_ptr(self.ptr.wrapping_add(0x30usize) as _) }
-    }
-    #[inline(always)]
-    pub const fn port_c(self) -> Port {
-        unsafe { Port::from_ptr(self.ptr.wrapping_add(0x60usize) as _) }
-    }
-    #[inline(always)]
-    pub const fn port_d(self) -> Port {
-        unsafe { Port::from_ptr(self.ptr.wrapping_add(0x90usize) as _) }
-    }
-    #[inline(always)]
-    pub const fn port_e(self) -> Port {
-        unsafe { Port::from_ptr(self.ptr.wrapping_add(0xc0usize) as _) }
-    }
-    #[inline(always)]
-    pub const fn port_f(self) -> Port {
-        unsafe { Port::from_ptr(self.ptr.wrapping_add(0xf0usize) as _) }
+    pub const fn port(self, n: usize) -> Port {
+        assert!(n < 6usize);
+        unsafe { Port::from_ptr(self.ptr.wrapping_add(0x0usize + n * 48usize) as _) }
     }
     #[doc = "External Interrupt Port Select Low Register."]
     #[inline(always)]
